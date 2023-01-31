@@ -19,7 +19,7 @@ OpenMMLab 是由中国开发者主导，有国际影响力的开源计算机视�
 3. 对 AI 感兴趣，希望提升技术水平熟悉业界领先框架，积累实战经验的开发者
 ## 活动日程
 <img src="https://user-images.githubusercontent.com/117071079/215315402-d281e23b-6f13-4a1d-afcf-c2df04090ecf.png" width="500">
-![检测](https://user-images.githubusercontent.com/117071079/215673249-8bf0c307-1534-4939-8495-dfa7f53f11ed.jpg)
+
 
 ## 扫码报名
 三大成长角色等你来 pick，挑大梁的社交达人快来自荐！

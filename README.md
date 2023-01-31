@@ -37,5 +37,5 @@ mmclassification
 mmdetection
 mmsegmentation
 
-###作业提交入口
+### 作业提交入口
 

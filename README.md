@@ -39,7 +39,10 @@ OpenMMLab 是由中国开发者主导，有国际影响力的开源计算机视�
 [前期学习资料点这里](https://aicarrier.feishu.cn/docs/doccnP7NPMfRr9TAcwRsPKgkOgc)
 ### 课程相关算法库
 [mmclassification](https://github.com/open-mmlab/mmclassification)
+
 [mmdetection](https://github.com/open-mmlab/mmdetection)
+
 [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
+
 ### 作业提交入口
-[作业提交点这里，请提交至本班页面](https://aicarrier.feishu.cn/docx/D7PvdbHYmoehiEx3qVBc8isrnXe)
+[作业提交点这里，请提交至本班页面](https://github.com/open-mmlab/OpenMMLabCamp/issues)

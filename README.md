@@ -20,29 +20,11 @@ OpenMMLab 是由中国开发者主导，有国际影响力的开源计算机视�
 1. CS、EE 或者其他相关专业同学，希望快速上车 CV 领域的开发者
 2. 有一定理工背景，希望转行到 AI 领域工作，积累项目经验的开发者
 3. 对 AI 感兴趣，希望提升技术水平熟悉业界领先框架，积累实战经验的开发者
-## 活动日程
-<img src="https://user-images.githubusercontent.com/117071079/215315402-d281e23b-6f13-4a1d-afcf-c2df04090ecf.png" width="500">
-
-
-## 扫码报名
-三大成长角色等你来 pick，挑大梁的社交达人快来自荐！
-
-快快扫描下方海报二维码报名吧！
-
-官方认证证书和精彩大礼等你来拿！
-
-<img src="https://user-images.githubusercontent.com/117071079/215673249-8bf0c307-1534-4939-8495-dfa7f53f11ed.jpg" width="150">
 
 ## 课程相关资料及入口
 
 ### 前期学习资料
 [前期学习资料点这里](https://aicarrier.feishu.cn/docs/doccnP7NPMfRr9TAcwRsPKgkOgc)
-### 课程相关算法库
-[mmclassification](https://github.com/open-mmlab/mmclassification)
-
-[mmdetection](https://github.com/open-mmlab/mmdetection)
-
-[mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
 
 ### 作业提交入口
 [作业提交点这里，请提交至本班页面](https://github.com/open-mmlab/OpenMMLabCamp/issues)

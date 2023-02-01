@@ -1,4 +1,7 @@
 # OpenMMLabCamp
+The AI Camp will take you through a series of courses to understand the fundamentals of computer vision and the cutting-edge open-source toolboxes — OpenMMLab. Through the hands-on tutorials, you will know the learning path of deep learning, gain insight into SOTA algorithms, play with interesting project cases, and practice front-line industry projects.
+
+
 ## AI 实战营是什么？
 图像识别和计算机视觉，是人工智能的核心任务之一。图像分类、目标检测、图像分割、关键点检测、超分辨率、图像生成等领域，近年来取得了革命性进展，并深刻改变着各行各业。
 作为初学者，如何跨过编程、算法、项目实战三座大山，“无痛”开发自己的计算机视觉应用呢？

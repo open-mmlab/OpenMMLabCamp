@@ -4,7 +4,7 @@
 
 请参考 MMClassification 的文档以及教学视频，整理训练数据集，修改配置文件，基于 MMClassification 提供的预训练模型，在 flowers 数据集上完成分类模型的微调训练。
 
-同学们可以基于北京超算平台完成任务。超算平台的使用手册在这里可以找到：https://aicarrier.feishu.cn/docs/doccnP7NPMfRr9TAcwRsPKgkOgc?from=from_copylink
+同学们可以基于北京超算平台完成任务，本地有显卡的同学也可以在本地环境完成作业。超算平台的使用手册在这里可以找到：https://aicarrier.feishu.cn/docs/doccnP7NPMfRr9TAcwRsPKgkOgc?from=from_copylink
 
 ## 1. 整理 flower 数据集
 

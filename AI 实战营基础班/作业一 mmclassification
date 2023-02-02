@@ -96,9 +96,9 @@ tulip/NAME**.jpg 4
 tulip/NAME**.jpg 4
 ```
 
-为了节约 Colab 的线上时间，这个过程可以在本地完成。
+为了节约线上时间，这个过程可以在本地完成。
 
-整理完成后，将处理好的数据集迁移到 `mmclassification/data ` 文件夹下。为了减少重复上传，可以将数据同步到 google drive 上，并在 colab 中导入。
+整理完成后，将处理好的数据集迁移到 `mmclassification/data ` 文件夹下。
 
 ## 2. 构建模型微调的配置文件
 
@@ -120,7 +120,7 @@ tulip/NAME**.jpg 4
 
 ### 配置预训练模型
 
-从 Model Zoo 中找到原配置文件对应的模型文件，并下载到 Colab 或本地环境中，通常放置在 `checkpoints` 文件夹中。
+从 Model Zoo 中找到原配置文件对应的模型文件，并下载到平台或本地环境中，通常放置在 `checkpoints` 文件夹中。
 
 在配置文件中配置预训练模型的路径，完成 finetune 训练。
 

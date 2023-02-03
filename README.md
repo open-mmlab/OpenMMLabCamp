@@ -26,7 +26,7 @@ OpenMMLab 是由中国开发者主导，有国际影响力的开源计算机视�
 ## 课程相关资料及入口
 
 ### 前期学习资料
-[前期学习资料点这里](https://aicarrier.feishu.cn/docs/doccnP7NPMfRr9TAcwRsPKgkOgc)
+[前期学习资料点这里](https://github.com/open-mmlab/OpenMMLabCamp/tree/main/AI%20%E5%AE%9E%E6%88%98%E8%90%A5%E5%9F%BA%E7%A1%80%E7%8F%AD/%E8%AF%BE%E7%A8%8B%E5%89%8D%E6%9C%9F%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99)
 
 ### 作业提交入口
 [作业提交点这里，请提交至本班页面](https://github.com/open-mmlab/OpenMMLabCamp/issues)

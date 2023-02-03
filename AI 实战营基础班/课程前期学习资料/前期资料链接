@@ -1,19 +1,22 @@
-Python 入门
-文档：https://github.com/datawhalechina/learn-python-the-smart-way
-视频：https://www.bilibili.com/video/BV1hv411n7Yg/?spm_id_from=333.337.search-card.all.click&vd_source=7a863785a93380d229ded645710a0031
-Pytorch 入门
-在线阅读地址：https://datawhalechina.github.io/thorough-pytorch/
-配套视频教程：https://www.bilibili.com/video/BV1L44y1472Z
-规范代码（添加 type hints、代码规范、如何提交 PR ）
-如何提交规范代码，看这个(翻车)视频就够了！_哔哩哔哩_bilibili
-文档：https://github.com/HAOCHENYE/yehc-tutorial
-通用资料
+# Python 入门
+1. 文档：https://github.com/datawhalechina/learn-python-the-smart-way
+2. 视频：https://www.bilibili.com/video/BV1hv411n7Yg/?spm_id_from=333.337.search-card.all.click&vd_source=7a863785a93380d229ded645710a0031
+
+# Pytorch 入门
+1. 在线阅读地址：https://datawhalechina.github.io/thorough-pytorch/
+2. 配套视频教程：https://www.bilibili.com/video/BV1L44y1472Z
+
+# 规范代码（添加 type hints、代码规范、如何提交 PR ）
+1. 如何提交规范代码，看这个(翻车)视频就够了！_哔哩哔哩_bilibili
+2. 文档：https://github.com/HAOCHENYE/yehc-tutorial
+
+# 通用资料
 1. 熟悉 GitHub：熟悉 GitHub.pdf 
 2. 如何贡献代码：https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html
 3. 代码规范：https://mmcv.readthedocs.io/zh_CN/latest/community/code_style.html
 4. OpenMMLab 2.0 整体介绍：https://space.bilibili.com/1293512903/channel/collectiondetail?sid=737727
-5. 北京超算平台使用
-
+5. 北京超算平台使用：
 6. 环境配置：AI实战营环境配置·最佳实践（非官方） 
-MMCV：OpenMMLab 基础库
-- 介绍与安装：https://mmcv.readthedocs.io/zh_CN/latest/get_started/article.html
+
+#MMCV：OpenMMLab 基础库
+1. 介绍与安装：https://mmcv.readthedocs.io/zh_CN/latest/get_started/article.html

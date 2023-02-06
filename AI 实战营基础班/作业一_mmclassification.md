@@ -8,7 +8,7 @@
 
 ## 1. 整理 flower 数据集
 
-#### 数据集介绍
+### 数据集介绍
 
 flower 数据集包含 5 种类别的花卉图像：雏菊 daisy 588张，蒲公英 dandelion 556张，玫瑰 rose 583张，向日葵 sunflower 536张，郁金香 tulip 585张。
 
@@ -17,7 +17,7 @@ flower 数据集包含 5 种类别的花卉图像：雏菊 daisy 588张，蒲公
 - 国际网：https://www.dropbox.com/s/snom6v4zfky0flx/flower_dataset.zip?dl=0
 - 国内网：https://pan.baidu.com/s/1RJmAoxCD_aNPyTRX6w97xQ 提取码: 9x5u
 
-#### 对数据集进行划分
+### 对数据集进行划分
 
 1. 将数据集按照 8:2 的比例划分成训练和验证子数据集，并将数据集整理成 ImageNet的格式。这个过程同学们可以通过 Python 或其他脚本程序完成。具体步骤如下：
 
@@ -120,7 +120,7 @@ tulip/NAME**.jpg 4
 
 ### 配置预训练模型
 
-从 Model Zoo 中找到原配置文件对应的模型文件，并下载到平台或本地环境中，通常放置在 `checkpoints` 文件夹中。
+从 [Model Zoo](https://mmclassification.readthedocs.io/zh_CN/latest/model_zoo.html) 中找到原配置文件对应的模型文件，并下载到平台或本地环境中，通常放置在 `checkpoints` 文件夹中。
 
 在配置文件中配置预训练模型的路径，完成 finetune 训练。
 
@@ -134,5 +134,3 @@ tulip/NAME**.jpg 4
 ## 4. 作业提交和评价标准
 
 完成模型微调之后，请同学们将配置文件、训练保存的模型和log文件，全部打包提交到自己的 github （如没有，需要新建一个），而后提交至 issue 中对应作业和班级的位置。
-
-

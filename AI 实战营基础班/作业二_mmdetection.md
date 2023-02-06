@@ -1,4 +1,4 @@
-﻿# 作业2
+# 作业2
 
 请参考 MMDetection 文档及教程，基于自定义数据集 balloon 训练实例分割模型，基于训练的模型在样例视频上完成color splash的效果制作，即使用模型对图像进行逐帧实例分割，并将气球以外的图像转换为灰度图像。
 
@@ -6,14 +6,13 @@ color splash样例：
 https://github.com/matterport/Mask_RCNN/blob/master/assets/balloon_color_splash.gif 
 
 
-**注：由于colab的GPU使用资源有限，请同学们尽量在CPU上先调通程序再进行模型的训练。**
+**注：由于GPU使用资源有限，请同学们尽量在CPU上先调通程序再进行模型的训练。**
 
 ## 1. Balloon数据集
 
 balloon是带有mask的气球数据集，其中训练集包含61张图片，验证集包含13张图片。
 
 下载链接：https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip 
-（可以在colab中直接下载）
 
 ## 2. 新数据集的支持
 
@@ -22,7 +21,6 @@ balloon是带有mask的气球数据集，其中训练集包含61张图片，验�
 1. 将数据集整理为COCO格式
 2. 将数据集整理为中间格式
 3. 直接实现新数据集的支持
-4. 
 注：方法2，3不直接支持分割任务，需要后处理。这里推荐使用方法1。
 
 ## 3. 构建配置文件
@@ -65,12 +63,10 @@ http://www.scikit-video.org/stable/modules/io.html#module-skvideo.io
 
 ## 6. 作业提交：
 
-完成视频特效制作之后，请同学们将以下文件一起打包交到平台：
+完成视频特效制作之后，请同学们将以下文件上传至自己的github，并将链接按要求提交在对应班级issue：
 
-* Colab笔记本
 * 训练模型的配置文件
-* 训练好的模型文件
-* 特效制作后的视频文件
-* 实验报告
+* 训练好的模型文件（若文件过大，可以存至网盘，将链接放在github readme中）
+* 特效制作后的视频文件（若文件过大，可以存至网盘，将链接放在github readme中）
+* log文件
 
-原生的MMDetection文件不需要提交。

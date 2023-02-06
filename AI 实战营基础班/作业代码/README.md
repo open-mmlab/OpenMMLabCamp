@@ -1,22 +1,4 @@
-# sjtu-openmmlab-tutorial
-
-## Notes on SJTU Cluster
-
-1. To activate conda environment in **terminal**
-
-    ```sh
-    module load anaconda3/2019.07
-    source activate openmmlab
-    ```
-
-2. Remember to select **openmmlab** kernel in jupyter notebook
-
-3. Remember to check PATH in terminal
-
-    PATH should include `/cluster/apps/anaconda3/2019.07/envs/openmmlab/bin` at the first entry.
-    Otherwise `mim` will not work correctly.
-
-## Set up Environment Locally
+# Set up Environment Locally
 
 **Check PATH**
 

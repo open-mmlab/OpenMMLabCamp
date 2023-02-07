@@ -44,7 +44,7 @@ balloon是带有mask的气球数据集，其中训练集包含61张图片，验�
 在获取到图像的mask之后，请同学们将图像转为灰度图像，并在mask区域将原图像的像素值拷贝到灰度图像上即可完成特效制作。
 
 
-测试样例视频请同学们在作业文件夹中下载 `test_video.mp4`
+测试样例视频请同学们在[作业二](https://github.com/open-mmlab/OpenMMLabCamp/tree/main/AI%20%E5%AE%9E%E6%88%98%E8%90%A5%E5%9F%BA%E7%A1%80%E7%8F%AD/%E4%BD%9C%E4%B8%9A%E4%BA%8C%E8%B5%84%E6%96%99)文件夹中下载 `test_video.mp4`
 
 
 有关视频的读写可以参考以下文档：

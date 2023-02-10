@@ -19,6 +19,10 @@
 
 6. 使用MMDeploy部署语义分割模型（可选）
 
+
+
+本课代码：https://github.com/TommyZihao/MMSegmentation_Tutorials/tree/main/20230206
+
 # 参考单类别语义分割数据集
 组织病理切片小鼠肾小球：https://zihao-openmmlab.obs.cn-east-3.myhuaweicloud.com/20230130-mmseg/dataset/Glomeruli-dataset.zip
 

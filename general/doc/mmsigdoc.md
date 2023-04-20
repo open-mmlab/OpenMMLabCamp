@@ -14,7 +14,10 @@
 
 ![image](https://user-images.githubusercontent.com/25839884/233364929-0a0f9037-37b3-426e-87d7-26ae713c4308.png)
 
-这样就把 OpenMMLabCamp 的仓库 Fork 到自己账号下面了。
+这样就把 OpenMMLabCamp 的仓库 Fork 到自己账号下面了，可以看到本教程的演示账号 OpenMMLab-Assistant-004 下面多了一个 OpenMMLabCamp 的 仓库。
+
+![image](https://user-images.githubusercontent.com/25839884/233366598-b0885041-400e-4339-9722-6080f99932a2.png)
+
 
 
 ## 2. 编辑 markdown 文档
@@ -23,3 +26,6 @@
 
 
 ## 3. 提 PR （Pull Request）
+
+
+

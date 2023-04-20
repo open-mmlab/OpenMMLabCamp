@@ -21,10 +21,11 @@
 
 ![image](https://user-images.githubusercontent.com/25839884/233366598-b0885041-400e-4339-9722-6080f99932a2.png)
 
-
-
 ## 2. 编辑 markdown 文档
 
+我们点击自己账号中 OpenMMLabCamp 仓库，并切换到 mmsig 分支。
+
+![image](https://user-images.githubusercontent.com/25839884/233367888-83eb7276-6a09-4dc9-8957-784a5adbc060.png)
 
 
 

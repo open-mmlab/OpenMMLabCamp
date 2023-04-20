@@ -17,7 +17,7 @@
 这样就把 OpenMMLabCamp 的仓库 Fork 到自己账号下面了。
 
 
-## 2. 编辑内容
+## 2. 编辑 markdown 文档
 
 
 

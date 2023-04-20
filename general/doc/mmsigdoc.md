@@ -2,7 +2,10 @@
 
 给本 MMSIG 贡献者教程贡献的步骤如下：
 
-
+- Fork 仓库
+- 编辑文档
+- 创建 PR (Pull Requests)
+- OpenMMLab 社区管理员 Merge PR
 
 ## 1. Fork Github 仓库
 

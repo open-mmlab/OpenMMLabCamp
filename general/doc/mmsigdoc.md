@@ -6,6 +6,20 @@
 
 ## 1. Fork Github 仓库
 
+点击进入[https://github.com/open-mmlab/OpenMMLabCamp/tree/mmsig](https://github.com/open-mmlab/OpenMMLabCamp/tree/mmsig) 进入 OpenMMLabCamp 仓库 mmsig 分支，然后点击 Fork。
 
-![image](https://user-images.githubusercontent.com/25839884/233361381-fb3843c7-5466-4f2f-bb0e-867ea6949b04.png)
+![image](https://user-images.githubusercontent.com/25839884/233363301-5f6ef5b7-e9c0-4d5a-87ff-7cb95f152658.png)
 
+取消勾选 Copy the main branch only，并点击 Create fork。
+
+![image](https://user-images.githubusercontent.com/25839884/233364929-0a0f9037-37b3-426e-87d7-26ae713c4308.png)
+
+这样就把 OpenMMLabCamp 的仓库 Fork 到自己账号下面了。
+
+
+## 2. 编辑内容
+
+
+
+
+## 3. 提 PR （Pull Request）

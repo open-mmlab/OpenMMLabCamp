@@ -7,10 +7,5 @@
 ## 1. Fork Github 仓库
 
 
-
-{% embed url="https://github.com/open-mmlab/OpenMMLabCamp" %}
-
-
-
-![](../../.gitbook/assets/image.png)
+![image](https://user-images.githubusercontent.com/25839884/233361381-fb3843c7-5466-4f2f-bb0e-867ea6949b04.png)
 

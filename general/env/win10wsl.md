@@ -6,7 +6,7 @@
 
 2、Linux子系统不需要配置显卡。因为它是调用Win10系统下的显卡驱动进行深度学习的，这就意味着不需要在Linux子系统下载安装显卡驱动！
 
-有人会问：不是安装WSL2的驱动吗？为什么会装Win10系统上的？实际上，官网文档上标注了，带有WSL2的官方NVIDIA驱动是整个过程唯一要装的GPU驱动！后面关于Linux上的cuda的安装就要求不勾选Driver！
+大家可能会有这样的疑问：不是安装WSL2的显卡驱动吗？为什么会装Win10系统上的显卡驱动？其实，官网文档上说明了，带有WSL2的官方NVIDIA驱动是整个过程唯一要装的GPU驱动！所以后面关于Linux上的cuda的安装就要求不勾选Driver！
 
 ![image](https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png#pic_center)
 

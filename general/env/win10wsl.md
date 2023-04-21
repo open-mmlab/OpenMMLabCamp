@@ -314,7 +314,7 @@ sudo apt-get -y install cuda
 
 注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
 
-
+![image](https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png)
 
 在.bashrc中添加下面两条代码指令，并保存：
 

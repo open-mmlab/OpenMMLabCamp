@@ -543,32 +543,6 @@ nvcc -V
 <img src="https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png"/>
 </div>
 
-### 如何删除WSL2的cuda toolkit
-
-首先打开ubuntu 的local路径下的文件：
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233632731-bc9da4af-091d-4560-8060-9a6bf21d712b.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233633108-ad2b63e7-cff0-4651-b1fb-f2c2be2a278c.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233633233-055ff0a4-7684-49c2-bdb7-c5b07f2679b7.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233633379-65f78251-a982-477b-9390-e9e6096cb646.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233633471-ec626178-1691-4165-acc3-46ac947bb63a.png"/>
-</div>
-
-
-
 ## 七、有关一些问题的解决思路
 
 ### 解决：nvcc: command not found
@@ -688,48 +662,6 @@ wsl.exe --unregister Ubuntu-22.04 (第一步查询出来需要注销的系统名
  第三步,重新启动unbuntu系统，系统会重新初始化，效果如下：
  
  ![image](https://user-images.githubusercontent.com/105597268/233662679-98e8271c-920f-4656-9fb6-7df5eba43370.png)
-
-### 解决：执行sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 和 sudo apt-get update 分别报错
-
-Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))
-
-W: file:/var/cuda-repo-wsl-ubuntu-11-1-local/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
-
-为了最好地确保 RPM 和 Debian 软件包存储库的安全性和可靠性， NVIDIA 从 2022 年 4 月 27 日开始更新并轮换apt、dnf/yum和zypper软件包管理器使用的签名密钥。
-
-如果不更新存储库签名密钥，则在尝试从 CUDA 存储库访问或安装软件包时，可能会出现软件包管理错误。
-
-要确保继续访问最新的 NVIDIA 软件，请完成以下步骤。
-
-删除过期的签名密钥：
-
-```
-sudo apt-key del 7fa2af80
-
-sudo rpm --erase gpg-pubkey-7fa2af80*
-```
-
-安装新的 cuda 钥匙圈组件
-
-```
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/3bf863cc.pub
-
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
-```
-
-
-
-
-
-找出/var/ 目录下的 cuda-repo-wsl-ubuntu-11-1-local 文件，并将其删除
-
-在根目录下，采用以下指令将其删除：
-
-```
-rm -rf cuda-repo-wsl-ubuntu-11-1-local
-```
-
-![image](https://user-images.githubusercontent.com/105597268/233643647-e5c7d1f2-13d2-44d3-be91-f5a7f96ac02a.png)
 
 
 

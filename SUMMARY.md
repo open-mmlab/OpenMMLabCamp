@@ -17,17 +17,17 @@
   * [MMSIG 文档贡献指南 (建设中)](general/doc/mmsigdoc.md)
   * [算法库文档贡献指南 (建设中)](general/doc/repodoc.md)
 * [Type Hints 贡献指南(建设中)](general/typehints.md)
-* [单元测试贡献指南(建设中)](general/pytests.md)
+* [单元测试贡献指南(建设中)](general/dan-yuan-ce-shi-gong-xian-zhi-nan-jian-she-zhong.md)
 * [源码阅读及调试技巧(建设中)](general/sourcedebug.md)
 
 ## 算法库贡献者教程(建设中) <a href="#mm" id="mm"></a>
 
-* [Playground(建设中)](mm/playground-jian-she-zhong.md)
+* [Playground(建设中)](mm/playground.md)
 * [MMEngine(建设中)](mm/mmengine.md)
   * [新 Config 适配贡献指南](mm/mmengine/newconfig.md)
 * [MMCV(建设中)](mm/mmcv.md)
-  * [Transform 数据增强贡献指南(建设中)](mm/mmcv/transform-shu-ju-zeng-qiang-gong-xian-zhi-nan-jian-she-zhong.md)
-  * [算子贡献指南(建设中)](mm/mmcv/suan-zi-gong-xian-zhi-nan-jian-she-zhong.md)
+  * [Transform 数据增强贡献指南(建设中)](mm/mmcv/transform.md)
+  * [算子贡献指南(建设中)](mm/mmcv/operator.md)
 * [MMPreTrain(建设中)](mm/mmpretrain/README.md)
   * [骨干网络贡献指南(建设中)](mm/mmpretrain/backbone.md)
   * [自监督算法贡献指南(建设中)](mm/mmpretrain/selfsupc.md)

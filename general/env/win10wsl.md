@@ -455,6 +455,8 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ## 六、WSL2的cuda toolkit配置（说明：如果需要使用到nvcc，即要使用到源码编译，执行WSL2的cuda toolkit配置，如果只需要进行预编译，请忽略该步骤）
 
+注意：不要使用 sudo apt install nvidia-cuda-toolkit 进行配置，会默认配置为一个低版本的 cuda toolkit
+
 没有配置cuda toolkit之前：
 
 <div align=center>
@@ -664,7 +666,42 @@ Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (s
 
 W: file:/var/cuda-repo-wsl-ubuntu-11-1-local/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
 
+为了最好地确保 RPM 和 Debian 软件包存储库的安全性和可靠性， NVIDIA 从 2022 年 4 月 27 日开始更新并轮换apt、dnf/yum和zypper软件包管理器使用的签名密钥。
+
+如果不更新存储库签名密钥，则在尝试从 CUDA 存储库访问或安装软件包时，可能会出现软件包管理错误。
+
+要确保继续访问最新的 NVIDIA 软件，请完成以下步骤。
+
+删除过期的签名密钥：
+
+```
+sudo apt-key del 7fa2af80
+
+sudo rpm --erase gpg-pubkey-7fa2af80*
+```
+
+安装新的 cuda 钥匙圈组件
+
+```
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/3bf863cc.pub
+
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+```
+
+
+
+
+
 找出/var/ 目录下的 cuda-repo-wsl-ubuntu-11-1-local 文件，并将其删除
+
+在根目录下，采用以下指令将其删除：
+
+```
+rm -rf cuda-repo-wsl-ubuntu-11-1-local
+```
+
+![image](https://user-images.githubusercontent.com/105597268/233643647-e5c7d1f2-13d2-44d3-be91-f5a7f96ac02a.png)
+
 
 
 

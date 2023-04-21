@@ -50,4 +50,10 @@
 ![image](https://user-images.githubusercontent.com/129494131/233517211-abfe54a7-bb40-490e-88aa-d68557308bb0.png)
 
 
+点击 **compare across forks**, 并选择刚刚选择 **OpenMMLab-Assistant-004/OpenMMLabCamp**中的 **update_mmsig_doc** 分支 创建 Pull Request 到 **open-mmlab/OpenMMLabCamp**中的 mmsig 分支，编辑好Pull Request 的标题和详细内容后，点击 Create pull request。
+
+![img_v2_cef1434b-45f3-4e2b-ac30-421d81194b9g](https://user-images.githubusercontent.com/129494131/233518289-cace14ec-af7b-45f4-a222-37cc40a31020.jpg)
+
+此时在浏览器地址栏能得到此 PR 的链接，可以在 PR 链接中追踪状态，并等待 OpenMMLab 社区管理员对 PR 进行 Review 和 Merge。
+![img_v2_1db926da-0eec-422f-a81d-e906c1e95a5g](https://user-images.githubusercontent.com/129494131/233519021-f626b713-9be0-4d8c-a895-5e566f9427e5.jpg)
 

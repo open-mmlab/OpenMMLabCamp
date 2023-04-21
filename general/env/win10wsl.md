@@ -82,15 +82,18 @@ nvidia-smi
 
 启动WSL2，在powershell中输入下面指令：
 
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+<pre><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</code></pre>
 
 启用“虚拟机平台”，在powershell中输入下面指令：
 
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+<pre><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</code></pre>
 
 将WSL2设置为默认版本，在powershell中输入下面指令：
 
-wsl --set-default-version 2
+<pre><code>wsl --set-default-version 2
+</code></pre>
 
 ### Win10下安装linux子系统
 

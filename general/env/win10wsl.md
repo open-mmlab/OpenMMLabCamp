@@ -660,6 +660,26 @@ su命令不能切换root，提示su: Authentication failure，只要你sudo pass
 <img src="https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png"/>
 </div>
 
+### 解决：系统找不到指定的文件。
+
+![image](https://user-images.githubusercontent.com/105597268/233660551-e739fc38-fca8-492c-8980-c43e7b9edc35.png)
+
+系统卸载没有卸载干净，导致重新安装后出现该问题。
+
+第一步，查询当前已安装的系统：
+
+wsl.exe --list --all
+
+![image](https://user-images.githubusercontent.com/105597268/233660852-20fb9a43-19b4-4c10-b108-a4116bd1c9e4.png)
+
+ 第二步，注销当前注册的系统：
+
+wsl.exe --unregister Ubuntu-22.04 (第一步查询出来需要注销的系统名称)
+
+ 第三步,重新启动unbuntu系统，系统会重新初始化，效果如下：
+ 
+ ![image](https://user-images.githubusercontent.com/105597268/233662679-98e8271c-920f-4656-9fb6-7df5eba43370.png)
+
 ### 解决：执行sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 和 sudo apt-get update 分别报错
 
 Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))

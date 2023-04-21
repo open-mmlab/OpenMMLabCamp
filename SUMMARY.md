@@ -12,12 +12,12 @@
   * [Win11 WSL 环境配置](general/env/win11wsl.md)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
   * [masOS 环境配置 （建设中）](general/env/macos.md)
-* [熟悉 Git/GitHub(建设中)](general/git.md)
+* [熟悉 Git/GitHub(建设中)](general/shu-xi-gitgithub-jian-she-zhong.md)
 * [文档类贡献指南(建设中)](general/doc.md)
   * [MMSIG 文档贡献指南 (建设中)](general/doc/mmsigdoc.md)
   * [算法库文档贡献指南 (建设中)](general/doc/repodoc.md)
 * [Type Hints 贡献指南(建设中)](general/typehints.md)
-* [单元测试贡献指南(建设中)](general/dan-yuan-ce-shi-gong-xian-zhi-nan-jian-she-zhong.md)
+* [单元测试贡献指南(建设中)](general/pytests.md)
 * [源码阅读及调试技巧(建设中)](general/sourcedebug.md)
 
 ## 算法库贡献者教程(建设中) <a href="#mm" id="mm"></a>

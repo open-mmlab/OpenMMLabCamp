@@ -65,7 +65,7 @@ nvidia-smi
 
 ## 二、WSL2和Ubuntu22.04下载安装
 
-### 下载并安装WSL2 Linux内核包
+### 下载并安装WSL2的Linux内核包
 
 下载链接：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
@@ -139,7 +139,7 @@ wsl --unregister Ubuntu-22.04
 
 wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 
-### 在WSL2 root 和普通用户的切换：
+### 在WSL2的root和普通用户的切换：
 
 在cmd里面输入下面指令，切换到根目录：
 
@@ -278,6 +278,12 @@ sudo apt-get update
 
 sudo apt-get -y install cuda
 
+安装完了后，输入下面指令进行验证：
+
+nvcc -V
+
+![image](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
+
 ### 下载torch==1.9.1+cu111 torchvision==0.10.1+cu111
 
 如果用以下指令下载很慢：
@@ -289,11 +295,11 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 
 ![image](https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png)
 
-蓝色小横线消失了，就上传完了
+蓝色小横线消失了，就上传完了：
 
 ![image](https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png)
 
-上传完之后：
+上传完之后，Ubuntu文件中会有两个相应的安装包：
 
 ![image](https://user-images.githubusercontent.com/105597268/233556625-59d58c1a-6d90-41f1-a4cc-a6c966a71627.png)
 
@@ -311,7 +317,17 @@ print(torchvision.__version__)
 
 ![image](https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png)
 
-在终端执行：
+在终端执行以下指令：
+
+pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
+
+pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
+
+![image](https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png)
+
+然后运行我们刚才建立的python文件：
+
+![image](https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233558949-afef38e3-bd56-4dde-aba2-f08987b8e32a.png)
 

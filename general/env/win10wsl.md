@@ -271,8 +271,9 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 code .
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233664035-e18937c6-8aa3-4dfb-863a-1887b92dd56b.png)
-
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233664035-e18937c6-8aa3-4dfb-863a-1887b92dd56b.png"/>
+</div>
 
 手动远程连接：
 

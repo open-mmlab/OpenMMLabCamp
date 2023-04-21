@@ -69,9 +69,8 @@
 
 经过和社区管理员的多轮 review 与修改后，PR 就 Merge 了。
 
-![image](https://user-images.githubusercontent.com/129494131/233521681-e5883028-25c8-4ce5-aaa6-6468e716515b.png)
 
-
+![image](https://user-images.githubusercontent.com/129494131/233522209-364cfd95-d0a3-4352-b88b-7831bac627b8.png)
 
 
 

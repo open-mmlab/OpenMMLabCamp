@@ -75,11 +75,11 @@ nvidia-smi
 
 下载链接：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-下载完点安装即可，安装中不停地next就可以。
+下载完点击安装即可，安装中不停地next就可以。
 
 ![image](https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png)
 
-打开powershell
+打开powershell：
 
 ![image](https://user-images.githubusercontent.com/105597268/233546130-c846904d-f372-40bd-a7a5-7018bbd7cc2c.png)
 
@@ -105,13 +105,13 @@ wsl --set-default-version 2
 
 网站地址：https://www.microsoft.com/zh-cn/
 
-搜索ubuntu，选择22.04版本安装
+搜索ubuntu，选择22.04版本安装：
 
 ![image](https://user-images.githubusercontent.com/105597268/233546452-184fad0d-b31d-4bd8-b3e2-18b1555bd2aa.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png)
 
-选控制面板的“程序和功能”里边的设置，勾选“Hyper-V”和“适用于Linux的Windows子系统”
+选控制面板的“程序和功能”里边的设置，勾选“Hyper-V”和“适用于Linux的Windows子系统”：
 
 ![image](https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png)
 
@@ -220,7 +220,7 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 
 ![image](https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png)
 
-可以通过拖拉windows里面的文件，放到这个路径下面
+可以通过拖拉windows里面的文件，放到这个路径下面：
 
 ![image](https://user-images.githubusercontent.com/105597268/233549251-ed9733d4-62bd-40c0-994b-a145b93b7c27.png)
 
@@ -252,7 +252,7 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 
 安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车。
 
-安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存
+安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存：
 
 ![image](https://user-images.githubusercontent.com/105597268/233549656-4316a952-7954-465b-91d4-8f3b2d240ad8.png)
 
@@ -400,7 +400,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ### 解决：nvcc: command not found
 
-nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code.(NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用nvcc -V查看CUDA版本
+nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code.(NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
 输入下面指令，查看cuda的bin目录下是否有nvcc：
 

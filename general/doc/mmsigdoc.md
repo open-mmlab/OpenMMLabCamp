@@ -24,8 +24,13 @@
 
 ## 2. 编辑 markdown 文档
 
-我们点击自己账号中 OpenMMLabCamp 仓库，并切换到 mmsig 分支。
+我们点击自己账号中 OpenMMLabCamp 仓库，切换到 mmsig 分支。
 
 ![image](https://user-images.githubusercontent.com/25839884/233367888-83eb7276-6a09-4dc9-8957-784a5adbc060.png)
 
+在 OpenMMLabCamp 的 mmsig 分支找到需要编辑的对应文档，我们点击进行编辑。
+
 ## 3. 提 PR （Pull Request）
+
+
+

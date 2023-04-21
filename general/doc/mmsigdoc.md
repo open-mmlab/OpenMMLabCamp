@@ -63,13 +63,13 @@
 
 ![image](https://user-images.githubusercontent.com/129494131/233520491-6053e294-d571-4490-9a53-a577410b2084.png)
 
-修改 PR 中的内容，不需要重新创建新的分支，只需要在原来的 PR 对应的分支上修改内容，并在修改内容后填写 commit changes 的标题和内容，并选择 **Commit directly to the update_mmsig_doc branch.** 并点击 **Commit changes** ，
+修改 PR 中的内容，不需要重新创建新的分支，只需要在原来的 PR 对应的分支上修改内容，并在修改内容后填写 commit changes 的标题和内容，并选择 **Commit directly to the update_mmsig_doc branch.** 并点击 **Commit changes** 。此时在 PR 界面出现了 [Fix] fix typo 的记录，我们点击 Resolve conversation。
 
 ![image](https://user-images.githubusercontent.com/129494131/233520990-5021d377-67f4-470c-8f95-099b1a2c6837.png)
 
+经过和社区管理员的多轮 review 与修改后，PR 就 Merge 了。
 
-
-![image](https://user-images.githubusercontent.com/129494131/233519300-67baae9b-28ca-47c2-9eec-deb63d1543bc.png)
+![image](https://user-images.githubusercontent.com/129494131/233521681-e5883028-25c8-4ce5-aaa6-6468e716515b.png)
 
 
 

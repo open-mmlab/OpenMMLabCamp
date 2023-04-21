@@ -602,16 +602,12 @@ driver api， 使用nvidia-smi显示
 
 ### 解决：查看显卡使用情况nvidia-smi报错：command not found
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233571801-24f910d0-3978-4678-b32f-c4ab421ea057.png"/>
-</div>
-
-gpu重启以后，是默认关闭的，在root下执行：
+gpu重启以后，是默认关闭的，在ubuntu exe下执行：
 
 ```
 nvidia-smi -pm 1
 lspci | grep NVIDIA
-nvidia-msi
+nvidia-smi
 ```
 
 <div align=center>

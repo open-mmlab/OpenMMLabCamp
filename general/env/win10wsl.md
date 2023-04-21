@@ -20,7 +20,7 @@
 
 ![image](https://user-images.githubusercontent.com/105597268/233544743-6576de41-5254-4de9-bac1-bea57f2b6822.png)
 
-另一种方式更新windows
+另一种方式更新Windows：
 
 ![image](https://user-images.githubusercontent.com/105597268/233544762-871cf8c6-32c9-4ea6-a731-b03719274466.png)
 
@@ -51,6 +51,17 @@
 ![image](https://user-images.githubusercontent.com/105597268/233545719-5ba40012-5d30-42e5-839f-a94eab7cdcb2.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233545847-afb912ce-65d7-47ca-bc73-505f7b2d289f.png)
+
+在ubuntu exe程序中输入以下指令，验证驱动是否安装成功：
+
+nvidia-smi -pm 1
+
+lspci | grep NVIDIA
+
+nvidia-smi
+
+![image](https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png)
+
 
 ## 二、WSL2和Ubuntu22.04下载安装
 
@@ -232,6 +243,88 @@ conda activate pytorch
 ![image](https://user-images.githubusercontent.com/105597268/233553518-57757d98-9579-4ce1-88c4-1d4f8a1c7112.png)
 
 ## 五、WSL2的cuda配置
+
+没有配置cuda之前：
+
+![image](https://user-images.githubusercontent.com/105597268/233554064-b9d08cef-d16b-450a-b936-58d2f55dd232.png)
+
+去英伟达的官网：https://developer.nvidia.com/cuda-downloads
+
+下载往期版本：
+
+![image](https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png)
+
+下载cu111版本（注意，Win10上的显卡驱动的版本不用与这里的cuda版本一致，比如我下载的Win10上的显卡驱动版本为12.1，显卡驱动是向下兼容的）：
+
+![image](https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png)
+
+进行选择，下方会出现相应的指令：
+
+![image](https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png)
+
+打开ubuntu exe：输入下面指令：
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+
+sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
+wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
+
+sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
+
+sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub
+
+sudo apt-get update
+
+sudo apt-get -y install cuda
+
+### 下载torch==1.9.1+cu111 torchvision==0.10.1+cu111
+
+如果用以下指令下载很慢：
+
+pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+
+
+直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
+
+![image](https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png)
+
+蓝色小横线消失了，就上传完了
+
+![image](https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png)
+
+上传完之后：
+
+![image](https://user-images.githubusercontent.com/105597268/233556625-59d58c1a-6d90-41f1-a4cc-a6c966a71627.png)
+
+创建一个python文件，输入下面的代码，并配置之前我们创建的anaconda的虚拟环境的python的解释器：
+
+import torch
+
+import torchvision
+
+device = torch.device('cuda')
+
+print(torch.__version__)
+
+print(torchvision.__version__)
+
+![image](https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png)
+
+在终端执行：
+
+![image](https://user-images.githubusercontent.com/105597268/233558949-afef38e3-bd56-4dde-aba2-f08987b8e32a.png)
+
+
+
+
+
+
+
+
+
+
+
 
 
 

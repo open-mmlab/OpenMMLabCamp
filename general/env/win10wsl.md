@@ -54,12 +54,13 @@
 
 在ubuntu exe程序中输入以下指令，验证驱动是否安装成功：
 
-<pre><code>nvidia-smi -pm 1
+```
+nvidia-smi -pm 1
 
 lspci | grep NVIDIA
 
 nvidia-smi
-</code></pre>
+```
 
 
 
@@ -82,18 +83,21 @@ nvidia-smi
 
 启动WSL2，在powershell中输入下面指令：
 
-<pre><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-</code></pre>
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
 启用“虚拟机平台”，在powershell中输入下面指令：
 
-<pre><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-</code></pre>
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 将WSL2设置为默认版本，在powershell中输入下面指令：
 
-<pre><code>wsl --set-default-version 2
-</code></pre>
+```
+wsl --set-default-version 2
+```
 
 ### Win10下安装linux子系统
 
@@ -121,26 +125,30 @@ nvidia-smi
 
 在 PowerShell 中运行下面命令显示所有发行版的详细信息：
 
-<pre><code>wsl --list --verbose
-</code></pre>
+```
+wsl --list --verbose
+```
 
 
 ![image](https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png)
 
 终止正在运行的wsl：
 
-<pre><code>wsl --shutdown
-</code></pre>
+```
+wsl --shutdown
+```
 
 将需要迁移的Linux，进行导出：
 
-<pre><code>wsl --export Ubuntu-22.04 E:/export.tar
-</code></pre>
+```
+wsl --export Ubuntu-22.04 E:/export.tar
+```
 
 导出完成之后，就需要将原有的分发进行卸载：
 
-<pre><code>wsl --unregister Ubuntu-22.04
-</code></pre>
+```
+wsl --unregister Ubuntu-22.04
+```
 
 注销完后：
 
@@ -148,15 +156,17 @@ nvidia-smi
 
 然后将导出的文件放到需要保存的地方，进行导入即可：
 
-<pre><code>wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
-</code></pre>
+```
+wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
+```
 
 ### 在WSL2的root和普通用户的切换：
 
 在cmd里面输入下面指令，切换到根目录：
 
-<pre><code>ubuntu2204 config --default-user root
-</code></pre>
+```
+ubuntu2204 config --default-user root
+```
 
 输入 passwd 用户名，并设置密码：
 
@@ -164,8 +174,9 @@ nvidia-smi
 
 切换到普通用户：
 
-<pre><code>ubuntu2204 config --default-user geoffreyfan 
-</code></pre>
+```
+ubuntu2204 config --default-user geoffreyfan 
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png)
 
@@ -183,8 +194,9 @@ nvidia-smi
 
 关闭远程连接，Powershell输入下面指令（重装系统卸载Ubuntu也需要先输入下面指令）：
 
-<pre><code>wsl --shutdown
-</code></pre>
+```
+wsl --shutdown
+```
 
 
 ![image](https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png)
@@ -245,9 +257,10 @@ nvidia-smi
 
 用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们配置3.9版本的python环境）：
 
-<pre><code>conda create -n pytorch python=3.9 -y
+```
+conda create -n pytorch python=3.9 -y
 conda activate pytorch
-</code></pre>
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png)
 
@@ -283,7 +296,8 @@ conda activate pytorch
 
 打开ubuntu exe：输入下面指令：
 
-<pre><code>wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+```
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
 
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
@@ -296,20 +310,22 @@ sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub
 sudo apt-get update
 
 sudo apt-get -y install cuda
-</code></pre>
+```
 
 在.bashrc中添加下面两条代码指令，并保存：
 
-<pre><code>export LD_LIBRARY_PATH=/usr/local/cuda/lib
+```
+export LD_LIBRARY_PATH=/usr/local/cuda/lib
 export PATH=$PATH:/usr/local/cuda/bin
-</code></pre>
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233562413-60c276b1-1878-4085-abdc-d37de7866dc8.png)
 
 安装完了后，输入下面指令进行验证：
 
-<pre><code>nvcc -V
-</code></pre>
+```
+nvcc -V
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
 
@@ -317,8 +333,9 @@ export PATH=$PATH:/usr/local/cuda/bin
 
 如果用以下指令下载很慢：
 
-<pre><code>pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
-</code></pre>
+```
+pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+```
 
 
 直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
@@ -335,9 +352,8 @@ export PATH=$PATH:/usr/local/cuda/bin
 
 创建一个python文件，输入下面的代码，并配置之前我们创建的anaconda的虚拟环境的python的解释器：
 
-<p>这里是一段示例代码:</p>
-
-<pre><code>import torch
+```
+import torch
 
 import torchvision
 
@@ -346,18 +362,17 @@ device = torch.device('cuda')
 print(torch.__version__)
 
 print(torchvision.__version__)
-</code></pre>
-
-
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png)
 
 在终端执行以下指令：
 
-<pre><code>pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
+```
+pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
 
 pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
-</code></pre>
+```
 
 ![image](https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png)
 
@@ -366,6 +381,96 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 ![image](https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233558949-afef38e3-bd56-4dde-aba2-f08987b8e32a.png)
+
+## 六、有关一些问题的解决思路
+
+### 解决：ncvv: command not found
+
+nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code.(NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用nvcc -V查看CUDA版本
+
+输入下面指令，查看cuda的bin目录下是否有nvcc：
+
+```
+cd /usr/local/cuda/bin
+```
+
+如果存在：
+
+![image](https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png)
+
+直接将cuda路径加入系统路径（即将下面指令加入.bashrc文件）即可：
+
+```
+export LD_LIBRARY_PATH=/usr/local/cuda/lib
+
+export PATH=$PATH:/usr/local/cuda/bin
+```
+
+![image](https://user-images.githubusercontent.com/105597268/233568948-58904e1c-57fc-4cbd-9d0c-3501a8ac92ed.png)
+
+![image](https://user-images.githubusercontent.com/105597268/233568987-36b56b0e-d0f0-4d87-9a15-3af83f2b263e.png)
+
+保存：
+
+![image](https://user-images.githubusercontent.com/105597268/233569042-fb98c59e-7f87-4fc7-ba22-139bed57145f.png)
+
+退出ubuntu exe程序，然后再开启，再次执行nvcc -V 就可以看到相应cuda版本了：
+
+![image](https://user-images.githubusercontent.com/105597268/233569202-2c7939eb-f276-4e1e-b9f7-4d28667c1761.png)
+
+解释说明：
+
+CUDA有两个CUDA版本
+
+runtime api 使用nvcc -V显示
+
+driver api， 使用nvidia-smi显示
+
+如果报错的命令是RuntimeError，那就使用nvcc -V命令查看是否是版本不匹配。
+
+### 解决：查看显卡使用情况nvidia-smi报错：command not found
+
+![image](https://user-images.githubusercontent.com/105597268/233571801-24f910d0-3978-4678-b32f-c4ab421ea057.png)
+
+gpu重启以后，是默认关闭的，在root下执行：
+
+```
+nvidia-smi -pm 1
+lspci | grep NVIDIA
+nvidia-msi
+```
+
+![image](https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png)
+
+### 解决：下载完anaconda之后仍然报错：conda: command not found
+
+将以下添加到.bashrc文件里面:
+
+```
+PATH=/home/user/anaconda3/bin:$PATH
+```
+
+![image](https://user-images.githubusercontent.com/105597268/233572324-d52abedb-eda0-4bab-a3c3-789f9c018711.png)
+
+在终端运行一个python文件，前面有(base)这个标示符就表示成功了：
+
+![image](https://user-images.githubusercontent.com/105597268/233572402-768a1ea5-ea9e-4e3b-834e-65451da0c399.png)
+
+### 解决：su: Authentication failure
+
+su命令不能切换root，提示su: Authentication failure，只要你sudo passwd root过一次之后，下次再su的时候只要输入密码就可以成功登录了。
+
+![image](https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png)
+
+
+
+
+
+
+
+
+
+
 
 
 

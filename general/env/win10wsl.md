@@ -175,15 +175,21 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 ubuntu2204 config --default-user root
 ```
 
-输入 passwd 用户名，并设置密码：
+![image](https://user-images.githubusercontent.com/105597268/233590514-561c671a-22e0-4afa-928c-1ced30a3497c.png)
+
+打开ubuntu exe程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
 
 ![image](https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png)
 
-切换到普通用户：
+在cmd里面输入下面指令，切换到普通用户：
 
 ```
-ubuntu2204 config --default-user geoffreyfan 
+ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名字） 
 ```
+
+![image](https://user-images.githubusercontent.com/105597268/233590812-cee2d3a7-fb20-469e-89f5-ddce74645ac1.png)
+
+打开ubuntu exe程序，此时就进入普通用户界面了：
 
 ![image](https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png)
 

@@ -2,11 +2,11 @@
 姓名：geoffreyfan
 ## 一、Win10升级最新版本和Win10安装英伟达对linux子系统的显卡驱动
 
-1、window10系统一定要升级到最新版，否则是无法在linux子系统里加载出显卡驱动的，那么就无法进行深度学习！
+1、Win10系统一定要升级到最新版，否则是无法在Linux子系统里加载出显卡驱动的，那么就无法进行深度学习！
 
-2、子系统不需要配置显卡。因为它是调用Window10下的显卡驱动进行深度学习的，这就意味着不需要在子系统下载安装显卡驱动！
+2、Linux子系统不需要配置显卡。因为它是调用Win10系统下的显卡驱动进行深度学习的，这就意味着不需要在Linux子系统下载安装显卡驱动！
 
-有人会问：不是安装WSL2的驱动吗？为什么装Windows10上的？实际上，官网文档上标注了，带有WSL2的官方nvidia驱动是整个过程唯一要装的GPU驱动！后面关于linux上的cuda的安装就要求不勾选driver！
+有人会问：不是安装WSL2的驱动吗？为什么会装Win10系统上的？实际上，官网文档上标注了，带有WSL2的官方NVIDIA驱动是整个过程唯一要装的GPU驱动！后面关于Linux上的cuda的安装就要求不勾选Driver！
 
 ![image](https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png#pic_center)
 
@@ -14,13 +14,13 @@
 
 微软Microsoft官网下载：https://www.microsoft.com/zh-cn/software-download/windows10。
 
-点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（我电脑是需要翻墙才能更新的，不翻墙就无法加载）。PS：查询系统版本方法：Win+R输入winver回车。
+点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（我电脑是需要翻墙才能更新的，不翻墙就无法加载）。
 
 ![image](https://user-images.githubusercontent.com/105597268/233544719-94c8dafb-f29b-49bd-8378-4f1f2b31a0ab.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233544743-6576de41-5254-4de9-bac1-bea57f2b6822.png)
 
-另一种方式更新Windows：
+另一种方式更新Win10系统：
 
 ![image](https://user-images.githubusercontent.com/105597268/233544762-871cf8c6-32c9-4ea6-a731-b03719274466.png)
 
@@ -28,7 +28,11 @@
 
 ![image](https://user-images.githubusercontent.com/105597268/233544794-95ef3c72-a3de-47cd-b9ed-b1e3928f8ca4.png)
 
-### Win10下安装英伟达对linux子系统的显卡驱动
+PS：查询系统版本方法：Win+R输入winver回车：
+
+![image](https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png)
+
+### Win10系统下安装英伟达对linux子系统的显卡驱动
 
 下载驱动（下载GEFORCE的那个）：http://www.nvidia.com/Download/index.aspx
 
@@ -62,18 +66,16 @@ lspci | grep NVIDIA
 nvidia-smi
 ```
 
-
-
 ![image](https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png)
 
 
-## 二、WSL2和Ubuntu22.04下载安装
+## 二、WSL2和Ubuntu22.04的下载安装
 
 ### 下载并安装WSL2的Linux内核包
 
 下载链接：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-下载完点安装即可，安装中，不停地next就可以。
+下载完点安装即可，安装中不停地next就可以。
 
 ![image](https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png)
 
@@ -121,14 +123,13 @@ wsl --set-default-version 2
 
 ![image](https://user-images.githubusercontent.com/105597268/233546867-db689603-384a-432b-82ae-308840e52f8a.png)
 
-### WSL2位置迁移
+### WSL2的位置迁移
 
 在 PowerShell 中运行下面命令显示所有发行版的详细信息：
 
 ```
 wsl --list --verbose
 ```
-
 
 ![image](https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png)
 
@@ -144,7 +145,7 @@ wsl --shutdown
 wsl --export Ubuntu-22.04 E:/export.tar
 ```
 
-导出完成之后，就需要将原有的分发进行卸载：
+导出完成之后，就需要将原有的进行卸载：
 
 ```
 wsl --unregister Ubuntu-22.04
@@ -215,7 +216,7 @@ wsl --shutdown
 
 ![image](https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png)
 
-路径为/home/geoffreyfan/   路径下的文档就被打开了:
+ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 
 ![image](https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png)
 
@@ -243,9 +244,9 @@ wsl --shutdown
 
 ![image](https://user-images.githubusercontent.com/105597268/233549487-95c2061f-df66-4c3c-a48b-8b3a2bc4f39a.png)
 
-安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车，然后等待1分钟左右即可安装完毕。
+安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车。
 
-安装完成之后，在 .bashrc文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存
+安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存
 
 ![image](https://user-images.githubusercontent.com/105597268/233549656-4316a952-7954-465b-91d4-8f3b2d240ad8.png)
 
@@ -255,7 +256,7 @@ wsl --shutdown
 
 ![image](https://user-images.githubusercontent.com/105597268/233550587-76fdf0a8-5906-4369-83ec-a821be0adef8.png)
 
-用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们配置3.9版本的python环境）：
+用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置3.9版本的python环境）：
 
 ```
 conda create -n pytorch python=3.9 -y
@@ -286,7 +287,7 @@ conda activate pytorch
 
 ![image](https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png)
 
-下载cu111版本（注意，Win10上的显卡驱动的版本不用与这里的cuda版本一致，比如我下载的Win10上的显卡驱动版本为12.1，显卡驱动是向下兼容的）：
+下载cu111版本（注意，Win10系统上的显卡驱动的版本不用与这里的cuda版本一致，比如我下载的Win10系统上的显卡驱动版本为12.1，显卡驱动是向下兼容的）：
 
 ![image](https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png)
 
@@ -316,7 +317,7 @@ sudo apt-get -y install cuda
 
 ![image](https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png)
 
-在.bashrc中添加下面两条代码指令，并保存：
+在 .bashrc 文件中添加下面两条代码指令，并保存：
 
 ```
 export LD_LIBRARY_PATH=/usr/local/cuda/lib
@@ -333,14 +334,13 @@ nvcc -V
 
 ![image](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
 
-### 下载torch==1.9.1+cu111 torchvision==0.10.1+cu111
+### 下载torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
 
 如果用以下指令下载很慢：
 
 ```
 pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-
 
 直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
 

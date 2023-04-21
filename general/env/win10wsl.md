@@ -214,7 +214,29 @@ wsl --shutdown
 
 ![image](https://user-images.githubusercontent.com/105597268/233550587-76fdf0a8-5906-4369-83ec-a821be0adef8.png)
 
+用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们配置3.9版本的python环境）：
+
+conda create -n pytorch python=3.9 -y
+conda activate pytorch
+
+![image](https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png)
+
+配置好虚拟环境后，我们配置anaconda下我们创建的虚拟环境下的解释器：
+
+![image](https://user-images.githubusercontent.com/105597268/233552962-7a322355-9a95-419a-8513-39f7ccaf97df.png)
+
+![image](https://user-images.githubusercontent.com/105597268/233553023-fb83cf7e-d438-40a8-ba5d-691604d0d48b.png)
+
+配置好后，我们在终端运行我们创建的python文件，会发现（base）标志变成了我们的虚拟环境的名称（pytorch）:
+
+![image](https://user-images.githubusercontent.com/105597268/233553518-57757d98-9579-4ce1-88c4-1d4f8a1c7112.png)
+
 ## 五、WSL2的cuda配置
+
+
+
+
+
 
 
 

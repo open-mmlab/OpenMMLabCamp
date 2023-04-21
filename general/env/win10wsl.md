@@ -313,6 +313,10 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
+小知识：在执行了wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb指令后，ubuntu里面会出现相应的安装包，后面重新安装，直接sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb就可以了，不用再反复下载安装包：
+
+![image](https://user-images.githubusercontent.com/105597268/233581137-19a01917-aa5f-436b-8ec9-59867ba7360f.png)
+
 注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
 
 ![image](https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png)

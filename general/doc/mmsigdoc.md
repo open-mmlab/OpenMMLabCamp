@@ -61,7 +61,17 @@
 
 如果社区管理员没有直接 merge 而是给出了一下修改建议，请在上文中对应的 **OpenMMLab-Assistant-004/OpenMMLabCamp**中的 **update_mmsig_doc** 分支中对应的文档进行修改。
 
+![image](https://user-images.githubusercontent.com/129494131/233520491-6053e294-d571-4490-9a53-a577410b2084.png)
+
+修改 PR 中的内容，不需要重新创建新的分支，只需要在原来的 PR 对应的分支上修改内容，并在修改内容后填写 commit changes 的标题和内容，并选择 **Commit directly to the update_mmsig_doc branch.** 并点击 **Commit changes** ，
+
+![image](https://user-images.githubusercontent.com/129494131/233520990-5021d377-67f4-470c-8f95-099b1a2c6837.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/129494131/233519300-67baae9b-28ca-47c2-9eec-deb63d1543bc.png)
+
+
 
 
 

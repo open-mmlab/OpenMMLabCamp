@@ -8,7 +8,9 @@
 
 大家可能会有这样的疑问：不是安装WSL2的显卡驱动吗？为什么会装Win10系统上的显卡驱动？其实，官网文档上说明了，带有WSL2的官方NVIDIA驱动是整个过程唯一要装的GPU驱动！所以后面关于Linux上的cuda的安装就要求不勾选Driver！
 
-![image](https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png#pic_center)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png"/>
+</div>
 
 ### 更新Win10系统
 
@@ -16,21 +18,33 @@
 
 点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（我电脑是需要翻墙才能更新的，不翻墙就无法加载）。
 
-![image](https://user-images.githubusercontent.com/105597268/233544719-94c8dafb-f29b-49bd-8378-4f1f2b31a0ab.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233544719-94c8dafb-f29b-49bd-8378-4f1f2b31a0ab.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233544743-6576de41-5254-4de9-bac1-bea57f2b6822.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233544743-6576de41-5254-4de9-bac1-bea57f2b6822.png"/>
+</div>
 
 另一种方式更新Win10系统：
 
-![image](https://user-images.githubusercontent.com/105597268/233544762-871cf8c6-32c9-4ea6-a731-b03719274466.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233544762-871cf8c6-32c9-4ea6-a731-b03719274466.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233544776-c3ed805c-1d37-4d84-875a-cb2a6bc1c807.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233544776-c3ed805c-1d37-4d84-875a-cb2a6bc1c807.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233544794-95ef3c72-a3de-47cd-b9ed-b1e3928f8ca4.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233544794-95ef3c72-a3de-47cd-b9ed-b1e3928f8ca4.png"/>
+</div>
 
 PS：查询系统版本方法：Win+R输入winver回车：
 
-![image](https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png"/>
+</div>
 
 ### Win10系统下安装英伟达对linux子系统的显卡驱动
 
@@ -40,21 +54,37 @@ PS：查询系统版本方法：Win+R输入winver回车：
 
 根据自己显卡的型号选择驱动，notebooks代表笔记本，我是台式电脑3080显卡，所以选择GeForce RX 30 Series下的GeForce RX 3080。
 
-![image](https://user-images.githubusercontent.com/105597268/233551395-537e1988-2894-476e-a3f8-c60e4ee5c853.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233551395-537e1988-2894-476e-a3f8-c60e4ee5c853.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233550992-457c493f-c194-4deb-b65f-155ddb8dff58.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233550992-457c493f-c194-4deb-b65f-155ddb8dff58.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545426-3f13f4d3-cab5-40f0-a353-a070de5c2c9b.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233545426-3f13f4d3-cab5-40f0-a353-a070de5c2c9b.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545477-fe21aece-1d40-40d8-a6c0-0f9f78fb0c2b.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233545477-fe21aece-1d40-40d8-a6c0-0f9f78fb0c2b.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545693-c071b1cd-3de3-4987-98ca-4724c8f82cdc.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545659-28f634eb-4b41-49d6-aa9c-72a63e7fd13d.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233545659-28f634eb-4b41-49d6-aa9c-72a63e7fd13d.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545719-5ba40012-5d30-42e5-839f-a94eab7cdcb2.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233545719-5ba40012-5d30-42e5-839f-a94eab7cdcb2.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233545847-afb912ce-65d7-47ca-bc73-505f7b2d289f.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233545847-afb912ce-65d7-47ca-bc73-505f7b2d289f.png"/>
+</div>
 
 在ubuntu exe程序中输入以下指令，验证驱动是否安装成功：
 
@@ -66,8 +96,9 @@ lspci | grep NVIDIA
 nvidia-smi
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png)
-
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png"/>
+</div>
 
 ## 二、WSL2和Ubuntu22.04的下载安装
 
@@ -77,11 +108,15 @@ nvidia-smi
 
 下载完点击安装即可，安装中不停地next就可以。
 
-![image](https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png"/>
+</div>
 
 打开powershell：
 
-![image](https://user-images.githubusercontent.com/105597268/233546130-c846904d-f372-40bd-a7a5-7018bbd7cc2c.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546130-c846904d-f372-40bd-a7a5-7018bbd7cc2c.png"/>
+</div>
 
 启动WSL2，在powershell中输入下面指令：
 
@@ -107,21 +142,33 @@ wsl --set-default-version 2
 
 搜索ubuntu，选择22.04版本安装：
 
-![image](https://user-images.githubusercontent.com/105597268/233546452-184fad0d-b31d-4bd8-b3e2-18b1555bd2aa.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546452-184fad0d-b31d-4bd8-b3e2-18b1555bd2aa.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png"/>
+</div>
 
 选控制面板的“程序和功能”里边的设置，勾选“Hyper-V”和“适用于Linux的Windows子系统”：
 
-![image](https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233546804-0086f867-a564-4ad0-81f9-9a4ddc020045.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546804-0086f867-a564-4ad0-81f9-9a4ddc020045.png"/>
+</div>
 
 下载完打开Ubuntu2204：
 
-![image](https://user-images.githubusercontent.com/105597268/233546859-45c1e1c6-aa4e-427c-a375-e2170c60363e.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546859-45c1e1c6-aa4e-427c-a375-e2170c60363e.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233546867-db689603-384a-432b-82ae-308840e52f8a.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233546867-db689603-384a-432b-82ae-308840e52f8a.png"/>
+</div>
 
 ### WSL2的位置迁移
 
@@ -131,7 +178,9 @@ wsl --set-default-version 2
 wsl --list --verbose
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png"/>
+</div>
 
 终止正在运行的wsl：
 
@@ -153,7 +202,9 @@ wsl --unregister Ubuntu-22.04
 
 注销完后：
 
-![image](https://user-images.githubusercontent.com/105597268/233547746-f532ffe2-bdd7-416b-82dc-03029c5f1caa.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233547746-f532ffe2-bdd7-416b-82dc-03029c5f1caa.png"/>
+</div>
 
 然后将导出的文件放到需要保存的地方，进行导入即可：
 
@@ -161,9 +212,13 @@ wsl --unregister Ubuntu-22.04
 wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233589225-937d4217-959c-4728-a69f-1f091563478d.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233589225-937d4217-959c-4728-a69f-1f091563478d.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233589320-f5234c4d-21d9-4999-b12a-ad3d0f796adf.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233589320-f5234c4d-21d9-4999-b12a-ad3d0f796adf.png"/>
+</div>
 
 如果后面想要重装Ubuntu系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
 
@@ -175,11 +230,15 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 ubuntu2204 config --default-user root
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233590514-561c671a-22e0-4afa-928c-1ced30a3497c.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233590514-561c671a-22e0-4afa-928c-1ced30a3497c.png"/>
+</div>
 
 打开ubuntu exe程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
 
-![image](https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png"/>
+</div>
 
 在cmd里面输入下面指令，切换到普通用户：
 
@@ -187,23 +246,34 @@ ubuntu2204 config --default-user root
 ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名字） 
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233590812-cee2d3a7-fb20-469e-89f5-ddce74645ac1.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233590812-cee2d3a7-fb20-469e-89f5-ddce74645ac1.png"/>
+</div>
 
 打开ubuntu exe程序，此时就进入普通用户界面了：
 
-![image](https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png"/>
+</div>
 
 ## 三、VScode远程连接Ubuntu2204:
 
 下载Remote-SSH插件：
 
-![image](https://user-images.githubusercontent.com/105597268/233548620-fc6867e6-5552-469b-a205-936553fa8a16.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548620-fc6867e6-5552-469b-a205-936553fa8a16.png"/>
+</div>
 
 远程连接：
 
-![image](https://user-images.githubusercontent.com/105597268/233548642-e12a5de7-556d-4bf4-98cf-4b701a7711ff.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548642-e12a5de7-556d-4bf4-98cf-4b701a7711ff.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233548674-26a8edba-09f7-447f-bbee-410ed0fc9126.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548674-26a8edba-09f7-447f-bbee-410ed0fc9126.png"/>
+</div>
 
 关闭远程连接，Powershell输入下面指令（重装系统卸载Ubuntu也需要先输入下面指令）：
 
@@ -211,68 +281,104 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 wsl --shutdown
 ```
 
-
-![image](https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png"/>
+</div>
 
 点击打开ubuntu2204.exe程序：
 
-![image](https://user-images.githubusercontent.com/105597268/233548951-ce31856b-0b0a-4ab8-a89b-d01260f99f6b.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548951-ce31856b-0b0a-4ab8-a89b-d01260f99f6b.png"/>
+</div>
 
 重新进行远程连接：
 
-![image](https://user-images.githubusercontent.com/105597268/233548975-3d24ce7e-f604-4344-b966-047c64a2e5c2.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233548975-3d24ce7e-f604-4344-b966-047c64a2e5c2.png"/>
+</div>
 
 打开ubuntu里面的文件：open Folder, 点击ok：
 
-![image](https://user-images.githubusercontent.com/105597268/233549008-ef26bd5e-aa3b-44f6-9948-570237b166ca.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549008-ef26bd5e-aa3b-44f6-9948-570237b166ca.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png"/>
+</div>
 
 ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 
-![image](https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png"/>
+</div>
 
 可以通过拖拉windows里面的文件，放到这个路径下面：
 
-![image](https://user-images.githubusercontent.com/105597268/233549251-ed9733d4-62bd-40c0-994b-a145b93b7c27.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549251-ed9733d4-62bd-40c0-994b-a145b93b7c27.png"/>
+</div>
 
 ## 四、WSL2的Anaconda 配置（Miniconda配置同理,只是换了一个安装包）
 
 安装Miconda地址: https://docs.conda.io/en/latest/miniconda.html
 
-![image](https://user-images.githubusercontent.com/105597268/233582670-1464caf7-a3d7-48f4-849d-f459b45dd6cc.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233582670-1464caf7-a3d7-48f4-849d-f459b45dd6cc.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233583155-f8037347-48ca-4756-80df-28b6948b9c90.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233583155-f8037347-48ca-4756-80df-28b6948b9c90.png"/>
+</div>
 
 安装anaconda地址： https://www.anaconda.com/
 
-![image](https://user-images.githubusercontent.com/105597268/233549351-576d586e-c210-4713-b515-ed0024d09033.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549351-576d586e-c210-4713-b515-ed0024d09033.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233549365-c6ed8c3f-bdcd-4970-9ee7-6d3774c3e671.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549365-c6ed8c3f-bdcd-4970-9ee7-6d3774c3e671.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233549378-f8e88873-b7a4-4bd7-95af-46eba360e837.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549378-f8e88873-b7a4-4bd7-95af-46eba360e837.png"/>
+</div>
 
 浏览器下载下完后，拖入到unbuntu里面：
 
-![image](https://user-images.githubusercontent.com/105597268/233549401-22e38e9b-5681-4d22-a544-33b4e126f851.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549401-22e38e9b-5681-4d22-a544-33b4e126f851.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233549429-2f791c85-1bd3-49ea-b63f-252357ec9a39.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549429-2f791c85-1bd3-49ea-b63f-252357ec9a39.png"/>
+</div>
 
 输入指令：bash Anaconda3-2023.03-Linux-x86_64.sh安装：
 
-![image](https://user-images.githubusercontent.com/105597268/233549487-95c2061f-df66-4c3c-a48b-8b3a2bc4f39a.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549487-95c2061f-df66-4c3c-a48b-8b3a2bc4f39a.png"/>
+</div>
 
 安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车。
 
 安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存：
 
-![image](https://user-images.githubusercontent.com/105597268/233549656-4316a952-7954-465b-91d4-8f3b2d240ad8.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233549656-4316a952-7954-465b-91d4-8f3b2d240ad8.png"/>
+</div>
 
 创建一个python文件，配置anaconda路径下的python解释器，并在终端执行该python文件，如果前面有（base）这个标志，那么说明anaconda配置成功：
 
-![image](https://user-images.githubusercontent.com/105597268/233550247-91b4f05f-2490-4cc0-9b03-8ddf2b4f165f.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233550247-91b4f05f-2490-4cc0-9b03-8ddf2b4f165f.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233550587-76fdf0a8-5906-4369-83ec-a821be0adef8.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233550587-76fdf0a8-5906-4369-83ec-a821be0adef8.png"/>
+</div>
 
 用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置3.9版本的python环境）：
 
@@ -281,35 +387,50 @@ conda create -n pytorch python=3.9 -y
 conda activate pytorch
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png"/>
+</div>
 
 配置好虚拟环境后，我们配置anaconda下我们创建的虚拟环境下的解释器：
 
-![image](https://user-images.githubusercontent.com/105597268/233553023-fb83cf7e-d438-40a8-ba5d-691604d0d48b.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233553023-fb83cf7e-d438-40a8-ba5d-691604d0d48b.png"/>
+</div>
 
 配置好后，我们在终端运行我们创建的python文件，会发现（base）标志变成了我们的虚拟环境的名称（pytorch）:
 
-![image](https://user-images.githubusercontent.com/105597268/233553518-57757d98-9579-4ce1-88c4-1d4f8a1c7112.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233553518-57757d98-9579-4ce1-88c4-1d4f8a1c7112.png"/>
+</div>
 
 ## 五、WSL2的cuda配置
 
 没有配置cuda之前：
 
-![image](https://user-images.githubusercontent.com/105597268/233554064-b9d08cef-d16b-450a-b936-58d2f55dd232.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233554064-b9d08cef-d16b-450a-b936-58d2f55dd232.png"/>
+</div>
 
 去英伟达的官网：https://developer.nvidia.com/cuda-downloads
 
 下载往期版本：
 
-![image](https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png"/>
+</div>
 
 下载cu111版本（注意，Win10系统上的显卡驱动的版本不用与这里的cuda版本一致，比如我下载的Win10系统上的显卡驱动版本为12.1，显卡驱动是向下兼容的）：
 
-![image](https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png"/>
+</div>
 
 进行选择，下方会出现相应的指令：
 
-![image](https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png"/>
+</div>
 
 打开ubuntu exe：输入下面指令：
 
@@ -331,11 +452,16 @@ sudo apt-get -y install cuda
 
 小知识：在执行了wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 指令后，ubuntu里面会出现相应的安装包，后面重新安装，直接sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb就可以了，不用再反复下载安装包：
 
-![image](https://user-images.githubusercontent.com/105597268/233581137-19a01917-aa5f-436b-8ec9-59867ba7360f.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233581137-19a01917-aa5f-436b-8ec9-59867ba7360f.png"/>
+</div>
 
 注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
 
-![image](https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png"/>
+</div>
 
 在 .bashrc 文件中添加下面两条代码指令，并保存：
 
@@ -344,7 +470,9 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib
 export PATH=$PATH:/usr/local/cuda/bin
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233562413-60c276b1-1878-4085-abdc-d37de7866dc8.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233562413-60c276b1-1878-4085-abdc-d37de7866dc8.png"/>
+</div>
 
 安装完了后，输入下面指令进行验证：
 
@@ -352,7 +480,9 @@ export PATH=$PATH:/usr/local/cuda/bin
 nvcc -V
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png"/>
+</div>
 
 ### 下载torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
 
@@ -364,15 +494,22 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 
 直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
 
-![image](https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png"/>
+</div>
 
 蓝色小横线消失了，就上传完了：
 
-![image](https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
+</div>
 
 上传完之后，Ubuntu文件中会有两个相应的安装包：
 
-![image](https://user-images.githubusercontent.com/105597268/233556625-59d58c1a-6d90-41f1-a4cc-a6c966a71627.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233556625-59d58c1a-6d90-41f1-a4cc-a6c966a71627.png"/>
+</div>
 
 创建一个python文件，输入下面的代码，并配置之前我们创建的anaconda的虚拟环境的python的解释器：
 
@@ -390,7 +527,10 @@ print(torch.__version__)
 print(torchvision.__version__)
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png)
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png"/>
+</div>
 
 在终端执行以下指令：
 
@@ -400,13 +540,20 @@ pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
 pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png"/>
+</div>
 
 然后运行我们刚才建立的python文件：
 
-![image](https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png)
 
-![image](https://user-images.githubusercontent.com/105597268/233575234-54fb9676-222d-4bd3-9630-998cd54f1bf1.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png"/>
+</div>
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233575234-54fb9676-222d-4bd3-9630-998cd54f1bf1.png"/>
+</div>
 
 ## 六、有关一些问题的解决思路
 

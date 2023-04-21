@@ -317,10 +317,10 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 可以通过拖拉windows里面的文件，放到这个路径下面：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549251-ed9733d4-62bd-40c0-994b-a145b93b7c27.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233627037-0bb11b45-25d6-4ee6-863f-2fbb0125919f.png"/>
 </div>
 
-## 四、WSL2的Anaconda 配置（Miniconda配置同理,只是换了一个安装包）
+## 四、WSL2的Miniconda配置
 
 安装Miconda地址: https://docs.conda.io/en/latest/miniconda.html
 
@@ -332,55 +332,37 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 <img src="https://user-images.githubusercontent.com/105597268/233583155-f8037347-48ca-4756-80df-28b6948b9c90.png"/>
 </div>
 
-安装anaconda地址： https://www.anaconda.com/
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549351-576d586e-c210-4713-b515-ed0024d09033.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549365-c6ed8c3f-bdcd-4970-9ee7-6d3774c3e671.png"/>
-</div>
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549378-f8e88873-b7a4-4bd7-95af-46eba360e837.png"/>
-</div>
 
 浏览器下载下完后，拖入到unbuntu里面：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549401-22e38e9b-5681-4d22-a544-33b4e126f851.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233628794-950bfcab-645c-44cf-be0b-cd8d488fc9e9.png"/>
 </div>
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549429-2f791c85-1bd3-49ea-b63f-252357ec9a39.png"/>
-</div>
-
-输入指令：bash Anaconda3-2023.03-Linux-x86_64.sh安装：
+输入指令：bash Miniconda3-latest-Linux-x86_64.sh安装：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549487-95c2061f-df66-4c3c-a48b-8b3a2bc4f39a.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233629009-bc48cc05-705d-4956-8d4a-5d37ae670280.png"/>
 </div>
 
 安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车。
 
-安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/anaconda3/bin:$PATH ，并保存：
+安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/miniconda3/bin:$PATH ，并保存：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233549656-4316a952-7954-465b-91d4-8f3b2d240ad8.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233629221-53e51d1b-7b40-45e3-94b2-3e99baff1f53.png"/>
 </div>
 
-创建一个python文件，配置anaconda路径下的python解释器，并在终端执行该python文件，如果前面有（base）这个标志，那么说明anaconda配置成功：
+创建一个project.py文件，配置miniconda路径下的python解释器，并在终端执行该python文件，如果前面有（base）这个标志，那么说明miniconda配置成功：
+
+<img src="https://user-images.githubusercontent.com/105597268/233629718-519b87c7-cc65-4dc9-99fb-f5dba91bafe2.png"/>
+</div>
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233550247-91b4f05f-2490-4cc0-9b03-8ddf2b4f165f.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233629827-418c2569-93ef-4946-a3b5-5bf2ebd15b7a.png"/>
 </div>
 
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233550587-76fdf0a8-5906-4369-83ec-a821be0adef8.png"/>
-</div>
-
-用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置3.9版本的python环境）：
+用miniconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置3.9版本的python环境）：
 
 ```
 conda create -n pytorch python=3.9 -y
@@ -388,25 +370,92 @@ conda activate pytorch
 ```
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233629974-89ad74d5-6a09-4e4b-82dc-add0a8cf0339.png"/>
 </div>
 
-配置好虚拟环境后，我们配置anaconda下我们创建的虚拟环境下的解释器：
+配置好虚拟环境后，我们配置miniconda下我们创建的虚拟环境下的解释器：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233553023-fb83cf7e-d438-40a8-ba5d-691604d0d48b.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233630372-da60128f-c77f-4aab-8024-9e6f8f313127.png"/>
 </div>
 
 配置好后，我们在终端运行我们创建的python文件，会发现（base）标志变成了我们的虚拟环境的名称（pytorch）:
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233553518-57757d98-9579-4ce1-88c4-1d4f8a1c7112.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233630630-dc8d754a-7928-4193-bda5-20224cdba5f7.png"/>
 </div>
 
-## 五、WSL2的cuda配置
+## 五、下载torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
 
-没有配置cuda之前：
+如果用以下指令下载很慢：
 
+```
+pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png"/>
+</div>
+
+蓝色小横线消失了，就上传完了：
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
+</div>
+
+上传完之后，Ubuntu文件中会有两个相应的安装包：
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233630823-6e83678f-583b-4161-929c-7bac50eb7ae4.png"/>
+</div>
+
+创建一个project.py文件，输入下面的代码，并配置之前我们创建的miniconda的虚拟环境的python的解释器：
+
+```
+import torch
+
+import torchvision
+
+device = torch.device('cuda')
+
+print(torch.cuda.is_available())
+
+print(torch.__version__)
+
+print(torchvision.__version__)
+```
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233631119-89a5b439-76ce-4b34-9b34-5e6deaaa58e4.png"/>
+</div>
+
+在终端执行以下指令：
+
+```
+pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
+
+pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
+```
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png"/>
+</div>
+
+然后运行我们刚才建立的python文件：
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233628149-ed5e3714-53a0-4c97-9ea1-1f9116b93540.png"/>
+</div>
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233628271-7cdc43b8-a7a2-48ee-a35f-efb941ba0f00.png"/>
+</div>
+
+## 六、WSL2的cuda toolkit配置（说明：如果需要使用到nvcc，即要使用到源码编译，执行WSL2的cuda toolkit配置，如果只需要进行预编译，请忽略该步骤）
+
+没有配置cuda toolkit之前：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233554064-b9d08cef-d16b-450a-b936-58d2f55dd232.png"/>
@@ -443,7 +492,7 @@ wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/
 
 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
 
-sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub
+sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub （这条指令是会变化的，请每次都到官网获取新的指令）
 
 sudo apt-get update
 
@@ -452,9 +501,8 @@ sudo apt-get -y install cuda
 
 小知识：在执行了wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 指令后，ubuntu里面会出现相应的安装包，后面重新安装，直接sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb就可以了，不用再反复下载安装包：
 
-
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233581137-19a01917-aa5f-436b-8ec9-59867ba7360f.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233631320-94aa49d5-1505-47aa-bcc1-41bd711a5542.png"/>
 </div>
 
 注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
@@ -471,7 +519,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 ```
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233562413-60c276b1-1878-4085-abdc-d37de7866dc8.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233631575-f1b1fce2-b8ae-4988-a331-10ab88bf9455.png"/>
 </div>
 
 安装完了后，输入下面指令进行验证：
@@ -484,78 +532,33 @@ nvcc -V
 <img src="https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png"/>
 </div>
 
-### 下载torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
+### 如何删除WSL2的cuda toolkit
 
-如果用以下指令下载很慢：
-
-```
-pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
-```
-
-直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
+首先打开ubuntu 的local路径下的文件：
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png"/>
-</div>
-
-蓝色小横线消失了，就上传完了：
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
-</div>
-
-上传完之后，Ubuntu文件中会有两个相应的安装包：
-
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233556625-59d58c1a-6d90-41f1-a4cc-a6c966a71627.png"/>
-</div>
-
-创建一个python文件，输入下面的代码，并配置之前我们创建的anaconda的虚拟环境的python的解释器：
-
-```
-import torch
-
-import torchvision
-
-device = torch.device('cuda')
-
-print(torch.cuda.is_available())
-
-print(torch.__version__)
-
-print(torchvision.__version__)
-```
-
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png"/>
-</div>
-
-在终端执行以下指令：
-
-```
-pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
-
-pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
-```
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png"/>
-</div>
-
-然后运行我们刚才建立的python文件：
-
-
-<div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233632731-bc9da4af-091d-4560-8060-9a6bf21d712b.png"/>
 </div>
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233575234-54fb9676-222d-4bd3-9630-998cd54f1bf1.png"/>
+<img src="https://user-images.githubusercontent.com/105597268/233633108-ad2b63e7-cff0-4651-b1fb-f2c2be2a278c.png"/>
 </div>
 
-## 六、有关一些问题的解决思路
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233633233-055ff0a4-7684-49c2-bdb7-c5b07f2679b7.png"/>
+</div>
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233633379-65f78251-a982-477b-9390-e9e6096cb646.png"/>
+</div>
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233633471-ec626178-1691-4165-acc3-46ac947bb63a.png"/>
+</div>
+
+
+
+## 七、有关一些问题的解决思路
 
 ### 解决：nvcc: command not found
 
@@ -569,7 +572,9 @@ cd /usr/local/cuda/bin
 
 如果存在(如果不存在，请参考WSL2的cuda配置,进行重新配置)：
 
-![image](https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png"/>
+</div>
 
 直接将cuda路径加入系统路径（即将下面指令加入.bashrc文件）即可：
 
@@ -579,17 +584,25 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib
 export PATH=$PATH:/usr/local/cuda/bin
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233568948-58904e1c-57fc-4cbd-9d0c-3501a8ac92ed.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233568948-58904e1c-57fc-4cbd-9d0c-3501a8ac92ed.png"/>
+</div>
 
-![image](https://user-images.githubusercontent.com/105597268/233568987-36b56b0e-d0f0-4d87-9a15-3af83f2b263e.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233568987-36b56b0e-d0f0-4d87-9a15-3af83f2b263e.png"/>
+</div>
 
 保存：
 
-![image](https://user-images.githubusercontent.com/105597268/233569042-fb98c59e-7f87-4fc7-ba22-139bed57145f.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233569042-fb98c59e-7f87-4fc7-ba22-139bed57145f.png"/>
+</div>
 
 退出ubuntu exe程序，然后再开启，再次执行nvcc -V 就可以看到相应cuda版本了：
 
-![image](https://user-images.githubusercontent.com/105597268/233569202-2c7939eb-f276-4e1e-b9f7-4d28667c1761.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233569202-2c7939eb-f276-4e1e-b9f7-4d28667c1761.png"/>
+</div>
 
 解释说明：
 
@@ -603,7 +616,9 @@ driver api， 使用nvidia-smi显示
 
 ### 解决：查看显卡使用情况nvidia-smi报错：command not found
 
-![image](https://user-images.githubusercontent.com/105597268/233571801-24f910d0-3978-4678-b32f-c4ab421ea057.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233571801-24f910d0-3978-4678-b32f-c4ab421ea057.png"/>
+</div>
 
 gpu重启以后，是默认关闭的，在root下执行：
 
@@ -613,7 +628,9 @@ lspci | grep NVIDIA
 nvidia-msi
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png"/>
+</div>
 
 ### 解决：下载完anaconda之后仍然报错：conda: command not found
 
@@ -623,17 +640,33 @@ nvidia-msi
 PATH=/home/user/anaconda3/bin:$PATH
 ```
 
-![image](https://user-images.githubusercontent.com/105597268/233572324-d52abedb-eda0-4bab-a3c3-789f9c018711.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233572324-d52abedb-eda0-4bab-a3c3-789f9c018711.png"/>
+</div>
 
 在终端运行一个python文件，前面有(base)这个标示符就表示成功了：
 
-![image](https://user-images.githubusercontent.com/105597268/233572402-768a1ea5-ea9e-4e3b-834e-65451da0c399.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233631968-16276ceb-6958-4084-af55-6312f4162453.png"/>
+</div>
 
 ### 解决：su: Authentication failure
 
 su命令不能切换root，提示su: Authentication failure，只要你sudo passwd root过一次之后，下次再su的时候只要输入密码就可以成功登录了。
 
-![image](https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png)
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png"/>
+</div>
+
+### 解决：执行sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 和 sudo apt-get update 分别报错
+
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8))
+
+W: file:/var/cuda-repo-wsl-ubuntu-11-1-local/Release.gpg: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+
+找出/var/ 目录下的 cuda-repo-wsl-ubuntu-11-1-local 文件，并将其删除
+
+
 
 
 

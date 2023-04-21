@@ -224,7 +224,13 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 
 ![image](https://user-images.githubusercontent.com/105597268/233549251-ed9733d4-62bd-40c0-994b-a145b93b7c27.png)
 
-## 四、WSL2的Anaconda 配置
+## 四、WSL2的Anaconda 配置（Miniconda配置同理,只是换了一个安装包）
+
+安装Miconda地址: https://docs.conda.io/en/latest/miniconda.html
+
+![image](https://user-images.githubusercontent.com/105597268/233582670-1464caf7-a3d7-48f4-849d-f459b45dd6cc.png)
+
+![image](https://user-images.githubusercontent.com/105597268/233583155-f8037347-48ca-4756-80df-28b6948b9c90.png)
 
 安装anaconda地址： https://www.anaconda.com/
 
@@ -266,8 +272,6 @@ conda activate pytorch
 ![image](https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png)
 
 配置好虚拟环境后，我们配置anaconda下我们创建的虚拟环境下的解释器：
-
-![image](https://user-images.githubusercontent.com/105597268/233552962-7a322355-9a95-419a-8513-39f7ccaf97df.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233553023-fb83cf7e-d438-40a8-ba5d-691604d0d48b.png)
 

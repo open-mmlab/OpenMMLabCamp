@@ -61,7 +61,12 @@
 
 如果社区管理员没有直接 merge 而是给出了一下修改建议，请在上文中对应的 **OpenMMLab-Assistant-004/OpenMMLabCamp**中的 **update_mmsig_doc** 分支中对应的文档进行修改。
 
+家设文档中出现了错别字，或者其他的建议。
+
+
 ![image](https://user-images.githubusercontent.com/129494131/233519300-67baae9b-28ca-47c2-9eec-deb63d1543bc.png)
+
+
 
 
 

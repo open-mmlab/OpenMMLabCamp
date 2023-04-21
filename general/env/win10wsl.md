@@ -312,6 +312,10 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
+注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
+
+
+
 在.bashrc中添加下面两条代码指令，并保存：
 
 ```
@@ -359,6 +363,8 @@ import torchvision
 
 device = torch.device('cuda')
 
+print(torch.cuda.is_available())
+
 print(torch.__version__)
 
 print(torchvision.__version__)
@@ -380,11 +386,11 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ![image](https://user-images.githubusercontent.com/105597268/233561479-fe5ee501-9678-41e7-bf1a-5e913ddde47b.png)
 
-![image](https://user-images.githubusercontent.com/105597268/233558949-afef38e3-bd56-4dde-aba2-f08987b8e32a.png)
+![image](https://user-images.githubusercontent.com/105597268/233575234-54fb9676-222d-4bd3-9630-998cd54f1bf1.png)
 
 ## 六、有关一些问题的解决思路
 
-### 解决：ncvv: command not found
+### 解决：nvcc: command not found
 
 nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code.(NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用nvcc -V查看CUDA版本
 
@@ -394,7 +400,7 @@ nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and
 cd /usr/local/cuda/bin
 ```
 
-如果存在：
+如果存在(如果不存在，请参考WSL2的cuda配置,进行重新配置)：
 
 ![image](https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png)
 

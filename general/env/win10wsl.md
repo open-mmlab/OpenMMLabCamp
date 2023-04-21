@@ -34,6 +34,11 @@
 
 注意，该是安装Windows驱动，而不是安装Linux驱动，在Windows下安装驱动后，会自动将驱动以libcuda.so的形式集成至WSL2中，因此切勿在WSL Linux中重复安装驱动。
 
+根据自己显卡的型号选择驱动，notebooks代表笔记本，我是台式电脑3080显卡，所以选择GeForce RX 30 Series下的GeForce RX 3080。
+
+![image](https://user-images.githubusercontent.com/105597268/233551395-537e1988-2894-476e-a3f8-c60e4ee5c853.png)
+
+![image](https://user-images.githubusercontent.com/105597268/233550992-457c493f-c194-4deb-b65f-155ddb8dff58.png)
 
 ![image](https://user-images.githubusercontent.com/105597268/233545426-3f13f4d3-cab5-40f0-a353-a070de5c2c9b.png)
 

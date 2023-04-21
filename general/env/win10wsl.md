@@ -54,11 +54,14 @@
 
 在ubuntu exe程序中输入以下指令，验证驱动是否安装成功：
 
-nvidia-smi -pm 1
+<pre><code>nvidia-smi -pm 1
 
 lspci | grep NVIDIA
 
 nvidia-smi
+</code></pre>
+
+
 
 ![image](https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png)
 
@@ -115,21 +118,26 @@ wsl --set-default-version 2
 
 在 PowerShell 中运行下面命令显示所有发行版的详细信息：
 
-wsl --list --verbose
+<pre><code>wsl --list --verbose
+</code></pre>
+
 
 ![image](https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png)
 
 终止正在运行的wsl：
 
-wsl --shutdown
+<pre><code>wsl --shutdown
+</code></pre>
 
 将需要迁移的Linux，进行导出：
 
-wsl --export Ubuntu-22.04 E:/export.tar
+<pre><code>wsl --export Ubuntu-22.04 E:/export.tar
+</code></pre>
 
 导出完成之后，就需要将原有的分发进行卸载：
 
-wsl --unregister Ubuntu-22.04
+<pre><code>wsl --unregister Ubuntu-22.04
+</code></pre>
 
 注销完后：
 
@@ -137,19 +145,24 @@ wsl --unregister Ubuntu-22.04
 
 然后将导出的文件放到需要保存的地方，进行导入即可：
 
-wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
+<pre><code>wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
+</code></pre>
 
 ### 在WSL2的root和普通用户的切换：
 
 在cmd里面输入下面指令，切换到根目录：
 
-ubuntu2204 config --default-user root
+<pre><code>ubuntu2204 config --default-user root
+</code></pre>
 
 输入 passwd 用户名，并设置密码：
 
 ![image](https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png)
 
-ubuntu2204 config --default-user geoffreyfan 切换到普通用户
+切换到普通用户：
+
+<pre><code>ubuntu2204 config --default-user geoffreyfan 
+</code></pre>
 
 ![image](https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png)
 
@@ -167,7 +180,9 @@ ubuntu2204 config --default-user geoffreyfan 切换到普通用户
 
 关闭远程连接，Powershell输入下面指令（重装系统卸载Ubuntu也需要先输入下面指令）：
 
-wsl --shutdown
+<pre><code>wsl --shutdown
+</code></pre>
+
 
 ![image](https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png)
 
@@ -227,8 +242,9 @@ wsl --shutdown
 
 用anaconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们配置3.9版本的python环境）：
 
-conda create -n pytorch python=3.9 -y
+<pre><code>conda create -n pytorch python=3.9 -y
 conda activate pytorch
+</code></pre>
 
 ![image](https://user-images.githubusercontent.com/105597268/233552441-ac0b60af-799f-4811-aad6-5918f7cba70c.png)
 
@@ -264,7 +280,7 @@ conda activate pytorch
 
 打开ubuntu exe：输入下面指令：
 
-wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+<pre><code>wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
 
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
@@ -277,10 +293,20 @@ sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub
 sudo apt-get update
 
 sudo apt-get -y install cuda
+</code></pre>
+
+在.bashrc中添加下面两条代码指令，并保存：
+
+<pre><code>export LD_LIBRARY_PATH=/usr/local/cuda/lib
+export PATH=$PATH:/usr/local/cuda/bin
+</code></pre>
+
+![image](https://user-images.githubusercontent.com/105597268/233562413-60c276b1-1878-4085-abdc-d37de7866dc8.png)
 
 安装完了后，输入下面指令进行验证：
 
-nvcc -V
+<pre><code>nvcc -V
+</code></pre>
 
 ![image](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
 
@@ -288,7 +314,8 @@ nvcc -V
 
 如果用以下指令下载很慢：
 
-pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+<pre><code>pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+</code></pre>
 
 
 直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
@@ -305,7 +332,9 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 
 创建一个python文件，输入下面的代码，并配置之前我们创建的anaconda的虚拟环境的python的解释器：
 
-import torch
+<p>这里是一段示例代码:</p>
+
+<pre><code>import torch
 
 import torchvision
 
@@ -314,14 +343,18 @@ device = torch.device('cuda')
 print(torch.__version__)
 
 print(torchvision.__version__)
+</code></pre>
+
+
 
 ![image](https://user-images.githubusercontent.com/105597268/233560384-6109b48c-1b15-49f5-88a9-a56c198922a0.png)
 
 在终端执行以下指令：
 
-pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
+<pre><code>pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
 
 pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
+</code></pre>
 
 ![image](https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png)
 

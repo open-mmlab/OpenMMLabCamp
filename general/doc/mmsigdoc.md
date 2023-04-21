@@ -2,10 +2,10 @@
 
 给本 MMSIG 贡献者教程贡献的步骤如下：
 
-- Fork 仓库
-- 编辑文档
-- 创建 PR (Pull Requests)
-- OpenMMLab 社区管理员 Merge PR
+* Fork 仓库
+* 编辑文档
+* 创建 PR (Pull Requests)
+* OpenMMLab 社区管理员 Merge PR
 
 ## 1. Fork Github 仓库
 
@@ -15,7 +15,7 @@
 
 取消勾选 Copy the main branch only，并点击 Create fork。
 
-![image](https://user-images.githubusercontent.com/25839884/233364929-0a0f9037-37b3-426e-87d7-26ae713c4308.png)
+![创建新 fork](https://user-images.githubusercontent.com/25839884/233364929-0a0f9037-37b3-426e-87d7-26ae713c4308.png)
 
 这样就把 OpenMMLabCamp 的仓库 Fork 到自己账号下面了，可以看到本教程的演示账号 OpenMMLab-Assistant-004 下面多了一个 OpenMMLabCamp 的 仓库。
 
@@ -27,9 +27,4 @@
 
 ![image](https://user-images.githubusercontent.com/25839884/233367888-83eb7276-6a09-4dc9-8957-784a5adbc060.png)
 
-
-
 ## 3. 提 PR （Pull Request）
-
-
-

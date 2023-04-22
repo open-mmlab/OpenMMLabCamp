@@ -46,7 +46,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 <img src="https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png"/>
 </div>
 
-### Win10 系统下安装英伟达对 linux 子系统的显卡驱动
+### Win10 系统下安装英伟达对 Linux 子系统的显卡驱动
 
 下载驱动（下载GEFORCE的那个）：http://www.nvidia.com/Download/index.aspx
 

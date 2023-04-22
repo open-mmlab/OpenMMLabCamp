@@ -14,7 +14,7 @@
 
 ### 更新 Win10 系统
 
-微软Microsoft官网下载：https://www.microsoft.com/zh-cn/software-download/windows10。
+微软 Microsoft 官网下载：https://www.microsoft.com/zh-cn/software-download/windows10。
 
 点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（我电脑是需要翻墙才能更新的，不翻墙就无法加载）。
 
@@ -50,7 +50,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 
 下载驱动（下载GEFORCE的那个）：http://www.nvidia.com/Download/index.aspx
 
-注意，该是安装 Win10 驱动，而不是安装 Linux 驱动，在 Windows 下安装驱动后，会自动将驱动以 libcuda.so 的形式集成至 WSL2 中，因此切勿在 WSL Linux 中重复安装驱动。
+注意，该是安装 Win10 驱动，而不是安装 Linux 驱动，在 Win10 下安装驱动后，会自动将驱动以 libcuda.so 的形式集成至 WSL2 中，因此切勿在 WSL Linux 中重复安装驱动。
 
 根据自己显卡的型号选择驱动，Notebooks 代表笔记本，我是台式电脑 3080 显卡，所以选择 GeForce RX 30 Series 下的 GeForce RX 3080。
 
@@ -86,7 +86,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 <img src="https://user-images.githubusercontent.com/105597268/233545847-afb912ce-65d7-47ca-bc73-505f7b2d289f.png"/>
 </div>
 
-在 Ubuntu-20.04 exe 程序中输入以下指令，验证驱动是否安装成功：
+在 Ubuntu-22.04.exe 程序中输入以下指令，验证驱动是否安装成功：
 
 ```
 nvidia-smi -pm 1
@@ -100,7 +100,7 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png"/>
 </div>
 
-## 二、WSL2 和 Ubuntu-22.04 Linux 子系统的下载安装
+## 二、 WSL2 和 Ubuntu-22.04 Linux 子系统的下载安装
 
 ### 下载并安装 WSL2 的 Linux 内核包
 
@@ -188,7 +188,7 @@ wsl --list --verbose
 wsl --shutdown
 ```
 
-将需要迁移的 Linux ，进行导出：
+将需要迁移的 Ubuntu-22.04 Linux 子系统，进行导出：
 
 ```
 wsl --export Ubuntu-22.04 E:/export.tar

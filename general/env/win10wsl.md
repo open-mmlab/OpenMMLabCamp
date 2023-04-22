@@ -16,7 +16,7 @@
 
 微软 Microsoft 官网下载：https://www.microsoft.com/zh-cn/software-download/windows10。
 
-点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（我电脑是需要翻墙才能更新的，不翻墙就无法加载）。
+点击立即更新，会下载一个微软软件，按照提示更新即可，装完需要重启，网速快的话整个过程大约一个小时。（请确保您的网络能够正常访问）。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233544719-94c8dafb-f29b-49bd-8378-4f1f2b31a0ab.png"/>

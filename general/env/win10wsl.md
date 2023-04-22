@@ -546,7 +546,7 @@ nvcc -V
 
 ## 七、有关一些问题的解决思路
 
-### 1、解决：nvcc: command not found
+### 1、解决：nvcc: command not found （首先看自己有没有输入错误，比如将 nvcc 打错成 ncvv 等）
 
 nvcc 是 The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code. ( NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
@@ -598,7 +598,7 @@ Win10 系统里面的 Driver api， 使用 nvidia-smi 显示
 
 如果报错的命令是 RuntimeError ，那就使用 nvcc -V 命令查看是否是版本不匹配。
 
-### 2、解决：查看显卡使用情况 nvidia-smi 报错：command not found
+### 2、解决：查看显卡使用情况 nvidia-smi 报错：command not found（首先看自己有没有输入错误，比如将 nvidia-smi 打错成 nvidia-sim 等）
 
 gpu 重启以后，是默认关闭的，在 Ubuntu-22.04.exe 下执行：
 

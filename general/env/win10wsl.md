@@ -257,8 +257,8 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 </div>
 
 ## 三、VScode 远程连接 Ubuntu2204 :
-
-下载Remote-SSH插件：
+ 
+下载 WSL 远程连接插件：
 
 
 <div align=center>

@@ -265,7 +265,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233548620-fc6867e6-5552-469b-a205-936553fa8a16.png"/>
 </div>
 
-快捷指令远程连接：
+快捷指令远程连接，用 VScode 打开ubuntu：
 
 ```
 code .
@@ -275,7 +275,7 @@ code .
 <img src="https://user-images.githubusercontent.com/105597268/233664035-e18937c6-8aa3-4dfb-863a-1887b92dd56b.png"/>
 </div>
 
-手动远程连接：
+手动远程连接，用VScode 打开 ubuntu：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548642-e12a5de7-556d-4bf4-98cf-4b701a7711ff.png"/>

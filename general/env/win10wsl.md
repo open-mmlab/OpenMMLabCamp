@@ -487,10 +487,14 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png"/>
 </div>
 
-进行选择，下方会出现相应的指令：
+进行选择，下方会出现相应的指令(可以勾选 “runfile(local)” ，操作步骤同理)：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png"/>
+</div>
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/105597268/233769208-ec1d76d0-bbf0-469d-8b7d-9bcb082157ef.png"/>
 </div>
 
 打开 Ubuntu-22.04.exe ：输入下面指令：

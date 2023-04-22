@@ -6,7 +6,7 @@
 
 2、Linux 子系统不需要配置显卡。因为它是调用 Win10 系统下的显卡驱动进行深度学习的，这就意味着不需要在 Linux 子系统下载安装显卡驱动！
 
-大家可能会有这样的疑问：不是安装 WSL2 的显卡驱动吗？为什么会装 Win10 系统上的显卡驱动？其实，官网文档上说明了，带有 WSL2 的官方 NVIDIA 驱动是整个过程唯一要装的 GPU 驱动！所以后面关于 Linux 上的 cuda 的安装就要求不勾选 Driver！
+大家可能会有这样的疑问：不是安装 WSL2 的显卡驱动吗？为什么会装 Win10 系统上的显卡驱动？其实，官网文档上说明了，带有 WSL2 的官方 NVIDIA 驱动是整个过程唯一要装的 GPU 驱动！所以后面关于 Linux 上的 cuda toolkit 的配置就要求不勾选 Driver！
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png"/>

@@ -508,7 +508,7 @@ wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/
 
 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
 
-sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub （这条指令是会变化的，请每次都到官网获取新的指令）
+sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub （这条指令可能会随着时间被官网更新，请每次都到官网获取新的指令）
 
 sudo apt-get update
 

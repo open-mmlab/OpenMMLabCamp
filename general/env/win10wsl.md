@@ -86,7 +86,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 <img src="https://user-images.githubusercontent.com/105597268/233545847-afb912ce-65d7-47ca-bc73-505f7b2d289f.png"/>
 </div>
 
-在ubuntu exe程序中输入以下指令，验证驱动是否安装成功：
+在 Ubuntu-20.04 exe 程序中输入以下指令，验证驱动是否安装成功：
 
 ```
 nvidia-smi -pm 1
@@ -100,7 +100,7 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png"/>
 </div>
 
-## 二、WSL2 和 Ubuntu22.04 的下载安装
+## 二、WSL2 和 Ubuntu-22.04 Linux 子系统的下载安装
 
 ### 下载并安装 WSL2 的 Linux 内核包
 
@@ -160,7 +160,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546804-0086f867-a564-4ad0-81f9-9a4ddc020045.png"/>
 </div>
 
-下载完打开 Ubuntu2204 ：
+下载完打开 Ubuntu-22.04 Linux 子系统：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546859-45c1e1c6-aa4e-427c-a375-e2170c60363e.png"/>
@@ -220,7 +220,7 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 <img src="https://user-images.githubusercontent.com/105597268/233589320-f5234c4d-21d9-4999-b12a-ad3d0f796adf.png"/>
 </div>
 
-如果后面想要重装 Ubuntu 系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
+如果后面想要重装 Ubuntu-22.04 Linux 子系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
 
 ### 进行 WSL2 的 root 和普通用户的切换：
 
@@ -234,7 +234,7 @@ ubuntu2204 config --default-user root
 <img src="https://user-images.githubusercontent.com/105597268/233590514-561c671a-22e0-4afa-928c-1ced30a3497c.png"/>
 </div>
  
-打开 ubuntu exe 程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
+打开 Ubuntu-22.04.exe 程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png"/>
@@ -250,13 +250,13 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233590812-cee2d3a7-fb20-469e-89f5-ddce74645ac1.png"/>
 </div>
 
-打开 ubuntu exe 程序，此时就进入普通用户界面了：
+打开 Ubuntu-22.04.exe 程序，此时就进入普通用户界面了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png"/>
 </div>
 
-## 三、VScode 远程连接 Ubuntu2204 :
+## 三、VScode 远程连接 Ubuntu-22.04 Linux 子系统 :
  
 下载 WSL 远程连接插件：
 
@@ -265,7 +265,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233548620-fc6867e6-5552-469b-a205-936553fa8a16.png"/>
 </div>
 
-快捷指令远程连接，用 VScode 打开 Ubuntu Linux 系统：
+快捷指令远程连接，用 VScode 打开 Ubuntu-22.04 Linux 子系统：
 
 ```
 code .
@@ -275,7 +275,7 @@ code .
 <img src="https://user-images.githubusercontent.com/105597268/233664035-e18937c6-8aa3-4dfb-863a-1887b92dd56b.png"/>
 </div>
 
-手动远程连接，用 VScode 打开 Ubuntu Linux 系统：
+手动远程连接，用 VScode 打开 Ubuntu-22.04 Linux 子系统：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548642-e12a5de7-556d-4bf4-98cf-4b701a7711ff.png"/>
@@ -285,7 +285,7 @@ code .
 <img src="https://user-images.githubusercontent.com/105597268/233548674-26a8edba-09f7-447f-bbee-410ed0fc9126.png"/>
 </div>
 
-关闭远程连接， Powershell 输入下面指令（重装系统卸载 Ubuntu 也需要先输入下面指令）：
+关闭远程连接， Powershell 输入下面指令（重装系统卸载 Ubuntu-22.04 Linux 子系统也需要先输入下面指令）：
 
 ```
 wsl --shutdown
@@ -295,7 +295,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png"/>
 </div>
 
-点击打开 ubuntu2204.exe 程序：
+点击打开 Ubuntu-22.04.exe 程序：
 
 
 <div align=center>
@@ -308,7 +308,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233548975-3d24ce7e-f604-4344-b966-047c64a2e5c2.png"/>
 </div>
 
-打开 ubuntu 里面的文件：open Folder, 点击 ok ：
+打开 Ubuntu-22.04 Linux 子系统里面的文件：open Folder, 点击 ok ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549008-ef26bd5e-aa3b-44f6-9948-570237b166ca.png"/>
@@ -318,13 +318,13 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png"/>
 </div>
 
-ubuntu 里面 /home/geoffreyfan/ 路径下的文档就被打开了:
+Ubuntu-22.04 Linux 子系统里面的 /home/geoffreyfan/ 路径下的文档就被打开了:
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png"/>
 </div>
 
-可以通过拖拉 Win10 里面的文件，放到这个路径下面：
+可以通过拖拉 Win10 里面的文件，方便地上传文件到 Ubuntu-22.04 Linux 子系统的这个路径下面：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233627037-0bb11b45-25d6-4ee6-863f-2fbb0125919f.png"/>
@@ -343,7 +343,7 @@ ubuntu 里面 /home/geoffreyfan/ 路径下的文档就被打开了:
 </div>
 
 
-浏览器下载下完后，拖入到 unbuntu 里面：
+浏览器下载下完后，拖入到 Ubuntu-22.04 Linux 子系统里面：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233628794-950bfcab-645c-44cf-be0b-cd8d488fc9e9.png"/>
@@ -403,7 +403,7 @@ conda activate pytorch
 pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-直接手动去官网下载.whl文件，然后拖到 ubuntu 里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
+直接手动去官网下载.whl文件，然后拖到 Ubuntu-22.04 Linux 子系统里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png"/>
@@ -415,7 +415,7 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 <img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
 </div>
 
-上传完之后，Ubuntu 文件中会有两个相应的安装包：
+上传完之后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan/ 路径下的文件中会有两个相应的安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233630823-6e83678f-583b-4161-929c-7bac50eb7ae4.png"/>
@@ -453,7 +453,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png"/>
 </div>
 
-然后运行我们刚才建立的 python 文件：
+然后运行我们刚才创建的 project.py 文件：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233628149-ed5e3714-53a0-4c97-9ea1-1f9116b93540.png"/>
@@ -465,7 +465,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ## 六、WSL2 的 cuda toolkit 配置（说明：如果需要使用到 nvcc，即要使用到源码编译，执行 WSL2 的 cuda toolkit 配置，如果只需要进行预编译，请忽略该步骤）
 
-注意：不要使用 sudo apt install nvidia-cuda-toolkit 进行配置，会默认配置为一个低版本的 cuda toolkit
+注意：不要使用 sudo apt install nvidia-cuda-toolkit 进行配置，会默认配置一个低版本的 cuda toolkit 。
 
 没有配置 cuda toolkit 之前：
 
@@ -481,7 +481,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png"/>
 </div>
 
-下载 cu111 版本（注意， Win10 系统上的显卡驱动的版本不用与这里的 cuda 版本一致，比如我下载的 Win10 系统上的显卡驱动版本为 12.1 ，显卡驱动是向下兼容的）：
+下载 cu111 版本（注意， Win10 系统上的显卡驱动的版本可以不用与这里的 cuda 版本一致，比如我下载的 Win10 系统上的显卡驱动版本为 12.1 ，显卡驱动是向下兼容的）：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png"/>
@@ -493,7 +493,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png"/>
 </div>
 
-打开 ubuntu exe ：输入下面指令：
+打开 Ubuntu-22.04.exe ：输入下面指令：
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
@@ -511,13 +511,13 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-小知识：在执行了 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb  指令后，ubuntu 里面会出现相应的安装包，后面重新安装，直接执行 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 就可以了，不用再反复下载安装包：
+小知识：在执行了 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb  指令后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan/ 路径下会出现相应的安装包，后面重新安装，直接执行 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 就可以了，不用再反复下载安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233631320-94aa49d5-1505-47aa-bcc1-41bd711a5542.png"/>
 </div>
 
-注意：在 sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 指令之后，安装的过程中不要勾选 driver 否则会下载失败：
+注意：在 sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 指令之后，安装的过程中不要勾选 Driver 否则会下载失败：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png"/>
@@ -550,7 +550,7 @@ nvcc -V
 
 nvcc 是 The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code. ( NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
-输入下面指令，查看 cuda 的 bin 目录下是否有 nvcc：
+输入下面指令，查看 cuda toolkit 的 bin 目录下是否有 nvcc：
 
 ```
 cd /usr/local/cuda/bin
@@ -562,7 +562,7 @@ cd /usr/local/cuda/bin
 <img src="https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png"/>
 </div>
 
-直接将 cuda 路径加入系统路径（即将下面指令加入 .bashrc 文件）即可：
+直接将 cuda toolkit 的路径加入系统路径（即将下面指令加入 .bashrc 文件）即可：
 
 ```
 export LD_LIBRARY_PATH=/usr/local/cuda/lib
@@ -584,7 +584,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 <img src="https://user-images.githubusercontent.com/105597268/233569042-fb98c59e-7f87-4fc7-ba22-139bed57145f.png"/>
 </div>
 
-退出 ubuntu exe 程序，然后再开启，再次执行 nvcc -V 就可以看到相应 cuda 版本了：
+退出 Ubuntu-22.04.exe 程序，然后再开启，再次执行 nvcc -V 就可以看到相应 cuda 版本了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233569202-2c7939eb-f276-4e1e-b9f7-4d28667c1761.png"/>
@@ -592,17 +592,15 @@ export PATH=$PATH:/usr/local/cuda/bin
 
 解释说明：
 
-CUDA 有两个 CUDA 版本
+Ubuntu-22.04 Linux 里面的 Cuda toolkit api 使用 nvcc -V 显示
 
-runtime api 使用 nvcc -V 显示
-
-driver api， 使用 nvidia-smi 显示
+Win10 系统里面的 Driver api， 使用 nvidia-smi 显示
 
 如果报错的命令是 RuntimeError ，那就使用 nvcc -V 命令查看是否是版本不匹配。
 
 ### 解决：查看显卡使用情况 nvidia-smi 报错：command not found
 
-gpu 重启以后，是默认关闭的，在 ubuntu exe 下执行：
+gpu 重启以后，是默认关闭的，在 Ubuntu-22.04.exe 下执行：
 
 ```
 nvidia-smi -pm 1
@@ -626,7 +624,7 @@ PATH=/home/user/anaconda3/bin:$PATH
 <img src="https://user-images.githubusercontent.com/105597268/233572324-d52abedb-eda0-4bab-a3c3-789f9c018711.png"/>
 </div>
 
-在终端运行一个 python 文件，前面有 (base) 这个标示符就表示成功了：
+在终端运行 project.py 文件，前面有 (base) 这个标示符就表示成功了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233631968-16276ceb-6958-4084-af55-6312f4162453.png"/>
@@ -634,7 +632,7 @@ PATH=/home/user/anaconda3/bin:$PATH
 
 ### 解决：su: Authentication failure
 
-su命令不能切换 root ，提示 su: Authentication failure，只要你 sudo passwd root 过一次之后，下次再 su 的时候只要输入密码就可以成功登录了。
+su 命令不能切换 root ，提示 su: Authentication failure，只要你 sudo passwd root 过一次之后，下次再 su 的时候只要输入密码就可以成功登录了。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png"/>
@@ -650,8 +648,9 @@ su命令不能切换 root ，提示 su: Authentication failure，只要你 sudo 
 
 第一步，查询当前已安装的系统：
 
+```
 wsl.exe --list --all
-
+```
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233660852-20fb9a43-19b4-4c10-b108-a4116bd1c9e4.png"/>
@@ -659,7 +658,9 @@ wsl.exe --list --all
 
  第二步，注销当前注册的系统：
 
+```
 wsl.exe --unregister Ubuntu-22.04 (第一步查询出来需要注销的系统名称)
+```
 
  第三步,重新启动 unbuntu 系统，系统会重新初始化，效果如下：
  

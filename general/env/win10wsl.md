@@ -136,7 +136,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 ```
 
-### Win10 下安装 linux 子系统
+### Win10 下安装 Linux 子系统
 
 网站地址：https://www.microsoft.com/zh-cn/
 
@@ -150,7 +150,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png"/>
 </div>
 
-进入控制面板的“程序和功能”里边的设置，勾选 “Hyper-V” 和 “适用于Linux的Windows子系统” ：
+进入控制面板的 “程序和功能” 里边的设置，勾选 “ Hyper-V ” 和 “适用于 Linux 的 Windows 子系统” ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png"/>
@@ -250,7 +250,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233590812-cee2d3a7-fb20-469e-89f5-ddce74645ac1.png"/>
 </div>
 
-打开ubuntu exe程序，此时就进入普通用户界面了：
+打开 ubuntu exe 程序，此时就进入普通用户界面了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png"/>
@@ -265,7 +265,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233548620-fc6867e6-5552-469b-a205-936553fa8a16.png"/>
 </div>
 
-快捷指令远程连接，用 VScode 打开ubuntu：
+快捷指令远程连接，用 VScode 打开 Ubuntu Linux 系统：
 
 ```
 code .
@@ -275,7 +275,7 @@ code .
 <img src="https://user-images.githubusercontent.com/105597268/233664035-e18937c6-8aa3-4dfb-863a-1887b92dd56b.png"/>
 </div>
 
-手动远程连接，用VScode 打开 ubuntu：
+手动远程连接，用 VScode 打开 Ubuntu Linux 系统：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548642-e12a5de7-556d-4bf4-98cf-4b701a7711ff.png"/>

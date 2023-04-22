@@ -1,18 +1,18 @@
 # Win 10 WSL 环境配置
 姓名：geoffreyfan
-## 一、Win10升级最新版本和Win10安装英伟达对linux子系统的显卡驱动
+## 一、Win10 升级最新版本和 Win10 安装英伟达对 linux 子系统的显卡驱动
 
-1、Win10系统一定要升级到最新版，否则是无法在Linux子系统里加载出显卡驱动的，那么就无法进行深度学习！
+1、Win10 系统一定要升级到最新版，否则是无法在 Linux 子系统里加载出显卡驱动的，那么就无法进行深度学习！
 
-2、Linux子系统不需要配置显卡。因为它是调用Win10系统下的显卡驱动进行深度学习的，这就意味着不需要在Linux子系统下载安装显卡驱动！
+2、Linux 子系统不需要配置显卡。因为它是调用 Win10 系统下的显卡驱动进行深度学习的，这就意味着不需要在 Linux 子系统下载安装显卡驱动！
 
-大家可能会有这样的疑问：不是安装WSL2的显卡驱动吗？为什么会装Win10系统上的显卡驱动？其实，官网文档上说明了，带有WSL2的官方NVIDIA驱动是整个过程唯一要装的GPU驱动！所以后面关于Linux上的cuda的安装就要求不勾选Driver！
+大家可能会有这样的疑问：不是安装 WSL2 的显卡驱动吗？为什么会装 Win10 系统上的显卡驱动？其实，官网文档上说明了，带有 WSL2 的官方 NVIDIA 驱动是整个过程唯一要装的 GPU 驱动！所以后面关于 Linux 上的 cuda 的安装就要求不勾选 Driver！
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233543981-2ca68668-7db1-432e-a342-11ac0331daf9.png"/>
 </div>
 
-### 更新Win10系统
+### 更新 Win10 系统
 
 微软Microsoft官网下载：https://www.microsoft.com/zh-cn/software-download/windows10。
 
@@ -26,7 +26,7 @@
 <img src="https://user-images.githubusercontent.com/105597268/233544743-6576de41-5254-4de9-bac1-bea57f2b6822.png"/>
 </div>
 
-另一种方式更新Win10系统：
+另一种方式更新 Win10 系统：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233544762-871cf8c6-32c9-4ea6-a731-b03719274466.png"/>
@@ -40,19 +40,19 @@
 <img src="https://user-images.githubusercontent.com/105597268/233544794-95ef3c72-a3de-47cd-b9ed-b1e3928f8ca4.png"/>
 </div>
 
-PS：查询系统版本方法：Win+R输入winver回车：
+PS：查询系统版本方法：Win+R 输入 winver 回车：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233577393-ac7da003-9320-4dd5-9d71-34b03a02e148.png"/>
 </div>
 
-### Win10系统下安装英伟达对linux子系统的显卡驱动
+### Win10 系统下安装英伟达对 linux 子系统的显卡驱动
 
 下载驱动（下载GEFORCE的那个）：http://www.nvidia.com/Download/index.aspx
 
-注意，该是安装Windows驱动，而不是安装Linux驱动，在Windows下安装驱动后，会自动将驱动以libcuda.so的形式集成至WSL2中，因此切勿在WSL Linux中重复安装驱动。
+注意，该是安装 Win10 驱动，而不是安装 Linux 驱动，在 Windows 下安装驱动后，会自动将驱动以 libcuda.so 的形式集成至 WSL2 中，因此切勿在 WSL Linux 中重复安装驱动。
 
-根据自己显卡的型号选择驱动，notebooks代表笔记本，我是台式电脑3080显卡，所以选择GeForce RX 30 Series下的GeForce RX 3080。
+根据自己显卡的型号选择驱动，notebooks 代表笔记本，我是台式电脑 3080 显卡，所以选择 GeForce RX 30 Series 下的 GeForce RX 3080。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233551395-537e1988-2894-476e-a3f8-c60e4ee5c853.png"/>
@@ -100,9 +100,9 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png"/>
 </div>
 
-## 二、WSL2和Ubuntu22.04的下载安装
+## 二、WSL2 和 Ubuntu22.04 的下载安装
 
-### 下载并安装WSL2的Linux内核包
+### 下载并安装 WSL2 的 Linux 内核包
 
 下载链接：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
@@ -112,35 +112,35 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png"/>
 </div>
 
-打开powershell：
+打开 powershell：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546130-c846904d-f372-40bd-a7a5-7018bbd7cc2c.png"/>
 </div>
 
-启动WSL2，在powershell中输入下面指令：
+启动 WSL2 ，在 powershell 中输入下面指令：
 
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-启用“虚拟机平台”，在powershell中输入下面指令：
+启用“虚拟机平台”，在 powershell 中输入下面指令：
 
 ```
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-将WSL2设置为默认版本，在powershell中输入下面指令：
+将 WSL2 设置为默认版本，在 powershell 中输入下面指令：
 
 ```
 wsl --set-default-version 2
 ```
 
-### Win10下安装linux子系统
+### Win10 下安装 linux 子系统
 
 网站地址：https://www.microsoft.com/zh-cn/
 
-搜索ubuntu，选择22.04版本安装：
+搜索 ubuntu，选择 22.04 版本安装：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546452-184fad0d-b31d-4bd8-b3e2-18b1555bd2aa.png"/>
@@ -150,7 +150,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png"/>
 </div>
 
-选控制面板的“程序和功能”里边的设置，勾选“Hyper-V”和“适用于Linux的Windows子系统”：
+选控制面板的“程序和功能”里边的设置，勾选 “Hyper-V” 和 “适用于Linux的Windows子系统” ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png"/>
@@ -160,7 +160,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546804-0086f867-a564-4ad0-81f9-9a4ddc020045.png"/>
 </div>
 
-下载完打开Ubuntu2204：
+下载完打开 Ubuntu2204 ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546859-45c1e1c6-aa4e-427c-a375-e2170c60363e.png"/>
@@ -170,7 +170,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546867-db689603-384a-432b-82ae-308840e52f8a.png"/>
 </div>
 
-### WSL2的位置迁移
+### WSL2 的位置迁移
 
 在 PowerShell 中运行下面命令显示所有发行版的详细信息：
 
@@ -182,13 +182,13 @@ wsl --list --verbose
 <img src="https://user-images.githubusercontent.com/105597268/233547562-c5e7ae73-d0a2-45c1-85c9-4ca421d029da.png"/>
 </div>
 
-终止正在运行的wsl：
+终止正在运行的 wsl：
 
 ```
 wsl --shutdown
 ```
 
-将需要迁移的Linux，进行导出：
+将需要迁移的 Linux ，进行导出：
 
 ```
 wsl --export Ubuntu-22.04 E:/export.tar
@@ -220,11 +220,11 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 <img src="https://user-images.githubusercontent.com/105597268/233589320-f5234c4d-21d9-4999-b12a-ad3d0f796adf.png"/>
 </div>
 
-如果后面想要重装Ubuntu系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
+如果后面想要重装 Ubuntu 系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
 
 ### 在WSL2的root和普通用户的切换：
 
-在cmd里面输入下面指令，切换到根目录：
+在 cmd 里面输入下面指令，切换到根目录：
 
 ```
 ubuntu2204 config --default-user root
@@ -233,14 +233,14 @@ ubuntu2204 config --default-user root
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233590514-561c671a-22e0-4afa-928c-1ced30a3497c.png"/>
 </div>
-
-打开ubuntu exe程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
+ 
+打开 ubuntu exe 程序，此时就进入根目录了，输入 passwd 用户名，并设置密码：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233548076-34145ecb-8b46-49d4-ae87-8295829ae8ce.png"/>
 </div>
 
-在cmd里面输入下面指令，切换到普通用户：
+在 cmd 里面输入下面指令，切换到普通用户：
 
 ```
 ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名字） 
@@ -256,7 +256,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 <img src="https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png"/>
 </div>
 
-## 三、VScode远程连接Ubuntu2204:
+## 三、VScode 远程连接 Ubuntu2204 :
 
 下载Remote-SSH插件：
 
@@ -285,7 +285,7 @@ code .
 <img src="https://user-images.githubusercontent.com/105597268/233548674-26a8edba-09f7-447f-bbee-410ed0fc9126.png"/>
 </div>
 
-关闭远程连接，Powershell输入下面指令（重装系统卸载Ubuntu也需要先输入下面指令）：
+关闭远程连接， Powershell 输入下面指令（重装系统卸载 Ubuntu 也需要先输入下面指令）：
 
 ```
 wsl --shutdown
@@ -295,7 +295,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233548708-de0c32f7-3ff2-4088-b37a-ac2aa319478a.png"/>
 </div>
 
-点击打开ubuntu2204.exe程序：
+点击打开 ubuntu2204.exe 程序：
 
 
 <div align=center>
@@ -308,7 +308,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233548975-3d24ce7e-f604-4344-b966-047c64a2e5c2.png"/>
 </div>
 
-打开ubuntu里面的文件：open Folder, 点击ok：
+打开 ubuntu 里面的文件：open Folder, 点击 ok ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549008-ef26bd5e-aa3b-44f6-9948-570237b166ca.png"/>
@@ -318,21 +318,21 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png"/>
 </div>
 
-ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
+ubuntu 里面 /home/geoffreyfan/ 路径下的文档就被打开了:
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png"/>
 </div>
 
-可以通过拖拉windows里面的文件，放到这个路径下面：
+可以通过拖拉 Win10 里面的文件，放到这个路径下面：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233627037-0bb11b45-25d6-4ee6-863f-2fbb0125919f.png"/>
 </div>
 
-## 四、WSL2的Miniconda配置
+## 四、WSL2 的 Miniconda 配置
 
-安装Miconda地址: https://docs.conda.io/en/latest/miniconda.html
+安装 Miconda 地址: https://docs.conda.io/en/latest/miniconda.html
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233582670-1464caf7-a3d7-48f4-849d-f459b45dd6cc.png"/>
@@ -343,19 +343,19 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 </div>
 
 
-浏览器下载下完后，拖入到unbuntu里面：
+浏览器下载下完后，拖入到 unbuntu 里面：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233628794-950bfcab-645c-44cf-be0b-cd8d488fc9e9.png"/>
 </div>
 
-输入指令：bash Miniconda3-latest-Linux-x86_64.sh安装：
+输入指令：bash Miniconda3-latest-Linux-x86_64.sh 安装：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233629009-bc48cc05-705d-4956-8d4a-5d37ae670280.png"/>
 </div>
 
-安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入yes/no，全输入yes。有提示输入回车的，就按回车。
+安装过程中，刚开始要按回车键很多次（大概一直按住5秒这样），之后两三个地方会让你输入 yes/no ，全输入 yes 。有提示输入回车的，就按回车。
 
 安装完成之后，在 .bashrc 文件中最后一行加上：PATH=/home/user/miniconda3/bin:$PATH ，并保存：
 
@@ -363,7 +363,7 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 <img src="https://user-images.githubusercontent.com/105597268/233629221-53e51d1b-7b40-45e3-94b2-3e99baff1f53.png"/>
 </div>
 
-创建一个project.py文件，配置miniconda路径下的python解释器，并在终端执行该python文件，如果前面有（base）这个标志，那么说明miniconda配置成功：
+创建一个 project.py 文件，配置 miniconda 路径下的 python 解释器，并在终端执行该 python 文件，如果前面有 （base） 这个标志，那么说明 miniconda 配置成功：
 
 <img src="https://user-images.githubusercontent.com/105597268/233629718-519b87c7-cc65-4dc9-99fb-f5dba91bafe2.png"/>
 </div>
@@ -372,7 +372,7 @@ ubuntu里面/home/geoffreyfan/ 路径下的文档就被打开了:
 <img src="https://user-images.githubusercontent.com/105597268/233629827-418c2569-93ef-4946-a3b5-5bf2ebd15b7a.png"/>
 </div>
 
-用miniconda创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置3.9版本的python环境）：
+用 miniconda 创建虚拟环境, 并激活该虚拟环境（根据自己的需求来，这里我们选择配置 3.9 版本的 python 环境）：
 
 ```
 conda create -n pytorch python=3.9 -y
@@ -383,19 +383,19 @@ conda activate pytorch
 <img src="https://user-images.githubusercontent.com/105597268/233629974-89ad74d5-6a09-4e4b-82dc-add0a8cf0339.png"/>
 </div>
 
-配置好虚拟环境后，我们配置miniconda下我们创建的虚拟环境下的解释器：
+配置好虚拟环境后，我们配置 miniconda 下我们创建的虚拟环境下的解释器：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233630372-da60128f-c77f-4aab-8024-9e6f8f313127.png"/>
 </div>
 
-配置好后，我们在终端运行我们创建的python文件，会发现（base）标志变成了我们的虚拟环境的名称（pytorch）:
+配置好后，我们在终端运行我们创建的python文件，会发现 （base） 标志变成了我们的虚拟环境的名称 （pytorch） :
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233630630-dc8d754a-7928-4193-bda5-20224cdba5f7.png"/>
 </div>
 
-## 五、下载torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
+## 五、下载 torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
 
 如果用以下指令下载很慢：
 
@@ -403,7 +403,7 @@ conda activate pytorch
 pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-直接手动去官网下载.whl文件，然后拖到ubuntu里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
+直接手动去官网下载.whl文件，然后拖到 ubuntu 里面，官网地址：https://download.pytorch.org/whl/torch_stable.html
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233557377-e01c271a-ed83-4e8c-a694-d71e0e6ada99.png"/>
@@ -415,13 +415,13 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 <img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
 </div>
 
-上传完之后，Ubuntu文件中会有两个相应的安装包：
+上传完之后，Ubuntu 文件中会有两个相应的安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233630823-6e83678f-583b-4161-929c-7bac50eb7ae4.png"/>
 </div>
 
-创建一个project.py文件，输入下面的代码，并配置之前我们创建的miniconda的虚拟环境的python的解释器：
+创建一个 project.py 文件，输入下面的代码，并配置之前我们创建的 miniconda 的虚拟环境的 python 的解释器：
 
 ```
 import torch
@@ -453,7 +453,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233561233-d4b035e7-aa26-46cc-9b53-305a8f981ce0.png"/>
 </div>
 
-然后运行我们刚才建立的python文件：
+然后运行我们刚才建立的 python 文件：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233628149-ed5e3714-53a0-4c97-9ea1-1f9116b93540.png"/>
@@ -463,11 +463,11 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233628271-7cdc43b8-a7a2-48ee-a35f-efb941ba0f00.png"/>
 </div>
 
-## 六、WSL2的cuda toolkit配置（说明：如果需要使用到nvcc，即要使用到源码编译，执行WSL2的cuda toolkit配置，如果只需要进行预编译，请忽略该步骤）
+## 六、WSL2 的 cuda toolkit 配置（说明：如果需要使用到 nvcc，即要使用到源码编译，执行 WSL2 的 cuda toolkit 配置，如果只需要进行预编译，请忽略该步骤）
 
 注意：不要使用 sudo apt install nvidia-cuda-toolkit 进行配置，会默认配置为一个低版本的 cuda toolkit
 
-没有配置cuda toolkit之前：
+没有配置 cuda toolkit 之前：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233554064-b9d08cef-d16b-450a-b936-58d2f55dd232.png"/>
@@ -481,7 +481,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233554120-fdb2ba64-60b5-4e38-abf5-3b673a3a0a19.png"/>
 </div>
 
-下载cu111版本（注意，Win10系统上的显卡驱动的版本不用与这里的cuda版本一致，比如我下载的Win10系统上的显卡驱动版本为12.1，显卡驱动是向下兼容的）：
+下载 cu111 版本（注意， Win10 系统上的显卡驱动的版本不用与这里的 cuda 版本一致，比如我下载的 Win10 系统上的显卡驱动版本为 12.1 ，显卡驱动是向下兼容的）：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233554161-b8e2258c-6238-4164-9efb-31fa17fe5dc3.png"/>
@@ -493,7 +493,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 <img src="https://user-images.githubusercontent.com/105597268/233555068-3f38e1a0-166c-4f54-a351-fa5b725c4413.png"/>
 </div>
 
-打开ubuntu exe：输入下面指令：
+打开 ubuntu exe ：输入下面指令：
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
@@ -511,13 +511,13 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-小知识：在执行了wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 指令后，ubuntu里面会出现相应的安装包，后面重新安装，直接sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb就可以了，不用再反复下载安装包：
+小知识：在执行了 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb  指令后，ubuntu 里面会出现相应的安装包，后面重新安装，直接执行 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 就可以了，不用再反复下载安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233631320-94aa49d5-1505-47aa-bcc1-41bd711a5542.png"/>
 </div>
 
-注意：在sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub指令之后，安装的过程中不要勾选driver否则会下载失败：
+注意：在 sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub 指令之后，安装的过程中不要勾选 driver 否则会下载失败：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233576435-74dc4412-daab-40e1-b8d1-0a05501b2c74.png"/>
@@ -548,9 +548,9 @@ nvcc -V
 
 ### 解决：nvcc: command not found
 
-nvcc 是The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code.(NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
+nvcc 是 The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code. ( NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
-输入下面指令，查看cuda的bin目录下是否有nvcc：
+输入下面指令，查看 cuda 的 bin 目录下是否有 nvcc：
 
 ```
 cd /usr/local/cuda/bin
@@ -562,7 +562,7 @@ cd /usr/local/cuda/bin
 <img src="https://user-images.githubusercontent.com/105597268/233568001-f1668e4a-3ccb-43b2-9e39-59a83211244e.png"/>
 </div>
 
-直接将cuda路径加入系统路径（即将下面指令加入.bashrc文件）即可：
+直接将 cuda 路径加入系统路径（即将下面指令加入 .bashrc 文件）即可：
 
 ```
 export LD_LIBRARY_PATH=/usr/local/cuda/lib
@@ -584,7 +584,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 <img src="https://user-images.githubusercontent.com/105597268/233569042-fb98c59e-7f87-4fc7-ba22-139bed57145f.png"/>
 </div>
 
-退出ubuntu exe程序，然后再开启，再次执行nvcc -V 就可以看到相应cuda版本了：
+退出 ubuntu exe 程序，然后再开启，再次执行 nvcc -V 就可以看到相应 cuda 版本了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233569202-2c7939eb-f276-4e1e-b9f7-4d28667c1761.png"/>
@@ -592,17 +592,17 @@ export PATH=$PATH:/usr/local/cuda/bin
 
 解释说明：
 
-CUDA有两个CUDA版本
+CUDA 有两个 CUDA 版本
 
-runtime api 使用nvcc -V显示
+runtime api 使用 nvcc -V 显示
 
-driver api， 使用nvidia-smi显示
+driver api， 使用 nvidia-smi 显示
 
-如果报错的命令是RuntimeError，那就使用nvcc -V命令查看是否是版本不匹配。
+如果报错的命令是 RuntimeError ，那就使用 nvcc -V 命令查看是否是版本不匹配。
 
-### 解决：查看显卡使用情况nvidia-smi报错：command not found
+### 解决：查看显卡使用情况 nvidia-smi 报错：command not found
 
-gpu重启以后，是默认关闭的，在ubuntu exe下执行：
+gpu 重启以后，是默认关闭的，在 ubuntu exe 下执行：
 
 ```
 nvidia-smi -pm 1
@@ -614,9 +614,9 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png"/>
 </div>
 
-### 解决：下载完anaconda之后仍然报错：conda: command not found
+### 解决：下载完 anaconda 之后仍然报错：conda: command not found
 
-将以下添加到.bashrc文件里面:
+将以下添加到 .bashrc 文件里面:
 
 ```
 PATH=/home/user/anaconda3/bin:$PATH
@@ -626,7 +626,7 @@ PATH=/home/user/anaconda3/bin:$PATH
 <img src="https://user-images.githubusercontent.com/105597268/233572324-d52abedb-eda0-4bab-a3c3-789f9c018711.png"/>
 </div>
 
-在终端运行一个python文件，前面有(base)这个标示符就表示成功了：
+在终端运行一个 python 文件，前面有 (base) 这个标示符就表示成功了：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233631968-16276ceb-6958-4084-af55-6312f4162453.png"/>
@@ -634,7 +634,7 @@ PATH=/home/user/anaconda3/bin:$PATH
 
 ### 解决：su: Authentication failure
 
-su命令不能切换root，提示su: Authentication failure，只要你sudo passwd root过一次之后，下次再su的时候只要输入密码就可以成功登录了。
+su命令不能切换 root ，提示 su: Authentication failure，只要你 sudo passwd root 过一次之后，下次再 su 的时候只要输入密码就可以成功登录了。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png"/>
@@ -661,7 +661,7 @@ wsl.exe --list --all
 
 wsl.exe --unregister Ubuntu-22.04 (第一步查询出来需要注销的系统名称)
 
- 第三步,重新启动unbuntu系统，系统会重新初始化，效果如下：
+ 第三步,重新启动 unbuntu 系统，系统会重新初始化，效果如下：
  
  <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233662679-98e8271c-920f-4656-9fb6-7df5eba43370.png"/>

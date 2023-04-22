@@ -222,7 +222,7 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 
 如果后面想要重装 Ubuntu 系统，删除之前的版本，在执行了 wsl --shutdown 指令后，直接删除 ext4.vhdx 文件即可。
 
-### 在WSL2的root和普通用户的切换：
+### 进行 WSL2 的 root 和普通用户的切换：
 
 在 cmd 里面输入下面指令，切换到根目录：
 

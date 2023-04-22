@@ -52,7 +52,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 
 注意，该是安装 Win10 驱动，而不是安装 Linux 驱动，在 Windows 下安装驱动后，会自动将驱动以 libcuda.so 的形式集成至 WSL2 中，因此切勿在 WSL Linux 中重复安装驱动。
 
-根据自己显卡的型号选择驱动，notebooks 代表笔记本，我是台式电脑 3080 显卡，所以选择 GeForce RX 30 Series 下的 GeForce RX 3080。
+根据自己显卡的型号选择驱动，Notebooks 代表笔记本，我是台式电脑 3080 显卡，所以选择 GeForce RX 30 Series 下的 GeForce RX 3080。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233551395-537e1988-2894-476e-a3f8-c60e4ee5c853.png"/>

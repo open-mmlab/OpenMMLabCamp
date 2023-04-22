@@ -106,7 +106,7 @@ nvidia-smi
 
 下载链接：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-下载完点击安装即可，安装中不停地next就可以。
+下载完点击安装即可，安装中不停地点击next就可以。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546108-e97fcec8-0848-48f1-a1b1-76327a5101aa.png"/>

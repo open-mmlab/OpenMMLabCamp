@@ -150,7 +150,7 @@ wsl --set-default-version 2
 <img src="https://user-images.githubusercontent.com/105597268/233546466-9e391780-70f0-41d5-8836-0f1ca1db015f.png"/>
 </div>
 
-选控制面板的“程序和功能”里边的设置，勾选 “Hyper-V” 和 “适用于Linux的Windows子系统” ：
+进入控制面板的“程序和功能”里边的设置，勾选 “Hyper-V” 和 “适用于Linux的Windows子系统” ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233546795-db997990-28aa-4870-96a5-ea0d9418afdb.png"/>

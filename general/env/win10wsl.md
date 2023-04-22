@@ -258,7 +258,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 
 ## 三、VScode 远程连接 Ubuntu-22.04 Linux 子系统 :
  
-下载 WSL 远程连接插件：
+下载 WSL 远程连接 Ubuntu-22.04 Linux 子系统的插件：
 
 
 <div align=center>

@@ -318,7 +318,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233549034-0bb03630-8c8b-459c-9e88-05a97bd9ab1d.png"/>
 </div>
 
-Ubuntu-22.04 Linux 子系统里面的 /home/geoffreyfan/ 路径下的文档就被打开了:
+Ubuntu-22.04 Linux 子系统里面的 /home/geoffreyfan (这里是你自己的用户名字) / 路径下的文档就被打开了:
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549085-53076917-cddd-4b3f-820e-43b1cfeb7814.png"/>
@@ -415,7 +415,7 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 <img src="https://user-images.githubusercontent.com/105597268/233556601-ff402f11-185c-4953-8de0-21e26601c3cd.png"/>
 </div>
 
-上传完之后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan/ 路径下的文件中会有两个相应的安装包：
+上传完之后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan (这里是你自己的用户名字) / 路径下的文件中会有两个相应的安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233630823-6e83678f-583b-4161-929c-7bac50eb7ae4.png"/>
@@ -511,7 +511,7 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-小知识：在执行了 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb  指令后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan/ 路径下会出现相应的安装包，后面重新安装，直接执行 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 就可以了，不用再反复下载安装包：
+小知识：在执行了 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb  指令后，Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan (这里是你自己的用户名字) / 路径下会出现相应的安装包，后面重新安装，直接执行 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb 就可以了，不用再反复下载安装包：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233631320-94aa49d5-1505-47aa-bcc1-41bd711a5542.png"/>
@@ -614,7 +614,7 @@ nvidia-smi
 
 ### 3、解决：下载完 anaconda 之后仍然报错：conda: command not found
 
-将以下添加到 .bashrc 文件里面:
+将以下添加到 Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan (这里是你自己的用户名字) / 路径下的 .bashrc 文件里面:
 
 ```
 PATH=/home/user/anaconda3/bin:$PATH

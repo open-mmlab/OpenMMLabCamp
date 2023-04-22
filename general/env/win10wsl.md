@@ -546,7 +546,7 @@ nvcc -V
 
 ## 七、有关一些问题的解决思路
 
-### 解决：nvcc: command not found
+### 1、解决：nvcc: command not found
 
 nvcc 是 The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code. ( NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
@@ -598,7 +598,7 @@ Win10 系统里面的 Driver api， 使用 nvidia-smi 显示
 
 如果报错的命令是 RuntimeError ，那就使用 nvcc -V 命令查看是否是版本不匹配。
 
-### 解决：查看显卡使用情况 nvidia-smi 报错：command not found
+### 2、解决：查看显卡使用情况 nvidia-smi 报错：command not found
 
 gpu 重启以后，是默认关闭的，在 Ubuntu-22.04.exe 下执行：
 
@@ -612,7 +612,7 @@ nvidia-smi
 <img src="https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png"/>
 </div>
 
-### 解决：下载完 anaconda 之后仍然报错：conda: command not found
+### 3、解决：下载完 anaconda 之后仍然报错：conda: command not found
 
 将以下添加到 .bashrc 文件里面:
 
@@ -630,7 +630,7 @@ PATH=/home/user/anaconda3/bin:$PATH
 <img src="https://user-images.githubusercontent.com/105597268/233631968-16276ceb-6958-4084-af55-6312f4162453.png"/>
 </div>
 
-### 解决：su: Authentication failure
+### 4、解决：su: Authentication failure
 
 su 命令不能切换 root ，提示 su: Authentication failure，只要你 sudo passwd root 过一次之后，下次再 su 的时候只要输入密码就可以成功登录了。
 
@@ -638,7 +638,7 @@ su 命令不能切换 root ，提示 su: Authentication failure，只要你 sudo
 <img src="https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png"/>
 </div>
 
-### 解决：系统找不到指定的文件。
+### 5、解决：系统找不到指定的文件。
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233660551-e739fc38-fca8-492c-8980-c43e7b9edc35.png"/>

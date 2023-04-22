@@ -63,10 +63,6 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 </div>
 
 <div align=center>
-<img src="https://user-images.githubusercontent.com/105597268/233545426-3f13f4d3-cab5-40f0-a353-a070de5c2c9b.png"/>
-</div>
-
-<div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233545477-fe21aece-1d40-40d8-a6c0-0f9f78fb0c2b.png"/>
 </div>
 

@@ -308,7 +308,7 @@ wsl --shutdown
 <img src="https://user-images.githubusercontent.com/105597268/233548975-3d24ce7e-f604-4344-b966-047c64a2e5c2.png"/>
 </div>
 
-打开 Ubuntu-22.04 Linux 子系统里面的文件：open Folder, 点击 ok ：
+打开 Ubuntu-22.04 Linux 子系统里面的文件：open Folder , 点击 OK ：
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/105597268/233549008-ef26bd5e-aa3b-44f6-9948-570237b166ca.png"/>

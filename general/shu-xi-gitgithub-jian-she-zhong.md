@@ -14,5 +14,5 @@ git config --global user.email xxx
 长期存储密码
 
 ```shell
-git config --global credential.helper cache
+git config --global credential.helper store
 ```

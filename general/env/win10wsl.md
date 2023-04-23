@@ -82,9 +82,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 
 ```
 nvidia-smi -pm 1
-
 lspci | grep NVIDIA
-
 nvidia-smi
 ```
 
@@ -417,15 +415,10 @@ pip install torch==1.9.1+cu110 torchvision==0.10.1+cu110 -f https://download.pyt
 
 ```
 import torch
-
 import torchvision
-
 device = torch.device('cuda')
-
 print(torch.cuda.is_available())
-
 print(torch.__version__)
-
 print(torchvision.__version__)
 ```
 
@@ -437,7 +430,6 @@ print(torchvision.__version__)
 
 ```
 pip install torch-1.9.1+cu111-cp39-cp39-linux_x86_64.whl
-
 pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 ```
 
@@ -493,17 +485,11 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
-
 sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
-
 wget https://developer.download.nvidia.com/compute/cuda/11.1.0/local_installers/cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
-
 sudo dpkg -i cuda-repo-wsl-ubuntu-11-1-local_11.1.0-1_amd64.deb
-
 sudo apt-key add /var/cuda-repo-wsl-ubuntu-11-1-local/7fa2af80.pub （这条指令可能会随着时间被官网更新，请每次都到官网获取新的指令）
-
 sudo apt-get update
-
 sudo apt-get -y install cuda
 ```
 
@@ -562,7 +548,6 @@ cd /usr/local/cuda/bin
 
 ```
 export LD_LIBRARY_PATH=/usr/local/cuda/lib
-
 export PATH=$PATH:/usr/local/cuda/bin
 ```
 

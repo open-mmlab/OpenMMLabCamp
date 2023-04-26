@@ -31,7 +31,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-### 2.安装 NVIDIA Docker
+## 2.安装 NVIDIA Docker
 ```bash
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
@@ -51,7 +51,7 @@ sudo docker build -t mmdetection:latest .
 ```
 构建过程可能需要花费一些时间。
 
-### 5.运行 Docker 容器:
+## 5.运行 Docker 容器:
 ```bash
 sudo docker run --gpus all -it --shm-size=8g --name mmdetection_container -v /path/to/mmdetection:/mmdetection mmdetection:latest
 ```

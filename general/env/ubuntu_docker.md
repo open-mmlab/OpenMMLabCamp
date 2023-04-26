@@ -1,5 +1,5 @@
 # ubuntu docker 环境配置
-### 1.安装 Docker和 docker compose：
+## 1.安装 Docker和 docker compose：
 [官方文档](https://docs.docker.com/engine/install/ubuntu/)
 1. 安装前准备
 ```bash

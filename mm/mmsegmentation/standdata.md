@@ -56,14 +56,20 @@ GID的5类有效标签分别为：0-背景-[0,0,0](mask标签值-标签名称-RG
 
 ### 3.2 贡献您的数据集代码
 为了最终能将您在projects中贡献的代码更加顺畅的移入核心库中(对代码要求质量更高)，非常建议按照核心库的目录来编辑您的数据集文件。
-关于数据集有 3 个必要的文件：
+关于数据集有 4 个必要的文件：
 * `mmseg/datasets/gid.py` 定义了数据集的尾缀、CLASSES、PALETTE等
 * `configs/_base_/gid.py` GID数据集的配置文件，定义了数据集的`dataset_type`（数据集类型，`mmseg/datasets/gid.py`中注册的数据集的类名）、`data_root`(数据集所在的根目录，建议将数据集通过软连接的方式将数据集放至`mmsegmentation/data`)、`train_pipline`(训练的数据流)、`test_pipline`(测试和验证时的数据流)、`img_rations`(多尺度预测时的多尺度)、`tta_pipeline`（多尺度预测）、`train_dataloader`(训练集的数据记载器)、`val_dataloader`(验证集的数据加载器)、`test_dataloader`(测试集的数据加载器)、`val_evaluator`(验证集的评估器)、`test_evaluator`(测试集的评估器)。
 * 使用了当前数据集 `config` 的模型配置文件
 这个是可选的，但是强烈建议您添加。在核心库中，所贡献的数据集需要和参考文献中所提出的结果精度对齐，为了后期将您贡献的代码合并入核心库。如您的算力充足，最好能提供对应模型配置文件的在您贡献的数据集上所验证的结果以及相应的权重文件，并撰写较为详细的README.md文档。[示例参考结果](https://github.com/open-mmlab/mmsegmentation/tree/main/configs/deeplabv3plus#mapillary-vistas-v12)
 ![image](https://user-images.githubusercontent.com/50650583/233877682-eabe8723-bce9-40e4-a303-08c8385cb6b5.png)
+* `docs/zh_cn/user_guides/2_dataset_prepare.md`来添加您的数据集介绍，包括但不限于数据集的下载方式，数据集目录结构、数据集生成等一些必要性的文字性描述和运行命令。以更好地帮助新用户能更快的实现数据集的准备工作。
 
-### 3.3 贡献`mmseg/datasets/gid.py`
+### 3.3 贡献`tools/dataset_converters/gid.py`
+由于 GID 数据集是由未经过切分的 6800*7200 图像所构成的数据集，并且没有划分训练集、验证集与测试集。以及，其label为 RGB 彩色标签，需要将标签转换为单通道的 mask label。为了方便训练，首先将 GID 数据集进行裁切和标签转换，并进行数据集划分，以构建为 mmsegmentation 所支持的格式。
+
+
+
+### 3.4 贡献`mmseg/datasets/gid.py`
 可参考[`projects/mapillary_dataset/mmseg/datasets/mapillary.py`](https://github.com/open-mmlab/mmsegmentation/blob/main/projects/mapillary_dataset/mmseg/datasets/mapillary.py)并在此基础上修改相应变量以适配您的数据集。  
 ```python
 # Copyright (c) OpenMMLab. All rights reserved.

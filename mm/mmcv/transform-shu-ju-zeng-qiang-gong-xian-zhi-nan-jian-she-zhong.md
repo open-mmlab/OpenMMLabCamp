@@ -195,3 +195,13 @@ flowchart TD;
 ```
 
 用户可通过堆叠不同的增强策略以实现指数级别的数据增强
+
+## PR 参考
+
+以 MMCV 2.0 开发过程中提交的 [PR](https://github.com/open-mmlab/mmcv/pull/1730/files) 为例，为 MMCV 贡献数据变换模块需要完成以下步骤：
+
+1. 更新 `__init__.py`
+2. 更新中英文版本的 [transform.rst](https://github.com/open-mmlab/mmcv/blob/main/docs/zh_cn/api/transforms.rst)（由于文档滞后于样例 PR 实现，因此样例中并没有这一步骤）
+3. 按照之前章节的指引，实现新的数据变换模块
+4. 补充单元测试
+5. 补充文档（可选）

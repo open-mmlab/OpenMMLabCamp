@@ -1,11 +1,10 @@
 # 贡献一个标准格式的数据集
 ## 在 projects 中贡献一个标准 mmseg 格式的数据集
-在您开始工作前，请先阅读[OpenMMLab 贡献代码指南](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html),以了解更详细的代码贡献流程。
-该教程所贡献数据集为 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 和 WHDLD 遥感图像语义分割数据集。
+在您开始工作前，请先阅读[OpenMMLab 贡献代码指南](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以了解更详细的代码贡献流程。
+该教程所贡献数据集为 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 和 [WHDLD](https://sites.google.com/view/zhouwx/dataset?pli=1#h.p_hQS2jYeaFpV0) 遥感图像语义分割数据集。
 
 ## 1 配置 mmsegmentation 运行所需必要的环境，并 git clone mmsegmentation
-环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)  
-![image](https://user-images.githubusercontent.com/50650583/233825292-2e52d574-f4b9-4404-b18e-eede70a67d7f.png)  
+环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。<img src="https://user-images.githubusercontent.com/50650583/233825292-2e52d574-f4b9-4404-b18e-eede70a67d7f.png" style="zoom: 80%;" >
 注意：这里的安装需要从源码构建，以方便您进行开发。
 
 ## 2 代码贡献前应该完成的准备工作
@@ -23,7 +22,7 @@
 ### 2.3 cd mmsegmentation 并 pip install -v -e .
 将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 仓库。
 安装完成后，您将能看到如下图所示的文件树结构。
-![image](https://user-images.githubusercontent.com/50650583/233826064-4b111358-8f97-44dd-955c-df3204410b8b.png)  
+<img src="https://user-images.githubusercontent.com/50650583/233826064-4b111358-8f97-44dd-955c-df3204410b8b.png" alt="image" style="zoom:67%;" />  
 
 ### 2.4 切换分支为 dev-1.x
 正如您在[ mmsegmentation 官网](https://github.com/open-mmlab/mmsegmentation/tree/main)所见，有许多分支，默认分支`main`为稳定的发行版本，以及用于开发的`dev-1.x`分支。`dev-1.x`分支是贡献者们用来提交您创意和PR的分支。
@@ -35,7 +34,8 @@ git checkout dev-1.x
 ```
 ### 2.5 创新属于自己的新分支
 在基于`dev-1.x`分支下，创建处于您自己的分支。
-使用如下命令格式
+使用如下命令格式：
+
 ```bash
 # git checkout -b 您的GithubID/您的分支想要实现的功能的名字
 # git checkout -b AI-Tianlong/support_GID_dataset
@@ -47,9 +47,14 @@ git checkout -b xxxx/xxxx
 ## 3  在`mmsegmentation/projects`下贡献您的代码
 #### 先对 GID 数据集进行分析
 
-这里以贡献遥感图像语义分割数据集 GID 为例，GID数据集是由我国自主研发的高分2号卫星所拍摄的光学遥感图像创建的，经图像预处理后共提供了150张6800*7200像素的RGB三通道的遥感图像。并提供了两种不同类别数的数据标注，一种是包含5类有效物体的RGB标签，另一种是包含15类有效物体的RGB标签。本教程将针对第一种标签进行数据集贡献讲解。  
-GID的5类有效标签分别为：0-背景-[0,0,0](mask标签值-标签名称-RGB标签值)、1-建筑-[255,0,0]、2-农田-[0,255,0]、3-森林-[0,0,255]、4-草地-[255,255,0]、5-水-[0,0,255]。在语义分割任务中，标签是与原图尺寸一致的单通道图像，标签图像中的像素值为真实样本图像中对应像素所包含的物体的类别。GID数据集提供的是具有RGB三通道的彩色标签，为了模型的训练需要将RGB标签转换为mask标签。并且由于图像尺寸为 6800*7200 像素，过大的图像尺寸对于神经网络的训练来说是不合适的，所以将每张图像裁切成了若干没有重叠的512*512的图像以便进行训练。
-![image](https://user-images.githubusercontent.com/50650583/234192183-83ee4209-e181-4a18-90ca-4d71757cd2c7.png)
+这里以贡献遥感图像语义分割数据集 GID 为例，GID数据集是由我国自主研发的高分2号卫星所拍摄的光学遥感图像创建的，经图像预处理后共提供了150张6800*7200像素的RGB三通道的遥感图像。并提供了两种不同类别数的数据标注，一种是包含5类有效物体的RGB标签，另一种是包含15类有效物体的RGB标签。本教程将针对第一种标签进行数据集贡献讲解。*
+
+*GID的5类有效标签分别为：0-背景-[0,0,0](mask标签值-标签名称-RGB标签值)、1-建筑-[255,0,0]、2-农田-[0,255,0]、3-森林-[0,0,255]、4-草地-[255,255,0]、5-水-[0,0,255]。在语义分割任务中，标签是与原图尺寸一致的单通道图像，标签图像中的像素值为真实样本图像中对应像素所包含的物体的类别。GID数据集提供的是具有RGB三通道的彩色标签，为了模型的训练需要将RGB标签转换为mask标签。并且由于图像尺寸为 6800*7200 像素，过大的图像尺寸对于神经网络的训练来说是不合适的，所以将每张图像裁切成了若干没有重叠的512*512的图像以便进行训练。
+
+<img align='center' src="https://user-images.githubusercontent.com/50650583/234192183-83ee4209-e181-4a18-90ca-4d71757cd2c7.png" alt="image" style="zoom:67%;" />
+
+
+
 ### 3.1 在`mmsegmentation/projects`下创建新文件夹
 在`mmsegmentation/projects`下创建文件夹`gid_dataset`
 ![image](https://user-images.githubusercontent.com/50650583/233829687-8f2b6600-bc9d-48ff-a865-d462af54d55a.png)
@@ -66,7 +71,185 @@ GID的5类有效标签分别为：0-背景-[0,0,0](mask标签值-标签名称-RG
 
 ### 3.3 贡献`tools/dataset_converters/gid.py`
 由于 GID 数据集是由未经过切分的 6800*7200 图像所构成的数据集，并且没有划分训练集、验证集与测试集。以及，其label为 RGB 彩色标签，需要将标签转换为单通道的 mask label。为了方便训练，首先将 GID 数据集进行裁切和标签转换，并进行数据集划分，以构建为 mmsegmentation 所支持的格式。
+```python
+import argparse
+import glob
+import math
+import os
+import os.path as osp
+from PIL import Image
 
+
+import mmcv
+import numpy as np
+from mmengine.utils import ProgressBar, mkdir_or_exist
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='Convert GID dataset to mmsegmentation format')
+    parser.add_argument('dataset_img_path', help='GID images folder path')
+    parser.add_argument('dataset_label_path', help='GID labels folder path')
+    parser.add_argument('--tmp_dir', help='path of the temporary directory')
+    parser.add_argument('-o', '--out_dir', help='output path', default='data/gid')
+    parser.add_argument(
+        '--clip_size',
+        type=int,
+        help='clipped size of image after preparation',
+        default=256)
+    parser.add_argument(
+        '--stride_size',
+        type=int,
+        help='stride of clipping original images',
+        default=256)
+    args = parser.parse_args()
+    return args
+
+GID_COLORMAP = dict(
+    Background=(0, 0, 0), #0-背景-黑色
+    Building=(255, 0, 0), #1-建筑-红色
+    Farmland=(0, 255, 0), #2-农田-绿色
+    Forest=(0, 0, 255), #3-森林-蓝色
+    Meadow=(255, 255, 0),#4-草地-黄色
+    Water=(0, 0, 255)#5-水-蓝色
+)
+palette = list(GID_COLORMAP.values())
+classes = list(GID_COLORMAP.keys())
+
+
+#############用列表来存一个 RGB 和一个类别的对应################
+def colormap2label(palette):   
+    colormap2label_list = np.zeros(256**3, dtype = np.longlong)
+    for i, colormap in enumerate(palette):
+        colormap2label_list[(colormap[0] * 256 + colormap[1])*256+colormap[2]] = i
+    return colormap2label_list
+
+#############给定那个列表，和vis_png然后生成masks_png################
+def label_indices(RGB_label, colormap2label_list):
+    RGB_label = RGB_label.astype('int32')
+    idx = (RGB_label[:, :, 0] * 256 + RGB_label[:, :, 1]) * 256 + RGB_label[:, :, 2]
+    # print(idx.shape)
+    return colormap2label_list[idx]
+
+def RGB2mask(RGB_label, colormap2label_list):
+    # RGB_label = np.array(Image.open(RGB_label).convert('RGB')) #打开RGB_png
+    mask_label = label_indices(RGB_label, colormap2label_list) # .numpy()
+    return mask_label
+
+
+colormap2label_list = colormap2label(palette)
+
+def clip_big_image(image_path, clip_save_dir, args, to_label=False):
+    """
+    Original image of GID dataset is very large, thus pre-processing
+    of them is adopted. Given fixed clip size and stride size to generate
+    clipped image, the intersection　of width and height is determined.
+    For example, given one 6800 x 7200 original image, the clip size is
+    256 and stride size is 256, thus it would generate 29 x 27 = 783 images
+    whose size are all 256 x 256. 
+    
+    """
+
+    
+    image = mmcv.imread(image_path, channel_order='rgb')
+    # image = mmcv.bgr2gray(image)
+
+    h, w, c = image.shape
+    clip_size = args.clip_size
+    stride_size = args.stride_size
+
+    num_rows = math.ceil((h - clip_size) / stride_size) if math.ceil(
+        (h - clip_size) /
+        stride_size) * stride_size + clip_size >= h else math.ceil(
+            (h - clip_size) / stride_size) + 1
+    num_cols = math.ceil((w - clip_size) / stride_size) if math.ceil(
+        (w - clip_size) /
+        stride_size) * stride_size + clip_size >= w else math.ceil(
+            (w - clip_size) / stride_size) + 1
+
+    x, y = np.meshgrid(np.arange(num_cols + 1), np.arange(num_rows + 1))
+    xmin = x * clip_size                        
+    ymin = y * clip_size
+
+    xmin = xmin.ravel()
+    ymin = ymin.ravel()
+    xmin_offset = np.where(xmin + clip_size > w, w - xmin - clip_size,
+                           np.zeros_like(xmin))
+    ymin_offset = np.where(ymin + clip_size > h, h - ymin - clip_size,
+                           np.zeros_like(ymin))
+    boxes = np.stack([
+        xmin + xmin_offset, ymin + ymin_offset,
+        np.minimum(xmin + clip_size, w),
+        np.minimum(ymin + clip_size, h)
+    ], axis=1)
+    
+    if to_label:
+        image = RGB2mask(image, colormap2label_list) #这里得改一下
+            
+    for count, box in enumerate(boxes):
+        start_x, start_y, end_x, end_y = box
+        clipped_image = image[start_y:end_y,
+                              start_x:end_x] if to_label else image[
+                                  start_y:end_y, start_x:end_x, :]
+        img_name = osp.basename(image_path).replace('.tif', '')
+        img_name = img_name.replace('_label', '')
+        if count % 3 == 0:
+            mmcv.imwrite(
+                clipped_image.astype(np.uint8),
+                osp.join(
+                    clip_save_dir.replace('train', 'val'),
+                    f'{img_name}_{start_x}_{start_y}_{end_x}_{end_y}.png'))
+        else:
+            mmcv.imwrite(
+                clipped_image.astype(np.uint8),
+                osp.join(
+                    clip_save_dir,
+                    f'{img_name}_{start_x}_{start_y}_{end_x}_{end_y}.png'))
+        count += 1
+
+def main():
+    args = parse_args()
+    
+    """
+    According to this paper: https://ieeexplore.ieee.org/document/9343296/
+    select 15 images contained in GID, , which cover the whole six 
+    categories, to generate train set and validation set.
+
+    According to Paper: https://ieeexplore.ieee.org/document/9343296/
+
+    """
+
+    if args.out_dir is None:
+        out_dir = osp.join('data', 'gid')
+    else:
+        out_dir = args.out_dir
+
+    print('Making directories...')
+    mkdir_or_exist(osp.join(out_dir, 'img_dir', 'train'))
+    mkdir_or_exist(osp.join(out_dir, 'img_dir', 'val'))
+    mkdir_or_exist(osp.join(out_dir, 'ann_dir', 'train'))
+    mkdir_or_exist(osp.join(out_dir, 'ann_dir', 'val'))
+
+
+    src_path_list = glob.glob(os.path.join(args.dataset_img_path, '*.tif'))  
+    print(f'Find {len(src_path_list)} pictures')
+
+    prog_bar = ProgressBar(len(src_path_list))
+
+    dst_img_dir = osp.join(out_dir, 'img_dir', 'train')
+    dst_label_dir = osp.join(out_dir, 'ann_dir', 'train')
+
+    for i, img_path in enumerate(src_path_list):
+        label_path = osp.join(args.dataset_label_path, osp.basename(img_path.replace('.tif', '_label.tif')))
+        
+        clip_big_image(img_path, dst_img_dir, args, to_label=False)
+        clip_big_image(label_path, dst_label_dir, args, to_label=True)
+        prog_bar.update()
+                      
+    print('Done!')
+
+
+```
 
 
 ### 3.4 贡献`mmseg/datasets/gid.py`
@@ -109,7 +292,6 @@ class GID_Dataset(BaseSegDataset):
             **kwargs)
 
 ```
-
 
 
 

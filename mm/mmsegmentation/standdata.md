@@ -1,34 +1,34 @@
 # 贡献一个标准格式的数据集
 ## 在 projects 中贡献一个标准 mmseg 格式的数据集
 在您开始工作前，请先阅读[OpenMMLab 贡献代码指南](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以了解更详细的代码贡献流程。
-该教程所贡献数据集为 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 和 [WHDLD](https://sites.google.com/view/zhouwx/dataset?pli=1#h.p_hQS2jYeaFpV0) 遥感图像语义分割数据集。
+该教程所贡献数据集样例为 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414)遥感图像语义分割数据集。
 
-## 1 配置 mmsegmentation 运行所需必要的环境，并 git clone mmsegmentation
+## 1 配置 mmsegmentation 运行所需必要的环境
 环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。<img src="https://user-images.githubusercontent.com/50650583/233825292-2e52d574-f4b9-4404-b18e-eede70a67d7f.png" style="zoom: 80%;" >
-注意：这里的安装需要从源码构建，以方便您进行开发。
+注：无需执行步骤 1，只需安装开发 mmsegmentation 所需的 pytorch、mmcv 等即可。
 
 ## 2 代码贡献前应该完成的准备工作
 ### 2.1 fork mmsegmentation 仓库
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
-* 登录您的 Github 账户，以下步骤均需在Github登录的情况下进行。
+* 登录您的 Github 账户，以下步骤均需在 Github 登录的情况下进行。
 * fork mmsegmentation 仓库
 * ![image](https://user-images.githubusercontent.com/50650583/233825567-b8bf273c-38f5-4487-b4c6-75ede1e283ee.png)
 ### 2.2 在您的代码编写软件中 git clone mmsegmentation
 这里以 VSCODE 为例
 * 打开 VSCODE，新建终端窗口并激活您在[1 环境安装](#1-配置-mmsegmentation-运行所需必要的环境并-git-clone-mmsegmentation)中所安装的虚拟环境。
-* 运行命令`git clone git@github.com:open-mmlab/mmsegmentation.git`或`git clone https://github.com/open-mmlab/mmsegmentation.git`
-* ![image](https://user-images.githubusercontent.com/50650583/233825892-80029b4d-b0b3-4aeb-8906-9b3df62fb634.png)
+* 在终端中执行命令`git clone git@github.com:open-mmlab/mmsegmentation.git`或`git clone https://github.com/open-mmlab/mmsegmentation.git`
+  ![image](https://user-images.githubusercontent.com/50650583/233825892-80029b4d-b0b3-4aeb-8906-9b3df62fb634.png)
 
-### 2.3 cd mmsegmentation 并 pip install -v -e .
-将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 仓库。
-安装完成后，您将能看到如下图所示的文件树结构。
+### 2.3 切换目录至 mmsegmentation 并从源码安装mmsegmentation
+ 执行`cd mmsegmentation`，将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 库。
+安装完成后，您将能看到如下图所示的文件树。  
 <img src="https://user-images.githubusercontent.com/50650583/233826064-4b111358-8f97-44dd-955c-df3204410b8b.png" alt="image" style="zoom:67%;" />  
 
 ### 2.4 切换分支为 dev-1.x
-正如您在[ mmsegmentation 官网](https://github.com/open-mmlab/mmsegmentation/tree/main)所见，有许多分支，默认分支`main`为稳定的发行版本，以及用于开发的`dev-1.x`分支。`dev-1.x`分支是贡献者们用来提交您创意和PR的分支。
+正如您在[ mmsegmentation 官网](https://github.com/open-mmlab/mmsegmentation/tree/main)所见，该仓库有许多分支，默认分支`main`为稳定的发行版本，以及用于开发的`dev-1.x`分支。`dev-1.x`分支是贡献者们用来提交创意和 PR 的分支，`dev-1.x`分支的内容会被周期性的合入到`main`分支。
 ![image](https://user-images.githubusercontent.com/50650583/233826225-f4b7299d-de23-47db-900d-dfb01ba0efc3.png)
 
-回到 VSCODE 中，在终端运行命令
+回到 VSCODE 中，在终端执行命令
 ```bash
 git checkout dev-1.x
 ```
@@ -42,7 +42,7 @@ git checkout dev-1.x
 git checkout -b xxxx/xxxx
 ```
 ### 2.6 配置 pre-commit
-详细请看[配置 pre-commit](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html#pre-commit) 
+OpenMMLab 仓库对代码质量有着较高的要求，所有提交的 PR 必须要通过代码格式检查。pre-commit详细配置参阅[配置 pre-commit](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html#pre-commit)。
 
 ## 3  在`mmsegmentation/projects`下贡献您的代码
 #### 先对 GID 数据集进行分析
@@ -271,9 +271,7 @@ class GID_Dataset(BaseSegDataset):
     
     GID  6 classes: background(others), built-up, farmland, forest, meadow, water
 
-    In This example, select 10 images from GID dataset as training set,
-    and select 5 images as validation set.
-    The selected images are listed as follows:
+    In This example, select 15 images from GID dataset.
 
     GF2_PMS1__L1A0000647767-MSS1
     GF2_PMS1__L1A0001064454-MSS1
@@ -314,5 +312,69 @@ class GID_Dataset(BaseSegDataset):
 
 ```
 
+### 3.5 贡献使用 GID 的训练 config file
+```python
+_base_ = [
+    '../../../configs/_base_/models/deeplabv3plus_r50-d8.py',
+    './_base_/datasets/gid.py',
+    '../../../configs/_base_/default_runtime.py',
+    '../../../configs/_base_/schedules/schedule_240k.py'
+]
+custom_imports = dict(
+    imports=['projects.gid_dataset.datasets.gid'])
 
+crop_size = (256, 256)
+data_preprocessor = dict(size=crop_size)
+model = dict(
+    data_preprocessor=data_preprocessor,
+    pretrained='open-mmlab://resnet101_v1c',
+    backbone=dict(depth=101),
+    decode_head=dict(num_classes=6),
+    auxiliary_head=dict(num_classes=6))
 
+```
+
+### 3.6 撰写`docs/zh_cn/user_guides/2_dataset_prepare.md`
+
+## Gaofen Image Dataset (GID)
+
+- GID 数据集可在[此处](https://x-ytong.github.io/project/Five-Billion-Pixels.html)进行下载。
+- GID 数据集包含 150 张 6800x7200 的大尺寸图像，标签为 RGB 标签。
+- 此处选择 15 张图像生成训练集和验证集，该 15 张图像包含了所有六类信息。所选的图像名称如下：
+```None
+  GF2_PMS1__L1A0000647767-MSS1
+  GF2_PMS1__L1A0001064454-MSS1
+  GF2_PMS1__L1A0001348919-MSS1
+  GF2_PMS1__L1A0001680851-MSS1
+  GF2_PMS1__L1A0001680853-MSS1
+  GF2_PMS1__L1A0001680857-MSS1
+  GF2_PMS1__L1A0001757429-MSS1
+  GF2_PMS2__L1A0000607681-MSS2
+  GF2_PMS2__L1A0000635115-MSS2
+  GF2_PMS2__L1A0000658637-MSS2
+  GF2_PMS2__L1A0001206072-MSS2
+  GF2_PMS2__L1A0001471436-MSS2
+  GF2_PMS2__L1A0001642620-MSS2
+  GF2_PMS2__L1A0001787089-MSS2
+  GF2_PMS2__L1A0001838560-MSS2
+```
+执行以下命令进行裁切及标签的转换，需要修改为您所存储 15 张图像及标签的路径。
+```
+python projects/gid_dataset/tools/dataset_converters/gid.py [15 张图像的路径] [15 张标签的路径] 
+```
+完成裁切后的 GID 数据结构如下：
+  ```none
+  mmsegmentation
+  ├── mmseg
+  ├── tools
+  ├── configs
+  ├── data
+  │   ├── gid
+  │   │   ├── ann_dir
+  |   │   │   │   ├── train
+  |   │   │   │   ├── val
+  │   │   ├── img_dir
+  |   │   │   │   ├── train
+  |   │   │   │   ├── val
+
+```

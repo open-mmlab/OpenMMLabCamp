@@ -1,10 +1,10 @@
 # 在 mmsegmentation 贡献一个标准格式的数据集
 ## 在 projects 中贡献一个标准 mmseg 格式的数据集
 在开始您的工作前，请先阅读[《OpenMMLab 贡献代码指南》](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以详细的了解 OpenMMLab 代码库的代码贡献流程。  
-该教程以[Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414)高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
+该教程以 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
 
-## 1 配置 mmsegmentation 运行所需必要的环境
-环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。<img src="https://user-images.githubusercontent.com/50650583/233825292-2e52d574-f4b9-4404-b18e-eede70a67d7f.png" style="zoom: 80%;" >
+## 1 配置 mmsegmentation 开发所需必要环境
+环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。<img src="https://user-images.githubusercontent.com/50650583/233825292-2e52d574-f4b9-4404-b18e-eede70a67d7f.png" style="zoom: 80%;" >
 注：无需执行步骤 1，只需安装开发 mmsegmentation 所需的 pytorch、mmcv 等即可。
 
 ## 2 代码贡献前应该完成的准备工作

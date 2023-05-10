@@ -386,3 +386,31 @@ python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights
 你会在当前文件夹中的 `outputs/vis` 文件夹中看到一个新的图像 `demo.jpg`，图像中包含有网络预测的检测框。
 
 **步骤 3.** 对 image_demo.py 进行简单的 debug。
+
+```shell
+pip install debugpy
+```
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/7e399eeb-2345-44a0-a1aa-2b0647d9f2be)
+
+将 launch.json 文件替换为以下配置。
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Remote Attach",
+            "type": "python",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "justMyCode": false
+        }
+    ]
+}
+```

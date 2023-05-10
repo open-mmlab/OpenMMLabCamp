@@ -6,46 +6,25 @@
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 * 开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 
-* 如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](#%E6%AD%A5%E9%AA%A4-2%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)。
-* **注：** 无需在此处安装mmsegmentation，只需安装开发 mmsegmentation 所需的 pytorch、mmcv、mmengine 即可。  
-
-* 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
-
-*  创建一个 conda 环境，并激活
-
-```shell
-conda create --name openmmlab python=3.8 -y
-conda activate openmmlab
-```
-
-* 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 PyTorch
-
-在 GPU 平台上：
-
-```shell
-conda install pytorch torchvision -c pytorch
-```
-
-在 CPU 平台上
-
-```shell
-conda install pytorch torchvision cpuonly -c pytorch
-```
-
-*  **安装**
-
-我们建议用户遵循我们的最佳实践来安装 MMSegmentation 。但是整个过程是高度自定义的。更多信息请参见[自定义安装](##自定义安装)部分。
-
-* **最佳实践**
-
-* 使用 [MIM](https://github.com/open-mmlab/mim) 安装 [MMCV](https://github.com/open-mmlab/mmcv)
-
-```shell
-pip install -U openmim
-mim install mmengine
-mim install "mmcv>=2.0.0"
-```
-
+* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](#%E6%AD%A5%E9%AA%A4-2%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)。
+* **注：** 在此处无需安装 mmsegmentation，只需安装开发 mmsegmentation 所必需的 pytorch、mmcv、mmengine 等即可。    
+> ### 配置开发环境    
+> #### 新建虚拟环境（如有合适的开发环境，可跳过）**  
+> * 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
+> *  创建一个 conda 环境，并激活
+> ```shell
+> conda create --name openmmlab python=3.8 -y
+> conda activate openmmlab
+> ```
+> **安装 pytorch （如环境下已安装 pytorch，可跳过）**  
+> * 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 **PyTorch**  
+> **使用 mim 安装 mmcv、mmengine**
+> * 使用 [MIM](https://github.com/open-mmlab/mim) 安装 [MMCV](https://github.com/open-mmlab/mmcv)
+> ```shell
+> pip install -U openmim
+> mim install mmengine
+> mim install "mmcv>=2.0.0"
+> ```
 
 ## 步骤 2：代码贡献前的准备工作
 ### 2.1 fork mmsegmentation 仓库

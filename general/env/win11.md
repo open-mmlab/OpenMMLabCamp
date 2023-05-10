@@ -385,7 +385,11 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 ```
 你会在当前文件夹中的 `outputs/vis` 文件夹中看到一个新的图像 `demo.jpg`，图像中包含有网络预测的检测框。
 
-**步骤 3.** 对 image_demo.py 进行简单的 debug。
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/561cbe54-3bac-4d37-bf07-1b5ad6cf855d)
+
+
+
+## 对 image_demo.py 进行简单的 debug。
 
 ```shell
 pip install debugpy

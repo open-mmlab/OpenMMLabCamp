@@ -414,3 +414,24 @@ pip install debugpy
     ]
 }
 ```
+
+```shell
+python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+```
+## 设置 `python -m debugpy --listen 5678 --wait-for-client` 别名为 `pyd`
+
+在 powershell 中执行 `code $PROFILE`, 使用 vscode 打开 powershell 的 `$PROFILE` 文件
+
+并在 $PROFILE 中插入以下内容设置别名
+
+```shell
+Set-Alias pyd 'python -m debugpy --wait-for-client --listen 5678'
+```
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/343bc339-5432-4db8-b932-b47489c8f1a7)
+
+此时 debug 命令就简化为 
+
+```shell
+pyd demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+```

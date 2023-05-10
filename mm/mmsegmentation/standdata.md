@@ -5,7 +5,7 @@
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 * 开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 
-* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过步骤 1 至[步骤 2](#%E6%AD%A5%E9%AA%A4-2%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)。
+* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过步骤 1 至[步骤 2](#步骤-2：代码贡献前的准备工作)。
 * **注：** 在此处无需安装 mmsegmentation，只需安装开发 mmsegmentation 所必需的 pytorch、mmcv、mmengine 等即可。    
 > ### 配置开发环境    
 > #### 新建虚拟环境（如已有合适的开发环境，可跳过）  
@@ -30,11 +30,14 @@
 ### 2.1 Fork mmsegmentation 仓库
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
 * 登录您的 Github 账户，以下步骤均需在 Github 登录的情况下进行。
-* fork mmsegmentation 仓库
+* Fork mmsegmentation 仓库
 * ![image](https://user-images.githubusercontent.com/50650583/233825567-b8bf273c-38f5-4487-b4c6-75ede1e283ee.png)
 ### 2.2 在您的代码编写软件中 git clone mmsegmentation
 这里以 VSCODE 为例
-* 打开 VSCODE，新建终端窗口并激活您在[1 环境安装](#1-配置-mmsegmentation-运行所需必要的环境并-git-clone-mmsegmentation)中所安装的虚拟环境。
+* 打开 VSCODE，新建终端窗口并激活您在[步骤 1 ](#步骤-1： 配置 mmsegmentation 开发所需必要环境)中所安装的虚拟环境。
+* 在 Github 中找到您 Fork 的 mmsegmentation 仓库，复制链接。
+* ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/92ad555b-c5b2-4a7f-a800-ebee1e405ab6)
+
 * 在终端中执行命令`git clone git@github.com:open-mmlab/mmsegmentation.git`或`git clone https://github.com/open-mmlab/mmsegmentation.git`
   ![image](https://user-images.githubusercontent.com/50650583/233825892-80029b4d-b0b3-4aeb-8906-9b3df62fb634.png)
 

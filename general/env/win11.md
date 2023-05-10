@@ -422,6 +422,14 @@ pip install debugpy
 ```shell
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+通过以下三步能对上文运行的程序进行 debug。
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/ef34f94e-6ae5-46cd-b886-7b6e5517ac85)
+
+
+但是此种 debug 方式需要将原来的 `python` 替换为 `python -m debugpy --listen 5678 --wait-for-client` 命令输入起来也比较累，所以下文将采取`别名`的方式简化命令。
+
 ## 设置 `python -m debugpy --listen 5678 --wait-for-client` 别名为 `pyd`
 
 在 powershell 中执行 `code $PROFILE`, 使用 vscode 打开 powershell 的 `$PROFILE` 文件
@@ -444,3 +452,6 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/aae3ad97-56ef-4f59-ab8b-c01f351d2900)
+

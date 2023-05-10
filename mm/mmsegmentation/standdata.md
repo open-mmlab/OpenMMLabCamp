@@ -4,12 +4,12 @@
 * 该教程以 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
 
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
-开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
-**注：**无需在此处安装mmsegmentation，只需安装开发 mmsegmentation 所需的 pytorch、mmcv、mmengine 即可。
-如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](# 步骤 2：代码贡献前的准备工作)。
+* 开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 
+* 如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](#步骤2：代码贡献前的准备工作)。
+* **注：** 无需在此处安装mmsegmentation，只需安装开发 mmsegmentation 所需的 pytorch、mmcv、mmengine 即可。  
 
-* 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
+>* 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
 
 *  创建一个 conda 环境，并激活
 

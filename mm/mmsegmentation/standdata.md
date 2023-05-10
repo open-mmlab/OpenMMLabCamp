@@ -1,5 +1,4 @@
-# 在 mmsegmentation 贡献一个标准格式的数据集
-## 在 projects 中贡献一个标准 mmseg 格式的数据集
+# 在 mmsegmentation projects 中贡献一个标准格式的数据集
 * 在开始您的工作前，请先阅读[《OpenMMLab 贡献代码指南》](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以详细的了解 OpenMMLab 代码库的代码贡献流程。
 * 该教程以 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
 

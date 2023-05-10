@@ -5,7 +5,7 @@
 
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
-如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤1。
+如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](# 步骤 2：代码贡献前的准备工作)。
 
 
 * 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
@@ -46,7 +46,7 @@ mim install "mmcv>=2.0.0"
 ```
 注：无需在此处安装mmsegmentation，只需安装开发 mmsegmentation 所需的 pytorch、mmcv、mmengine 即可。
 
-## 2 代码贡献前应该完成的准备工作
+## 步骤 2：代码贡献前的准备工作
 ### 2.1 fork mmsegmentation 仓库
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
 * 登录您的 Github 账户，以下步骤均需在 Github 登录的情况下进行。

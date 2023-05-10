@@ -286,6 +286,8 @@ cd ~
 # 在 ~ 用户主目录中创建 openmmlab 文件夹
 mkdir openmmlab
 
+cd openmmlab
+
 # 使用 vscode 打开 openmmlab 文件夹
 code .
 ```

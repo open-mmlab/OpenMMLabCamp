@@ -3,21 +3,21 @@
 在开始您的工作前，请先阅读[《OpenMMLab 贡献代码指南》](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以详细的了解 OpenMMLab 代码库的代码贡献流程。  
 该教程以 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
 
-## 1 配置 mmsegmentation 开发所需必要环境
+## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 如果您已安装了最新版的pytorch、mmcv、mmengine，那么您可以跳过此步骤1。
 
 
-**步骤 0.** 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
+* 从[官方网站](https://docs.conda.io/en/latest/miniconda.html)下载并安装 Miniconda
 
-**步骤 1.** 创建一个 conda 环境，并激活
+*  创建一个 conda 环境，并激活
 
 ```shell
 conda create --name openmmlab python=3.8 -y
 conda activate openmmlab
 ```
 
-**Step 2.** 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 PyTorch
+* 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 PyTorch
 
 在 GPU 平台上：
 
@@ -31,20 +31,20 @@ conda install pytorch torchvision -c pytorch
 conda install pytorch torchvision cpuonly -c pytorch
 ```
 
-## 安装
+*  **安装**
 
 我们建议用户遵循我们的最佳实践来安装 MMSegmentation 。但是整个过程是高度自定义的。更多信息请参见[自定义安装](##自定义安装)部分。
 
-### 最佳实践
+* **最佳实践**
 
-**步骤 0.** 使用 [MIM](https://github.com/open-mmlab/mim) 安装 [MMCV](https://github.com/open-mmlab/mmcv)
+* 使用 [MIM](https://github.com/open-mmlab/mim) 安装 [MMCV](https://github.com/open-mmlab/mmcv)
 
 ```shell
 pip install -U openmim
 mim install mmengine
 mim install "mmcv>=2.0.0"
 ```
-注：无需执行步骤 1，只需安装开发 mmsegmentation 所需的 pytorch、mmcv 等即可。
+注：无需在此处安装mmsegmentation，只需安装开发 mmsegmentation 所需的 pytorch、mmcv、mmengine 即可。
 
 ## 2 代码贡献前应该完成的准备工作
 ### 2.1 fork mmsegmentation 仓库

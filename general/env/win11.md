@@ -375,13 +375,13 @@ code .  # 打开 mmdetection 工作区
 步骤 1. 我们需要下载配置文件和模型权重文件。
 ```shell
 cd path/to/mmdetection
-mim download mmdet --config rtmdet_tiny_8xb32-300e_coco --dest .
+mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 ```
 下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 `rtmdet_tiny_8xb32-300e_coco.py` 和 `rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth`。
 
 **步骤 2.** 推理验证。
 ```shell
-python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 你会在当前文件夹中的 `outputs/vis` 文件夹中看到一个新的图像 `demo.jpg`，图像中包含有网络预测的检测框。
 
@@ -416,7 +416,7 @@ pip install debugpy
 ```
 
 ```shell
-python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 ## 设置 `python -m debugpy --listen 5678 --wait-for-client` 别名为 `pyd`
 
@@ -435,8 +435,8 @@ function pyd {
 此时 debug 命令就简化为 
 
 ```shell
-pyd demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
-# python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+# python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```

@@ -1,11 +1,11 @@
 # 在 mmsegmentation projects 中贡献一个标准格式的数据集
-* 在开始您的工作前，请先阅读[《OpenMMLab 贡献代码指南》](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以详细的了解 OpenMMLab 代码库的代码贡献流程。
+* 在开始您的贡献流程前，请先阅读[《OpenMMLab 贡献代码指南》](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html)，以详细的了解 OpenMMLab 代码库的代码贡献流程。
 * 该教程以 [Gaofen Image Dataset (GID)](https://www.sciencedirect.com/science/article/pii/S0034425719303414) 高分 2 号卫星所拍摄的遥感图像语义分割数据集作为样例，来演示在 mmsegmentation 中的数据集贡献流程。
 
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 * 开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 
-* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过此步骤 1 至[步骤 2](#%E6%AD%A5%E9%AA%A4-2%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)。
+* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过步骤 1 至[步骤 2](#%E6%AD%A5%E9%AA%A4-2%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)。
 * **注：** 在此处无需安装 mmsegmentation，只需安装开发 mmsegmentation 所必需的 pytorch、mmcv、mmengine 等即可。    
 > ### 配置开发环境    
 > #### 新建虚拟环境（如已有合适的开发环境，可跳过）  
@@ -16,7 +16,8 @@
 > conda activate openmmlab
 > ```
 > **安装 pytorch （如环境下已安装 pytorch，可跳过）**  
-> * 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 **PyTorch**  
+> * 参考 [official instructions](https://pytorch.org/get-started/locally/) 安装 **PyTorch** 
+> 
 > **使用 mim 安装 mmcv、mmengine**
 > * 使用 [MIM](https://github.com/open-mmlab/mim) 安装 [MMCV](https://github.com/open-mmlab/mmcv)
 > ```shell

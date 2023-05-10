@@ -365,7 +365,24 @@ git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetection
 git checkout tags/v3.0.0
 
+pip install -v -e . # 源码安装 mmdet
+
 code .  # 打开 mmdetection 工作区
 ```
 
-完成换源，我们就能通过 conda 和 pip 命令快速的下载 PyTorch 等依赖包了
+## 验证安装
+
+步骤 1. 我们需要下载配置文件和模型权重文件。
+```shell
+cd path/to/mmdetection
+mim download mmdet --config rtmdet_tiny_8xb32-300e_coco --dest .
+```
+下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 `rtmdet_tiny_8xb32-300e_coco.py` 和 `rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth`。
+
+**步骤 2.** 推理验证。
+```shell
+python demo/image_demo.py demo/demo.jpg rtmdet_tiny_8xb32-300e_coco.py --weights rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth --device cpu
+```
+你会在当前文件夹中的 `outputs/vis` 文件夹中看到一个新的图像 `demo.jpg`，图像中包含有网络预测的检测框。
+
+**步骤 3.** 对 image_demo.py 进行简单的 debug。

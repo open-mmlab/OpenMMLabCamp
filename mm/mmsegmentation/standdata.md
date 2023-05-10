@@ -27,7 +27,7 @@
 > ```
 
 ## 步骤 2：代码贡献前的准备工作
-### 2.1 fork mmsegmentation 仓库
+### 2.1 Fork mmsegmentation 仓库
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
 * 登录您的 Github 账户，以下步骤均需在 Github 登录的情况下进行。
 * fork mmsegmentation 仓库

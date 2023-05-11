@@ -157,7 +157,7 @@ def colormap2label(palette):
     for i, colormap in enumerate(palette):
         colormap2label_list[(colormap[0] * 256 + colormap[1])*256+colormap[2]] = i
     return colormap2label_list
-    
+
 #############给定那个列表，和vis_png然后生成masks_png################
 def label_indices(RGB_label, colormap2label_list):
     RGB_label = RGB_label.astype('int32')
@@ -169,7 +169,7 @@ def RGB2mask(RGB_label, colormap2label_list):
     # RGB_label = np.array(Image.open(RGB_label).convert('RGB')) #打开RGB_png
     mask_label = label_indices(RGB_label, colormap2label_list) # .numpy()
     return mask_label
-    
+
 colormap2label_list = colormap2label(palette)
 
 def clip_big_image(image_path, clip_save_dir, args, to_label=False):
@@ -182,6 +182,7 @@ def clip_big_image(image_path, clip_save_dir, args, to_label=False):
     whose size are all 256 x 256. 
     
     """
+
     image = mmcv.imread(image_path, channel_order='rgb')
     # image = mmcv.bgr2gray(image)
 
@@ -249,6 +250,7 @@ def main():
     According to Paper: https://ieeexplore.ieee.org/document/9343296/
 
     """
+
     if args.out_dir is None:
         out_dir = osp.join('data', 'gid')
     else:
@@ -277,18 +279,20 @@ def main():
                       
     print('Done!')
 
+if __name__ == '__main__':
+    main()
 ```
 
 ### 3.4 贡献`mmseg/datasets/gid.py`
 可参考[`projects/mapillary_dataset/mmseg/datasets/mapillary.py`](https://github.com/open-mmlab/mmsegmentation/blob/main/projects/mapillary_dataset/mmseg/datasets/mapillary.py)并在此基础上修改相应变量以适配您的数据集。  
 ```python
+# mmseg/datasets/gid.py
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmseg.datasets.basesegdataset import BaseSegDataset
-
 from mmseg.registry import DATASETS
 
-
-@DATASETS.register_module()       # 注册数据集类
+# 注册数据集类
+@DATASETS.register_module()       
 class GID_Dataset(BaseSegDataset):
     """Gaofen Image Dataset (GID)
 
@@ -298,7 +302,9 @@ class GID_Dataset(BaseSegDataset):
     
     GID  6 classes: background(others), built-up, farmland, forest, meadow, water
 
-    In This example, select 15 images from GID dataset.
+    In This example, select 10 images from GID dataset as training set,
+    and select 5 images as validation set.
+    The selected images are listed as follows:
 
     GF2_PMS1__L1A0000647767-MSS1
     GF2_PMS1__L1A0001064454-MSS1
@@ -336,7 +342,6 @@ class GID_Dataset(BaseSegDataset):
             seg_map_suffix=seg_map_suffix, 
             reduce_zero_label=reduce_zero_label,
             **kwargs)
-
 ```
 
 ### 3.5 贡献使用 GID 的训练 config file

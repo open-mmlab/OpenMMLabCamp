@@ -43,7 +43,7 @@
   git clone {您所复制的个人仓库的链接}
   ```
   ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/23ba2636-e66f-4ea5-9077-9dd6b69deb1d)
-**注：** 如提示以下信息，请在 GitHub 中添加 [SSH 秘钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+**注：** 如提示以下信息，请在 GitHub 中添加 [SSH 秘钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)  
 ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/6fcab213-0739-483c-b345-c59656027377)
 * 进入 mmsegmentation 目录。
   ```bash
@@ -53,6 +53,12 @@
   ```bash
   git remote add upstream git@github.com:open-mmlab/mmsegmentation.git
   ```
+* 使用以下命令检查 remote 是否添加成功。
+  ```bash
+  git remote -v 
+  ```
+  ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/beec7e5e-2b00-4e49-ab38-f0c79e346594)
+
 ### 2.3 切换目录至 mmsegmentation 并从源码安装mmsegmentation
  执行`cd mmsegmentation`，将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 库。
 安装完成后，您将能看到如下图所示的文件树。  

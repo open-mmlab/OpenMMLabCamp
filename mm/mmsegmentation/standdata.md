@@ -91,7 +91,7 @@ OpenMMLab 仓库对代码质量有着较高的要求，所有提交的 PR 必须
 GID 的 5 类有效标签分别为：0-背景-[0,0,0](mask 标签值-标签名称-RGB 标签值)、1-建筑-[255,0,0]、2-农田-[0,255,0]、3-森林-[0,0,255]、4-草地-[255,255,0]、5-水-[0,0,255]。在语义分割任务中，标签是与原图尺寸一致的单通道图像，标签图像中的像素值为真实样本图像中对应像素所包含的物体的类别。GID 数据集提供的是具有 RGB 三通道的彩色标签，为了模型的训练需要将 RGB 标签转换为 mask 标签。并且由于图像尺寸为 6800x7200 像素，对于神经网络的训练来有些过大，所以将每张图像裁切成了没有重叠的 512x512 的图像以便进行训练。
 <img align='center' src="https://user-images.githubusercontent.com/50650583/234192183-83ee4209-e181-4a18-90ca-4d71757cd2c7.png" alt="image" style="zoom:67%;" /> 
 ### 3.1 在`mmsegmentation/projects`下创建新的项目文件夹
-在`mmsegmentation/projects`下创建文件夹`gid_dataset`
+在`mmsegmentation/projects`下创建文件夹`gid_dataset`  
 ![image](https://user-images.githubusercontent.com/50650583/233829687-8f2b6600-bc9d-48ff-a865-d462af54d55a.png)
 
 ### 3.2 贡献您的数据集代码

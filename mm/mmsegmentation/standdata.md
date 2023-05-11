@@ -5,7 +5,7 @@
 ## 步骤 1： 配置 mmsegmentation 开发所需必要环境
 * 开发所必需的环境安装请参考[中文快速入门指南](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/zh_cn/get_started.md)或[英文 get_started](https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/get_started.md)。  
 
-* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过步骤 1 至[步骤 2](#步骤-2：代码贡献前的准备工作)。
+* 如果您已安装了最新版的 pytorch、mmcv、mmengine，那么您可以跳过步骤 1 至[步骤 2](#步骤-2)。
 * **注：** 在此处无需安装 mmsegmentation，只需安装开发 mmsegmentation 所必需的 pytorch、mmcv、mmengine 等即可。    
 > ### 配置开发环境    
 > #### 新建虚拟环境（如已有合适的开发环境，可跳过）  

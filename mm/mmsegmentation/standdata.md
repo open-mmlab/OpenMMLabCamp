@@ -45,7 +45,7 @@
   ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/23ba2636-e66f-4ea5-9077-9dd6b69deb1d)
 **注：** 如提示以下信息，请在 GitHub 中添加 [SSH 秘钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)  
 ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/6fcab213-0739-483c-b345-c59656027377)
-* 进入 mmsegmentation 目录。
+* 进入 mmsegmentation 目录(之后的操作均在 mmsegmentation 目录下)。
   ```bash
   cd mmsegmentation
   ```
@@ -60,12 +60,12 @@
   ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/beec7e5e-2b00-4e49-ab38-f0c79e346594)
 
 ### 2.3 切换目录至 mmsegmentation 并从源码安装mmsegmentation
- 执行`cd mmsegmentation`，将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 库。
+ 在`mmsegmentation`目录下执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 库。
 安装完成后，您将能看到如下图所示的文件树。  
 <img src="https://user-images.githubusercontent.com/50650583/233826064-4b111358-8f97-44dd-955c-df3204410b8b.png" alt="image" style="zoom:67%;" />  
 
 ### 2.4 切换分支为 dev-1.x
-正如您在[ mmsegmentation 官网](https://github.com/open-mmlab/mmsegmentation/tree/main)所见，该仓库有许多分支，默认分支`main`为稳定的发行版本，以及用于开发的`dev-1.x`分支。`dev-1.x`分支是贡献者们用来提交创意和 PR 的分支，`dev-1.x`分支的内容会被周期性的合入到`main`分支。
+正如您在[ mmsegmentation 官网](https://github.com/open-mmlab/mmsegmentation/tree/main)所见，该仓库有许多分支，默认分支`main`为稳定的发行版本，以及用于贡献者进行开发的`dev-1.x`分支。`dev-1.x`分支是贡献者们用来提交创意和 PR 的分支，`dev-1.x`分支的内容会被周期性的合入到`main`分支。
 ![image](https://user-images.githubusercontent.com/50650583/233826225-f4b7299d-de23-47db-900d-dfb01ba0efc3.png)
 
 回到 VSCODE 中，在终端执行命令
@@ -77,25 +77,21 @@ git checkout dev-1.x
 使用如下命令格式：
 
 ```bash
-# git checkout -b 您的GithubID/您的分支想要实现的功能的名字
+# git checkout -b 您的GitHubID/您的分支想要实现的功能的名字
 # git checkout -b AI-Tianlong/support_GID_dataset
-git checkout -b xxxx/xxxx
+git checkout -b {您的GitHubID/您的分支想要实现的功能的名字}
 ```
 ### 2.6 配置 pre-commit
-OpenMMLab 仓库对代码质量有着较高的要求，所有提交的 PR 必须要通过代码格式检查。pre-commit详细配置参阅[配置 pre-commit](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html#pre-commit)。
+OpenMMLab 仓库对代码质量有着较高的要求，所有提交的 PR 必须要通过代码格式检查。pre-commit 详细配置参阅[配置 pre-commit](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html#pre-commit)。
 
 ## 3  在`mmsegmentation/projects`下贡献您的代码
 #### 先对 GID 数据集进行分析
 
-这里以贡献遥感图像语义分割数据集 GID 为例，GID数据集是由我国自主研发的高分2号卫星所拍摄的光学遥感图像创建的，经图像预处理后共提供了150张6800*7200像素的RGB三通道的遥感图像。并提供了两种不同类别数的数据标注，一种是包含5类有效物体的RGB标签，另一种是包含15类有效物体的RGB标签。本教程将针对第一种标签进行数据集贡献讲解。*
+这里以贡献高分 2 号遥感图像语义分割数据集 GID 为例，GID 数据集是由我国自主研发的高分 2 号卫星所拍摄的光学遥感图像所创建，经图像预处理后共提供了 150 张 6800x7200 像素的 RGB 三通道遥感图像。并提供了两种不同类别数的数据标注，一种是包含 5 类有效物体的 RGB 标签，另一种是包含 15 类有效物体的 RGB 标签。本教程将针对 5 类标签进行数据集贡献流程讲解。
 
-*GID的5类有效标签分别为：0-背景-[0,0,0](mask标签值-标签名称-RGB标签值)、1-建筑-[255,0,0]、2-农田-[0,255,0]、3-森林-[0,0,255]、4-草地-[255,255,0]、5-水-[0,0,255]。在语义分割任务中，标签是与原图尺寸一致的单通道图像，标签图像中的像素值为真实样本图像中对应像素所包含的物体的类别。GID数据集提供的是具有RGB三通道的彩色标签，为了模型的训练需要将RGB标签转换为mask标签。并且由于图像尺寸为 6800*7200 像素，过大的图像尺寸对于神经网络的训练来说是不合适的，所以将每张图像裁切成了若干没有重叠的512*512的图像以便进行训练。
-
-<img align='center' src="https://user-images.githubusercontent.com/50650583/234192183-83ee4209-e181-4a18-90ca-4d71757cd2c7.png" alt="image" style="zoom:67%;" />
-
-
-
-### 3.1 在`mmsegmentation/projects`下创建新文件夹
+GID 的 5 类有效标签分别为：0-背景-[0,0,0](mask 标签值-标签名称-RGB 标签值)、1-建筑-[255,0,0]、2-农田-[0,255,0]、3-森林-[0,0,255]、4-草地-[255,255,0]、5-水-[0,0,255]。在语义分割任务中，标签是与原图尺寸一致的单通道图像，标签图像中的像素值为真实样本图像中对应像素所包含的物体的类别。GID 数据集提供的是具有 RGB 三通道的彩色标签，为了模型的训练需要将 RGB 标签转换为 mask 标签。并且由于图像尺寸为 6800x7200 像素，对于神经网络的训练来有些过大，所以将每张图像裁切成了没有重叠的 512x512 的图像以便进行训练。
+<img align='center' src="https://user-images.githubusercontent.com/50650583/234192183-83ee4209-e181-4a18-90ca-4d71757cd2c7.png" alt="image" style="zoom:67%;" /> 
+### 3.1 在`mmsegmentation/projects`下创建新的项目文件夹
 在`mmsegmentation/projects`下创建文件夹`gid_dataset`
 ![image](https://user-images.githubusercontent.com/50650583/233829687-8f2b6600-bc9d-48ff-a865-d462af54d55a.png)
 

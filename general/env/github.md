@@ -11,3 +11,15 @@ Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时�
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/4ffabfa1-912a-4e01-8bae-006372cebe81)
 
 
+
+## 安装插件
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
+
+
+
+# 在 Github Codespaces 中 Debug
+
+```json
+
+```

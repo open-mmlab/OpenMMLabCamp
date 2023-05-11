@@ -29,18 +29,18 @@
 ## 步骤 2：代码贡献前的准备工作
 ### 2.1 Fork mmsegmentation 仓库
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
-* 登录您的 Github 账户，以下步骤均需在 Github 登录的情况下进行。
+* 登录您的 GitHub 账户，以下步骤均需在 GitHub 登录的情况下进行。
 * Fork mmsegmentation 仓库
-* ![image](https://user-images.githubusercontent.com/50650583/233825567-b8bf273c-38f5-4487-b4c6-75ede1e283ee.png)
+  ![image](https://user-images.githubusercontent.com/50650583/233825567-b8bf273c-38f5-4487-b4c6-75ede1e283ee.png)
+ * Fork 之后，mmsegmentation 仓库将会出现在您的个人仓库中。
 ### 2.2 在您的代码编写软件中 git clone mmsegmentation
 这里以 VSCODE 为例
 * 打开 VSCODE，新建终端窗口并激活您在[步骤 1 ](#步骤-1： 配置 mmsegmentation 开发所需必要环境)中所安装的虚拟环境。
-* 在 Github 中找到您 Fork 的 mmsegmentation 仓库，复制链接。
-* ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/92ad555b-c5b2-4a7f-a800-ebee1e405ab6)
-
-* 在终端中执行命令`git clone git@github.com:open-mmlab/mmsegmentation.git`或`git clone https://github.com/open-mmlab/mmsegmentation.git`
+* 在您 GitHub 的个人仓库中找到您 Fork 的 mmsegmentation 仓库，复制其链接。
+  ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/92ad555b-c5b2-4a7f-a800-ebee1e405ab6)
+* 在终端中执行命令`git clone {您所复制的个人仓库的链接}`
   ![image](https://user-images.githubusercontent.com/50650583/233825892-80029b4d-b0b3-4aeb-8906-9b3df62fb634.png)
-
+* 在终端中执行命令 `git remote add upstream git@github.com:open-mmlab/mmsegmentation.git`
 ### 2.3 切换目录至 mmsegmentation 并从源码安装mmsegmentation
  执行`cd mmsegmentation`，将当前目录切换至`mmsegmentation`并执行`pip install -v -e .`通过源码构建方式安装 mmsegmentaion 库。
 安装完成后，您将能看到如下图所示的文件树。  

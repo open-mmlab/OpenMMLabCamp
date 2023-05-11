@@ -82,7 +82,7 @@ git checkout -b {您的GitHubID/您的分支想要实现的功能的名字}
 ### 2.6 配置 pre-commit
 OpenMMLab 仓库对代码质量有着较高的要求，所有提交的 PR 必须要通过代码格式检查。pre-commit 详细配置参阅[配置 pre-commit](https://mmcv.readthedocs.io/zh_CN/latest/community/contributing.html#pre-commit)。
 
-## 3  在`mmsegmentation/projects`下贡献您的代码
+## 步骤 3：在`mmsegmentation/projects`下贡献您的代码
 #### 先对 GID 数据集进行分析
 
 这里以贡献高分 2 号遥感图像语义分割数据集 GID 为例，GID 数据集是由我国自主研发的高分 2 号卫星所拍摄的光学遥感图像所创建，经图像预处理后共提供了 150 张 6800x7200 像素的 RGB 三通道遥感图像。并提供了两种不同类别数的数据标注，一种是包含 5 类有效物体的 RGB 标签，另一种是包含 15 类有效物体的 RGB 标签。本教程将针对 5 类标签进行数据集贡献流程讲解。

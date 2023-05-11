@@ -18,10 +18,10 @@ Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时�
 
 # 在 Github Codespaces 中 Debug
 
-
+```shell
+pip install debugpy
+```
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/feb3a916-4be0-43b0-b097-71ddd265cf2f)
-
-
 ```json
 {
     // Use IntelliSense to learn about possible attributes.

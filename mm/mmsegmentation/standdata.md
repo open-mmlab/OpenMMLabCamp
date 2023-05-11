@@ -353,7 +353,7 @@ _base_ = [
     '../../../configs/_base_/schedules/schedule_240k.py'
 ]
 custom_imports = dict(
-    imports=['projects.gid_dataset.datasets.gid'])
+    imports=['projects.gid_dataset.mmseg.datasets.gid'])
 
 crop_size = (256, 256)
 data_preprocessor = dict(size=crop_size)

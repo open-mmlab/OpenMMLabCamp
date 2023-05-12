@@ -101,7 +101,7 @@ GID 的 5 类有效标签分别为：0-背景-[0,0,0](mask 标签值-标签名�
 * **3** 使用了 GID 数据集的模型训练配置文件
 这个是可选的，但是强烈建议您添加。在核心库中，所贡献的数据集需要和参考文献中所提出的结果精度对齐，为了后期将您贡献的代码合并入核心库。如您的算力充足，最好能提供对应的模型配置文件在您贡献的数据集上所验证的结果以及相应的权重文件，并撰写较为详细的README.md文档。[示例参考结果](https://github.com/open-mmlab/mmsegmentation/tree/main/configs/deeplabv3plus#mapillary-vistas-v12)
 ![image](https://user-images.githubusercontent.com/50650583/233877682-eabe8723-bce9-40e4-a303-08c8385cb6b5.png)
-* 使用如下命令格式： 撰写`docs/zh_cn/user_guides/2_dataset_prepare.md`来添加您的数据集介绍，包括但不限于数据集的下载方式，数据集目录结构、数据集生成等一些必要性的文字性描述和运行命令。以更好地帮助用户能更快的实现数据集的准备工作。  
+* **4** 使用如下命令格式： 撰写`docs/zh_cn/user_guides/2_dataset_prepare.md`来添加您的数据集介绍，包括但不限于数据集的下载方式，数据集目录结构、数据集生成等一些必要性的文字性描述和运行命令。以更好地帮助用户能更快的实现数据集的准备工作。  
 
 ### 3.3 贡献`tools/dataset_converters/gid.py`
 由于 GID 数据集是由未经过切分的 6800x7200 图像所构成的数据集，并且没有划分训练集、验证集与测试集。以及其标签为 RGB 彩色标签，需要将标签转换为单通道的 mask label。为了方便训练，首先将 GID 数据集进行裁切和标签转换，并进行数据集划分，构建为 mmsegmentation 所支持的格式。

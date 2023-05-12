@@ -31,18 +31,24 @@
 * 通过浏览器打开[mmsegmentation 官方仓库](https://github.com/open-mmlab/mmsegmentation/tree/main)。
 * 登录您的 GitHub 账户，以下步骤均需在 GitHub 登录的情况下进行。
 * Fork mmsegmentation 仓库
+
   ![image](https://user-images.githubusercontent.com/50650583/233825567-b8bf273c-38f5-4487-b4c6-75ede1e283ee.png)
- * Fork 之后，mmsegmentation 仓库将会出现在您的个人仓库中。
+  
+* Fork 之后，mmsegmentation 仓库将会出现在您的个人仓库中。
 ### 2.2 在您的代码编写软件中 git clone mmsegmentation
 这里以 VSCODE 为例
 * 打开 VSCODE，新建终端窗口并激活您在[步骤 1 ](#%E6%AD%A5%E9%AA%A4-1-%E9%85%8D%E7%BD%AE-mmsegmentation-%E5%BC%80%E5%8F%91%E6%89%80%E9%9C%80%E5%BF%85%E8%A6%81%E7%8E%AF%E5%A2%83)中所安装的虚拟环境。
 * 在您 GitHub 的个人仓库中找到您 Fork 的 mmsegmentation 仓库，复制其链接。
-  ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/92ad555b-c5b2-4a7f-a800-ebee1e405ab6)
+
+![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/92ad555b-c5b2-4a7f-a800-ebee1e405ab6)
+
 * 在终端中执行命令
   ```bash
   git clone {您所复制的个人仓库的链接}
   ```
   ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/23ba2636-e66f-4ea5-9077-9dd6b69deb1d)
+  
+
 **注：** 如提示以下信息，请在 GitHub 中添加 [SSH 秘钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)  
 ![image](https://github.com/AI-Tianlong/OpenMMLabCamp/assets/50650583/6fcab213-0739-483c-b345-c59656027377)
 * 进入 mmsegmentation 目录（之后的操作均在 mmsegmentation 目录下）。

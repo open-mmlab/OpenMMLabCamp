@@ -67,9 +67,16 @@ pip install debugpy
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 
+我们通过在Linux系统中的`~/.bashrc` 或者 `~/.zshrc` 文件中添加以下命令
+
+```shell
+alias pyd='python -m debugpy --wait-for-client --listen 5678'
+```
+
 ```shell
 pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+

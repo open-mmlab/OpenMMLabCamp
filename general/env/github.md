@@ -29,6 +29,14 @@ git clone https://github.com/open-mmlab/mmdetection.git
 # git clone https://gitee.com/open-mmlab/mmdetection.git
 cd mmdetection
 git checkout tags/v3.0.0
+pip install -v -e .
+code .
+```
+
+
+```shell
+cd path/to/mmdetection
+mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 ```
 
 

@@ -2,9 +2,9 @@
 
 [https://openmmlab.gitbook.io/mmsig/](https://openmmlab.gitbook.io/mmsig/)
 
-针对 OpenMMLab 贡献者的培训教程，通过学习此贡献者教程将融入 OpenMMLab 社区。帮助社区同学在 OpenMMLab 获得技能上的成长。
+OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 
-小伙伴们可以在[任务发布表](https://aicarrier.feishu.cn/sheets/shtcnE5FlKLcg4vMjMMoq4kFL1f)领取任务。
+为了更好帮助小伙伴完成[任务发布表](https://aicarrier.feishu.cn/sheets/shtcnE5FlKLcg4vMjMMoq4kFL1f)
 
 ## 1. 前置基础知识
 

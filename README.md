@@ -1,4 +1,4 @@
-# OpenMMLab 贡献者教程 (建设中)
+# OpenMMLab 贡献者成长地图
 
 [https://openmmlab.gitbook.io/mmsig/](https://openmmlab.gitbook.io/mmsig/)
 
@@ -21,6 +21,9 @@
   * WSL （Windows Linux 子系统环境配置）
 * 熟悉 Git/GitHub (建设中)
 * [文档类贡献指南](general/doc.md)
+* Type Hints 贡献指南
+* 单元测试贡献指南
+* 源码阅读及调试技巧
 
 ## 3. 算法库贡献者教程
 

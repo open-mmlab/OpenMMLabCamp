@@ -16,6 +16,22 @@ Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时�
 
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 
+
+
+
+## 运行 MMDetection Demo
+
+
+```shell
+pip install openmim
+mim install "mmcv>=2.0.0"
+git clone https://github.com/open-mmlab/mmdetection.git
+# git clone https://gitee.com/open-mmlab/mmdetection.git
+cd mmdetection
+git checkout tags/v3.0.0
+```
+
+
 ## 在 Github Codespaces 中 Debug
 
 ```shell
@@ -23,6 +39,7 @@ pip install debugpy
 ```
 
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/feb3a916-4be0-43b0-b097-71ddd265cf2f)
+
 
 ```json
 {
@@ -44,6 +61,7 @@ pip install debugpy
     ]
 }
 ```
+
 
 ```shell
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu

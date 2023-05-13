@@ -15,8 +15,11 @@
 
 ## 2. 通用贡献者教程
 
-
 * 环境配置
+  * Windows 环境配置
+  * GitHub CodeSpace 云环境配置
+  * WSL （Windows Linux 子系统环境配置）
+* 熟悉 Git/GitHub (建设中)
 * [文档类贡献指南](general/doc.md)
 
 ## 3. 算法库贡献者教程

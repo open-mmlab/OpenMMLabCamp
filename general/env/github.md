@@ -19,7 +19,14 @@ Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时�
 
 
 
+
 ## 2. 运行 MMDetection Demo
+
+
+```shell
+sudo apt update
+sudo apt-get install libgl1-mesa-glx
+```
 
 
 ```shell
@@ -39,6 +46,11 @@ cd path/to/mmdetection
 mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 ```
 
+下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 rtmdet_tiny_8xb32-300e_coco.py 和 rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth。
+
+```shell
+python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
+```
 
 ## 3. 在 Github Codespaces 中 Debug
 

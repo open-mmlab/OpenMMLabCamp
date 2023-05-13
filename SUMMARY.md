@@ -5,10 +5,10 @@
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 
 * [环境配置(建设中)](general/env/README.md)
-  * [Github 云环境(建设中)](general/env/github.md)
+  * [Win11 环境配置](general/env/win11.md)
+  * [Github 云环境(建设中)](general/env/github/README.md)
+    * [Win 10 WSL 环境配置](general/env/github/win10wsl.md)
   * [Win10 环境配置(建设中)](general/env/win10.md)
-  * [Win 10 WSL 环境配置](general/env/win10wsl.md)
-  * [Win11 环境配置（建设中）](general/env/win11.md)
   * [Win11 WSL 环境配置](general/env/win11wsl.md)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
   * [masOS 环境配置 （建设中）](general/env/macos.md)

@@ -10,11 +10,11 @@
 
 ## 1. Github codespaces 介绍
 
-访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板
+访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板。
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/4ffabfa1-912a-4e01-8bae-006372cebe81)
 
-### 安装插件
+### 1.1. 安装插件
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 

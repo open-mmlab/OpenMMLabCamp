@@ -2,7 +2,7 @@
 
 本教程由社区同学 @geoffreyfan 贡献\~
 
-## 一、Win10 升级最新版本和 Win10 安装英伟达对 Linux 子系统的显卡驱动
+## 1. Win10 升级最新版本和 Win10 安装英伟达对 Linux 子系统的显卡驱动
 
 1、Win10 系统一定要升级到最新版，否则是无法在 Linux 子系统里加载出显卡驱动的，那么就无法进行深度学习！
 
@@ -64,7 +64,7 @@ nvidia-smi
 
 ![](https://user-images.githubusercontent.com/105597268/233559790-1fae3280-77d7-4079-8711-fe9fc58222e9.png)
 
-## 二、 WSL2 和 Ubuntu-22.04 Linux 子系统的下载安装
+## 2. WSL2 和 Ubuntu-22.04 Linux 子系统的下载安装
 
 ### 下载并安装 WSL2 的 Linux 内核包
 
@@ -188,7 +188,7 @@ ubuntu2204 config --default-user geoffreyfan（这里填写你自己的用户名
 
 ![](https://user-images.githubusercontent.com/105597268/233548107-857c6f92-a1e2-450a-b77d-4cc6e3345f4e.png)
 
-## 三、VScode 远程连接 Ubuntu-22.04 Linux 子系统 :
+## 3. VScode 远程连接 Ubuntu-22.04 Linux 子系统 :
 
 下载 WSL 远程连接 Ubuntu-22.04 Linux 子系统的插件：
 
@@ -238,7 +238,7 @@ Ubuntu-22.04 Linux 子系统里面的 /home/geoffreyfan (这里是你自己的�
 
 ![](https://user-images.githubusercontent.com/105597268/233627037-0bb11b45-25d6-4ee6-863f-2fbb0125919f.png)
 
-## 四、WSL2 的 Miniconda 配置
+## 4. WSL2 的 Miniconda 配置
 
 安装 Miconda 地址: https://docs.conda.io/en/latest/miniconda.html
 
@@ -283,7 +283,7 @@ conda activate pytorch
 
 ![](https://user-images.githubusercontent.com/105597268/233630630-dc8d754a-7928-4193-bda5-20224cdba5f7.png)
 
-## 五、下载 torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
+## 5. 下载 torch==1.9.1+cu111 和 torchvision==0.10.1+cu111
 
 如果用以下指令下载很慢：
 
@@ -331,7 +331,7 @@ pip install torchvision-0.10.1+cu111-cp39-cp39-linux_x86_64.whl
 
 ![](https://user-images.githubusercontent.com/105597268/233628271-7cdc43b8-a7a2-48ee-a35f-efb941ba0f00.png)
 
-## 六、WSL2 的 cuda toolkit 配置（说明：如果需要使用到 nvcc，即要使用到源码编译，执行 WSL2 的 cuda toolkit 配置，如果只需要进行预编译，请忽略该步骤）
+## 6. WSL2 的 cuda toolkit 配置（说明：如果需要使用到 nvcc，即要使用到源码编译，执行 WSL2 的 cuda toolkit 配置，如果只需要进行预编译，请忽略该步骤）
 
 注意：不要使用 sudo apt install nvidia-cuda-toolkit 进行配置，会默认配置一个低版本的 cuda toolkit 。
 
@@ -392,9 +392,9 @@ nvcc -V
 
 ![](https://user-images.githubusercontent.com/105597268/233561757-ff3fad4f-5b2c-4e8c-9fe9-529dd9c6ca1d.png)
 
-## 七、有关一些问题的解决思路
+## 7. 有关一些问题的解决思路
 
-### 1、解决：nvcc: command not found （首先看自己有没有输入错误，比如将 nvcc 打错成 ncvv 等）
+### 7.1 解决：nvcc: command not found （首先看自己有没有输入错误，比如将 nvcc 打错成 ncvv 等）
 
 nvcc 是 The main wrapper for the NVIDIA CUDA Compiler suite. Used to compile and link both host and gpu code. ( NVIDIA CUDA 编译器套件的主要包装器,用于编译和链接主机和 gpu 代码)。一般使用 nvcc -V 查看CUDA版本。
 
@@ -435,7 +435,7 @@ Win10 系统里面的 Driver api， 使用 nvidia-smi 显示
 
 如果报错的命令是 RuntimeError ，那就使用 nvcc -V 命令查看是否是版本不匹配。
 
-### 2、解决：查看显卡使用情况 nvidia-smi 报错：command not found（首先看自己有没有输入错误，比如将 nvidia-smi 打错成 nvidia-sim 等）
+### 7.2 解决：查看显卡使用情况 nvidia-smi 报错：command not found（首先看自己有没有输入错误，比如将 nvidia-smi 打错成 nvidia-sim 等）
 
 gpu 重启以后，是默认关闭的，在 Ubuntu-22.04.exe 下执行：
 
@@ -447,7 +447,7 @@ nvidia-smi
 
 ![](https://user-images.githubusercontent.com/105597268/233572066-987b373a-8448-43d6-bd34-4d1d7e5fb90d.png)
 
-### 3、解决：下载完 anaconda 之后仍然报错：conda: command not found
+### 7.3 解决：下载完 anaconda 之后仍然报错：conda: command not found
 
 将以下添加到 Ubuntu-22.04 Linux 子系统的 /home/geoffreyfan (这里是你自己的用户名字) / 路径下的 .bashrc 文件里面:
 
@@ -461,13 +461,13 @@ PATH=/home/user/anaconda3/bin:$PATH
 
 ![](https://user-images.githubusercontent.com/105597268/233631968-16276ceb-6958-4084-af55-6312f4162453.png)
 
-### 4、解决：su: Authentication failure
+### 7.4 解决：su: Authentication failure
 
 su 命令不能切换 root ，提示 su: Authentication failure，只要你 sudo passwd root 过一次之后，下次再 su 的时候只要输入密码就可以成功登录了。
 
 ![](https://user-images.githubusercontent.com/105597268/233572500-53b8151b-a197-49b9-9fa9-eaa0542420a4.png)
 
-### 5、解决：系统找不到指定的文件。
+### 7.5 解决：系统找不到指定的文件。
 
 ![](https://user-images.githubusercontent.com/105597268/233660551-e739fc38-fca8-492c-8980-c43e7b9edc35.png)
 

@@ -27,6 +27,8 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 
 ## 3. 算法库贡献者教程
 
+- [在 MMCV 中添加一个 Transform](./)
+
 ## 4. 加入 MMSIG
 
 可加 OpenMMLab 小助手闻星的微信 "openmmlab-gpt" 备注 【成长地图】加入 MMSIG 群。

@@ -1,15 +1,12 @@
 # Github 云环境(建设中)
 
+如果小伙伴平时有以下的需求和困扰
 
-
-
-
-* 想用 Linux 系统
-* 不想安装系统
-* 不想在 Windows 上安装 WSL
+* 想用 Linux 系统，但不想在自己电脑上装 Linux 系统。
+* 也不想在 Windows 上安装 WSL
 * Windows Pre-commit 在本地老是过不了。
 
-Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时长，OpenMMLab 的社区贡献者们可以使用这个免费算力参与 OpenMMLab 的贡献。 [https://github.com/codespaces](https://mmsig.vansin.top/00env/github)
+可以尝试 Github 的 codespaces，Github 中新增了 codespaces 的功能，每个月有 60 小时的免费时长，可以在这个 Linux 环境下熟悉 Linux 环境以及 Web 版 Vscode 的使用及 Debug。[https://github.com/codespaces](https://mmsig.vansin.top/00env/github)
 
 ## 1. Github codespaces 介绍
 

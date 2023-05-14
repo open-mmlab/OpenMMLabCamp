@@ -27,7 +27,8 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 
 ## 3. 算法库贡献者教程
 
-- [在 MMCV 中添加一个 Transform](./)
+- [在 MMCV 中添加一个 Transform](./mm/mmcv
+/transform-shu-ju-zeng-qiang-gong-xian-zhi-nan-jian-she-zhong.md)
 
 ## 4. 加入 MMSIG
 

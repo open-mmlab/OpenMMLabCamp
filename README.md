@@ -1,28 +1,28 @@
 # OpenMMLab 贡献者成长地图
 
-# 序言
+# 1. 序言
 [https://openmmlab.gitbook.io/mmsig/](https://openmmlab.gitbook.io/mmsig/)
 
 OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 
 帮助社区的小伙伴更快速的融入 OpenMMLa 社区并参与社区共建。小伙伴们可以通过此[任务发布表](https://aicarrier.feishu.cn/sheets/shtcnE5FlKLcg4vMjMMoq4kFL1f)领取任务。
 
-## 1. 前置基础知识
+## 1.1 前置基础知识
 
 社区同学需要对以下知识有基本的了解与掌握。
 
 * Python 的基本语法使用
 * 正常访问 Github
 
-## 4. 加入 MMSIG
+## 1.2. 加入 MMSIG
 
 可加 OpenMMLab 小助手闻星的微信 "openmmlab-gpt" 备注 【成长地图】加入 MMSIG 群。
 
-## 5. OpenMMLab 社区公约
+## 1.3. OpenMMLab 社区公约
 
 尊重 和谐 互助
 
-# 目录
+# 2. 目录
 
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 

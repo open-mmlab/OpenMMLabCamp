@@ -1,5 +1,9 @@
 # Github 云环境(建设中)
 
+
+
+
+
 如果小伙伴平时有以下的需求和困扰
 
 * 想用 Linux 系统，但不想在自己电脑上装 Linux 系统。
@@ -10,9 +14,24 @@
 
 ## 1. Github codespaces 介绍
 
-访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板。
+访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板。我们可以在这个服务器上看源码，Debug。
+
+
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/4ffabfa1-912a-4e01-8bae-006372cebe81)
+
+有四种打开这个 codespaces 的方式
+
+* Open in browser （用浏览器打开）
+* Open in Visual Studio Code
+* Open in JetBrains Gateway
+* Open in JupyterLab
+
+本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
+
+###
 
 ### 1.1. 安装插件
 
@@ -80,7 +99,7 @@ pip install debugpy
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 
-我们通过在Linux系统中的`~/.bashrc` 或者 `~/.zshrc` 文件中添加以下命令
+我们通过在Linux系统中的`~/.bashrc` 或者 `~/.zshrc` 文件中添加以下命令。
 
 ```shell
 alias pyd='python -m debugpy --wait-for-client --listen 5678'

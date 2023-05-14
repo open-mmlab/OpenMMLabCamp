@@ -1,5 +1,6 @@
 # OpenMMLab 贡献者成长地图
 
+# 序言
 [https://openmmlab.gitbook.io/mmsig/](https://openmmlab.gitbook.io/mmsig/)
 
 OpenMMLab: 构建国际领先的计算机视觉开源算法平台。

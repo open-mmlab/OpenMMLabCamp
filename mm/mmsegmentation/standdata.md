@@ -67,9 +67,8 @@ mim install "mmcv>=2.0.0"
 
 *   进入 mmsegmentation 目录（之后的操作均在 mmsegmentation 目录下）。
 
-    ```bash
-    cd mmsegmentation
-    ```
+    <pre class="language-bash"><code class="lang-bash"><strong>cd mmsegmentation
+    </strong></code></pre>
 *   在终端中执行以下命令，添加官方仓库为上游仓库。
 
     ```bash

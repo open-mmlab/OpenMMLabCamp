@@ -2,6 +2,11 @@
 
 
 
+
+
+* 想用 Linux 系统
+* 不想安装系统
+* 不想在 Windows 上安装 WSL
 * Windows Pre-commit 在本地老是过不了。
 
 Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时长，OpenMMLab 的社区贡献者们可以使用这个免费算力参与 OpenMMLab 的贡献。 [https://github.com/codespaces](https://mmsig.vansin.top/00env/github)
@@ -16,18 +21,12 @@ Github 中新增了 codespaces 的功能，每个月有 120 小时的免费时�
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 
-
-
-
-
 ## 2. 运行 MMDetection Demo
-
 
 ```shell
 sudo apt update
 sudo apt-get install libgl1-mesa-glx
 ```
-
 
 ```shell
 pip install openmim
@@ -40,13 +39,12 @@ pip install -v -e .
 code .
 ```
 
-
 ```shell
 cd path/to/mmdetection
 mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 ```
 
-下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 rtmdet_tiny_8xb32-300e_coco.py 和 rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth。
+下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 rtmdet\_tiny\_8xb32-300e\_coco.py 和 rtmdet\_tiny\_8xb32-300e\_coco\_20220902\_112414-78e30dcc.pth。
 
 ```shell
 python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
@@ -59,7 +57,6 @@ pip install debugpy
 ```
 
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/feb3a916-4be0-43b0-b097-71ddd265cf2f)
-
 
 ```json
 {
@@ -82,7 +79,6 @@ pip install debugpy
 }
 ```
 
-
 ```shell
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
@@ -99,4 +95,3 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
-

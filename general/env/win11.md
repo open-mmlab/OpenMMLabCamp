@@ -15,17 +15,17 @@
 
 我们到 vscode 的官网 [**https://code.visualstudio.com/**](https://code.visualstudio.com/) **下载安装**
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.png)
 
 在安装过程中请勾选上以下所有选项，方便后续能够通过右键打开文件夹。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1.png)
 
 ### 1.1 vscode 打开文件夹
 
 #### 鼠标右键法
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-2.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-2.png)
 
 #### 命令行 code 法
 
@@ -44,7 +44,7 @@ code ~ # 打开windows用户主目录路径文件夹
 
 #### Python 相关
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-3.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-3.png)
 
 [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
@@ -52,7 +52,7 @@ code ~ # 打开windows用户主目录路径文件夹
 
 Remote-SSH/Explorer/Development
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-4.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-4.png)
 
 ## 2. Miniconda 配置 Python 虚拟环境
 
@@ -77,7 +77,7 @@ Remote-SSH/Explorer/Development
 
 如下图所示，尽管已经安装了 Miniconda，但是此时在系统打开的 PowerShell 和 CMD 终端中无法使用 `conda`命令。这是因为环境变量 PATH 中没有 `conda`命令所在的路径。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-5.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-5.png)
 
 环境变量是用于存储操作系统和应用程序需要使用的信息的一种机制。它们包含的信息可以是许多不同的类型，包括路径、文件名、用户名、密码、网络地址、端口号等等。环境变量通常被用作配置信息的存储位置，以便应用程序可以使用这些信息来自定义其行为。
 
@@ -135,7 +135,7 @@ $env:Path += ";C:\ProgramData\miniconda3\Scripts"
 
 所以，我们在windows 中需要设置一下 conda 的环境变量。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-7.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-7.png)
 
 如上图所示，在系统环境变量中的 PATH 变量中，新增以下路径（请社区同学根据自己 miniconda 安装的实际位置进行调整）。
 
@@ -147,11 +147,11 @@ C:\ProgramData\miniconda3\Scripts
 
 原理解释：我们可以看到，在路径 `C:\\ProgramData\\miniconda3\\Scripts` 下可以找到可执行文件 `conda` 和 `pip`。当我们在命令行中执行 `conda` 命令时，系统会根据环境变量 `PATH` 里留下的路径 `C:\\ProgramData\\miniconda3\\Scripts` 找到 `conda` 可执行程序并执行它。因此，如果 `conda` 所在的文件夹没有出现在系统环境变量 `PATH` 中，系统就无法找到该程序并报错。这就是我们需要设置环境变量的原因。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-8.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-8.png)
 
 完成设置后我们重新打卡 powershell 终端 输入 conda 命令，发现我们已经可以成功执行了，如下图所提示的，conda 命令包含 `create` 、`init` 、`info` 等命令。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-9.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-9.png)
 
 以管理员模式打开 PowerShell，然后输入以下命令：
 
@@ -173,7 +173,7 @@ conda init
 conda create -n openmmlab python=3.9
 ```
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-10.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-10.png)
 
 完成此操作后，您可以通过输入以下命令激活名为 `openmmlab` 的 Python 3.9 虚拟环境：
 
@@ -217,7 +217,7 @@ conda config --set custom_channels.simpleitk https://mirrors.tuna.tsinghua.edu.c
 
 在 powershell 中运行一句一句执行上述命令，可以发现在 `C:\Users\{UserName}` 路径下生成了`.condarc` 文件，此时就实现了换源的操作，此时`{UserName}` 为 `msnod` ，用户需要根据自己用户名修改。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-11.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-11.png)
 
 `.condarc` 文件中的内容如下，如果不想通过命令行的方式换源，也可以在 `%USERPROFILE%` 路径下新建一个 `.condarc` 文件，然后将以下内容复制到 `.condarc` 文件中也可以实现换 conda 源的操作。
 
@@ -276,7 +276,7 @@ windows 是没有预装 Git 命令行软件的，所有我们在 PowerShell 运�
 
 安装完毕后我们能在 `C:\ProgramData\miniconda3\Library\bin` 路径下找到刚刚安装的 `git` 可执行命令。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-13.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-13.png)
 
 ## 3. PyTorch & MMCV 等依赖安装
 
@@ -295,11 +295,11 @@ code .
 
 通过上述命令使用 vscode 打开 openmmlab 文件夹后，新建一个 `hello_world.py` 的 python文件。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-14.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-14.png)
 
 然后在 VSCODE 中安装 Python 插件
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-15.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-15.png)
 
 ### 3.1 创建虚拟环境
 
@@ -323,17 +323,17 @@ conda activate openmmlab
 
 ### 3.2 Visual Studio Code 选择虚拟环境
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-18.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-18.png)
 
 我们先点击 hello\_world.py 这个 python 文件，再点击右下角的虚拟环境选择器，最后在 vscode 上方选择刚刚创建的 python 虚拟环境。
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-19.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-19.png)
 
 此时 在 Explore 工作区，点击鼠标右键，然后点击 Open in Integrated Terminal （在集成终端中打开）openmmlab 的 conda 虚拟环境会被自动激活。
 
 ### 3.3 安装 PyTorch cpu 版本
 
-![Untitled](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-20.png)
+![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-20.png)
 
 我们先在 vscode 中新建一个 powershell 终端，然后使用如下命令安装 Pytorch 的 cpu 版本。
 
@@ -400,7 +400,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 pip install debugpy
 ```
 
-![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/7e399eeb-2345-44a0-a1aa-2b0647d9f2be)
+![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/7e399eeb-2345-44a0-a1aa-2b0647d9f2be)
 
 将 launch.json 文件替换为以下配置。
 
@@ -431,7 +431,7 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 
 通过以下三步能对上文运行的程序进行 debug。
 
-![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/ef34f94e-6ae5-46cd-b886-7b6e5517ac85)
+![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/ef34f94e-6ae5-46cd-b886-7b6e5517ac85)
 
 但是此种 debug 方式需要将原来的 `python` 替换为 `python -m debugpy --listen 5678 --wait-for-client` 命令输入起来也比较累，所以下文将采取`别名`的方式简化命令。
 
@@ -447,7 +447,7 @@ function pyd {
 }
 ```
 
-![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/79349287-a02c-4f58-9869-9a9aa953fc39)
+![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/79349287-a02c-4f58-9869-9a9aa953fc39)
 
 此时 debug 命令就简化为
 
@@ -458,4 +458,4 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 
-![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/aae3ad97-56ef-4f59-ab8b-c01f351d2900)
+![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/aae3ad97-56ef-4f59-ab8b-c01f351d2900)

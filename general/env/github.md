@@ -24,7 +24,7 @@
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
 
-### 切换主题暗黑色
+### 1.1 切换主题暗黑色
 
 ![切换主题](https://cdn.vansin.top/picgo/segment\_anything/20230515210023.png)
 
@@ -32,7 +32,7 @@
 
 
 
-### Codespaces 预装的环境
+### 1.2 Codespaces 预装的环境
 
 ```bash
 @OpenMMLab-Assistant-004 ➜ /workspaces/codespaces-blank $ pip list
@@ -185,7 +185,7 @@ ypy-websocket            0.8.2
 
 
 
-### 1.2. 安装插件
+### 1.3. 在浏览器端安装插件
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 

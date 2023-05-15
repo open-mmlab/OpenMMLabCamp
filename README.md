@@ -32,7 +32,7 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
   * [Windows 环境配置](general/env/win11.md)
   * [Github 云环境(建设中)](general/env/github.md)
   * [Win 10 WSL 环境配置](general/env/win10wsl.md)
-  * [Win10 环境配置(建设中)](general/env/win10.md)
+  * [Win10 环境配置(建设中)](broken-reference)
   * [Win11 WSL 环境配置](broken-reference)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
   * [masOS 环境配置 （建设中）](general/env/macos.md)

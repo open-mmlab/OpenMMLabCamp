@@ -8,7 +8,6 @@
   * [Windows 环境配置](general/env/win11.md)
   * [Github CodeSpace 云环境(建设中)](general/env/github.md)
   * [Windows WSL 环境配置](general/env/win10wsl.md)
-  * [Win10 环境配置(建设中)](general/env/win10.md)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
   * [masOS 环境配置 （建设中）](general/env/macos.md)
   * [ubuntu docker 环境配置](general/env/ubuntu\_docker.md)

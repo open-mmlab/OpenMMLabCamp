@@ -13,7 +13,8 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 社区同学需要对以下知识有基本的了解与掌握。
 
 * Python 的基本语法使用
-* 正常访问 Github
+* 能正常访问 Github
+* 了解 PyTorch
 
 ### 1.2. 加入 MMSIG
 

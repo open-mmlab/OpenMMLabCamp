@@ -103,6 +103,6 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 
-## 运行代码审查
+## 4. pre-commit 运行代码审查
 
 我们在 Windows 环境 powershell 上经常报错，

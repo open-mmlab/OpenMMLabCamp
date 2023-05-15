@@ -6,7 +6,7 @@
 
 * [环境配置(建设中)](general/env/README.md)
   * [Windows 环境配置](general/env/win11.md)
-  * [Github CodeSpace 云环境(建设中)](general/env/github.md)
+  * [Github CodeSpace 云环境](general/env/github.md)
   * [Windows WSL 环境配置](general/env/win10wsl.md)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
   * [masOS 环境配置 （建设中）](general/env/macos.md)

@@ -37,7 +37,7 @@
 * [MMDetection3D(建设中)](mm/mmdetection3d.md)
 * [MMOCR (建设中)](mm/mmocr.md)
 * [MMSegmentation(建设中)](mm/mmsegmentation.md)
-  * [贡献一个标准格式的数据集(建设中)](mm/mmsegmentation/standdata.md)
+  * [贡献一个标准格式的数据集](mm/mmsegmentation/standdata.md)
   * [贡献一个数据集加载方式(建设中)](mm/mmsegmentation/dataloader.md)
 * [MMPose (建设中)](mm/mmpose.md)
 * [MMEditing(建设中)](mm/mmediting.md)

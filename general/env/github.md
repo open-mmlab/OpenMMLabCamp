@@ -103,11 +103,11 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 ## 3. 在 Github Codespaces 中 Debug
 
+先安装 debug 需要的 python 依赖包。[https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)
+
 ```shell
 pip install debugpy
 ```
-
-![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/feb3a916-4be0-43b0-b097-71ddd265cf2f)
 
 ```json
 {

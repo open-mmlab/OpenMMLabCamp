@@ -60,15 +60,15 @@ python
 更新 Ubuntu 依赖，并安装后续需要安装的依赖。
 
 ```shell
-sudo apt update
-sudo apt-get install libgl1-mesa-glx
+sudo apt update -y
+sudo apt-get install libgl1-mesa-glx -y
 ```
 
 安装 openmim，并使用 mim 安装 mmcv预编译包。
 
 ```shell
 pip install openmim
-mim install "mmcv>=2.0.0"
+mim install "mmcv==2.0.0"
 ```
 
 git clone mmdetection ，并源码安装 mmdetection。
@@ -79,7 +79,7 @@ git clone https://github.com/open-mmlab/mmdetection.git
 cd mmdetection
 git checkout tags/v3.0.0
 pip install -v -e .
-code .
+code .   # 浏览器新标签页打开 mmdetection 工作区
 ```
 
 下载 `rtmdet-ins` 权重文件和配置文件。
@@ -91,9 +91,15 @@ mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 
 下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 、`rtmdet_tiny_8xb32-300e_coco.py` 和 `rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth`。
 
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516073724.png)
+
 ```shell
 python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+运行以上命令，使用  rtmdet-ins\_tiny\_8xb32-300e\_coco.py 模型和权重，对图片 demo/demo.jpg 图片进行目标检测和实例分割，预测结果生成在 outputs/vis/demo.jpg 中，预测结果可视化如下。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516074225.png)
 
 ## 3. 在 Github Codespaces 中 Debug
 

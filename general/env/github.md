@@ -3,8 +3,7 @@
 如果小伙伴平时有以下的需求和困扰。
 
 * 平时使用 Windows 进行开发，当时 Windows 的命令行 pre-commit 代码审查始终过不去，且不想安装 WSL。
-* 也不想在 Windows 上安装 WSL
-* Windows Pre-commit 在本地老是过不了。
+* 又或者想有一个网络状况比较好的 Linux 环境。
 
 可以尝试 Github 的 codespaces，Github 中新增了 codespaces 的功能，每个月有 60 小时的免费时长，可以在这个 Linux 环境下熟悉 Linux 环境以及 Web 版 Vscode 的使用及 Debug。[https://github.com/codespaces](https://mmsig.vansin.top/00env/github)。
 

@@ -1,4 +1,4 @@
-# Github CodeSpace 云环境(建设中)
+# Github CodeSpace 云环境
 
 如果小伙伴平时有以下的需求和困扰：
 
@@ -20,7 +20,7 @@
 * Open in JetBrains Gateway(使用 JetBrains Gateway 打开)
 * Open in JupyterLab (使用 JupyterLab 打开)
 
-本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code
+本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code，本教程就以浏览器端的 VSCODE 进行演示，这需要有电脑+有谷歌浏览器+
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
 
@@ -69,6 +69,11 @@ sudo apt-get install libgl1-mesa-glx
 ```shell
 pip install openmim
 mim install "mmcv>=2.0.0"
+```
+
+git clone mmdetection ，并源码安装 mmdetection。
+
+```bash
 git clone https://github.com/open-mmlab/mmdetection.git
 # git clone https://gitee.com/open-mmlab/mmdetection.git
 cd mmdetection
@@ -76,6 +81,8 @@ git checkout tags/v3.0.0
 pip install -v -e .
 code .
 ```
+
+下载权重文件
 
 ```shell
 cd path/to/mmdetection

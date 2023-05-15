@@ -106,5 +106,7 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 
 ## 运行代码审查
 
+我们在 Windows 环境 powershell 上经常报错，
+
 
 

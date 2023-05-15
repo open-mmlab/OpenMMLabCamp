@@ -103,7 +103,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 ## 3. 在 Github Codespaces 中 Debug
 
-先安装 debug 需要的 python 依赖包，以下 Debug 方法由 [VSCODE Debug官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
+先安装 debug 需要的 python 依赖包，以下 Debug 方法由 [VSCODE Debug 官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
 
 ```shell
 pip install debugpy

@@ -57,10 +57,14 @@ python
 
 ## 2. 运行 MMDetection Demo
 
+更新 Ubuntu 依赖，并安装后续需要安装的依赖。
+
 ```shell
 sudo apt update
 sudo apt-get install libgl1-mesa-glx
 ```
+
+安装 openmim，并使用 mim 安装 mmcv。
 
 ```shell
 pip install openmim
@@ -72,6 +76,8 @@ git checkout tags/v3.0.0
 pip install -v -e .
 code .
 ```
+
+
 
 ```shell
 cd path/to/mmdetection

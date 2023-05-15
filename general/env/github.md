@@ -64,7 +64,7 @@ sudo apt update
 sudo apt-get install libgl1-mesa-glx
 ```
 
-安装 openmim，并使用 mim 安装 mmcv。
+安装 openmim，并使用 mim 安装 mmcv预编译包。
 
 ```shell
 pip install openmim
@@ -76,8 +76,6 @@ git checkout tags/v3.0.0
 pip install -v -e .
 code .
 ```
-
-
 
 ```shell
 cd path/to/mmdetection

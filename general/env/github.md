@@ -1,9 +1,5 @@
 # Github 云环境(建设中)
 
-
-
-
-
 如果小伙伴平时有以下的需求和困扰
 
 * 想用 Linux 系统，但不想在自己电脑上装 Linux 系统。
@@ -15,8 +11,6 @@
 ## 1. Github codespaces 介绍
 
 访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板。我们可以在这个服务器上看源码，Debug。
-
-
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/4ffabfa1-912a-4e01-8bae-006372cebe81)
 
@@ -30,8 +24,6 @@
 本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
-
-###
 
 ### 1.1. 安装插件
 

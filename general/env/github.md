@@ -103,3 +103,8 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+## 运行代码审查
+
+
+

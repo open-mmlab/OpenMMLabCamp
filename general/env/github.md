@@ -20,7 +20,7 @@
 * Open in JetBrains Gateway(使用 JetBrains Gateway 打开)
 * Open in JupyterLab (使用 JupyterLab 打开)
 
-本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code，本教程就以浏览器端的 VSCODE 进行演示，这需要有电脑+有谷歌浏览器+
+本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code，本教程就以浏览器端的 VSCODE 进行演示，这需要有电脑+有谷歌浏览器+能访问 Github 就能轻松 Debug 了。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
 

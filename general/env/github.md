@@ -34,158 +34,24 @@
 
 ### 1.2 Codespaces 预装的环境
 
+在工作区点击鼠标右键，并选择在集成终端中打开，输入以下命令查看 ubuntu 版本为 18.04，Python 版本为 3.10.4。
+
 ```bash
-@OpenMMLab-Assistant-004 ➜ /workspaces/codespaces-blank $ pip list
-Package                  Version
------------------------- ----------
-aiofiles                 22.1.0
-aiosqlite                0.19.0
-anyio                    3.6.2
-argon2-cffi              21.3.0
-argon2-cffi-bindings     21.2.0
-arrow                    1.2.3
-asttokens                2.2.1
-attrs                    23.1.0
-Babel                    2.12.1
-backcall                 0.2.0
-beautifulsoup4           4.12.2
-bleach                   6.0.0
-certifi                  2022.12.7
-cffi                     1.15.1
-charset-normalizer       3.1.0
-cmake                    3.26.3
-colorama                 0.4.6
-comm                     0.1.3
-contourpy                1.0.7
-cryptography             40.0.2
-cycler                   0.11.0
-debugpy                  1.6.7
-decorator                5.1.1
-defusedxml               0.7.1
-executing                1.2.0
-fastjsonschema           2.16.3
-filelock                 3.12.0
-fonttools                4.39.3
-fqdn                     1.5.1
-gitdb                    4.0.10
-GitPython                3.1.31
-idna                     3.4
-ipykernel                6.22.0
-ipython                  8.12.0
-ipython-genutils         0.2.0
-isoduration              20.11.0
-jedi                     0.18.2
-Jinja2                   3.1.2
-joblib                   1.2.0
-json5                    0.9.11
-jsonpointer              2.3
-jsonschema               4.17.3
-jupyter_client           8.2.0
-jupyter_core             5.3.0
-jupyter-events           0.6.3
-jupyter_server           2.5.0
-jupyter_server_fileid    0.9.0
-jupyter-server-mathjax   0.2.6
-jupyter_server_terminals 0.4.4
-jupyter_server_ydoc      0.8.0
-jupyter-ydoc             0.2.4
-jupyterlab               3.6.3
-jupyterlab-git           0.41.0
-jupyterlab-pygments      0.2.2
-jupyterlab_server        2.22.1
-kiwisolver               1.4.4
-lit                      16.0.2
-MarkupSafe               2.1.2
-matplotlib               3.7.1
-matplotlib-inline        0.1.6
-mistune                  2.0.5
-mpmath                   1.3.0
-nbclassic                0.5.5
-nbclient                 0.7.4
-nbconvert                7.3.1
-nbdime                   3.2.0
-nbformat                 5.8.0
-nest-asyncio             1.5.6
-networkx                 3.1
-notebook                 6.5.4
-notebook_shim            0.2.3
-numpy                    1.24.3
-nvidia-cublas-cu11       11.10.3.66
-nvidia-cuda-cupti-cu11   11.7.101
-nvidia-cuda-nvrtc-cu11   11.7.99
-nvidia-cuda-runtime-cu11 11.7.99
-nvidia-cudnn-cu11        8.5.0.96
-nvidia-cufft-cu11        10.9.0.58
-nvidia-curand-cu11       10.2.10.91
-nvidia-cusolver-cu11     11.4.0.1
-nvidia-cusparse-cu11     11.7.4.91
-nvidia-nccl-cu11         2.14.3
-nvidia-nvtx-cu11         11.7.91
-packaging                23.1
-pandas                   2.0.1
-pandocfilters            1.5.0
-parso                    0.8.3
-pexpect                  4.8.0
-pickleshare              0.7.5
-Pillow                   9.5.0
-pip                      23.1.1
-platformdirs             3.3.0
-plotly                   5.14.1
-prometheus-client        0.16.0
-prompt-toolkit           3.0.38
-psutil                   5.9.5
-ptyprocess               0.7.0
-pure-eval                0.2.2
-pycparser                2.21
-Pygments                 2.15.1
-pyparsing                3.0.9
-pyrsistent               0.19.3
-python-dateutil          2.8.2
-python-json-logger       2.0.7
-pytz                     2023.3
-PyYAML                   6.0
-pyzmq                    25.0.2
-requests                 2.28.2
-rfc3339-validator        0.1.4
-rfc3986-validator        0.1.1
-scikit-learn             1.2.2
-scipy                    1.10.1
-seaborn                  0.12.2
-Send2Trash               1.8.0
-setuptools               67.7.2
-six                      1.16.0
-smmap                    5.0.0
-sniffio                  1.3.0
-soupsieve                2.4.1
-stack-data               0.6.2
-sympy                    1.11.1
-tenacity                 8.2.2
-terminado                0.17.1
-threadpoolctl            3.1.0
-tinycss2                 1.2.1
-tomli                    2.0.1
-torch                    2.0.0
-tornado                  6.3.1
-traitlets                5.9.0
-triton                   2.0.0
-typing_extensions        4.5.0
-tzdata                   2023.3
-uri-template             1.2.0
-urllib3                  1.26.15
-wcwidth                  0.2.6
-webcolors                1.13
-webencodings             0.5.1
-websocket-client         1.5.1
-wheel                    0.40.0
-y-py                     0.5.9
-ypy-websocket            0.8.2
-
-
+cat /proc/version
+python
 ```
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230515212633.png)
+
+同时我们运行 `pip list` 我们可以看到系统环境的 python 预装了 torch 的版本为 2.0.0。在本文中就不安装 miniconda 和虚拟环境了，就直接使用 codespace 的默认环境进行代码的调试了。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230515215235.png)
 
 
 
 ### 1.3. 在浏览器端安装插件
+
+为了能够在浏览器端的 vscode 上智能的编辑代码和调试代码，需要在 vscode 插件市场安装以下 `Python` 插件。
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 

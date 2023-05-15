@@ -82,14 +82,14 @@ pip install -v -e .
 code .
 ```
 
-下载权重文件
+下载 `rtmdet-ins` 权重文件和配置文件。
 
 ```shell
 cd path/to/mmdetection
 mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 ```
 
-下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 rtmdet\_tiny\_8xb32-300e\_coco.py 和 rtmdet\_tiny\_8xb32-300e\_coco\_20220902\_112414-78e30dcc.pth。
+下载将需要几秒钟或更长时间，这取决于你的网络环境。完成后，你会在当前文件夹中发现两个文件 、`rtmdet_tiny_8xb32-300e_coco.py` 和 `rtmdet_tiny_8xb32-300e_coco_20220902_112414-78e30dcc.pth`。
 
 ```shell
 python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu

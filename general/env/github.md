@@ -15,10 +15,10 @@
 
 有四种打开这个 codespaces 的方式
 
-* Open in browser （用浏览器打开）
-* Open in Visual Studio Code
-* Open in JetBrains Gateway
-* Open in JupyterLab
+* Open in browser （使用浏览器打开）
+* Open in Visual Studio Code（使用VSCODE打开）
+* Open in JetBrains Gateway(使用 JetBrains Gateway 打开)
+* Open in JupyterLab (使用 JupyterLab 打开)
 
 本菜狗推荐使用 Open in browser 和 Open in Visual Studio Code
 

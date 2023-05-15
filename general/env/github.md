@@ -24,7 +24,13 @@
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230514195323.png)
 
-### 1.1. 安装插件
+### 1.1 Codespaces 预装的环境
+
+
+
+
+
+### 1.2. 安装插件
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 

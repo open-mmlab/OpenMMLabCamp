@@ -8,7 +8,7 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
 
 帮助社区的小伙伴更快速的融入 OpenMMLa 社区并参与社区共建，小伙伴们可以通过此[任务发布表](https://aicarrier.feishu.cn/sheets/shtcnE5FlKLcg4vMjMMoq4kFL1f)领取合适的任务。
 
-如果你的基础比较好，只需要看 [mmengine 文档](https://mmengine.readthedocs.io/zh\_CN/latest/notes/contributing.html)中贡献代码的一篇文章进行代码贡献。
+如果你的基础比较好，只需要看 [mmengine 文档](https://mmengine.readthedocs.io/zh\_CN/latest/notes/contributing.html)中贡献代码的一篇文章快速参与贡献。
 
 ### 1.1 前置基础知识
 

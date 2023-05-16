@@ -186,3 +186,28 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 ## 4. pre-commit 运行代码审查
 
 我们在 Windows 环境 powershell 上运行 `pre-commit run --all-files`经常报错，这时候我们可以使用 Github CodeSpaces 环境修 `pre-commit run --all-files` 代码审查的问题了。
+
+在 mmdetection 路径下安装 pre-commit。
+
+```bash
+cd path/to/mmdetection
+pip install pre-commit
+pre-commit install
+```
+
+对 mmdetection 整个仓库进行代码格式审查
+
+```bash
+pre-commit run --all-files
+```
+
+我们可以看到 pre-commit 基于 flake8、isort、yapf、codespell、mdformat 和 docformatter 的约束对 mmdetection 代码进行了全面的审查，可以看到审查是，全部通过的。如果是我们自己提 PR 的分支的话，如果不满足代码审查的规范，部分会自动调整格式，部分会提示错误，代码规范和审查的详细内容，将在后续的章节中详细介绍，本节只是介绍我们可以通过在 Github 的云 Linux 环境顺畅的运行 `pre-commit`
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516090726.png)
+
+
+
+
+
+
+

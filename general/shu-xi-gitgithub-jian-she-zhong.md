@@ -24,7 +24,9 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ## 2. Git 命令
 
+git 是分布式的版本控制软件
 
+### 2.1 配置账号和邮箱
 
 设置账号和邮箱
 
@@ -38,3 +40,10 @@ git config --global user.email xxx
 ```shell
 git config --global credential.helper store
 ```
+
+### 2.2 git 概念讲解
+
+
+
+
+

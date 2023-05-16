@@ -373,7 +373,7 @@ pip install -v -e . # 源码安装 mmdet
 code .  # 打开 mmdetection 工作区
 ```
 
-### 验证安装
+### 4.1 验证安装
 
 步骤 1. 我们需要下载配置文件和模型权重文件。
 
@@ -394,7 +394,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 ![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/561cbe54-3bac-4d37-bf07-1b5ad6cf855d)
 
-### 对 image\_demo.py 进行简单的 debug。
+### 4.2 对 image\_demo.py 进行简单的 debug。
 
 ```shell
 pip install debugpy
@@ -435,7 +435,7 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 
 但是此种 debug 方式需要将原来的 `python` 替换为 `python -m debugpy --listen 5678 --wait-for-client` 命令输入起来也比较累，所以下文将采取`别名`的方式简化命令。
 
-### 设置 `python -m debugpy --listen 5678 --wait-for-client` 别名为 `pyd`
+### 4.3 设置 `python -m debugpy --listen 5678 --wait-for-client` 别名为 `pyd`
 
 在 powershell 中执行 `code $PROFILE`, 使用 vscode 打开 powershell 的 `$PROFILE` 文件
 

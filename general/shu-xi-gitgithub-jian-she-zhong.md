@@ -30,7 +30,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ### 1.2 Issues
 
-如果想要在 OpenMMLab 社区有效的获得来自社区的帮助，我们可以通过提 Issues 的方式获得来自社区开发者和官方开发者的帮助，在 mmdetection 中，提供了以下四个 Issues 的模板。
+如果想要在 OpenMMLab 社区有效的获得来自社区的帮助，我们可以通过提 Issues 的方式获得来自社区开发者和官方开发者的帮助，在 mmdetection 中，提供了以下四个 Issues 的模板。建议用户选择对应的模板新建 Issue 快速的从社区获得帮助。
 
 * Error report(错误报告)
 * Feature request(特性请求)
@@ -43,7 +43,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ### 1.3 Pull requests
 
-
+这也是想给开源社区贡献力量的同学必须关注的部分。
 
 ### 1.4 Discussions
 

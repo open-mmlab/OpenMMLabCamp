@@ -99,6 +99,8 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 ## 3. 在 Github Codespaces 中 Debug
 
+### 3.1 使用 python -m debugpy --listen 5678 --wait-for-client 进行 Debug
+
 以下 Debug 方法由 [VSCODE Debug 官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
 
 先安装 debug 需要的 python 依赖包 `debugpy` 并安装好自己 VSCODE 的 Python 插件。
@@ -107,7 +109,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 pip install debugpy
 ```
 
-选择左侧的 `运行和调试`按钮，并点击创建 `launch.json` 文件，选择 Python File。
+选择左侧的 `运行和调试`按钮，并点击创建 `launch.json` 文件，选择 Python 然后选择 Python File。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516075852.png)
 
@@ -136,27 +138,34 @@ pip install debugpy
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080215.png)
 
-这样我们先在程序中打卡断点，然后在命令行的mmdetection路径下运行命令以下命名，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
+我们先打开一个 python 文件，然后点击又下角 python 插件环境选择按钮，最后选择一个 python 环境，这里我们选择  `~/.python/current/bin/python3` 这个环境。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516083059.png)
+
+
+
+我们将以下原始的命令行运行 RTMDet 实例分割的程序命令，稍加改造以下：
+
+```
+python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
+```
+
+将 `python` 替换为 `python -m debugpy --listen 5678 --wait-for-client` 得到以下的命令，意思是使用 debugpy 这个工具联合 VSCODE 进行 debug，开放程序的 5678 端口用户和 vscode 客户端进行通信，`--wait-for-client` 的意思是等待客户端点击 `Python: Remote Attach` 按钮后才正式 Debug 程序。
 
 <pre class="language-shell"><code class="lang-shell"><strong>
 </strong># Debug 命令
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
-
-# 原始命令
-# python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu 
 </code></pre>
 
-
-
-
+这样我们先在程序中打卡断点，然后在命令行的mmdetection路径下运行命令以上命令，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080728.png)
 
+### 3.2 设置 pyd 别名简化 python -m debugpy --listen 5678 --wait-for-client 命令
 
+上述 debug 的方式有一个很大的问题，在每次 debug 前都需要将 python 替换为 `python -m debugpy --listen 5678 --wait-for-client` 需要输入这么一大段，及其麻烦和耗费时间，所以想了设置别名的方法，将 `python -m debugpy --listen 5678 --wait-for-client` 简化为 `pyd` 命令。  &#x20;
 
-
-
-我们通过在Linux系统中的`~/.bashrc` 或者 `~/.zshrc` 文件中添加以下命令。
+我们通过`code ~/.bashrc`命令在Linux系统中的`~/.bashrc` 中添加以下命令（也可以添加到 `.zshrc`中）。
 
 ```shell
 alias pyd='python -m debugpy --wait-for-client --listen 5678'

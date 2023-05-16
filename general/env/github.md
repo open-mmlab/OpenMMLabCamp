@@ -51,7 +51,7 @@ python
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/c9142f91-a7cb-49f0-b65e-575ca4f772dc)
 
-## 2. 运行 MMDetection Demo
+## 2. 运行 MMDetection 实例分割推理 Demo
 
 更新 Ubuntu 依赖，并安装后续需要安装的依赖。
 

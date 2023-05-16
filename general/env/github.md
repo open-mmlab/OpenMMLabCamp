@@ -185,4 +185,4 @@ pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weight
 
 ## 4. pre-commit 运行代码审查
 
-我们在 Windows 环境 powershell 上运行 `pre-commit run --all-files`经常报错，这时候我们可能就需要一台 Linux 环境将运行 PR 分支的 `pre-commit run --all-files`
+我们在 Windows 环境 powershell 上运行 `pre-commit run --all-files`经常报错，这时候我们可以使用 Github CodeSpaces 环境修 `pre-commit run --all-files` 代码审查的问题了。

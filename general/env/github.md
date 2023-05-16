@@ -195,7 +195,7 @@ pip install pre-commit
 pre-commit install
 ```
 
-对 mmdetection 整个仓库进行代码格式审查
+对 mmdetection 整个仓库进行代码格式审查。
 
 ```bash
 pre-commit run --all-files

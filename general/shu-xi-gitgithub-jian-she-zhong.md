@@ -1,8 +1,16 @@
 # 熟悉 Git/GitHub(建设中)
 
-Git/GitHub 是开源社区贡献的必备技能。
+Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLab 社区中 GitHub 经常用到的几项功能。
 
-## Git 配置
+## 1. Github 配置
+
+
+
+
+
+## 2. Git 命令
+
+
 
 设置账号和邮箱
 

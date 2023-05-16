@@ -9,7 +9,7 @@
 
 ## 1. Github codespaces 介绍
 
-访问 https://github.com/codespaces ，选择 Github 提供的 Blank 模板。我们可以在这个服务器上看源码，Debug。
+访问 [https://github.com/codespaces](https://github.com/codespaces) ，选择 Github 提供的 Blank 模板。我们可以在这个服务器上看源码或者 Debug。
 
 ![](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/4ffabfa1-912a-4e01-8bae-006372cebe81)
 

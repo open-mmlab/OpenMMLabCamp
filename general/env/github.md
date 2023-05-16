@@ -1,4 +1,4 @@
-# 云 Linux 环境之 Github CodeSpaces
+# 云 Linux 环境之 Github Codespaces
 
 如果小伙伴平时有以下的需求和困扰：
 

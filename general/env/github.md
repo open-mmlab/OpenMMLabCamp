@@ -165,7 +165,7 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 
 上述 debug 的方式有一个很大的问题，在每次 debug 前都需要将 python 替换为 `python -m debugpy --listen 5678 --wait-for-client` 需要输入这么一大段，及其麻烦和耗费时间，所以想了设置别名的方法，将 `python -m debugpy --listen 5678 --wait-for-client` 简化为 `pyd` 命令。  &#x20;
 
-我们通过`code ~/.bashrc`命令在Linux系统中的`~/.bashrc` 中添加以下命令（也可以添加到 `.zshrc`中）。
+我们通过`code ~/.bashrc`命令在Linux系统中的`~/.bashrc` 中添加以下命令（如果使用的 shell 是 zsh 需要添加到 `.zshrc`中）。
 
 ```shell
 alias pyd='python -m debugpy --wait-for-client --listen 5678'

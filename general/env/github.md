@@ -171,11 +171,17 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 alias pyd='python -m debugpy --wait-for-client --listen 5678'
 ```
 
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516084807.png)
+
+在终端中运行 `source ~/.bashrc` 或者重新打开 vscode 中的终端，这样我们就只需要将原始运行程序的命令中的 `python` 替换为 `pyd` ，最后点击 Debug 按钮就能愉快的 Debug 了。
+
 ```shell
 pyd demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 # 原始命令是 python，只需要将 python 换成 pyd 就能在 vscode 中进行 debug 了。
 # python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516085158.png)
 
 ## 4. pre-commit 运行代码审查
 

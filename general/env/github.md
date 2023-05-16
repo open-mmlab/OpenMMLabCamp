@@ -30,8 +30,6 @@
 
 ![选择深色(Visual Studio)](https://cdn.vansin.top/picgo/segment\_anything/20230515210245.png)
 
-
-
 ### 1.2 Codespaces 预装的环境
 
 在工作区点击鼠标右键，并选择在集成终端中打开，输入以下命令查看 ubuntu 版本为 18.04，Python 版本为 3.10.4。
@@ -46,8 +44,6 @@ python
 同时我们运行 `pip list` 我们可以看到系统环境的 python 预装了 torch 的版本为 2.0.0。在本文中就不安装 miniconda 和虚拟环境了，就直接使用 codespace 的默认环境进行代码的调试了。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230515215235.png)
-
-
 
 ### 1.3 在浏览器端安装插件
 
@@ -97,17 +93,23 @@ mim download mmdet --config rtmdet-ins_tiny_8xb32-300e_coco --dest .
 python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
 
-运行以上命令，使用  rtmdet-ins\_tiny\_8xb32-300e\_coco.py 模型和权重，对图片 demo/demo.jpg 图片进行目标检测和实例分割，预测结果生成在 outputs/vis/demo.jpg 中，预测结果可视化如下。
+运行以上命令，使用 rtmdet-ins\_tiny\_8xb32-300e\_coco.py 模型和权重，对图片 demo/demo.jpg 图片进行目标检测和实例分割，预测结果生成在 outputs/vis/demo.jpg 中，预测结果可视化如下。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516074225.png)
 
 ## 3. 在 Github Codespaces 中 Debug
 
-先安装 debug 需要的 python 依赖包，以下 Debug 方法由 [VSCODE Debug 官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
+以下 Debug 方法由 [VSCODE Debug 官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
+
+先安装 debug 需要的 python 依赖包 `debugpy` 并安装好自己 VSCODE 的 Python 插件。
 
 ```shell
 pip install debugpy
 ```
+
+选择左侧的 `运行和调试`按钮，并点击创建 `launch.json` 文件，选择 Python File。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516075852.png)
 
 ```json
 {
@@ -130,9 +132,21 @@ pip install debugpy
 }
 ```
 
+并将上述 Debug 的配置复制到 launch.json 中。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516080215.png)
+
+这样我们先在程序中打卡断点，然后在命令行的mmdetection路径下运行命令，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
+
 ```shell
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
 ```
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516080728.png)
+
+
+
+
 
 我们通过在Linux系统中的`~/.bashrc` 或者 `~/.zshrc` 文件中添加以下命令。
 

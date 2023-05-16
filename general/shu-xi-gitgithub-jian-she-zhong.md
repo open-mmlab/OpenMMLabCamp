@@ -12,11 +12,11 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 
 
-### 1.3 Discussion
+### 1.3 discussion
 
 
 
-### 1.4 Codespaces
+### 1.4 codespaces
 
 
 

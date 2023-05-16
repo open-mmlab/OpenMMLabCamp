@@ -1,8 +1,17 @@
-# 熟悉 Git/GitHub(建设中)
+# 熟悉 GitHub\Git(建设中)
 
 Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLab 社区中 GitHub 经常用到的几项功能，Github 是人类开源财富的聚集地，作为社区用户，我们需要充分熟悉 Github 的使用，汲取来自开源社区的能力。
 
 ## 1. Github
+
+在 [mmdetection](https://github.com/open-mmlab/mmdetection) 的github页面有几个重要的功能
+
+* Code
+* Issues
+* Pull requests
+* Discussions
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516102953.png)
 
 ### 1.1 issue
 

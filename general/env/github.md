@@ -1,4 +1,4 @@
-# Github Codespaces 云 Linux 环境 
+# Github Codespaces 云 Linux 环境
 
 我们了解到一些社区的小伙伴平时有以下的需求和困扰：
 
@@ -138,11 +138,9 @@ pip install debugpy
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080215.png)
 
-我们先打开一个 python 文件，然后点击又下角 python 插件环境选择按钮，最后选择一个 python 环境，这里我们选择  `~/.python/current/bin/python3` 这个环境。
+我们先打开一个 python 文件，然后点击又下角 python 插件环境选择按钮，最后选择一个 python 环境，这里我们选择 `~/.python/current/bin/python3` 这个环境。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516083059.png)
-
-
 
 我们将以下原始的命令行运行 RTMDet 实例分割的程序命令，稍加改造一下：
 
@@ -152,10 +150,11 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 将 `python` 替换为 `python -m debugpy --listen 5678 --wait-for-client` 得到以下的命令，意思是使用 debugpy 这个工具联合 VSCODE 进行 debug，开放程序的 5678 端口用户和 vscode 客户端进行通信，`--wait-for-client` 的意思是等待客户端点击 `Python: Remote Attach` 按钮后才正式 Debug 程序。
 
-<pre class="language-shell"><code class="lang-shell"><strong>
-</strong># Debug 命令
+```shell
+
+# Debug 命令
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
-</code></pre>
+```
 
 这样我们先在程序中打断点，然后在命令行的mmdetection路径下运行命令以上命令，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
 
@@ -163,7 +162,7 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 
 ### 3.2 设置 pyd 别名简化 `python -m debugpy --listen 5678 --wait-for-client` 命令
 
-上述 debug 的方式有一个很大的问题，在每次 debug 前都需要将 python 替换为 `python -m debugpy --listen 5678 --wait-for-client` 需要输入这么一大段，及其麻烦和耗费时间，所以想了设置别名的方法，将 `python -m debugpy --listen 5678 --wait-for-client` 简化为 `pyd` 命令。  &#x20;
+上述 debug 的方式有一个很大的问题，在每次 debug 前都需要将 python 替换为 `python -m debugpy --listen 5678 --wait-for-client` 需要输入这么一大段，及其麻烦和耗费时间，所以想了设置别名的方法，将 `python -m debugpy --listen 5678 --wait-for-client` 简化为 `pyd` 命令。
 
 我们通过`code ~/.bashrc`命令在Linux系统中的`~/.bashrc` 中添加以下命令（如果使用的 shell 是 zsh 需要添加到 `.zshrc`中）。
 
@@ -201,13 +200,6 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-我们可以看到 pre-commit 基于 flake8、isort、yapf、codespell、mdformat 和 docformatter 的约束对 mmdetection 代码进行了全面的审查，可以看到审查结果是全部通过的。如果是我们自己提 PR 的分支的话，如果不满足代码审查的规范，pre-commit 会自动的对不满足要求的文件进行自动调整，不能自动调整的部分会提示错误。本节仅简单演示在 Github 的云 Linux 环境运行 `pre-commit`，代码规范和审查的详细内容，将在后续的章节中详细介绍。
+我们可以看到 pre-commit 基于 flake8、isort、yapf、codespell、mdformat 和 docformatter 的约束对 mmdetection 代码进行了全面的审查，可以看到审查结果是全部通过的。如果是我们自己提 PR 的分支的话，如果不满足代码审查的规范，pre-commit 会自动的对不满足要求的文件进行自动调整，不能自动调整的部分会提示错误。本节仅简单演示在 Github 的云 Linux 环境运行 `pre-commit`，代码规范审查的详细内容，将在后续的章节中详细介绍。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516090726.png)
-
-
-
-
-
-
-

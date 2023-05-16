@@ -99,7 +99,7 @@ python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --wei
 
 ## 3. 在 Github Codespaces 中 Debug
 
-### 3.1 使用 python -m debugpy --listen 5678 --wait-for-client 进行 Debug
+### 3.1 使用 `python -m debugpy --listen 5678 --wait-for-client` 进行 Debug
 
 以下 Debug 方法由 [VSCODE Debug 官方文档](https://code.visualstudio.com/docs/python/debugging#\_debugging-by-attaching-over-a-network-connection)演化而来。
 
@@ -161,7 +161,7 @@ python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.j
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080728.png)
 
-### 3.2 设置 pyd 别名简化 python -m debugpy --listen 5678 --wait-for-client 命令
+### 3.2 设置 pyd 别名简化 `python -m debugpy --listen 5678 --wait-for-client` 命令
 
 上述 debug 的方式有一个很大的问题，在每次 debug 前都需要将 python 替换为 `python -m debugpy --listen 5678 --wait-for-client` 需要输入这么一大段，及其麻烦和耗费时间，所以想了设置别名的方法，将 `python -m debugpy --listen 5678 --wait-for-client` 简化为 `pyd` 命令。  &#x20;
 

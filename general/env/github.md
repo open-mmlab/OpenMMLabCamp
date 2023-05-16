@@ -144,7 +144,7 @@ pip install debugpy
 
 
 
-我们将以下原始的命令行运行 RTMDet 实例分割的程序命令，稍加改造以下：
+我们将以下原始的命令行运行 RTMDet 实例分割的程序命令，稍加改造一下：
 
 ```
 python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu

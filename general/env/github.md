@@ -7,7 +7,7 @@
 
 这里本菜狗推荐使用 Github 的 codespaces 云 Linux 环境，每个月有 120-core 时的免费时长，15 GB 免费磁盘，可以在这个环境下进行 Debug 和修 pre-commit 代码审查的 Bug。
 
-## 1. Github codespaces 介绍
+## 1. Github Codespaces 介绍
 
 访问 [https://github.com/codespaces](https://github.com/codespaces) ，选择 Github 提供的 Blank 模板。我们可以在这个服务器上看源码或者 Debug。
 

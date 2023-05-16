@@ -19,7 +19,9 @@
 
 在安装过程中请勾选上以下所有选项，方便后续能够通过右键打开文件夹。
 
-![](https://cdn.vansin.top/picgo/Windows%2011%20%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1.png)
+
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/25839884/82a11b00-acd5-4731-bfd8-e5f11c234450)
+
 
 ### 1.1 vscode 打开文件夹
 

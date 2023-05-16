@@ -32,6 +32,17 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 
 
+在 mmdetection 中，提供了以下四个 Issues 的目标
+
+* Error report(错误报告)
+* Feature request(特性请求)
+* General questions(通用问题)
+* Reimplementation Questions(复现问题)
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230516110002.png)
+
+
+
 ### 1.3 Pull requests
 
 

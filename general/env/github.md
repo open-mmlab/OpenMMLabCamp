@@ -201,7 +201,7 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-我们可以看到 pre-commit 基于 flake8、isort、yapf、codespell、mdformat 和 docformatter 的约束对 mmdetection 代码进行了全面的审查，可以看到审查是，全部通过的。如果是我们自己提 PR 的分支的话，如果不满足代码审查的规范，部分会自动调整格式，部分会提示错误，代码规范和审查的详细内容，将在后续的章节中详细介绍，本节只是介绍我们可以通过在 Github 的云 Linux 环境顺畅的运行 `pre-commit`
+我们可以看到 pre-commit 基于 flake8、isort、yapf、codespell、mdformat 和 docformatter 的约束对 mmdetection 代码进行了全面的审查，可以看到审查结果是全部通过的。如果是我们自己提 PR 的分支的话，如果不满足代码审查的规范，pre-commit 会自动的对不满足要求的文件进行自动调整，不能自动调整的部分会提示错误。代码规范和审查的详细内容，将在后续的章节中详细介绍，本节只是介绍我们可以通过在 Github 的云 Linux 环境顺畅的运行 `pre-commit`
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516090726.png)
 

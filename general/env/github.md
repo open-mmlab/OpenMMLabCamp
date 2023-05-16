@@ -1,11 +1,11 @@
 # Github Codespaces 云 Linux 环境 
 
-如果小伙伴平时有以下的需求和困扰：
+我们了解到一些社区的小伙伴平时有以下的需求和困扰：
 
 * 平时使用 Windows 进行开发，但是提 PR 时 Windows 的命令行 pre-commit 代码审查始终过不去，且不想安装 WSL。
-* 又或者想有一个网络状况比较好的 Linux 环境，在浏览器上就能方便的对 OpenMMLab 算法进行 Debug 调试学习。
+* 想有一个网络状况比较好的 Linux 环境，在浏览器上就能方便的对 OpenMMLab 算法进行 Debug 调试学习。
 
-可以尝试 Github 的 codespaces 云 Linux 环境，每个月有 120-core 时的免费时长，15 GB 免费磁盘，可以在这个环境下进行 Debug 和修 pre-commit 代码审查的 Bug。
+这里本菜狗推荐使用 Github 的 codespaces 云 Linux 环境，每个月有 120-core 时的免费时长，15 GB 免费磁盘，可以在这个环境下进行 Debug 和修 pre-commit 代码审查的 Bug。
 
 ## 1. Github codespaces 介绍
 

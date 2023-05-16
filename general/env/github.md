@@ -136,11 +136,19 @@ pip install debugpy
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080215.png)
 
-这样我们先在程序中打卡断点，然后在命令行的mmdetection路径下运行命令，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
+这样我们先在程序中打卡断点，然后在命令行的mmdetection路径下运行命令以下命名，最后点击 Python:Remote Attach 按钮就能打断点进行调试了。
 
-```shell
+<pre class="language-shell"><code class="lang-shell"><strong>
+</strong># Debug 命令
 python -m debugpy --listen 5678 --wait-for-client demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu
-```
+
+# 原始命令
+# python demo/image_demo.py demo/demo.jpg rtmdet-ins_tiny_8xb32-300e_coco.py --weights rtmdet-ins_tiny_8xb32-300e_coco_20221130_151727-ec670f7e.pth --device cpu 
+</code></pre>
+
+
+
+
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516080728.png)
 

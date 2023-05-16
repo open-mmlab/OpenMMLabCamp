@@ -4,12 +4,15 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 本文将介绍Github和Git命令行的基本操作
 
-* Github
+* Github&#x20;
   * Code
   * Issues
   * Pull requests
   * Discussions
-* Git
+* Git 核心知识点
+  * 分布式版本管理 Git 介绍
+  * 在 Git 中配置账号/邮箱/密码
+  * git clone/pull/add/commit/push/checkout 等命令介绍
 
 ## 1. Github
 
@@ -39,11 +42,11 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230516110002.png)
 
-
-
 ### 1.3 Pull requests
 
 这也是想给开源社区贡献力量的同学必须关注的部分。
+
+
 
 ### 1.4 Discussions
 

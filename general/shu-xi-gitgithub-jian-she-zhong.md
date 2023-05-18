@@ -923,3 +923,19 @@ $ git checkout <branchname>
 可以在 PR 页面的 Checks 标签页，点击右上角的 “Re-run all jobs” 按键，即可重新运行 CI。
 
 ### GitLab/Gitee/gitcode
+
+
+
+## 4. 课后作业
+
+* 提交一个 PR
+* 向源算法库中其他人提的 PR 中提交代码
+* 解决分支冲突
+
+## 5. 参考资料
+
+* Git 官方教程：[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+* 2个 Git 沙盘：
+  * [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
+  * [https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)
+* 廖雪峰 Git 教程：[https://www.liaoxuefeng.com/wiki/896043488029600](https://www.liaoxuefeng.com/wiki/896043488029600)

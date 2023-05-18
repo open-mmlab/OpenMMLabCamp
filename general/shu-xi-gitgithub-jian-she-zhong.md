@@ -10,51 +10,76 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 本文将介绍Github和Git命令行的基本操作
 
-* Github
-  * Code
-  * Issues
-  * Pull requests
-  * Discussions
-* Git 核心知识点
-  * 分布式版本管理 Git 介绍
-  * 在 Git 中配置账号/邮箱/密码
-  * git clone/pull/add/commit/push/checkout 等命令介绍
-
-## 1. 熟悉 Github 页面
-
-在 [mmdetection](https://github.com/open-mmlab/mmdetection) 的github页面有几个重要的功能。
-
-* Code
-* Issues
-* Pull requests
-* Discussions
-
-![](https://cdn.vansin.top/picgo/segment\_anything/20230516102953.png)
-
-### 1.1 Code
-
-在 Code 页面，左边为导航的目录栏，右边为点击文件后的详细内容，在 Github 的 Code 中就能比较方便的看源码。
-
-![](https://cdn.vansin.top/picgo/segment\_anything/20230516105557.png)
-
-### 1.2 Issues
-
-如果想要在 OpenMMLab 社区有效的获得来自社区的帮助，我们可以通过提 Issues 的方式获得来自社区开发者和官方开发者的帮助，在 mmdetection 中，提供了以下四个 Issues 的模板。建议用户选择对应的模板新建 Issue 快速的从社区获得帮助。
-
-* Error report(错误报告)
-* Feature request(特性请求)
-* General questions(通用问题)
-* Reimplementation Questions(复现问题)
-
-![](https://cdn.vansin.top/picgo/segment\_anything/20230516110002.png)
-
-### 1.3 Pull requests
-
-这也是想给开源社区贡献力量的同学必须关注的部分。
-
-### 1.4 Discussions
 
 
+## 1. 熟悉 Github&#x20;
+
+GitHub （github.com）是最大的 Git 版本库托管平台，包括 OpenMMLab 在内的许多开源项目使用 GitHub 网站实现代码托管、版本管理、问题追踪、社区交流等功能。即使你还不熟悉 Git 的使用，也很可能已经使用过 GitHub 来查找所需的开源软件或资料。我们首先简单熟悉一下 GitHub 的页面和基本功能。 以 MMPose （github.com/open-mmlab/mmpose）为例，一个软件项目在 GitHub 上的首页通常如下图所示：
+
+![图1 软件项目首页（Code 页面）](https://cdn.vansin.top/picgo/segment\_anything/20230518205638.png)
+
+在页面最上方的区域展示了该软件项目的名称和基本信息，如 Watch（关注）、Star（点赞）和 Fork（使用或开发）的人数。基本信息下方是一排功能标签，包括 Code、Issues、Pull Requests、Actions、Insights 等，下面会依次介绍。
+
+![图2 基本信息和功能标签](https://cdn.vansin.top/picgo/segment\_anything/20230518205727.png)
+
+### 1.1 Code页面
+
+默认的 Code 页面，内容即为图1所示，主要包括：
+
+* 文件结构和代码内容：该区域显示了项目中所有的文件，可以在此浏览文件结构，或点进文件浏览其内容
+* 其他信息：通常包括使用许可、发布版本、贡献者等信息
+* README：如果当前浏览的路径下有 README.md 文件，其内容会显示在这一区域。通常软件项目会在根目录下包含 README.md 文件作为项目介绍。
+
+### 1.2 Issues 页面
+
+Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 issue 来提出遇到的问题，报告发现的 bug，或提出意见建议等；开发者可以在 issue 下进行回复，或将 issue 指定（assign）给特定的人来解决。此外，还可以用 issue 功能发布消息，如项目的 Roadmap、开发计划等，并将这些重要信息置顶。每个 issue 都会有一个编号，如 #900, 可以用于在其他 issue 或稍后将介绍的 Pull Request 中关联这个 issue。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)
+
+![图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)
+
+### 1.3 Pull Requests 页面
+
+Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 PR），如图4所示。通常，在 Github 上多人共同开发和维护一个项目时，会遵循一定的开发流程，这部分将在3.1中详细介绍。在此只简要说明开发流程，以引入 PR 的概念：
+
+1. 开发者从官方代码仓库（如 open-mmlab/mmpose）fork 一份副本到自己的帐号 （如 zhang3/mmpose），并 clone 到本地；
+2. 开发者在自己的代码仓库进行某项功能的开发；
+3. 开发者将自己的修改推到自己的远程仓库，并向官方仓库发出申请，要求官方仓库拉取（pull）此次修改，即将此次修改加入到官方代码中。这样的请求就叫做 PR。（与之相对的还有 GitLab 平台所采用的 merge request，拓展阅读：https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request）
+4. 代码库的维护者或其他开发者会对 PR 进行 Review，并与作者共同进行讨论和修改。最终将修改完成的 PR 合入到官方代码仓库中。至此，一个开发项的开发周期完成。
+
+在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 3.1 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)
+
+![图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)
+
+
+
+### 1.4 Actions 页面
+
+Actions 指 GitHub Actions，是 GitHub 提供的简化和方便开发流程的功能，用来在开发周期中自动触发执行特定的操作。如在 PR 被提交时，自动运行 CI； 在发布新版本时，自动编译并更新 pypi 上托管的安装包等。在 Actions 页面中，可以看到最近运行过的 action。点开其中一个action，可以看到详细信息、执行的具体操作步骤和输出的 log 等。如图5所示。
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)
+
+![图5 Actions 页面 （左：action 列表，右：一个运行 CI 的action的详细信息）](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)
+
+### 1.5 Insights 页面
+
+Insights 页面展示了项目的汇总信息和统计数据，以方便开发者快速了解项目的整体开发情况、社区活跃度和关注点的等。通常我们较关注的项目有：
+
+* Pulse：项目的总览，包括最近的贡献者，PR，issue 等信息
+* Contributors：代码贡献者信息
+* Traffic： 项目流量信息，包括近期的访问量、clone 次数、访问者的来源以及访问量最高的项目内容等
+
+### 1.6 注意事项
+
+在 PR 提交成功后，正常流程是由至少两个 Reviewer 对 PR 进行 Review，内容包括代码规范、命名、逻辑、功能等等，一般至少要经过 2 轮 Review 过程。
+
+在 Review Approve 后由 maintainer 进行 merge 到指定分支。developer 未经 maintainer 允许不允许merge 代码，也就是说除了已经被许可情况下，除了 maintainer 其他人谁也不允许点 merge 代码，其merge 按钮大概位置在每个 PR 页面的最下面，图示内容如下：
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518210144.png)
+
+上图最下面 `Merge pull request` 即为合并操作，灰色表示本身就没有合并权限，如果是绿色则表示有合并权限。
 
 ## 2. 学习 Git
 
@@ -621,3 +646,280 @@ $ git rebase -i HEAD~3
 ```
 
 与 merge 类似，在 rebase 的过程中也可能会遇到冲突，需要手动解决。解决冲突的过程也与 merge 中相似（使用`--continue`，`--abort`等标志）。需要注意的是，由于 rebase 的工作方式是先切换到目标分支，然后依次添加当前分支中的提交，因此在处理冲突时，`HEAD`指向的是目标分支，这一点与 merge 稍有不同（但在实际开发中，通常 merge 时把主分支作为当前分支，而 rebase 时把主分支作为目标分支，所以 `HEAD` 都会指向主分支 master（或 main）分支，所以不至于混淆）。
+
+## 3. Git 实战
+
+### 3.1 常规开发流程
+
+在这一部分，我们以在 MMPose 算法库中完成一个功能开发的过程为例，介绍基于 Git 的常规开发流程。
+
+**3.1.1 准备**
+
+* **Fork 源代码仓库**
+
+在 MMPose 的 Github 页面（https://github.com/open-mmlab/mmpose）点击 Fork 按键，在自己的 Github 帐号下创建一个副本仓库（如：https://github.com/ly015/mmpose）。
+
+* **创建本地仓库并关联远程仓库**
+
+到本地，并配制远程仓库地址。通常，我们会关联两个远程仓库： origin 为自己 fork 的副本仓库，upstream 为官方仓库
+
+```
+# clone 副本仓库。此时会自动关联远程仓库 origin
+$ git clone https://github.com/ly015/mmpose.git
+# 添加远程仓库 upstream
+$ cd mmpose
+$ git remote add upstream https://github.com/open-mmlab/mmpose.git
+```
+
+* **配制 Pre-commit Hook**
+
+参考 [Contributing to OpenMMLab](https://github.com/open-mmlab/mmcv/blob/master/CONTRIBUTING.md) 中的说明，在本地仓库配制 Pre-commit Hook。 Pre-commit Hook 是 Git 支持的钩子函数的一种，通常用于在提交修改（Commit）前自动完成代码风格检查等工作。以上准备工作只是第一次提 PR 之前需要进行，后续开发工作，在每个 PR 开发中都需要做。
+
+**3.1.2 开发**
+
+* **创建开发分支**
+
+通常我们会为每个开发项创建一个独立的分支，以避免耦合带来的混乱。分支的命名最好能简洁地体现开发项的内容。
+
+```
+# 拉取官方远程仓库
+$ git fetch upstream
+
+# 从最新的 master 分支创建开发分支
+$ git checkout upstream/master
+$ git checkout -b feature
+# 上面两行指令等价与下面的指令
+# git checkout -b feature --no-track upstream/master
+```
+
+* **完成功能开发**
+
+在开发过程中，建议多使用`git add`和`git commit`及时提交修改。
+
+* **将本地修改推送到远程仓库**
+
+在完成开发并将本地修改都提交到本地仓库后，使用`git push`指令将本地修改同步到远程仓库。注意，我们通常不会将修改推送到官方远程仓库，而是推送到自己 fork 的远程仓库，再通过向官方仓库提 PR 的方式向其贡献代码。（这样不需要官方远程仓库的推送权限，并且有利于维护官方仓库的内容整洁）
+
+```
+# 首次推送，在远程仓库中建立关联分支
+$ 1.
+
+# 非首次推送
+$ git push
+
+# 如果在本地进行了 merge，rebase 等操作，导致本地修改无法通过 fast-forwarded 方式
+# 合入关联远程分支时，可以使用 -f 或 --force 参数强制更新远程分支（注意这是个风险操作）
+$ git push -f
+```
+
+**3.1.3 提交 PR**
+
+* **开始创建 PR**
+
+当我们将本地的修改推送到自己的远程仓库后，需要向官方仓库提交一个 PR，要求官方仓库将这一修改合入到主分支（或其他指定分支）。创建 PR 可以在浏览器中操作。如果是近期推送的修改，在官方仓库或自己仓库的页面上都会出现提示，点击“Compare & pull request” 即可（如下图红色部分）。如果没有看到这个提示，也可以在自己仓库的页面上切换到开发分支，点击“Contribute”→“Open pull request”即可（如下图蓝色部分）。
+
+![图12 开始创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203825.png)
+
+* **提交 PR**
+
+完成上一步后，会进入创建 PR 页面，如下图所示。这里我们需要填写 PR 相关的信息。红色部分是分支信息，默认将当前分支合入官方主分支，一般不用修改。绿色部分是 PR title 和 PR message，用来说明这个 PR 的内容。这部分非常重要，必须认真填写。PR title 一般格式为 \[Prefix] Short description of the pull request (Suffix)Prefix：
+
+* 新增功能 \[Feature]
+* 修 bug \[Fix]
+* 文档相关 \[Docs]
+* 开发中 \[WIP] ( work in process 暂时不会被review)
+
+PR message 的主要修改内容，结果，以及对其他部分的影响，通常我们的代码库会准备 [PR 模板](https://github.com/open-mmlab/mmcv/blob/master/.github/pull\_request\_template.md)，只需要按照模板填入对应的内容即可。另外，PR message 可以关联相关的 issue 和 PR，通过 fixes/resolves issue ID 可以在 PR merge 的时候 close issue。蓝色部分是其他信息，在这里可以指定 reviewer 来 review 这个 PR。完成所有信息后，点击下方的“Create pull request”即可完成 PR 提交。
+
+![图13 创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203913.png)
+
+* **查看 CI 状态**
+
+PR 创建后会自动触发 CI（OpenMMLab 的算法库都基于 GitHub Actions 配置了 CI），完成代码格式、单元测试等检查工作。在 PR 页面可以查看 CI 的运行状态和结果，如下图所示。如果 CI 中有失败的项，可以点击“Details” 查看详细情况，修改后推送到自己的仓库，PR 也会随之更新。
+
+![图13 CI 运行状态和结果](https://cdn.vansin.top/picgo/segment\_anything/20230518203947.png)
+
+**3.1.4 代码 Review 及合入**
+
+PR 提交后，会由 reviewer 进行 review 并提出意见建议，再由作者修改并更新。这样的迭代通常会进行几轮，直到大家均认为该 PR 已经可以合入主分支后，由该项目的 maintainer 来进行合入操作。关于 Review 代码的方法和技巧，后续详细介绍，这里我们只简单介绍相关的 Github 操作。 如下图所示，在 PR 页面的 “Files changed” 标签页，可以看到该 PR 的所有修改。将鼠标指向某一行，会在行号出显示 “+” 按钮，点击即可输入 review 意见和建议。作者或其他 reviewer 也可以进行回复讨论。在 “Conversation” 标签页会显示这些对话内容。
+
+![图14 在 PR 中提交 review comment](https://cdn.vansin.top/picgo/segment\_anything/20230518204647.png)
+
+PR 开发和 review 过程中如果 master 分支有相关的更新，需要及时 rebase，更新本地代码，以免和 master 分支有冲突。
+
+
+
+### 3.2 一些常用的 Git 技巧
+
+**3.2.1 使用 gitignore文件**
+
+`gitignore`文件用来设置不希望 Git 进行跟踪和管理的文件路径，例如编译或运行时生成的临时文件、较大的数据文件等。`gitignore`文件是一个文本文件，通常路径是项目目录下的`.gitignore`，写法规范如下：
+
+* 每一行指定一个要忽略的文件路径，除了空行和以 “#” 开头的注释行
+* 文件路径可以使用 glob 模式匹配的写法
+* 路径以 “/” 结尾表示要忽略的是一个目录
+* 在文件路径前加入取反符号 “!” ，表示这是一个不应忽略的特例
+
+以下是一个例子：
+
+```
+# 可使用"#"符号添加注释
+
+# 忽略 "MANIFEST" 这个文件
+MANIFEST
+
+# 忽略所有 .pkl 文件
+*.pkl
+# 但是不忽略 a.pkl 这个文件
+!a.pkl
+
+# 忽略 data 目录下的所有文件
+data/
+
+# 忽略 model 目录下的所有 .pth 文件
+model/**/*.pth
+```
+
+通常项目里已经提供了`gitignore`文件，必要时可以对其进行修改。`gitignore`文件本身也属于项目内容，需要添加修改 (`git add`)、提交修改(`git commit`)、开 PR 合入等。
+
+**3.2.2 配置 git mergetool**
+
+在合并分支时，经常需要手动解决冲突，这里可以选用一些可视化的工具帮助我们提高效率，例如 VS Code 就有较好的可视化功能，可以协助解决冲突。除此之外我们也可以借助第三方工具，这里我们以 [meld](https://meldmerge.org/) 这个工具为例，介绍 Git 中 mergetool 的配置和使用。首先需要在本地安装 meld，可以参考其官网的文档。安装完成后，可以在 Git 配置文件（见 [2.3.1onfig](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#cBWtEI)）中写入如下内容：
+
+```bash
+# 使用 meld 作为默认 difftool
+[diff]
+    tool = meld
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+# 使用 meld 作为默认 mergetool
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+```
+
+完成这些配制后，当需要解决冲突时，Git 会自动启动 meld，界面如下图所示。可以看到界面分成三列，对应与上面设置中的L11，分别是本地分支内容、合并后内容和目标（远程）分支内容。在这个界面中可以清晰对比两个分支的不同，还可以三列之间的箭头状按钮选快速选择内容添加到对应文件中。这里要注意，LOCAL 和 REMOTE 对应的分支，在 merge 和 rebase 两种情况下是不同的，这在 [git-rebase 说明](shu-xi-gitgithub-jian-she-zhong.md#2.4-git-jin-jie-zhi-ling) 中做过介绍。
+
+![图15 使用 meld 进行可视化分支合并](https://cdn.vansin.top/picgo/segment\_anything/20230518204954.png)
+
+由于我们同时配制了 "difftool"，所以在运行`git diff`指令时，也会启动 meld，用左右两列来对比文件差异。
+
+**3.2.3 添加自定义 pre-commit hook**
+
+在 3.1.1 中我们提到，Git 提供了 pre-commit hook 机制来帮助开发者自动完成格式检查等工作。一些常用的格式格式检查三方库，都提供了可以直接调用的 hook，可以在`.pre-commit-config.yaml`文件进行配制。除此之外，我们也可以在项目中添加本地代码脚本作为 pre-commit hook 以实现特定功能。以 MMPose 中自动给代码文件添加版权信息的功能为例。我们首先添加了实现该功能的脚本[`.dev_scripts/github/update_copyright.py`](https://github.com/open-mmlab/mmpose/blob/master/.dev\_scripts/github/update\_copyright.py)，该脚本以一个文件列表作为输入参数，检查并添加版权信息到这些文件中。如果所有输入文件均已包含版权信息而未作修改，则正常返回 0, 否则返回 1。如果该 hook 在提交时对代码做了修改，就会中止这次提交，待开发者添加这些修改后重新提交。最后，我们将该脚本添加到`.pre-commit-config.yaml`中即可：
+
+```
+- repo: local
+    hooks:
+      - id: update-copyright
+        name: update-copyright
+        description: Add OpenMMLab copyright header to files
+        # specify entry point
+        entry: .dev_scripts/github/update_copyright.py
+        # specify hook executor
+        language: python
+        # specify files that this hook will check
+        files: ^(demo|docs|docs_zh-CN|mmpose|tests|tools|\.dev_scripts)/.*\.(py|c|cpp|cu|sh)$
+        exclude: ^demo/mm(detection|tracking)_cfg/.*$
+```
+
+关于 Git hook 的详细介绍可以参考 [Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+
+**3.2.4 使用 ssh 和远程仓库通信**
+
+与远程仓库通信可以使用 https 或 ssh 两种方式。在 2.3.6 中主要基于 https 方式进行了介绍，这里我们简单介绍 ssh 方式。在 clone 远程仓库到本地时，可以选择 ssh 地址，如下图所示：
+
+![图16 使用 ssh 通信的远程仓库地址](https://cdn.vansin.top/picgo/segment\_anything/20230518205111.png)
+
+使用 ssh 方式的仓库同步操作与使用 https 方式没有区别（如`git clone`，`git pull`，`git push`等）。ssh 方式需要配置公钥-私钥对，并将公钥提交到 GitHub 上，用以在通信时进行身份验证，不需要每次输入账号密码。配置 ssh 秘钥的具体的做法可以参考这里的文档：[About SSH - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+
+
+
+### 3.3 FAQ
+
+**3.3.1 关于 Git 操作**
+
+* **如何修改 commit 但不产生新的提交**
+
+请参考 [2.3.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#1zolX4) 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
+
+* **如何撤销 commit 但仍需保留修改**
+
+请参考 [2.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#Xd9htu) 中 `git reset --mixed`或`git reset --soft`的用法。
+
+* **如何合并多个 commit**
+
+请参考 [2.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#BHIPnC) 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
+
+```
+$ git log
+commit 7eea97ea4cd9ff50ccf7ce146c4b440a98c85c51 (HEAD -> master)
+Author: ly015 <liyining0712@gmail.com>
+Date:   Sat Oct 9 18:39:45 2021 +0800
+
+    Add c.txt
+
+commit 7d97740b91137ec8049c83726ba0c950090cb8f3
+Author: ly015 <liyining0712@gmail.com>
+Date:   Sat Oct 9 18:39:27 2021 +0800
+
+    Add b.txt
+
+commit 7f836e4b528a565b42d41c021197242b87a038f4
+Author: ly015 <liyining0712@gmail.com>
+Date:   Sat Oct 9 18:39:03 2021 +0800
+
+    Add a.txt
+```
+
+使用`git rebase`对后2个提交进行合并：
+
+```
+$ git rebase -i HEAD~2
+```
+
+此时会出现交互界面，如下图左。可以看到相关的 commit 被逐行列出，并且每个 commit 前面有一个指令（pick），这个指令是可以按照需求修改的，所有可选项都在下方的注释中有说明。例如，我们现在希望合并2个 commit， 则可以将第一个 7d97740 的指令设置为 reword，将第二个 7eea97e 的指令设置为 fixup，如下图中，然后保存退出。由于第一个指令是 reword，接下来会跳出重新输入 commit message 的界面，我们将原本的 “Add b.txt” 改成 “ Add b.txt and c.txt ”， 并保存退出，如下图右。
+
+![图17 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/segment\_anything/20230518205328.png)
+
+此时我们再查看分支提交历史，会发现之前的2个 commit 已经被合并：
+
+```
+$ git log
+commit a321f6787a3cb2f27f70f5f7877e158a2aea7e0d (HEAD -> master)
+Author: ly015 <liyining0712@gmail.com>
+Date:   Sat Oct 9 18:39:27 2021 +0800
+
+    Add b.txt and c.txt
+
+commit 7f836e4b528a565b42d41c021197242b87a038f4
+Author: ly015 <liyining0712@gmail.com>
+Date:   Sat Oct 9 18:39:03 2021 +0800
+
+    Add a.txt
+```
+
+* **如何删除 add 或者 commit 之后的大文件**
+
+在开发中会遇到不慎将一些文件错误添加到 Git 仓库中的情况（比如未及时更新`gitignore`文件就可能会导致这种情况）。尤其是以一些大文件（如数据文件或临时文件），如果被错误包含在项目仓库中，会使仓库变得很大而严重影响和远程仓库通信的效率（如`git clone`,`git push`,`git pull`等操作会变得很慢）。如果只是通过`git add`添加到了暂存区，只需要用前面介绍过的`git rm --cached`或`git reset`清理暂存区即可。但如果已经通过`git commit`提交到了仓库，情况会变得比较棘手，因为 Git 仓库会记录完整的提交历史，即使撤销这次提交，或者在后续提交中移除这些错误添加的文件，它们依旧会存在与仓库中。这种情况也不是无法解决的，这篇文档 [Git - 维护与数据恢复](https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-%E7%BB%B4%E6%8A%A4%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D#\_removing\_objects) 中给出了一个清除历史提交中错误引入的大文件的完整例子，大家可以仔细学习并 follow 其步骤。
+
+**3.3.2 关于 PR**
+
+* **如何往源算法库中其他人提的 PR 中提交代码**
+
+在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（[参考 2.3.6 git remote](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#WZbqsI)），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
+
+```
+# 拉取 PR#222 到本地并为其创建一个本地分支
+$ git fetch upstream pull/222/head:<branchname>
+# 切换到 PR 分支
+$ git checkout <branchname>
+```
+
+* **如何手动运行 CI**
+
+可以在 PR 页面的 Checks 标签页，点击右上角的 “Re-run all jobs” 按键，即可重新运行 CI。
+
+### GitLab/Gitee/gitcode

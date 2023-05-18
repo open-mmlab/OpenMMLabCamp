@@ -10,7 +10,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 本文将介绍Github和Git命令行的基本操作
 
-* Github&#x20;
+* Github
   * Code
   * Issues
   * Pull requests
@@ -22,7 +22,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ## 1. Github
 
-在 [mmdetection](https://github.com/open-mmlab/mmdetection) 的github页面有几个重要的功能
+在 [mmdetection](https://github.com/open-mmlab/mmdetection) 的github页面有几个重要的功能。
 
 * Code
 * Issues

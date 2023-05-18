@@ -195,3 +195,429 @@ git config --global user.email johndoe@example.com
 # 注意：信息会以明文存储在本地，需考虑安全性
 git config --global credential.helper store
 ```
+
+上面指令中的 `--global` 指定了配置的层级。Git 中支持3个层级的配置，分别是 system（系统）、global（全局）和 local（本地），靠后的层级会覆盖掉靠前层级的配置。`git config`指令会将配置写入特定的文件中，因而我们也可以通过手动编辑配置文件的方式对 Git 进行配置。在 Linux 系统中，这文件的路径通常是：
+
+* system：/etc/gitconfig（需要 sudo 权限，不推荐）git
+* global： \~/.gitconfig (或者 \~/.config/git/config）
+* local：正在操作的仓库的 .git 路径下的配置文件, 即 \[REPO\_PATH]/.git/config
+
+**2.3.2 建立仓库**
+
+* **git init**
+
+`git init`指令用于在一个本地的路径下创建和初始化 Git 仓库。该指令会在项目目录下创建`.git`目录，但不会自动关联远程仓库（如 GitHub 上的远程仓库）。
+
+```bash
+# 创建本地代码仓库
+$ cd ~/my_project/
+$ git init
+```
+
+* **git clone**
+
+`git clone`指令用将远程代码仓库下载到本地，以创建本地仓库。这是实际开发中更常用的一种创建本地仓库的方式。
+
+```bash
+# 从远程仓库创建本地仓库
+$ git clone https://github.com/open-mmlab/mmpose.git
+```
+
+`git clone`中使用的远程代码库 URL，可以在其 GitHub 首页看到（如图8），其他平台如 GitLab 也类似。
+
+![图8 GitHub 上远程仓库的URL](https://cdn.vansin.top/picgo/segment\_anything/20230518202413.png)
+
+**2.3.3 状态查询**
+
+* **git status**
+
+`git status`指令用于查看当前本地仓库的状态，包括所在的分支、文件状态等。
+
+```bash
+# 查看本地仓库状态
+$ git status
+
+On branch v2.0_dataset
+Your branch is up to date with 'origin/v2.0_dataset'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README_CN.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        new_file.py
+```
+
+在上面的例子中，可以看到返回的信息包括：
+
+* 本地处于 v2.0\_dataset 分支
+* 有一个新增文件`new_file.py`处于未被追踪的状态（关于文件状态，可回顾 [2.2.2 文件状态](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#tJRr85)）
+* **git diff**
+
+
+
+`git diff`指令用来比较仓库中的文件在修改先后的差异。常见的用法有
+
+```
+# 查看工作区与暂存区的差异（基本用法）
+$ git diff
+
+# 查看暂存区与最近一次提交的差异
+$ git diff --staged
+
+# 比较两个提交（或分支）的差异
+$ git diff <branch-a> <branch-b>
+# 例如：
+$ git diff master dev
+
+# 比较分支B的最近提交与分支A、B最近的公共提交之间的差异
+# 即查看分支B在分支A的基础上加入了哪些内容
+$ git diff <branch-a>...<branch-b>
+# 例如
+$ git diff master...dev
+```
+
+**2.3.4 文件操作**
+
+* **git add**
+
+`git add`指令用来将工作区的修改添加到暂存区。可参考本文 2.2 中关于工作区、暂存区和文件状态的介绍。
+
+```
+# 添加指定文件的修改到暂存区
+$ git add <file-a> <file-b>
+
+# 添加当前目录下的所有修改到暂存区
+$ git add .
+```
+
+* **git commit**
+
+`git commit`指令用来将所有已添加到暂存区的修改生成一个提交对象，保存进仓库区，并将当前分支的指针（HEAD）移动到该次提交上。
+
+```
+# 提交暂存区修改
+$ git commit
+
+# 提交暂存区修改，并直接输入commit message
+$ git commit -m "Some commit messages"
+
+# 重做上一次提交，通常用于修改 commit message
+$ git commit --amend
+
+# 跳过git add，直接将工作区的修改提交
+$ git commit -a
+```
+
+**2.3.5 分支管理**
+
+* **git branch**
+
+`git branch`指令用来进行分支管理操作，如列出有的分支、创建新分支、删除分支及重命名分支等。
+
+```
+# 列出所有的本地分支
+$ git branch
+
+# 列出所有的本地和远程分支
+$ git branch -a
+
+# 在当前的提交对象上创建一个新分支（但并不自动切换到新分支）
+$ git branch <branch-name>
+
+# 重命名分支,若未指定old-branch，则默认重命名当前分支
+$ git branch -m [<old-branch>] <new-branch>
+
+# 删除分支
+$ git branch -D <branch-name>
+```
+
+* **git checkout**
+
+`git checkout`指令主要用于切换分支。
+
+```
+# 切换到已有分支
+$ git checkout <branch-name>
+
+# 从当前提交创建并切换到新分支
+$ git checkout -b <branch-name>
+```
+
+此外，`git checkout`指令还用于丢弃工作区中的修改（未提交到暂存区），或从其他提交对象（如其他分支，或特定commit等）中提取文件到当前工作区。
+
+```
+# 撤销指定文件的修改
+$ git checkout -- <filename>
+
+# 批量撤销(.py文件中的）修改
+$ git checkout -- '*.py'
+
+# 从指定分支中提取文件，添加到工作区
+$ git checkout <branch-name> <filename>
+```
+
+由于`git checkout`的功能较多且分散，在较新版本的 Git 中引入了`git switch`指令，来代替`git checkout`的分支切换功能，可以参考 [Git - git-switch Documentation](https://git-scm.com/docs/git-switch).
+
+* **git merge**
+
+`git merge`指令用来合并分支。关于分支合并的说明，可以参考 [2.2.3](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#DexPUT) 部分。
+
+```
+# 合并指定分支到当前分支
+$ git merge <branch-name>.
+
+# 在合并过程中继续/中止
+$ git merge --continue
+$ git merge --abort
+```
+
+
+
+**2.3.6 远程仓库管理与同步**
+
+* **git remote**
+
+`git remote`指令用来管理本地仓库与远程仓库的关联。
+
+```
+# 查看关联的远程仓库
+$ git remote -v
+
+origin  https://github.com/ly015/mmpose.git (fetch)
+origin  https://github.com/ly015/mmpose.git (push)
+upstream        https://github.com/open-mmlab/mmpose.git (fetch)
+upstream        https://github.com/open-mmlab/mmpose.git (push)
+```
+
+在上面的例子中，可以看到已经关联的远程仓库有2个，命名分别是 origin（URL：https://github.com/ly015/mmpose.git）和 upstream（URL：https://github.com/open-mmlab/mmpose.git）。`git remote`除了用于查看关联仓库，还用于进行关联的管理：
+
+```
+# 添加关联的远程仓库
+# git remote add <name> <url>
+$ git remote add zhang3 https://github.com/zhang3/mmpose.git
+
+# 重命名远程仓库
+# git remote rename <old> <new>
+$ git remote rename zhang3 li4
+
+# 设置远程仓库URL
+# git remote set-url <name> <url>
+$ git remote set-url li4 https://github.com/li4/mmpose.git
+
+# 删除关联远程仓库
+# git remote remove <name>
+$ git remote remove li4
+
+```
+
+* **git fetch**
+
+`git fetch`指令用于与一个远程的仓库交互，并且将远程仓库中有而本地仓库中没有的所有信息拉取下来，然后存储在本地仓库中。这个指令不会修改本地工作区、暂存区的内容，也不会修改本地分支的信息。例如，从远程仓库 origin 拉取的 master 分支会在本地存储为 origin/master, 而不会与原有的本地分支 master 相混淆。
+
+```
+# 从远程仓库（默认远程仓库为 origin）拉取信息
+$ git fetch [<remote-name>]
+```
+
+* **git push**
+
+`git push`指令用于将本地仓库的分支推送到远程仓库，即比较本地分支与远程仓库中对应关联的分支，并将差异同步到远程仓库。该指令需要有远程仓库的写权限，因此这通常是需要验证的。
+
+```
+# 推送当前分支到默认远程仓库
+$ git push
+
+# 推送本地分支到指定远程仓库的指定分支。若 <local-branch-name> 和 <remote-branch-name>
+# 之一未指定，则默认两者相同；若两者均未指定，则默认将当前本地分支推送到同名远程分支
+$ git push <remote-name> <local-branch-name>:<remote-branch-name>
+
+# 在指定远程仓库创建与本地分支关联的远程分支，并推送。
+# 通常用于将本地创建的分支第一次推送到远程仓库
+$ git push --set-upstream <branch-name>
+```
+
+* **git pull**
+
+`git pull`指令用于拉取远程分支到本地，即比较本地分支与远程仓库中对应关联的分支，并将差异合入本地分支。通常`git pull`指令可以看作是`git fetch`+`git merge`。如同一般的分支合并，如果远程关联分支和本地仓库中的提交历史存在冲突，则需要解决冲突后才能继续合并。
+
+```
+# 拉取当前本地分支关联的远程分支
+$ git pull
+
+# 拉取指定远程仓库的指定分支到当前本地分支
+$ git pull <remote-name> <branch-name>
+```
+
+### 2.4 Git 进阶指令
+
+* **git mv**
+
+`git mv`指令用于重命名或移动文件、目录或链接。与`mv`不同的是，`git mv`会自动将这一修改添加到暂存区。
+
+```
+# 移动文件或目录
+$ git mv <source> <destination>
+
+# 将文件或目录移动到指定路径下
+$ git mv <source> ... <destination-directory>
+```
+
+* **git rm**
+
+`git rm`指令用于从工作区或暂存区移除文件。`git rm`会自动将这一修改添加到暂存区（即将该文件从已追踪的文件清单中移除），类似`git mv`。如果我们只想把文件从暂存区移除（即让 Git 不再跟踪该文件），但仍保留在工作区，则可以使用`--cached`选项。
+
+```
+# 从工作区和暂存区移除文件
+$ git rm <filename>
+# 仅从暂存区移除文件
+$ git rm --cached <filename>
+```
+
+* **git stash**
+
+`git stash`指令用来临时保存一些还没有提交的工作，以便在分支上不需要提交未完成工作就可以清理工作目录。例如，我们正在dev分支编辑`run.py`文件，临时需要切换到master分支跑一个测试任务。在切换分支前，需要清理工作区和暂存区，但我们并不希望将未完成的修改提交到仓库，此时可以用`git stash`指令临时贮藏当前的工作，并在完成临时任务后回复这些工作：
+
+```
+# 临时贮藏 dev 分支当前的工作
+$ git add run.py
+$ git stash # or "git stash push"
+# 此时，工作区和暂存区会被清理，恢复到最近一次提交的状态
+
+# 切换到 master 分支，完成临时任务
+$ git checkout master
+$ python run.py
+
+# 切换回 dev 分支，回复之前贮存的工作
+$ git checkout dev
+$ git stash pop
+```
+
+`git stash`会将贮藏的修改存放在一个栈上，因此可以多次使用`git stash`贮藏修改。栈的状态可以用`git stash list`查看，例如。
+
+```
+$ git stash list
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051 Revert "added file_size"
+stash@{2}: WIP on master: 21d80a5 added number to log
+```
+
+`git stash`的常见用法汇总如下
+
+```
+# 贮藏当前分支的修改
+$ git stash [push]
+
+# 显示贮藏栈情况
+$ git stash list
+
+# 应用一个的贮藏的工作，即将其恢复到工作区，但不删除栈中的内容
+$ git stash apply  # 应用最近一个贮藏
+$ git stash apply stash@{2}  # 应用指定的贮藏
+
+# 从栈中弹出最近一个贮藏，并应用
+$ git stash pop
+
+```
+
+* **git reset**
+
+`git reset`指令用来执行撤销操作。例如，它可以将当前分支的 HEAD 指针移动到指定的提交上，从而实现撤销到该提交之后的所有提交。根据指令参数，这种撤销可以是只移动 HEAD 指针，而不改变工作区内容（被撤销的提交内容会保留在工作区，变成已修改，未提交的状态）；也可以直接修改工作区的内容。此外，`git reset`还可以用来撤销提交到暂存区的内容。一些例子如下：
+
+```
+# 基本用法
+$ git reset [<commit>]  # 将 HEAD 指针移动到指定的提交（默认为最近一次提交），并重置暂存区
+$ git reset [--mixed]  # 重置 HEAD 指针及暂存区
+$ git reset --soft  # 仅重置 HEAD 指针
+$ git reset --hard  # 重置 HEAD 指针、暂存区及工作区
+
+# 撤销提交的例子
+$ git reset HEAD~2  # 撤销当前分支最近的2次提交，但不改变工作区内容
+$ git reset HEAD~2 --hard  # 撤销当前分支最近的2次提交，并将工作区内容回复到撤销后的状态
+```
+
+由于`git reset --hard`指令会直接修改工作区，有可能会导致数据丢失（Git 会真正销毁数据的仅有的几个操作之一），所以在这样使用前一定要确保自己知道其后果。
+
+* **git cherry-pick**
+
+`git cherry-pick`指令用来获得在单个提交中引入的变更，然后尝试将作为一c个新的提交引入到你当前分支上。 这通常用来从另一个分支合并单个或几个提交，而不是整个分支。例如，当前有 main 和 dev 两个分支，提交历史如下：
+
+![图9a git cherry-pick 示意（操作前）](https://cdn.vansin.top/picgo/segment\_anything/20230518202604.png)
+
+如果我们只希望将 dev 分支中的 C3 提交合并到 main 分支中，可以使用以下方式：
+
+```
+$ git checkout main
+$ git cherry-pick C3
+```
+
+此时，提交历史会变为：
+
+![图9b git cherry-pick 示意（操作后）](https://cdn.vansin.top/picgo/segment\_anything/20230518202630.png)
+
+`git cherry-pick`指令的常见用法如下：
+
+```
+# 合并单个提交到当前分支
+$ git cherry-pick <commit>
+# 合并两个提交到当前分支
+$ git cherry-pick <commit1> <commit2>
+
+# 当合并遇到冲突时，可能需要手动解决，与 merge 中类似
+$ git cherry-pick --continue  # 继续 cherry-pick
+$ git cherry-pick --abort  # 中止 cherry-pick
+```
+
+* git revert
+
+`git revert`指令用来撤销之前的提交。与`git reset`指令移动`HEAD`指针的方式，`git revert`会创建一个与之前提交的变更完全相反的新提交（本质上是一个特殊的 cherry-pick），从而实现撤销：
+
+```
+# 撤销单个或多个提交
+$ git revert <commit1> [<commit2> ...]
+
+# 同样，当遇到冲突时，解决的方式与 merge 中类似
+$ git revert (--continue | --abort)
+```
+
+下图中可以更直观地对比`git reset`和`git revert`的区别：
+
+![图10 git revert 与 git reset 对比   左：初始状态    中：执行 git reset C2   右：执行git revert C3](https://cdn.vansin.top/picgo/segment\_anything/20230518202724.png)
+
+* **git rebase**
+
+`git rebase`指令采用“变基”的方式整合不同分支的修改。回顾之前介绍的`git merge`指令，其工作方式是在当前分支创建一个新提交，在其中合并目标分支和当前分支的修改。与之不同，`git rebase`会首先寻找当前分支和目标分支的“分叉点”，并尝试将当前分支在“分叉点“之后的部分”转移“到目标分支的末尾。下图中对比了使用`git rebase`和`git merge`合并分支的不同：
+
+![图11 git rebase 与 git merge 对比：初始状态](https://cdn.vansin.top/picgo/segment\_anything/20230518202757.png)
+
+![图11b git rebase 与 git merge 对比：在 main 分支（当前分支）上合并 dev 分支（目标分支）](https://cdn.vansin.top/picgo/segment\_anything/20230518202815.png)
+
+`$ git checkout main && git merge dev`
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518202833.png)
+
+图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）`$ git checkout dev && git rebase main`在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 [3.1](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#f1RrHh) 部分中可以看到这一步）。`git rebase`指令的常见用法如下：
+
+```
+# 将当前分支 rebase 到目标分支 upstream-branch
+$ git rebase <upstream-branch>
+
+# 将指定分支 rebase 到目标分支 upstream-branch
+$ git rebase <upstream-branch> <branch-name>
+$ git rebase --onto <upstream-branch> <branch-name>~1  # 另一种方式
+
+# 使用 -i 标志可以交互式的方式进行 rebase，使操作者可以手动选择对每个 commit 的处理方式。
+# 一个常见用法是用这种方式合并当前分支的最近若干个 commit，例如：
+$ git rebase -i HEAD~3
+```
+
+与 merge 类似，在 rebase 的过程中也可能会遇到冲突，需要手动解决。解决冲突的过程也与 merge 中相似（使用`--continue`，`--abort`等标志）。需要注意的是，由于 rebase 的工作方式是先切换到目标分支，然后依次添加当前分支中的提交，因此在处理冲突时，`HEAD`指向的是目标分支，这一点与 merge 稍有不同（但在实际开发中，通常 merge 时把主分支作为当前分支，而 rebase 时把主分支作为目标分支，所以 `HEAD` 都会指向主分支 master（或 main）分支，所以不至于混淆）。

@@ -922,7 +922,7 @@ $ git checkout <branchname>
 
 可以在 PR 页面的 Checks 标签页，点击右上角的 “Re-run all jobs” 按键，即可重新运行 CI。
 
-### GitLab/Gitee/gitcode
+### 3.4 GitLab/Gitee/gitcode
 
 
 

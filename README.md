@@ -37,7 +37,7 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
   * [Win10 环境配置(建设中)](broken-reference)
   * [Win11 WSL 环境配置](broken-reference)
   * [Ubuntu 20.04 环境配置(建设中)](general/env/ubuntu20.md)
-  * [masOS 环境配置 （建设中）](general/env/macos.md)
+  * [masOS 环境配置 （建设中）](broken-reference)
   * [ubuntu docker 环境配置](general/env/ubuntu\_docker.md)
 * [熟悉 Git/GitHub(建设中)](general/shu-xi-gitgithub-jian-she-zhong.md)
 * [文档类贡献指南(建设中)](general/doc.md)

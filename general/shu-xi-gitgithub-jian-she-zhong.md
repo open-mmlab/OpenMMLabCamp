@@ -63,9 +63,15 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 Actions 指 GitHub Actions，是 GitHub 提供的简化和方便开发流程的功能，用来在开发周期中自动触发执行特定的操作。如在 PR 被提交时，自动运行 CI； 在发布新版本时，自动编译并更新 pypi 上托管的安装包等。在 Actions 页面中，可以看到最近运行过的 action。点开其中一个action，可以看到详细信息、执行的具体操作步骤和输出的 log 等。如图5所示。
 
-![](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)
+<div align="center">
+  <a href="" style="text-decoration:none;">
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518210010.png" width="49%" alt="" /></a>
+  <a href="" style="text-decoration:none;">
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518210024.png" width="49%" alt="" /></a>
+图5 Actions 页面 （左：action 列表，右：一个运行 CI 的action的详细信息）
+</div>
 
-![图5 Actions 页面 （左：action 列表，右：一个运行 CI 的action的详细信息）](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)
+
 
 ### 1.5 Insights 页面
 

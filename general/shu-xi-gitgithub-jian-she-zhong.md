@@ -12,7 +12,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 ## 1. 熟悉 Github&#x20;
 
-GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库托管平台，包括 OpenMMLab 在内的许多开源项目使用 GitHub 网站实现代码托管、版本管理、问题追踪、社区交流等功能。即使你还不熟悉 Git 的使用，也很可能已经使用过 GitHub 来查找所需的开源软件或资料。我们首先简单熟悉一下 GitHub 的页面和基本功能。 以 MMPose （github.com/open-mmlab/mmpose）为例，一个软件项目在 GitHub 上的首页通常如下图所示：
+GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库托管平台，包括 OpenMMLab 在内的许多开源项目使用 GitHub 网站实现代码托管、版本管理、问题追踪、社区交流等功能。即使你还不熟悉 Git 的使用，也很可能已经使用过 GitHub 来查找所需的开源软件或资料。我们首先简单熟悉一下 GitHub 的页面和基本功能。 以 MMPose （[https://github.com/open-mmlab/mmpose](https://github.com/open-mmlab/mmpose)）为例，一个软件项目在 GitHub 上的首页通常如下图所示：
 
 ![图1 软件项目首页（Code 页面）](https://cdn.vansin.top/picgo/segment\_anything/20230518205638.png)
 

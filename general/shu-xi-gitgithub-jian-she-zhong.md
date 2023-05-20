@@ -37,6 +37,12 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)
 
 
+<center class="half">
+    <img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png" width="200"/><img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png" width="200"/>
+</center>
+
+
+
 图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
 
 <div style="display:flex;">

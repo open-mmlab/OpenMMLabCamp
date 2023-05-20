@@ -24,8 +24,8 @@ GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库�
 
 默认的 Code 页面，内容即为图1所示，主要包括：
 
-* 文件结构和代码内容：该区域显示了项目中所有的文件，可以在此浏览文件结构，或点进文件浏览其内容
-* 其他信息：通常包括使用许可、发布版本、贡献者等信息
+* 文件结构和代码内容：该区域显示了项目中所有的文件，可以在此浏览文件结构，或点进文件浏览其内容。
+* 其他信息：通常包括使用许可、发布版本、贡献者等信息。
 * README：如果当前浏览的路径下有 README.md 文件，其内容会显示在这一区域。通常软件项目会在根目录下包含 README.md 文件作为项目介绍。
 
 ### 1.2 Issues 页面
@@ -40,8 +40,8 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 
 Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 PR），如图4所示。通常，在 Github 上多人共同开发和维护一个项目时，会遵循一定的开发流程，这部分将在3.1中详细介绍。在此只简要说明开发流程，以引入 PR 的概念：
 
-1. 开发者从官方代码仓库（如 open-mmlab/mmpose）fork 一份副本到自己的帐号 （如 zhang3/mmpose），并 clone 到本地；
-2. 开发者在自己的代码仓库进行某项功能的开发；
+1. 开发者从官方代码仓库（如 open-mmlab/mmpose）fork 一份副本到自己的帐号 （如 zhang3/mmpose），并 clone 到本地。
+2. 开发者在自己的代码仓库进行某项功能的开发。
 3. 开发者将自己的修改推到自己的远程仓库，并向官方仓库发出申请，要求官方仓库拉取（pull）此次修改，即将此次修改加入到官方代码中。这样的请求就叫做 PR。（与之相对的还有 GitLab 平台所采用的 merge request，拓展阅读：https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request）
 4. 代码库的维护者或其他开发者会对 PR 进行 Review，并与作者共同进行讨论和修改。最终将修改完成的 PR 合入到官方代码仓库中。至此，一个开发项的开发周期完成。
 
@@ -50,8 +50,6 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)
 
 ![图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)
-
-
 
 ### 1.4 Actions 页面
 

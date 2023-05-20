@@ -32,22 +32,13 @@ GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库�
 
 Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 issue 来提出遇到的问题，报告发现的 bug，或提出意见建议等；开发者可以在 issue 下进行回复，或将 issue 指定（assign）给特定的人来解决。此外，还可以用 issue 功能发布消息，如项目的 Roadmap、开发计划等，并将这些重要信息置顶。每个 issue 都会有一个编号，如 #900, 可以用于在其他 issue 或稍后将介绍的 Pull Request 中关联这个 issue。
 
-)
-
-
 <div align="center">
   <a href="" style="text-decoration:none;">
     <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="49%" alt="" /></a>
   <a href="" style="text-decoration:none;">
     <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="49%" alt="" /></a>
   图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
-
 </div>
-
-
-
-
-
 
 ### 1.3 Pull Requests 页面
 

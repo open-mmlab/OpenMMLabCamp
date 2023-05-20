@@ -51,9 +51,13 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 3.1 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
 
-![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)
-
-![图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)
+<div align="center">
+  <a href="" style="text-decoration:none;">
+    <img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png" width="49%" alt="" /></a>
+  <a href="" style="text-decoration:none;">
+    <img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png" width="49%" alt="" /></a>
+图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）
+</div>
 
 ### 1.4 Actions 页面
 

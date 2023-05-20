@@ -40,9 +40,9 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 
 <div align="center">
   <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="30%" alt="" /></a>
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="45%" alt="" /></a>
   <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="30%" alt="" /></a>
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="45%" alt="" /></a>
 </div>
 
 

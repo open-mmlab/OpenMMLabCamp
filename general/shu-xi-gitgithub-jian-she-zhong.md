@@ -38,7 +38,7 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 
 
 <center class="half">
-    <img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png" width="200"/><img src="https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png" width="200"/>
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="200"/><img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="200"/>
 </center>
 
 

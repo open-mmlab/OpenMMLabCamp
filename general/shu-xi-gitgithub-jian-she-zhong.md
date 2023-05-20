@@ -34,17 +34,16 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)
 
-![图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)
+![](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)
 
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="flex: 1;">
-        <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" alt="左边图片">
-    </div>
-    <div style="flex: 1;">
-        <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" alt="右边图片">
-    </div>
+图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
+
+<div style="display:flex;">
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" alt="图像1" style="width:50%;">
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" alt="图像2" style="width:50%;">
 </div>
+
 
 
 

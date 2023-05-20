@@ -53,10 +53,10 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 
 <div align="center">
   <a href="https://openmmlab.medium.com/" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="50%" alt="" /></a>
-  <img src="https://user-images.githubusercontent.com/25839884/218346358-56cc8e2f-a2b8-487f-9088-32480cceabcf.png" width="3%" alt="" />
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="5%" alt="" /></a>
+  <img src="https://user-images.githubusercontent.com/25839884/218346358-56cc8e2f-a2b8-487f-9088-32480cceabcf.png" width="5%" alt="" />
   <a href="https://discord.com/channels/1037617289144569886/1046608014234370059" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="50%" alt="" /></a>
+    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="5%" alt="" /></a>
 </div>
 
 

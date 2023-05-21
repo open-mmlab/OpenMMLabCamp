@@ -38,7 +38,7 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
   <a href="" style="text-decoration:none;">
     <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="49%" alt="" /></a>
 </div>
-
+<br>
 <div align="center">
   图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
 </div>

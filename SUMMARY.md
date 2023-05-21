@@ -4,7 +4,7 @@
 
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 
-* [开源协议学习](general/license.md)
+* [开源协议学习(建设中)](general/license.md)
 * [环境配置(建设中)](general/env/README.md)
   * [Windows 环境配置](general/env/win11.md)
   * [Github Codespaces 云 Linux 环境](general/env/github.md)
@@ -12,7 +12,7 @@
   * [Ubuntu 20.04 环境配置(建设中 2)](general/env/ubuntu20.md)
   * [ubuntu docker 环境配置](general/env/ubuntu\_docker.md)
 * [熟悉 GitHub/Git(建设中)](general/shu-xi-gitgithub-jian-she-zhong.md)
-* [代码规范](general/dai-ma-gui-fan.md)
+* [代码规范](general/xue-xi-xie-dai-ma-gui-fan.md)
 * [文档类贡献指南(建设中)](general/doc.md)
   * [MMSIG 文档贡献指南 (建设中)](general/doc/mmsigdoc.md)
   * [算法库文档贡献指南 (建设中)](general/doc/repodoc.md)

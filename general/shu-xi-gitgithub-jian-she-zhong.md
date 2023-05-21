@@ -10,7 +10,7 @@ Git/GitHub 是开源社区贡献的必备技能，本文将详细介绍 OpenMMLa
 
 本文将介绍Github和Git命令行的基本操作。
 
-## 1. 熟悉 Github&#x20;
+## 1. 熟悉 Github
 
 GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库托管平台，包括 OpenMMLab 在内的许多开源项目使用 GitHub 网站实现代码托管、版本管理、问题追踪、社区交流等功能。即使你还不熟悉 Git 的使用，也很可能已经使用过 GitHub 来查找所需的开源软件或资料。我们首先简单熟悉一下 GitHub 的页面和基本功能。 以 MMPose （[https://github.com/open-mmlab/mmpose](https://github.com/open-mmlab/mmpose)）为例，一个软件项目在 GitHub 上的首页通常如下图所示：
 
@@ -32,16 +32,8 @@ GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库�
 
 Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 issue 来提出遇到的问题，报告发现的 bug，或提出意见建议等；开发者可以在 issue 下进行回复，或将 issue 指定（assign）给特定的人来解决。此外，还可以用 issue 功能发布消息，如项目的 Roadmap、开发计划等，并将这些重要信息置顶。每个 issue 都会有一个编号，如 #900, 可以用于在其他 issue 或稍后将介绍的 Pull Request 中关联这个 issue。
 
-<div align="center">
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205823.png" width="49%" alt="" /></a>
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205835.png" width="49%" alt="" /></a>
-</div>
-<br>
-<div align="center">
-  图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
-</div>
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)](shu-xi-gitgithub-jian-she-zhong.md)\
+图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
 
 ### 1.3 Pull Requests 页面
 
@@ -54,27 +46,17 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 3.1 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
 
-<div align="center">
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205913.png" width="49%" alt="" /></a>
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518205928.png" width="49%" alt="" /></a>
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)](shu-xi-gitgithub-jian-she-zhong.md)&#x20;
+
 图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）
-</div>
 
 ### 1.4 Actions 页面
 
 Actions 指 GitHub Actions，是 GitHub 提供的简化和方便开发流程的功能，用来在开发周期中自动触发执行特定的操作。如在 PR 被提交时，自动运行 CI； 在发布新版本时，自动编译并更新 pypi 上托管的安装包等。在 Actions 页面中，可以看到最近运行过的 action。点开其中一个action，可以看到详细信息、执行的具体操作步骤和输出的 log 等。如图5所示。
 
-<div align="center">
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518210010.png" width="49%" alt="" /></a>
-  <a href="" style="text-decoration:none;">
-    <img src="https://cdn.vansin.top/picgo/segment_anything/20230518210024.png" width="49%" alt="" /></a>
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)](shu-xi-gitgithub-jian-she-zhong.md)&#x20;
+
 图5 Actions 页面 （左：action 列表，右：一个运行 CI 的action的详细信息）
-</div>
-
-
 
 ### 1.5 Insights 页面
 
@@ -301,8 +283,6 @@ Untracked files:
 * 有一个新增文件`new_file.py`处于未被追踪的状态（关于文件状态，可回顾 2.2.2 文件状态）
 * **git diff**
 
-
-
 `git diff`指令用来比较仓库中的文件在修改先后的差异。常见的用法有
 
 ```
@@ -418,8 +398,6 @@ $ git merge <branch-name>.
 $ git merge --continue
 $ git merge --abort
 ```
-
-
 
 **2.3.6 远程仓库管理与同步**
 
@@ -760,8 +738,6 @@ PR 提交后，会由 reviewer 进行 review 并提出意见建议，再由作�
 
 PR 开发和 review 过程中如果 master 分支有相关的更新，需要及时 rebase，更新本地代码，以免和 master 分支有冲突。
 
-
-
 ### 3.2 一些常用的 Git 技巧
 
 **3.2.1 使用 gitignore文件**
@@ -848,23 +824,21 @@ model/**/*.pth
 
 使用 ssh 方式的仓库同步操作与使用 https 方式没有区别（如`git clone`，`git pull`，`git push`等）。ssh 方式需要配置公钥-私钥对，并将公钥提交到 GitHub 上，用以在通信时进行身份验证，不需要每次输入账号密码。配置 ssh 秘钥的具体的做法可以参考这里的文档：[About SSH - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 
-
-
 ### 3.3 FAQ
 
 **3.3.1 关于 Git 操作**
 
 * **如何修改 commit 但不产生新的提交**
 
-请参考 [2.3.4] 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
+请参考 \[2.3.4] 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
 
 * **如何撤销 commit 但仍需保留修改**
 
-请参考 [2.4] 中 `git reset --mixed`或`git reset --soft`的用法。
+请参考 \[2.4] 中 `git reset --mixed`或`git reset --soft`的用法。
 
 * **如何合并多个 commit**
 
-请参考 [2.4] 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
+请参考 \[2.4] 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
 
 ```
 $ git log
@@ -922,7 +896,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 * **如何往源算法库中其他人提的 PR 中提交代码**
 
-在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（[参考 2.3.6 git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
+在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（\[参考 2.3.6 git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
 
 ```
 # 拉取 PR#222 到本地并为其创建一个本地分支
@@ -936,8 +910,6 @@ $ git checkout <branchname>
 可以在 PR 页面的 Checks 标签页，点击右上角的 “Re-run all jobs” 按键，即可重新运行 CI。
 
 ### 3.4 GitLab/Gitee/gitcode
-
-
 
 ## 4. 课后作业
 

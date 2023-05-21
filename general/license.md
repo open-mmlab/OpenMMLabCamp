@@ -1,4 +1,4 @@
-# 开源协议学习
+# 开源协议学习(建设中)
 
 ## 1. 什么是开源协议
 
@@ -196,14 +196,21 @@ A1：apache2.0没有传染性，兼容有方向性，宽松协议兼容于严格
 
 ## 5. 参考材料
 
-[https://choosealicense.com/\
-https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository\
-https://opensource.com/resources/what-open-source\
-https://opensource.org/faq\
-https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository\
-https://dwheeler.com/essays/floss-license-slide.html\
-https://www.apache.org/licenses/contributor-agreements.html#clas\
-https://www.apache.org/licenses/cla-faq.html#cclas-not-required\
+\[1] [https://choosealicense.com/](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[2] [https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[3] [https://opensource.com/resources/what-open-source](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[4] [https://opensource.org/faq](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[5] [https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[6] [https://dwheeler.com/essays/floss-license-slide.html](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[7] [https://www.apache.org/licenses/contributor-agreements.html#clas](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
+
+\[8] [https://www.apache.org/licenses/cla-faq.html#cclas-not-required\
 \
 ](https://choosealicense.com/https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repositoryhttps://opensource.com/resources/what-open-sourcehttps://opensource.org/faqhttps://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repositoryhttps://dwheeler.com/essays/floss-license-slide.htmlhttps://www.apache.org/licenses/contributor-agreements.html#clashttps://www.apache.org/licenses/cla-faq.html#cclas-not-required)
 

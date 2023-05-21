@@ -1,4 +1,4 @@
-# Win 10 WSL 环境配置
+# Windows WSL 环境配置
 
 本教程由社区同学 @geoffreyfan 贡献\~
 
@@ -56,7 +56,7 @@ PS：查询系统版本方法：Win+R 输入 winver 回车：
 
 在 Ubuntu-22.04.exe 程序中输入以下指令，验证驱动是否安装成功：
 
-```
+```sh
 nvidia-smi -pm 1
 lspci | grep NVIDIA
 nvidia-smi
@@ -80,19 +80,19 @@ nvidia-smi
 
 启动 WSL2 ，在 powershell 中输入下面指令：
 
-```
+```sh
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
 启用“虚拟机平台”，在 powershell 中输入下面指令：
 
-```
+```sh
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 将 WSL2 设置为默认版本，在 powershell 中输入下面指令：
 
-```
+```sh
 wsl --set-default-version 2
 ```
 
@@ -122,7 +122,7 @@ wsl --set-default-version 2
 
 在 PowerShell 中运行下面命令显示所有发行版的详细信息：
 
-```
+```sh
 wsl --list --verbose
 ```
 
@@ -130,19 +130,19 @@ wsl --list --verbose
 
 终止正在运行的 wsl：
 
-```
+```sh
 wsl --shutdown
 ```
 
 将需要迁移的 Ubuntu-22.04 Linux 子系统，进行导出：
 
-```
+```sh
 wsl --export Ubuntu-22.04 E:/export.tar
 ```
 
 导出完成之后，就需要将原有的进行卸载：
 
-```
+```sh
 wsl --unregister Ubuntu-22.04
 ```
 
@@ -152,7 +152,7 @@ wsl --unregister Ubuntu-22.04
 
 然后将导出的文件放到需要保存的地方，进行导入即可：
 
-```
+```sh
 wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 ```
 
@@ -166,7 +166,7 @@ wsl --import Ubuntu-22.04 E:\export\ E:\export.tar --version 2
 
 在 cmd 里面输入下面指令，切换到根目录：
 
-```
+```sh
 ubuntu2204 config --default-user root
 ```
 

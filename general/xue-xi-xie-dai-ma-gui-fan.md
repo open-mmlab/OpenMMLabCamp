@@ -84,6 +84,16 @@ Flake8 是 Python 官方发布的一款 Python 代码规范检测工具，是以
 
 Yapf 是另一款代码规范检测工具，由 Google 进行开发维护，作为 flake8 的补充，会在 OpenMMLab 各项目开发的 pre-commit hook 中执行。
 
+#### 1.2.3 isort
+
+用以自动调整 Python 导入包顺序的工具，会将导入的包分为 system、third-party、local 三部分，以保证结构清晰。
+
+#### 1.2.4 [Pre-commit](https://github.com/pre-commit/pre-commit)
+
+Pre-commit 利用了 Git 的 hook 机制，将以上工具以及一些其他的检查工具集成在一起，并且在每次 Git 提交时自动执行这些代码检查工具，没有错误才可继续提交，从而最低限度地保证代码质量。
+
+安装 pre-commit 并初始化的相关操作，可以参考 [Contributing to OpenMMLab ‒ mmclassification documentation](https://mmclassification.readthedocs.io/en/master/community/CONTRIBUTING.html#python)
+
 ## 2. 命名规范
 
 

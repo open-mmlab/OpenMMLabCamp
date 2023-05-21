@@ -662,7 +662,7 @@ $ cd mmpose
 $ git remote add upstream https://github.com/open-mmlab/mmpose.git
 ```
 
-* **配制 Pre-commit Hook**
+* **配制 pre-commit Hook**
 
 参考 [Contributing to OpenMMLab](https://github.com/open-mmlab/mmcv/blob/master/CONTRIBUTING.md) 中的说明，在本地仓库配制 Pre-commit Hook。 Pre-commit Hook 是 Git 支持的钩子函数的一种，通常用于在提交修改（Commit）前自动完成代码风格检查等工作。以上准备工作只是第一次提 PR 之前需要进行，后续开发工作，在每个 PR 开发中都需要做。
 

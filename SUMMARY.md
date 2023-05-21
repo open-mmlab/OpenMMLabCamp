@@ -25,7 +25,7 @@
 * [MMEngine(建设中)](mm/mmengine.md)
   * [新 Config 适配贡献指南](mm/mmengine/newconfig.md)
 * [MMCV(建设中)](mm/mmcv.md)
-  * [Transform 数据增强贡献指南(建设中)](mm/mmcv/transform-shu-ju-zeng-qiang-gong-xian-zhi-nan-jian-she-zhong.md)
+  * [Transform 数据增强贡献指南](mm/mmcv/transform-shu-ju-zeng-qiang-gong-xian-zhi-nan-jian-she-zhong.md)
   * [算子贡献指南(建设中)](mm/mmcv/suan-zi-gong-xian-zhi-nan-jian-she-zhong.md)
 * [MMPreTrain(建设中)](mm/mmpretrain/README.md)
   * [骨干网络贡献指南(建设中)](mm/mmpretrain/backbone.md)

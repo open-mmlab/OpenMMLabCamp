@@ -40,7 +40,7 @@ Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 
 </div>
 
 <div align="center">
-图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
+  图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
 </div>
 
 ### 1.3 Pull Requests 页面

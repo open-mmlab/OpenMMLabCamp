@@ -96,33 +96,553 @@ Pre-commit 利用了 Git 的 hook 机制，将以上工具以及一些其他的�
 
 ## 2. 命名规范
 
+### 2.1 命名规范的重要性
 
+优秀的命名是良好代码可读的基础。基础的命名规范对各类变量的命名做了要求，使读者可以方便地根据代码名了解变量是一个类 / 局部变量 / 全局变量等。而优秀的命名则需要代码作者对于变量的功能有清晰的认识，以及良好的表达能力，从而使读者根据名称就能了解其含义，甚至帮助了解该段代码的功能。
+
+
+
+### 2.2 基础命名规范
+
+| Type      | 公有                   | 私有                                                                 | Note                                                   |
+| --------- | -------------------- | ------------------------------------------------------------------ | ------------------------------------------------------ |
+| 模块        | `lower_with_under`   | `_lower_with_under`                                                |                                                        |
+| 包         | `lower_with_under`   |                                                                    |                                                        |
+| 类         | `CapWords`           | `_CapWords`                                                        |                                                        |
+| 异常        | `CapWordsError`      |                                                                    |                                                        |
+| Functions | `lower_with_under()` | `_lower_with_under()`                                              |                                                        |
+| 全局 / 类内常量 | `CAPS_WITH_UNDER`    | `_CAPS_WITH_UNDER`                                                 |                                                        |
+| 全局 / 类内变量 | `lower_with_under`   | `_lower_with_under`                                                |                                                        |
+| 实例变量      | `lower_with_under`   | `_lower_with_under` (protected)`__lower_with_under` (private)      | 此处的 private 不止是命名规范，而是会触发 Python 的更名机制，实际项目中自定义变量名不常用到 |
+| 方法        | `lower_with_under()` | `_lower_with_under()` (protected) `__lower_with_under()` (private) |                                                        |
+| 局部变量      | `lower_with_under`   |                                                                    |                                                        |
+| 函数 / 方法参数 | `lower_with_under`   |                                                                    |                                                        |
+
+Tips:
+
+* 尽量避免变量名与保留字冲突，特殊情况下如不可避免，可使用一个后置下划线，如 `class_`
+* 尽量不要使用过于简单的命名，除了约定俗成的循环变量 `i`，文件变量 `f`，错误变量 `e` 等。
+* 不会被用到的变量可以命名为 `_`，逻辑检查器会将其忽略。
+
+### 2.3 命名技巧
+
+良好的变量命名需要保证三点：1. 含义准确，没有歧义；2. 长短适中；3. 前后统一
+
+```python
+# Wrong
+class Masks(metaclass=ABCMeta):  # 命名无法表现基类；Instance or Semantic？
+    pass
+
+# Correct
+class BaseInstanceMasks(metaclass=ABCMeta):
+    pass
+    
+# Wrong，不同地方含义相同的变量尽量用统一的命名
+def __init__(self, inplanes, planes):
+    pass
+
+def __init__(self, in_channels, out_channels):
+    pass
+```
+
+常见的函数命名方法：
+
+* 动宾命名法：`crop_img`, `init_weights`
+* 动宾倒置命名法：`imread`, `bbox_flip`
+
+注意函数命名与参数的顺序，保证主语在前，符合语言习惯：
+
+* `check_keys_exist(key, container)`
+* `check_keys_contain(container, key)`
+
+注意避免非常规或统一约定的缩写，如 `nb` -> `num_blocks`，`in_nc` -> `in_channels`
 
 
 
 ## 3. Docstring 规范
 
+### 3.1 为什么要写 docstring
 
+Docstring 是对一个类、一个函数功能与 API 接口的详细描述，有两个功能，一是帮助其他开发者了解代码功能，方便 debug 和复用代码；二是在 Readthedocs 文档中自动生成相关的 API reference 文档，帮助不了解源代码的社区用户使用相关功能。
 
+### 3.2 如何写 Docstring
 
+与注释不同，一份规范的 docstring 有着严格的格式要求，以便于 Python 解释器以及 sphinx 进行文档解析，详细的 docstring 约定参见 [PEP 257](https://www.python.org/dev/peps/pep-0257/)。此处以例子的形式介绍各种文档的标准格式，参考格式为 [Google 风格](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python\_style\_rules/#comments)。
+
+#### 模块文档
+
+代码风格规范推荐为每一个模块（即 Python 文件）编写一个 docstring，但目前 OpenMMLab 项目大部分没有此类 docstring，因此不做硬性要求。
+
+```python
+"""A one line summary of the module or program, terminated by a period.
+
+Leave one blank line. The rest of this docstring should contain an
+overall description of the module or program. Optionally, it may also
+contain a brief description of exported classes and functions and/or usage
+examples.
+
+Typical usage example:
+
+foo = ClassFoo()
+bar = foo.FunctionBar()
+"""
+```
+
+#### 类文档
+
+类文档是我们最常需要编写的，此处，按照 OpenMMLab 的惯例，我们使用了与 Google 风格不同的写法。如下例所示，文档中没有使用 `Attributes` 描述类属性，而是使用 `Args` 描述 `__init__` 函数的参数。在 `Args` 中，遵照`parameter (type): Description.`的格式，描述每一个参数类型和功能。其中，多种类型可使用 `(float | str)`的写法，可以为 `None` 的参数可以写为`(int | None)`或`(int, optional)`。
+
+```python
+class BaseRunner(metaclass=ABCMeta):
+    """The base class of Runner, a training helper for PyTorch.
+
+    All subclasses should implement the following APIs:
+
+    - ``run()``
+    - ``train()``
+    - ``val()``
+    - ``save_checkpoint()``
+
+    Args:
+        model (:obj:`torch.nn.Module`): The model to be run.
+        batch_processor (callable, optional): A callable method that process 
+            a data batch. The interface of this method should be
+            ``batch_processor(model, data, train_mode) -> dict``.
+            Defaults to None.
+        optimizer (dict | :obj:`torch.optim.Optimizer` | None): It can be 
+            either an optimizer (in most cases) or a dict of optimizers 
+            (in models that requires more than one optimizer, e.g., GAN).
+            Defaults to None.
+        work_dir (str, optional): The working directory to save checkpoints
+            and logs. Defaults to None.
+        logger (:obj:`logging.Logger`): Logger used during training.
+             Defaults to None. (The default value is just for backward
+             compatibility)
+        meta (dict, optional): A dict records some import information such as
+            environment info and seed, which will be logged in logger hook.
+            Defaults to None.
+        max_epochs (int, optional): Total training epochs. Defaults to None.
+        max_iters (int, optional): Total training iterations. Defaults to None.
+    """
+
+    def __init__(self,
+                 model,
+                 batch_processor=None,
+                 optimizer=None,
+                 work_dir=None,
+                 logger=None,
+                 meta=None,
+                 max_iters=None,
+                 max_epochs=None):
+        ...
+```
+
+注意 \`\`here\`\`、\`here\`、"here" 三种引号功能是不同在 reStructured 语法中，\`\`here\`\` 表示一段代码；\`here\` 表示斜体；"here" 无特殊含义，一般可用来表示字符串。其中 \`here\` 的用法与 Markdown 中不同，需要多加留意。另外还有 :obj:\`type\` 这种更规范的表示类的写法，但鉴于长度，不做特别要求，一般仅用于表示非常用类型。另外，在一些算法实现的主体类中，建议加入原论文的链接；如果参考了其他开源代码的实现，则应加入`modified from`，而如果是直接复制了其他代码库的实现，则应加入 `copied from` ，并注意源码的 License。如有必要，也可以通过 `.. math::` 来加入数学公式
+
+```python
+# 参考实现
+# This func is modified from `detectron2
+# <https://github.com/facebookresearch/detectron2/blob/ffff8acc35ea88ad1cb1806ab0f00b4c1c5dbfd9/detectron2/structures/masks.py#L387>`_.
+
+# 复制代码
+# This code was copied from the `ubelt 
+# library<https://github.com/Erotemic/ubelt>`_.
+
+# 引用论文 & 添加公式
+class LabelSmoothLoss(nn.Module):
+    r"""Intializer for the label smoothed cross entropy loss.
+
+    Refers to `Rethinking the Inception Architecture for Computer Vision
+    <https://arxiv.org/abs/1512.00567>`_.
+
+    This decreases gap between output scores and encourages generalization.
+    Labels provided to forward can be one-hot like vectors (NxC) or class
+    indices (Nx1).
+    And this accepts linear combination of one-hot like labels from mixup or
+    cutmix except multi-label task.
+
+    Args:
+        label_smooth_val (float): The degree of label smoothing.
+        num_classes (int, optional): Number of classes. Defaults to None.
+        mode (str): Refers to notes, Options are "original", "classy_vision",
+            "multi_label". Defaults to "classy_vision".
+        reduction (str): The method used to reduce the loss.
+            Options are "none", "mean" and "sum". Defaults to 'mean'.
+        loss_weight (float):  Weight of the loss. Defaults to 1.0.
+
+    Note:
+        if the ``mode`` is "original", this will use the same label smooth 
+        method as the original paper as:
+
+        .. math::
+            (1-\epsilon)\delta_{k, y} + \frac{\epsilon}{K}
+
+        where :math:`\epsilon` is the ``label_smooth_val``, :math:`K` is 
+        the ``num_classes`` and :math:`\delta_{k,y}` is Dirac delta, 
+        which equals 1 for k=y and 0 otherwise.
+
+        if the ``mode`` is "classy_vision", this will use the same label 
+        smooth method as the `facebookresearch/ClassyVision
+        <https://github.com/facebookresearch/ClassyVision/blob/main/classy_vision/losses/label_smoothing_loss.py>`_ repo as:
+
+        .. math::
+            \frac{\delta_{k, y} + \epsilon/K}{1+\epsilon}
+
+        if the ``mode`` is "multi_label", this will accept labels from 
+        multi-label task and smoothing them as:
+
+        .. math::
+            (1-2\epsilon)\delta_{k, y} + \epsilon
+```
+
+#### 方法（函数）文档
+
+函数文档与类文档的结构基本一致，但需要加入返回值文档。对于较为复杂的函数和类，可以使用 `Examples` 字段加入示例；如果需要对参数加入一些较长的备注，可以加入 `Note` 字段进行说明。对于使用较为复杂的类或函数，比起看大段大段的说明文字和参数文档，添加合适的示例更能帮助用户迅速了解其用法。需要注意的是，这些示例最好是能够直接在 Python 交互式环境中运行的，并给出一些相对应的结果。如果存在多个示例，可以使用注释简单说明每段示例，也能起到分隔作用。
+
+```python
+def import_modules_from_strings(imports, allow_failed_imports=False):
+    """Import modules from the given list of strings.
+
+    Args:
+        imports (list | str | None): The given module names to be imported.
+        allow_failed_imports (bool): If True, the failed imports will return
+            None. Otherwise, an ImportError is raise. Defaults to False.
+
+    Returns:
+        List[module] | module | None: The imported modules.
+        All these three lines in docstring will be compiled into the same
+        line in readthedocs.
+
+    Examples:
+        >>> osp, sys = import_modules_from_strings(
+        ...     ['os.path', 'sys'])
+        >>> import os.path as osp_
+        >>> import sys as sys_
+        >>> assert osp == osp_
+        >>> assert sys == sys_
+    """
+    ...
+```
+
+为了生成 readthedocs 文档，文档的编写需要按照 ReStructrued 文档格式，否则会产生文档渲染错误，在提交 PR 前，最好生成并预览一下文档效果。语法规范参考：
+
+* [reStructuredText Primer - Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+* [Example Google Style Python Docstrings ‒ napoleon 0.7 documentation](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example\_google.html#example-google)
+
+如果函数接口在某个版本发生了变化，需要在 docstring 中加入相关的说明，必要时添加 `Note` 或者 `Warning` 进行说明，例如：
+
+```python
+class CheckpointHook(Hook):
+    """Save checkpoints periodically.
+
+    Args:
+.       ...
+        out_dir (str, optional): The root directory to save checkpoints. If 
+            not specified, ``runner.work_dir`` will be used by default. If 
+            specified, the ``out_dir`` will be the concatenation of 
+            ``out_dir`` and the last level directory of ``runner.work_dir``. 
+            Defaults to None. `Changed in version 1.3.15.`
+        ...
+        file_client_args (dict, optional): Arguments to instantiate a 
+            FileClient. See :class:`mmcv.fileio.FileClient` for details.
+            Defaults to None. `New in version 1.3.15.`
+
+    Warning:
+        Before v1.3.15, the ``out_dir`` argument indicates the path where the
+        checkpoint is stored. However, in v1.3.15 and later, ``out_dir``
+        indicates the root directory and the final path to save checkpoint is
+        the concatenation of out_dir and the last level directory of
+        ``runner.work_dir``. Suppose the value of ``out_dir`` is 
+        "/path/of/A" and the value of ``runner.work_dir`` is "/path/of/B", 
+        then the final path will be "/path/of/A/B".
+```
+
+如果参数或返回值里带有需要展开描述字段的 dict，则应该采用如下格式：
+
+```python
+def func(x):
+    r"""
+    Args:
+        x (None): A dict with 2 keys, ``padded_targets``, and ``targets``.
+
+            - | ``targets`` (list[Tensor]): A list of tensors.
+                Each tensor has the shape of :math:`(T_i)`. Each
+                element is the index of a character.
+            - | ``padded_targets`` (Tensor): A tensor of shape :math:`(N)`.
+               Each item is the length of a word.
+
+    Returns:
+        dict: A dict with 2 keys, ``padded_targets``, and ``targets``.
+
+        - | ``targets`` (list[Tensor]): A list of tensors.
+            Each tensor has the shape of :math:`(T_i)`. Each
+            element is the index of a character.
+        - | ``padded_targets`` (Tensor): A tensor of shape :math:`(N)`.
+            Each item is the length of a word.
+    """
+    return x
+```
+
+渲染效果如下：
+
+![](https://cdn.vansin.top/picgo/20230521210855.png)
+
+关于竖线（“|”）在 restructtredtext 中的应用，请参阅：https://github.com/sphinx-doc/sphinx/issues/3778 [rst Cheatsheet - Material for Sphinx](https://bashtage.github.io/sphinx-material/rst-cheatsheet/rst-cheatsheet.html) (搜索 vertical bar)
+
+已知这种写法与 VSCode 对 docstring 的渲染方法不太兼容，请谨慎使用。
 
 
 
 ## 4. 注释规范
 
+### 4.1 为什么写注释
 
+对于一个开源项目，团队合作以及社区之间的合作是必不可少的，因而尤其要重视合理的注释。不写注释的代码，很有可能过几个月自己也难以理解，造成额外的阅读和修改成本。
 
+### 4.2 如何写注释
 
+> 最需要写注释的是代码中那些技巧性的部分。如果你在下次 [代码审查](http://en.wikipedia.org/wiki/Code\_review) 的时候必须解释一下, 那么你应该现在就给它写注释. 对于复杂的操作, 应该在其操作开始前写上若干行注释. 对于不是一目了然的代码, 应在其行尾添加注释.
 
+> _—— Google 开源项目风格指南_
 
+```python
+# We use a weighted dictionary search to find out where i is in
+# the array. We extrapolate position based on the largest num
+# in the array and the array size and then do binary search to
+# get the exact number.
+if i & (i-1) == 0:        # True if i is 0 or a power of 2.
+```
+
+> 为了提高可读性, 注释应该至少离开代码2个空格.
+
+> 另一方面, 绝不要描述代码. 假设阅读代码的人比你更懂Python, 他只是不知道你的代码要做什么.
+
+> _—— Google 开源项目风格指南_
+
+```python
+# Wrong:
+# Now go through the b array and make sure whenever i occurs
+# the next element is i+1
+
+# Wrong:
+if i & (i-1) == 0:        # True if i bitwise and i-1 is 0.
+```
+
+在注释中，可以使用 Markdown 语法，因为开发人员通常熟悉 Markdown 语法，这样可以便于交流理解，如可使用单反引号表示代码和变量（注意不要和 docstring 中的 ReStructured 语法混淆）
+
+```python
+# `_reversed_padding_repeated_twice` is the padding to be passed to
+# `F.pad` if needed (e.g., for non-zero padding types that are
+# implemented as two ops: padding + conv). `F.pad` accepts paddings in
+# reverse order than the dimension.
+self._reversed_padding_repeated_twice = _reverse_repeat_tuple(self.padding, 2)
+```
+
+### 4.3 注释示例
+
+1. 出自`mmcv/utils/registry.py`，对于较为复杂的逻辑结构，通过注释，明确了优先级关系。
+
+```python
+# self.build_func will be set with the following priority:
+# 1. build_func
+# 2. parent.build_func
+# 3. build_from_cfg
+if build_func is None:
+    if parent is not None:
+        self.build_func = parent.build_func
+    else:
+        self.build_func = build_from_cfg
+else:
+    self.build_func = build_func
+```
+
+2. 出自`mmcv/runner/checkpoint.py`，对于 bug 修复中的一些特殊处理，可以附带相关的 issue 链接，帮助其他人了解 bug 背景。
+
+```python
+def _save_ckpt(checkpoint, file):
+    # The 1.6 release of PyTorch switched torch.save to use a new
+    # zipfile-based file format. It will cause RuntimeError when a
+    # checkpoint was saved in high version (PyTorch version>=1.6.0) but
+    # loaded in low version (PyTorch version<1.6.0). More details at
+    # https://github.com/open-mmlab/mmpose/issues/904
+    if digit_version(TORCH_VERSION) >= digit_version('1.6.0'):
+        torch.save(checkpoint, file, _use_new_zipfile_serialization=False)
+    else:
+        torch.save(checkpoint, file)
+```
 
 ## 5. 类型注解
 
+### 5.1 为什么要写类型注解
+
+类型注解是对函数中变量的类型做限定或提示，为代码的安全性提供保障、增强代码的可读性、避免出现类型相关的错误。
+
+Python 没有对类型做强制限制，类型注解只起到一个提示作用，通常你的 IDE 会解析这些类型注解，然后在你调用相关代码时对类型做提示。另外也有类型注解检查工具，这些工具会根据类型注解，对代码中可能出现的问题进行检查，减少 bug 的出现。&#x20;
+
+需要注意的是，通常我们不需要注释模块中的所有函数
+
+1. > 公共的 API 需要注释
+2. > 在代码的安全性，清晰性和灵活性上进行权衡是否注释
+3. > 对于容易出现类型相关的错误的代码进行注释
+4. > 难以理解的代码请进行注释
+5. > 若代码中的类型已经稳定，可以进行注释. 对于一份成熟的代码，多数情况下，即使注释了所有的函数，也不会丧失太多的灵活性.
+
+> _—— Google 开源项目风格指南_
+
+### 5.2 如何写类型注解
+
+* 函数 / 方法类型注解，通常不对 `self` 和 `cls` 注释。
+
+```python
+from typing import Optional, List, Tuple
+
+# 全部位于一行
+def my_method(self, first_var: int) -> int:
+    pass
+
+# 另起一行
+def my_method(
+        self, first_var: int,
+        second_var: float) -> Tuple[MyLongType1, MyLongType1, MyLongType1]:
+    pass
+    
+# 单独成行（具体的应用场合与行宽有关，建议结合 yapf 自动化格式使用）
+def my_method(
+    self, first_var: int, second_var: float
+) -> Tuple[MyLongType1, MyLongType1, MyLongType1]:
+    pass
+    
+# 引用尚未被定义的类型
+class MyClass:
+    def __init__(self,
+                 stack: List["MyClass"]) -> None:
+        pass
+```
+
+注：类型注解中的类型可以是 Python 内置类型，也可以是自定义类，还可以使用 Python 提供的 wrapper 类对类型注解进行装饰，一些常见的注解如下：
+
+```python
+# 数值类型
+from numbers import Number
+
+# 可选类型，指参数可以为 None
+from typing import Optional
+def foo(var: Optional[int] = None):
+    pass
+    
+# 联合类型，指同时接受多种类型
+from typing import Union
+def foo(var: Union[float, str]):
+    pass
+    
+from typing import Sequence  # 序列类型
+from typing import Iterable  # 可迭代类型
+from typing import Any  # 任意类型
+from typing import Callable  # 可调用类型
+
+from typing import List, Dict  # 列表和字典的泛型类型
+from typing import Tuple  # 元组的特殊格式
+# 虽然在 Python 3.9 中，list, tuple 和 dict 本身已支持泛型，但为了支持之前的版本
+# 我们在进行类型注解时还是需要使用 List, Tuple, Dict 类型
+# 另外，在对参数类型进行注解时，尽量使用 Sequence & Iterable & Mapping
+# List, Tuple, Dict 主要用于返回值类型注解
+# 参见 https://docs.python.org/3/library/typing.html#typing.List
+```
+
+* 变量类型注解，一般用于难以直接推断其类型时：
+
+```python
+# Recommend: 带类型注解的赋值
+a: Foo = SomeUndecoratedFunction()
+a: List[int]: [1, 2, 3]         # List 只支持单一类型泛型，可使用 Union
+b: Tuple[int, int] = (1, 2)     # 长度固定为 2
+c: Tuple[int, ...] = (1, 2, 3)  # 变长
+d: Dict[str, int] = {'a': 1, 'b': 2}
+
+# Not Recommend：行尾类型注释
+# 虽然这种方式被写在了 Google 开源指南中，但这是一种为了支持 Python 2.7 版本
+# 而补充的注释方式，鉴于我们只支持 Python 3, 为了风格统一，不推荐使用这种方式。
+a = SomeUndecoratedFunction()  # type: Foo
+a = [1, 2, 3]  # type: List[int]
+b = (1, 2, 3)  # type: Tuple[int, ...] 
+c = (1, "2", 3.5)  # type: Tuple[int, Text, float]
+```
+
+* 泛型
+
+上文中我们知道，`typing` 中提供了 `list` 和 `dict` 的泛型类型，那么我们自己是否可以定义类似的泛型呢？
+
+```python
+from typing import TypeVar, Generic
+
+KT = TypeVar('KT')
+VT = TypeVar('VT')
+
+class Mapping(Generic[KT, VT]):
+    def __init__(self, data: Dict[KT, VT]):
+        self._data = data
+
+    def __getitem__(self, key: KT) -> VT:
+        return self._data[key]
+```
+
+使用上述方法，我们定义了一个拥有泛型能力的映射类，实际用法如下：
+
+```python
+mapping = Mapping[str, float]({'a': 0.5})
+value: float = example['a']
+```
+
+另外，我们也可以利用 `TypeVar` 在函数签名中指定联动的多个类型：
+
+```python
+from typing import TypeVar, List
+
+T = TypeVar('T')  # Can be anything
+A = TypeVar('A', str, bytes)  # Must be str or bytes
 
 
+def repeat(x: T, n: int) -> List[T]:
+    """Return a list containing n references to x."""
+    return [x]*n
+    
+    
+def longest(x: A, y: A) -> A:
+    """Return the longest of two strings."""
+    return x if len(x) >= len(y) else y
+```
 
+### 5.3 类型注解检查工具
+
+mypy 是一个 Python 静态类型检查工具。根据你的类型注解，mypy 会检查传参、赋值等操作是否符合类型注解，从而避免可能出现的 bug。
+
+例如如下的一个 Python 脚本文件 `test.py`:
+
+```python
+def foo(var: int) -> float:
+    return float(var)
+
+a: str = foo('2.0')
+b: int = foo('3.0')  # type: ignore
+```
+
+运行 `mypy test.py` 可以得到如下检查结果，分别指出了第 4 行在函数调用和返回值赋值两处类型错误。而第 5 行同样存在两个类型错误，由于使用了 `type: ignore` 而被忽略了，只有部分特殊情况可能需要此类忽略。
+
+```bash
+test.py:4: error: Incompatible types in assignment (expression has type "float", variable has type "int")
+test.py:4: error: Argument 1 to "foo" has incompatible type "str"; expected "int"
+Found 2 errors in 1 file (checked 1 source file)
+```
+
+OpenMMLab 中使用类型注解还在起步阶段，更为详细的实践方式有待后续进一步补充。
 
 ## 6. 参考资料
 
-
+[\
+https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/https://realpython.com/python-pep8/https://docs.python.org/3/library/typing.htmlhttps://mypy.readthedocs.io/en/stable/)[\
+https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/\
+https://realpython.com/python-pep8/\
+https://docs.python.org/3/library/typing.html\
+https://mypy.readthedocs.io/en/stable/\
+](https://www.python.org/dev/peps/pep-0008/https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/https://realpython.com/python-pep8/https://docs.python.org/3/library/typing.htmlhttps://mypy.readthedocs.io/en/stable/)
 

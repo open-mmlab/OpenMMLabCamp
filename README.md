@@ -44,7 +44,7 @@ OpenMMLab: 构建国际领先的计算机视觉开源算法平台。
   * [MMSIG 文档贡献指南 (建设中)](general/doc/mmsigdoc.md)
   * [算法库文档贡献指南 (建设中)](general/doc/repodoc.md)
 * [Type Hints 贡献指南(建设中)](general/typehints.md)
-* [单元测试贡献指南(建设中)](general/unitest.md)
+* [单元测试贡献指南(建设中)](general/dan-yuan-ce-shi-gong-xian-zhi-nan-jian-she-zhong.md)
 * [源码阅读及调试技巧(建设中)](general/sourcedebug.md)
 
 ### 2.2 算法库贡献者教程(建设中) <a href="#mm" id="mm"></a>

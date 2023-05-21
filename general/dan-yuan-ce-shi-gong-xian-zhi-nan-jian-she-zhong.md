@@ -6,7 +6,7 @@
 
 ## 2. 为什么要写单元测试
 
-### **大家不愿意写单元测试的常见原因**
+### **2.1 大家不愿意写单元测试的常见原因**
 
 * 功能很简单，没必要测，不写了
 * 开发时间紧，没时间写，不写了
@@ -15,7 +15,7 @@
 
 跳出舒适区，一份高质量的代码从写单元测试开始。
 
-### **单元测试的重要性**
+### **2.2 单元测试的重要性**
 
 * 帮助理解需求
 
@@ -41,13 +41,13 @@
 
 一个模块很难进行单元测试通常是不良设计的信号，单元测试可以反过来指导设计出高内聚、低耦合的模块
 
-### **举例**
+### **2.3 举例**
 
 * [mmcv 中由于缺乏单元测试导致的 bug](https://github.com/open-mmlab/mmcv/pull/907)
 
 ## 3. 单元测试测什么
 
-### **输入测试**
+### **3.1 输入测试**
 
 * 参数类型测试
 
@@ -153,7 +153,7 @@ def test_iter_list():
         next(gen)
 ```
 
-### **输出测试**
+### **3.2 输出测试**
 
 测试输出是否符合预期
 
@@ -277,7 +277,7 @@ def dummpy_func(A, B, C, D):
 
 > 本节代码示例地址：https://github.com/zhouzaida/unittest-tutorial
 
-[**pytest**](https://docs.pytest.org/en/6.2.x/getting-started.html)
+### 4.1 [**pytest**](https://docs.pytest.org/en/6.2.x/getting-started.html)
 
 pytest 是一个测试框架，简化编写易读以及可扩展的测试流程。测试代码和代码一样，也要求是可读的。使用 pytest 构建测试非常简单，我们可以在几分钟内就可以为应用程序或库进行小型单元测试或复杂的功能测试。
 
@@ -538,7 +538,7 @@ def test_divide():
         divide(1, 0)
 ```
 
-[**unittest**](https://docs.python.org/3/library/unittest.html)
+### 4.2 [**unittest**](https://docs.python.org/3/library/unittest.html)
 
 [`unittest`](https://docs.python.org/zh-cn/3/library/unittest.html#module-unittest) 模块提供了一系列创建和运行测试的工具。
 
@@ -767,9 +767,9 @@ class MyTestCase(unittest.TestCase):
 | [assertIsInstance(a, b)](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIsInstance)       | isinstance(a, b)     |
 | [assertNotIsInstance(a, b)](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertNotIsInstance) | not isinstance(a, b) |
 
-[**mock**](https://docs.python.org/3/library/unittest.mock.html)
+### 4.3 [**mock**](https://docs.python.org/3/library/unittest.mock.html)
 
-**mock 是什么**
+#### **mock 是什么**
 
 模拟对象（mock object）是以可控的方式模拟真实对象（real object）行为的假对象。而之所以使用 模拟对象，是因为有时真实对象的行为是不确定的（例如真实对象是 http 请求）、真实对象很难搭建起来（例如 mmcv 需要在 github action 中测试 pavi，而 pavi 是 sensetime 内部库）、真实对象的行为很难触发（例如网络异常），这种情况下使用模拟对象可以隔绝依赖的影响，只关注代码的逻辑。[unittest.mock](https://docs.python.org/3/library/unittest.mock.html) 模块允许替换代码中的对象并且可以使用断言确认对象是否被调用。
 
@@ -1051,7 +1051,7 @@ class TestPackageUtils(unittest.TestCase):
 
 ## 5. 测试覆盖率
 
-[**coverage**](https://coverage.readthedocs.io/en/coverage-5.5/)
+### 5.1 [**coverage**](https://coverage.readthedocs.io/en/coverage-5.5/)
 
 coverage.py 是一个用来统计 Python 程序代码覆盖率的工具。
 
@@ -1150,7 +1150,7 @@ TOTAL            26      3    88%
 
 
 
-## 如何组织单元测试
+## 6. 如何组织单元测试
 
 举 mmaction2 的测试目录重构为例
 
@@ -1226,7 +1226,7 @@ mmaction2
 │   │   ├── test_localization_utils.py
 ```
 
-## 课后作业
+## 7. 课后作业
 
 1. 提交第一份单元测试（测试 [scandir](https://github.com/open-mmlab/mmcv/blob/93418560d8a6911326039e97831a4771b16f6afa/mmcv/utils/path.py#L39)）
 2. 提交第二份单元测试（具体内容未定，要求使用 mock）

@@ -720,7 +720,7 @@ $ git push -f
 * 文档相关 \[Docs]
 * 开发中 \[WIP] ( work in process 暂时不会被review)
 
-PR message 的主要修改内容，结果，以及对其他部分的影响，通常我们的代码库会准备 [PR 模板](https://github.com/open-mmlab/mmcv/blob/master/.github/pull\_request\_template.md)，只需要按照模板填入对应的内容即可。另外，PR message 可以关联相关的 issue 和 PR，通过 fixes/resolves issue ID 可以在 PR merge 的时候 close issue。蓝色部分是其他信息，在这里可以指定 reviewer 来 review 这个 PR。完成所有信息后，点击下方的“Create pull request”即可完成 PR 提交。
+PR message 的主要修改内容，结果，以及对其他部分的影响，通常我们的代码库会准备 [PR 模板](https://github.com/open-mmlab/mmcv/blob/master/.github/pull\_request\_template.md)，只需要按照模板填入对应的内容即可。另外， PR message 可以关联相关的 issue 和 PR，通过 fixes/resolves issue ID 可以在 PR merge 的时候 close issue。蓝色部分是其他信息，在这里可以指定 reviewer 来 review 这个 PR。完成所有信息后，点击下方的“Create pull request”即可完成 PR 提交。
 
 ![图13 创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203913.png)
 

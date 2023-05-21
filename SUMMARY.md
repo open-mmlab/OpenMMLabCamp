@@ -12,6 +12,7 @@
   * [Ubuntu 20.04 环境配置(建设中 2)](general/env/ubuntu20.md)
   * [ubuntu docker 环境配置](general/env/ubuntu\_docker.md)
 * [熟悉 GitHub/Git(建设中)](general/shu-xi-gitgithub-jian-she-zhong.md)
+* [学习写代码规范](general/xue-xi-xie-dai-ma-gui-fan.md)
 * [文档类贡献指南(建设中)](general/doc.md)
   * [MMSIG 文档贡献指南 (建设中)](general/doc/mmsigdoc.md)
   * [算法库文档贡献指南 (建设中)](general/doc/repodoc.md)

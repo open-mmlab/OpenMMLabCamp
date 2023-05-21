@@ -139,7 +139,7 @@ Insights 页面展示了项目的汇总信息和统计数据，以方便开发�
 
 **2.2.3 分支**
 
-分支（branch）是 Git 用来支持并行开发的机制。一个分支可以简单理解为一系列提交组成的版本历史。通常一个项目会有一个主分支 master（或main）。开发者从 master 分支创建新的分支，进行功能的开发，并在开发完成后将该分支合并回 master 分支。通过这种方式，开发者们可以在多个分支上并行开发，而不会互相干扰。Git 因其独特的数据保存机制和分支模型（详见：[Git - 分支简介](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B)）可以实现非常快速的分支创建和切换，因而也鼓励在开发流程中频繁使用分支与合并。关于分支的新建、合并与解决冲突新建和合并分支是基于 Git 的开发流程中很常用的操作。例如，当我们要在项目中开发一个功能时，通常会从当前的 master 分支新建一个分支用于开发（关于这里用到的 Git 指令，可以在 [2.3](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#cBWtEI) 部分中介绍）：
+分支（branch）是 Git 用来支持并行开发的机制。一个分支可以简单理解为一系列提交组成的版本历史。通常一个项目会有一个主分支 master（或main）。开发者从 master 分支创建新的分支，进行功能的开发，并在开发完成后将该分支合并回 master 分支。通过这种方式，开发者们可以在多个分支上并行开发，而不会互相干扰。Git 因其独特的数据保存机制和分支模型（详见：[Git - 分支简介](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B)）可以实现非常快速的分支创建和切换，因而也鼓励在开发流程中频繁使用分支与合并。关于分支的新建、合并与解决冲突新建和合并分支是基于 Git 的开发流程中很常用的操作。例如，当我们要在项目中开发一个功能时，通常会从当前的 master 分支新建一个分支用于开发（关于这里用到的 Git 指令，可以在 2.3 部分中介绍）：
 
 ```sh
 # 从远程仓库 origin 拉取最新的 master
@@ -297,7 +297,7 @@ Untracked files:
 在上面的例子中，可以看到返回的信息包括：
 
 * 本地处于 v2.0\_dataset 分支
-* 有一个新增文件`new_file.py`处于未被追踪的状态（关于文件状态，可回顾 [2.2.2 文件状态](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#tJRr85)）
+* 有一个新增文件`new_file.py`处于未被追踪的状态（关于文件状态，可回顾 2.2.2 文件状态）
 * **git diff**
 
 
@@ -407,7 +407,7 @@ $ git checkout <branch-name> <filename>
 
 * **git merge**
 
-`git merge`指令用来合并分支。关于分支合并的说明，可以参考 [2.2.3](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#DexPUT) 部分。
+`git merge`指令用来合并分支。关于分支合并的说明，可以参考 2.2.3 部分。
 
 ```
 # 合并指定分支到当前分支
@@ -642,7 +642,7 @@ $ git revert (--continue | --abort)
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230518202833.png)
 
-图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）`$ git checkout dev && git rebase main`在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 [3.1](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#f1RrHh) 部分中可以看到这一步）。`git rebase`指令的常见用法如下：
+图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）`$ git checkout dev && git rebase main`在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 3.1 部分中可以看到这一步）。`git rebase`指令的常见用法如下：
 
 ```
 # 将当前分支 rebase 到目标分支 upstream-branch
@@ -796,7 +796,7 @@ model/**/*.pth
 
 **3.2.2 配置 git mergetool**
 
-在合并分支时，经常需要手动解决冲突，这里可以选用一些可视化的工具帮助我们提高效率，例如 VS Code 就有较好的可视化功能，可以协助解决冲突。除此之外我们也可以借助第三方工具，这里我们以 [meld](https://meldmerge.org/) 这个工具为例，介绍 Git 中 mergetool 的配置和使用。首先需要在本地安装 meld，可以参考其官网的文档。安装完成后，可以在 Git 配置文件（见 [2.3.1onfig](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#cBWtEI)）中写入如下内容：
+在合并分支时，经常需要手动解决冲突，这里可以选用一些可视化的工具帮助我们提高效率，例如 VS Code 就有较好的可视化功能，可以协助解决冲突。除此之外我们也可以借助第三方工具，这里我们以 [meld](https://meldmerge.org/) 这个工具为例，介绍 Git 中 mergetool 的配置和使用。首先需要在本地安装 meld，可以参考其官网的文档。安装完成后，可以在 Git 配置文件（见 2.3.1onfig）中写入如下内容：
 
 ```bash
 # 使用 meld 作为默认 difftool
@@ -855,15 +855,15 @@ model/**/*.pth
 
 * **如何修改 commit 但不产生新的提交**
 
-请参考 [2.3.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#1zolX4) 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
+请参考 [2.3.4] 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
 
 * **如何撤销 commit 但仍需保留修改**
 
-请参考 [2.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#Xd9htu) 中 `git reset --mixed`或`git reset --soft`的用法。
+请参考 [2.4] 中 `git reset --mixed`或`git reset --soft`的用法。
 
 * **如何合并多个 commit**
 
-请参考 [2.4](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#BHIPnC) 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
+请参考 [2.4] 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
 
 ```
 $ git log
@@ -921,7 +921,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 * **如何往源算法库中其他人提的 PR 中提交代码**
 
-在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（[参考 2.3.6 git remote](https://openmmlab.feishu.cn/docs/doccnm6MfPOPfZgnZ569EhA1DIf#WZbqsI)），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
+在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（[参考 2.3.6 git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
 
 ```
 # 拉取 PR#222 到本地并为其创建一个本地分支

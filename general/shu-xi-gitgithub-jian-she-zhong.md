@@ -917,8 +917,10 @@ $ git checkout <branchname>
 
 ## 5. 参考资料
 
-* Git 官方教程：[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
-* 2个 Git 沙盘：
-  * [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
-  * [https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)
-* 廖雪峰 Git 教程：[https://www.liaoxuefeng.com/wiki/896043488029600](https://www.liaoxuefeng.com/wiki/896043488029600)
+\[1] Git 官方教程：[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+
+\[2] [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
+
+\[3] [https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)
+
+\[4] 廖雪峰 Git 教程：[https://www.liaoxuefeng.com/wiki/896043488029600](https://www.liaoxuefeng.com/wiki/896043488029600)

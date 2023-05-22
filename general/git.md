@@ -32,7 +32,7 @@ GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库�
 
 Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 issue 来提出遇到的问题，报告发现的 bug，或提出意见建议等；开发者可以在 issue 下进行回复，或将 issue 指定（assign）给特定的人来解决。此外，还可以用 issue 功能发布消息，如项目的 Roadmap、开发计划等，并将这些重要信息置顶。每个 issue 都会有一个编号，如 #900, 可以用于在其他 issue 或稍后将介绍的 Pull Request 中关联这个 issue。
 
-[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)](shu-xi-gitgithub-jian-she-zhong.md)\
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)](git.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)](git.md)\
 图3 Issues 页面 （左： issue 列表，右： 一个 issue 的内容）
 
 ### 1.3 Pull Requests 页面
@@ -44,9 +44,9 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 3. 开发者将自己的修改推到自己的远程仓库，并向官方仓库发出申请，要求官方仓库拉取（pull）此次修改，即将此次修改加入到官方代码中。这样的请求就叫做 PR。（与之相对的还有 GitLab 平台所采用的 merge request，拓展阅读：https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request）
 4. 代码库的维护者或其他开发者会对 PR 进行 Review，并与作者共同进行讨论和修改。最终将修改完成的 PR 合入到官方代码仓库中。至此，一个开发项的开发周期完成。
 
-在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 [3.1](shu-xi-gitgithub-jian-she-zhong.md#3.1-chang-gui-kai-fa-liu-cheng) 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
+在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 [3.1](git.md#3.1-chang-gui-kai-fa-liu-cheng) 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
 
-[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)](shu-xi-gitgithub-jian-she-zhong.md)&#x20;
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)](git.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)](git.md)&#x20;
 
 图4 Pull Requests 页面 （左： PR 列表， 右： 一个 PR 的内容）
 
@@ -54,7 +54,7 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 Actions 指 GitHub Actions，是 GitHub 提供的简化和方便开发流程的功能，用来在开发周期中自动触发执行特定的操作。如在 PR 被提交时，自动运行 CI； 在发布新版本时，自动编译并更新 pypi 上托管的安装包等。在 Actions 页面中，可以看到最近运行过的 action。点开其中一个action，可以看到详细信息、执行的具体操作步骤和输出的 log 等。如图5所示。
 
-[![](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)](shu-xi-gitgithub-jian-she-zhong.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)](shu-xi-gitgithub-jian-she-zhong.md)&#x20;
+[![](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)](git.md) [![](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)](git.md)&#x20;
 
 图5 Actions 页面 （左：action 列表，右：一个运行 CI 的action的详细信息）
 
@@ -789,7 +789,7 @@ model/**/*.pth
     cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 ```
 
-完成这些配制后，当需要解决冲突时，Git 会自动启动 meld，界面如下图所示。可以看到界面分成三列，对应与上面设置中的L11，分别是本地分支内容、合并后内容和目标（远程）分支内容。在这个界面中可以清晰对比两个分支的不同，还可以三列之间的箭头状按钮选快速选择内容添加到对应文件中。这里要注意，LOCAL 和 REMOTE 对应的分支，在 merge 和 rebase 两种情况下是不同的，这在 [git-rebase 说明](shu-xi-gitgithub-jian-she-zhong.md#2.4-git-jin-jie-zhi-ling) 中做过介绍。
+完成这些配制后，当需要解决冲突时，Git 会自动启动 meld，界面如下图所示。可以看到界面分成三列，对应与上面设置中的L11，分别是本地分支内容、合并后内容和目标（远程）分支内容。在这个界面中可以清晰对比两个分支的不同，还可以三列之间的箭头状按钮选快速选择内容添加到对应文件中。这里要注意，LOCAL 和 REMOTE 对应的分支，在 merge 和 rebase 两种情况下是不同的，这在 [git-rebase 说明](git.md#2.4-git-jin-jie-zhi-ling) 中做过介绍。
 
 ![图15 使用 meld 进行可视化分支合并](https://cdn.vansin.top/picgo/segment\_anything/20230518204954.png)
 

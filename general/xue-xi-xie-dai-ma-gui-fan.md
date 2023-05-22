@@ -10,9 +10,11 @@
 
 Python 官方的代码风格指南，包含了以下几个方面的内容：
 
-1. 代码布局，介绍了 Python 中空行、断行以及导入相关的代码风格规范。比如一个常见的问题：当我的代码较长，无法在一行写下时，何处可以断行？
-2. 表达式，介绍了 Python 中表达式空格相关的一些风格规范。
-3. 尾随逗号相关的规范。当列表较长，无法一行写下而写成如下逐行列表时，推荐在末项后加逗号，从而便于追加选项、版本控制等。
+**代码布局：**介绍了 Python 中空行、断行以及导入相关的代码风格规范。比如一个常见的问题：当我的代码较长，无法在一行写下时，何处可以断行？
+
+**表达式：**介绍了 Python 中表达式空格相关的一些风格规范。
+
+**尾随逗号相关的规范：**当列表较长，无法一行写下而写成如下逐行列表时，推荐在末项后加逗号，从而便于追加选项、版本控制等。
 
 ```python
 # Correct:
@@ -31,7 +33,7 @@ FILES = [
 ]
 ```
 
-4. 命名相关规范、注释相关规范、类型注解相关规范，我们将在后续章节中做详细介绍。
+**命名相关规范、注释相关规范、类型注解相关规范：**我们将在后续章节中做详细介绍。
 
 > A style guide is about consistency. Consistency with this style guide is important. Consistency within a project is more important. Consistency within one module or function is the most important.
 

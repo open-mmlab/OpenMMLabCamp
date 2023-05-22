@@ -154,7 +154,7 @@ def test_add():
     assert add(-1, 1) == 0
 ```
 
-**控制流测试**
+### **3.3 控制流测试**
 
 > 参考 https://testerhome.com/topics/19991
 
@@ -162,7 +162,7 @@ def test_add():
 
 
 
-**控制流图**
+#### **3.3.1 控制流图**
 
 控制流图（Control Flow Graph，CFG）也叫控制流程图，是一个过程或程序的抽象表现，是用在编译器中的一个抽象数据结构，由编译器在内部维护，代表了一个程序执行过程中会遍历到的所有路径。 它用图的形式表示一个过程内所有基本块执行的可能流向, 也能反映一个过程的实时执行过程。
 
@@ -178,7 +178,7 @@ def test_add():
 
 ![源自 https://www.cnblogs.com/lxh2cwl/p/14842908.html](https://cdn.vansin.top/picgo/20230521155302.png)
 
-**主要测试方法**
+#### **3.3.2 主要测试方法**
 
 围绕下面的例子介绍控制流测试的主要测试方法
 
@@ -190,7 +190,7 @@ def dummpy_func(A, B, C, D):
         # do something here 
 ```
 
-**语句覆盖**
+#### **3.3.3 语句覆盖**
 
 在控制流中每条可执行的语句至少被执行一次。
 
@@ -206,7 +206,7 @@ def dummpy_func(A, B, C, D):
 
 
 
-**分支覆盖（判定覆盖）**
+#### **3.3.4 分支覆盖（判定覆盖）**
 
 在控制流图内的每一条边都至少被执行一次。
 
@@ -222,9 +222,7 @@ def dummpy_func(A, B, C, D):
 
 上述的测试用例可使分支覆盖率 100 %
 
-
-
-**条件覆盖**
+#### **3.3.5 条件覆盖**
 
 每一个条件的可能取值都应该被测试到。
 
@@ -238,9 +236,7 @@ def dummpy_func(A, B, C, D):
 
 上述的测试用例可使条件覆盖率 100 %
 
-
-
-**路径覆盖**
+#### **3.3.6 路径覆盖**
 
 在控制流图内的每一个分支序列（路径）都应该执行一次。
 
@@ -264,13 +260,13 @@ def dummpy_func(A, B, C, D):
 
 pytest 是一个测试框架，简化编写易读以及可扩展的测试流程。测试代码和代码一样，也要求是可读的。使用 pytest 构建测试非常简单，我们可以在几分钟内就可以为应用程序或库进行小型单元测试或复杂的功能测试。
 
-**安装**
+#### **4.1.1 安装**
 
 ```bash
 pip install pytest
 ```
 
-**入门用法**
+#### **4.1.2 入门用法**
 
 * 编写函数的单元测试
 
@@ -325,7 +321,7 @@ class TestOperation:
         assert self.operation.mul(1, 2) == 0.5
 ```
 
-**进阶用法**
+#### **4.1.3 进阶用法**
 
 [**fixture**](https://docs.pytest.org/en/latest/explanation/fixtures.html)
 
@@ -525,7 +521,7 @@ def test_divide():
 
 [`unittest`](https://docs.python.org/zh-cn/3/library/unittest.html#module-unittest) 模块提供了一系列创建和运行测试的工具。
 
-**基本用法**
+#### **4.2.1 基本用法**
 
 这是一段简短的代码，来测试三种字符串方法:
 
@@ -589,7 +585,7 @@ python -m unittest example1.TestStringMethods.test_upper -v
 python -m unittest example1.py -v
 ```
 
-**组织测试结构**
+#### **4.2.2 组织测试结构**
 
 > https://asciinema.org/a/435174
 
@@ -626,7 +622,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-**组织测试顺序**
+#### **4.2.3 组织测试顺序**
 
 > https://asciinema.org/a/435177
 
@@ -674,7 +670,7 @@ if __name__ == '__main__':
 
 需要使用`python example4.py` 启动测试，因为是在 \_\_main\_\_ 中重新组织了测试用例的调用顺序，而使用`python -m unittest example` ，该启动方式不会执行 \_\_main\_\_ 中的语句。
 
-**跳过测例**
+#### **4.2.4 跳过测例**
 
 > https://asciinema.org/a/435179
 
@@ -733,7 +729,7 @@ class MyTestCase(unittest.TestCase):
         pass
 ```
 
-**常用断言**
+#### **4.2.5 常用断言**
 
 | Method                                                                                                             | Checks that          |
 | ------------------------------------------------------------------------------------------------------------------ | -------------------- |
@@ -752,11 +748,11 @@ class MyTestCase(unittest.TestCase):
 
 ### 4.3 [**mock**](https://docs.python.org/3/library/unittest.mock.html)
 
-#### **mock 是什么**
+#### **4.3.1 mock 是什么**
 
 模拟对象（mock object）是以可控的方式模拟真实对象（real object）行为的假对象。而之所以使用 模拟对象，是因为有时真实对象的行为是不确定的（例如真实对象是 http 请求）、真实对象很难搭建起来（例如 mmcv 需要在 github action 中测试 pavi，而 pavi 是 sensetime 内部库）、真实对象的行为很难触发（例如网络异常），这种情况下使用模拟对象可以隔绝依赖的影响，只关注代码的逻辑。[unittest.mock](https://docs.python.org/3/library/unittest.mock.html) 模块允许替换代码中的对象并且可以使用断言确认对象是否被调用。
 
-**基本用法**
+#### **4.3.2 基本用法**
 
 unittest.mock 中常用的两个核心类是 Mock、MagicMock 以及一个装饰器 patch，在这里只介绍 MagicMock、patch，因为MagicMock 是 Mock 的子类，MagicMock 默认提供了大多数魔术方法的实现，而 Mock 没有提供，如果 Mock 要使用魔术方法，需单独实现。注：Mock 和 MagicMock 的区别可参考以下两篇文章
 
@@ -1032,13 +1028,11 @@ class TestPackageUtils(unittest.TestCase):
 
 
 
-## 5. 测试覆盖率
-
-### 5.1 [**coverage**](https://coverage.readthedocs.io/en/coverage-5.5/)
+## 5. 测试覆盖率 [**coverage**](https://coverage.readthedocs.io/en/coverage-5.5/)
 
 coverage.py 是一个用来统计 Python 程序代码覆盖率的工具。
 
-**分析测试覆盖率**
+### 5.1 **分析测试覆盖率**
 
 > https://asciinema.org/a/435655
 
@@ -1095,7 +1089,7 @@ coverage html
 
 ![](https://cdn.vansin.top/picgo/20230521160240.png)
 
-**根据反馈完善单元测试**
+### **5.2 根据反馈完善单元测试**
 
 > https://asciinema.org/a/435656
 

@@ -30,9 +30,9 @@ GitHub （[https://github.com](https://github.com)）是最大的 Git 版本库�
 
 Issues 页面类似用于社区沟通的论坛。使用者可以在这里创建 issue 来提出遇到的问题，报告发现的 bug，或提出意见建议等；开发者可以在 issue 下进行回复，或将 issue 指定（assign）给特定的人来解决。此外，还可以用 issue 功能发布消息，如项目的 Roadmap、开发计划等，并将这些重要信息置顶。每个 issue 都会有一个编号，如 #900, 可以用于在其他 issue 或稍后将介绍的 Pull Request 中关联这个 issue。
 
-![图3a Issues 页面： issue 列表](https://cdn.vansin.top/picgo/segment_anything/20230518205823.png)
+![图3a Issues 页面： issue 列表](https://cdn.vansin.top/picgo/segment\_anything/20230518205823.png)
 
-![图3b Issues 页面： 一个 issue 的内容](https://cdn.vansin.top/picgo/segment_anything/20230518205835.png)
+![图3b Issues 页面： 一个 issue 的内容](https://cdn.vansin.top/picgo/segment\_anything/20230518205835.png)
 
 ### 1.3 Pull Requests 页面
 
@@ -45,21 +45,17 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 [3.1](git.md#3.1-chang-gui-kai-fa-liu-cheng) 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
 
+![图4a Requests 页面: PR 列表](https://cdn.vansin.top/picgo/segment\_anything/20230518205913.png)
 
-
-![图4a Requests 页面: PR 列表](https://cdn.vansin.top/picgo/segment_anything/20230518205913.png)
-
-![图4b Pull Requests 页面: 一个 PR 的内容](https://cdn.vansin.top/picgo/segment_anything/20230518205928.png)
+![图4b Pull Requests 页面: 一个 PR 的内容](https://cdn.vansin.top/picgo/segment\_anything/20230518205928.png)
 
 ### 1.4 Actions 页面
 
 Actions 指 GitHub Actions，是 GitHub 提供的简化和方便开发流程的功能，用来在开发周期中自动触发执行特定的操作。如在 PR 被提交时，自动运行 CI； 在发布新版本时，自动编译并更新 pypi 上托管的安装包等。在 Actions 页面中，可以看到最近运行过的 action。点开其中一个action，可以看到详细信息、执行的具体操作步骤和输出的 log 等。如图5所示。
 
-![图5a Actions 页面：action 列表](https://cdn.vansin.top/picgo/segment_anything/20230518210010.png)
+![图5a Actions 页面：action 列表](https://cdn.vansin.top/picgo/segment\_anything/20230518210010.png)
 
-![图5b Actions 页面：一个运行 CI 的action的详细信息](https://cdn.vansin.top/picgo/segment_anything/20230518210024.png)
-
-
+![图5b Actions 页面：一个运行 CI 的action的详细信息](https://cdn.vansin.top/picgo/segment\_anything/20230518210024.png)
 
 ### 1.5 Insights 页面
 
@@ -876,7 +872,13 @@ $ git rebase -i HEAD~2
 
 此时会出现交互界面，如下图左。可以看到相关的 commit 被逐行列出，并且每个 commit 前面有一个指令（pick），这个指令是可以按照需求修改的，所有可选项都在下方的注释中有说明。例如，我们现在希望合并2个 commit， 则可以将第一个 7d97740 的指令设置为 reword，将第二个 7eea97e 的指令设置为 fixup，如下图中，然后保存退出。由于第一个指令是 reword，接下来会跳出重新输入 commit message 的界面，我们将原本的 “Add b.txt” 改成 “ Add b.txt and c.txt ”， 并保存退出，如下图右。
 
-![图17 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/segment\_anything/20230518205328.png)
+
+
+![图17a 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171618.png)
+
+![图17b 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171728.png)
+
+![图17c 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171814.png)
 
 此时我们再查看分支提交历史，会发现之前的2个 commit 已经被合并：
 

@@ -47,6 +47,7 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 
 ![图4a Requests 页面: PR 列表](https://cdn.vansin.top/picgo/segment_anything/20230518205913.png)
+
 ![图4b Pull Requests 页面: 一个 PR 的内容](https://cdn.vansin.top/picgo/segment_anything/20230518205928.png)
 
 ### 1.4 Actions 页面

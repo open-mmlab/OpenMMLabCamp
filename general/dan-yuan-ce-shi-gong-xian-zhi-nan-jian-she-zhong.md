@@ -1208,7 +1208,7 @@ mmaction2
 1. 提交第一份单元测试（测试 [scandir](https://github.com/open-mmlab/mmcv/blob/93418560d8a6911326039e97831a4771b16f6afa/mmcv/utils/path.py#L39)）
 2. 提交第二份单元测试（具体内容未定，要求使用 mock）
 
-## 参考资料
+## 8. 参考资料
 
 [https://docs.python.org/zh-cn/3/library/unittest.html](https://docs.python.org/zh-cn/3/library/unittest.html)&#x20;
 

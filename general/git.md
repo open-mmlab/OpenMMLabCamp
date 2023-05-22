@@ -165,7 +165,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Git 会在存在冲突的文件中对应位置加入标准的冲突解决标记，方便手动解决冲突，看起来如下：
 
-```
+```sh
 <<<<<<< HEAD:run.py
 print('OpenMMLab is an open-source project')
 =======
@@ -175,13 +175,13 @@ print('OpenMMLab is AWESOME!')
 
 这里`HEAD`表示当前分支（即 master）所在位置，`=======`上面的部分就是当前分支中的内容，下面的部分则是 dev 分支中的内容。我们可以手动编辑冲突的内容，并删除冲突解决标记 （含有`<<<<<<<`，`>>>>>>>`和`=======`的行）。例如将例子中的这部分代码改为：
 
-```
+```python
 print('OpenMMLab is an awesome open-source project')
 ```
 
 手动解决冲突后，需要将修改过的文件添加到暂存区，然后继续分支合并即可：
 
-```
+```sh
 # 添加解决冲突时的修改
 $ git add run.py
 # 继续分支合并
@@ -310,7 +310,7 @@ $ git diff master...dev
 
 `git add`指令用来将工作区的修改添加到暂存区。可参考本文 2.2 中关于工作区、暂存区和文件状态的介绍。
 
-```
+```sh
 # 添加指定文件的修改到暂存区
 $ git add <file-a> <file-b>
 
@@ -322,7 +322,7 @@ $ git add .
 
 `git commit`指令用来将所有已添加到暂存区的修改生成一个提交对象，保存进仓库区，并将当前分支的指针（HEAD）移动到该次提交上。
 
-```
+```sh
 # 提交暂存区修改
 $ git commit
 
@@ -342,7 +342,7 @@ $ git commit -a
 
 `git branch`指令用来进行分支管理操作，如列出有的分支、创建新分支、删除分支及重命名分支等。
 
-```
+```sh
 # 列出所有的本地分支
 $ git branch
 
@@ -363,7 +363,7 @@ $ git branch -D <branch-name>
 
 `git checkout`指令主要用于切换分支。
 
-```
+```sh
 # 切换到已有分支
 $ git checkout <branch-name>
 
@@ -373,7 +373,7 @@ $ git checkout -b <branch-name>
 
 此外，`git checkout`指令还用于丢弃工作区中的修改（未提交到暂存区），或从其他提交对象（如其他分支，或特定commit等）中提取文件到当前工作区。
 
-```
+```sh
 # 撤销指定文件的修改
 $ git checkout -- <filename>
 
@@ -390,7 +390,7 @@ $ git checkout <branch-name> <filename>
 
 `git merge`指令用来合并分支。关于分支合并的说明，可以参考 2.2.3 部分。
 
-```
+```sh
 # 合并指定分支到当前分支
 $ git merge <branch-name>.
 
@@ -405,7 +405,7 @@ $ git merge --abort
 
 `git remote`指令用来管理本地仓库与远程仓库的关联。
 
-```
+```sh
 # 查看关联的远程仓库
 $ git remote -v
 
@@ -417,7 +417,7 @@ upstream        https://github.com/open-mmlab/mmpose.git (push)
 
 在上面的例子中，可以看到已经关联的远程仓库有2个，命名分别是 origin（URL：https://github.com/ly015/mmpose.git）和 upstream（URL：https://github.com/open-mmlab/mmpose.git）。`git remote`除了用于查看关联仓库，还用于进行关联的管理：
 
-```
+```sh
 # 添加关联的远程仓库
 # git remote add <name> <url>
 $ git remote add zhang3 https://github.com/zhang3/mmpose.git
@@ -440,7 +440,7 @@ $ git remote remove li4
 
 `git fetch`指令用于与一个远程的仓库交互，并且将远程仓库中有而本地仓库中没有的所有信息拉取下来，然后存储在本地仓库中。这个指令不会修改本地工作区、暂存区的内容，也不会修改本地分支的信息。例如，从远程仓库 origin 拉取的 master 分支会在本地存储为 origin/master, 而不会与原有的本地分支 master 相混淆。
 
-```
+```sh
 # 从远程仓库（默认远程仓库为 origin）拉取信息
 $ git fetch [<remote-name>]
 ```
@@ -449,7 +449,7 @@ $ git fetch [<remote-name>]
 
 `git push`指令用于将本地仓库的分支推送到远程仓库，即比较本地分支与远程仓库中对应关联的分支，并将差异同步到远程仓库。该指令需要有远程仓库的写权限，因此这通常是需要验证的。
 
-```
+```sh
 # 推送当前分支到默认远程仓库
 $ git push
 
@@ -466,7 +466,7 @@ $ git push --set-upstream <branch-name>
 
 `git pull`指令用于拉取远程分支到本地，即比较本地分支与远程仓库中对应关联的分支，并将差异合入本地分支。通常`git pull`指令可以看作是`git fetch`+`git merge`。如同一般的分支合并，如果远程关联分支和本地仓库中的提交历史存在冲突，则需要解决冲突后才能继续合并。
 
-```
+```sh
 # 拉取当前本地分支关联的远程分支
 $ git pull
 
@@ -480,7 +480,7 @@ $ git pull <remote-name> <branch-name>
 
 `git mv`指令用于重命名或移动文件、目录或链接。与`mv`不同的是，`git mv`会自动将这一修改添加到暂存区。
 
-```
+```sh
 # 移动文件或目录
 $ git mv <source> <destination>
 
@@ -492,7 +492,7 @@ $ git mv <source> ... <destination-directory>
 
 `git rm`指令用于从工作区或暂存区移除文件。`git rm`会自动将这一修改添加到暂存区（即将该文件从已追踪的文件清单中移除），类似`git mv`。如果我们只想把文件从暂存区移除（即让 Git 不再跟踪该文件），但仍保留在工作区，则可以使用`--cached`选项。
 
-```
+```sh
 # 从工作区和暂存区移除文件
 $ git rm <filename>
 # 仅从暂存区移除文件
@@ -503,7 +503,7 @@ $ git rm --cached <filename>
 
 `git stash`指令用来临时保存一些还没有提交的工作，以便在分支上不需要提交未完成工作就可以清理工作目录。例如，我们正在dev分支编辑`run.py`文件，临时需要切换到master分支跑一个测试任务。在切换分支前，需要清理工作区和暂存区，但我们并不希望将未完成的修改提交到仓库，此时可以用`git stash`指令临时贮藏当前的工作，并在完成临时任务后回复这些工作：
 
-```
+```sh
 # 临时贮藏 dev 分支当前的工作
 $ git add run.py
 $ git stash # or "git stash push"
@@ -520,7 +520,7 @@ $ git stash pop
 
 `git stash`会将贮藏的修改存放在一个栈上，因此可以多次使用`git stash`贮藏修改。栈的状态可以用`git stash list`查看，例如。
 
-```
+```sh
 $ git stash list
 stash@{0}: WIP on master: 049d078 added the index file
 stash@{1}: WIP on master: c264051 Revert "added file_size"
@@ -529,7 +529,7 @@ stash@{2}: WIP on master: 21d80a5 added number to log
 
 `git stash`的常见用法汇总如下
 
-```
+```sh
 # 贮藏当前分支的修改
 $ git stash [push]
 
@@ -549,7 +549,7 @@ $ git stash pop
 
 `git reset`指令用来执行撤销操作。例如，它可以将当前分支的 HEAD 指针移动到指定的提交上，从而实现撤销到该提交之后的所有提交。根据指令参数，这种撤销可以是只移动 HEAD 指针，而不改变工作区内容（被撤销的提交内容会保留在工作区，变成已修改，未提交的状态）；也可以直接修改工作区的内容。此外，`git reset`还可以用来撤销提交到暂存区的内容。一些例子如下：
 
-```
+```sh
 # 基本用法
 $ git reset [<commit>]  # 将 HEAD 指针移动到指定的提交（默认为最近一次提交），并重置暂存区
 $ git reset [--mixed]  # 重置 HEAD 指针及暂存区
@@ -571,7 +571,7 @@ $ git reset HEAD~2 --hard  # 撤销当前分支最近的2次提交，并将工�
 
 如果我们只希望将 dev 分支中的 C3 提交合并到 main 分支中，可以使用以下方式：
 
-```
+```sh
 $ git checkout main
 $ git cherry-pick C3
 ```
@@ -582,7 +582,7 @@ $ git cherry-pick C3
 
 `git cherry-pick`指令的常见用法如下：
 
-```
+```sh
 # 合并单个提交到当前分支
 $ git cherry-pick <commit>
 # 合并两个提交到当前分支
@@ -597,7 +597,7 @@ $ git cherry-pick --abort  # 中止 cherry-pick
 
 `git revert`指令用来撤销之前的提交。与`git reset`指令移动`HEAD`指针的方式，`git revert`会创建一个与之前提交的变更完全相反的新提交（本质上是一个特殊的 cherry-pick），从而实现撤销：
 
-```
+```sh
 # 撤销单个或多个提交
 $ git revert <commit1> [<commit2> ...]
 
@@ -623,7 +623,7 @@ $ git revert (--continue | --abort)
 
 图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）`$ git checkout dev && git rebase main`在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 3.1 部分中可以看到这一步）。`git rebase`指令的常见用法如下：
 
-```
+```sh
 # 将当前分支 rebase 到目标分支 upstream-branch
 $ git rebase <upstream-branch>
 
@@ -654,7 +654,7 @@ $ git rebase -i HEAD~3
 
 到本地，并配制远程仓库地址。通常，我们会关联两个远程仓库： origin 为自己 fork 的副本仓库，upstream 为官方仓库
 
-```
+```sh
 # clone 副本仓库。此时会自动关联远程仓库 origin
 $ git clone https://github.com/ly015/mmpose.git
 # 添加远程仓库 upstream
@@ -672,7 +672,7 @@ $ git remote add upstream https://github.com/open-mmlab/mmpose.git
 
 通常我们会为每个开发项创建一个独立的分支，以避免耦合带来的混乱。分支的命名最好能简洁地体现开发项的内容。
 
-```
+```sh
 # 拉取官方远程仓库
 $ git fetch upstream
 
@@ -691,7 +691,7 @@ $ git checkout -b feature
 
 在完成开发并将本地修改都提交到本地仓库后，使用`git push`指令将本地修改同步到远程仓库。注意，我们通常不会将修改推送到官方远程仓库，而是推送到自己 fork 的远程仓库，再通过向官方仓库提 PR 的方式向其贡献代码。（这样不需要官方远程仓库的推送权限，并且有利于维护官方仓库的内容整洁）
 
-```
+```sh
 # 首次推送，在远程仓库中建立关联分支
 $ 1.
 
@@ -751,7 +751,7 @@ PR 开发和 review 过程中如果 master 分支有相关的更新，需要及�
 
 以下是一个例子：
 
-```
+```sh
 # 可使用"#"符号添加注释
 
 # 忽略 "MANIFEST" 这个文件
@@ -799,7 +799,7 @@ model/**/*.pth
 
 在 3.1.1 中我们提到，Git 提供了 pre-commit hook 机制来帮助开发者自动完成格式检查等工作。一些常用的格式格式检查三方库，都提供了可以直接调用的 hook，可以在`.pre-commit-config.yaml`文件进行配制。除此之外，我们也可以在项目中添加本地代码脚本作为 pre-commit hook 以实现特定功能。以 MMPose 中自动给代码文件添加版权信息的功能为例。我们首先添加了实现该功能的脚本[`.dev_scripts/github/update_copyright.py`](https://github.com/open-mmlab/mmpose/blob/master/.dev\_scripts/github/update\_copyright.py)，该脚本以一个文件列表作为输入参数，检查并添加版权信息到这些文件中。如果所有输入文件均已包含版权信息而未作修改，则正常返回 0, 否则返回 1。如果该 hook 在提交时对代码做了修改，就会中止这次提交，待开发者添加这些修改后重新提交。最后，我们将该脚本添加到`.pre-commit-config.yaml`中即可：
 
-```
+```yaml
 - repo: local
     hooks:
       - id: update-copyright
@@ -840,7 +840,7 @@ model/**/*.pth
 
 请参考 \[2.4] 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
 
-```
+```sh
 $ git log
 commit 7eea97ea4cd9ff50ccf7ce146c4b440a98c85c51 (HEAD -> master)
 Author: ly015 <liyining0712@gmail.com>
@@ -863,7 +863,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 使用`git rebase`对后2个提交进行合并：
 
-```
+```sh
 $ git rebase -i HEAD~2
 ```
 
@@ -873,7 +873,7 @@ $ git rebase -i HEAD~2
 
 此时我们再查看分支提交历史，会发现之前的2个 commit 已经被合并：
 
-```
+```sh
 $ git log
 commit a321f6787a3cb2f27f70f5f7877e158a2aea7e0d (HEAD -> master)
 Author: ly015 <liyining0712@gmail.com>
@@ -898,7 +898,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（\[参考 2.3.6 git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
 
-```
+```sh
 # 拉取 PR#222 到本地并为其创建一个本地分支
 $ git fetch upstream pull/222/head:<branchname>
 # 切换到 PR 分支

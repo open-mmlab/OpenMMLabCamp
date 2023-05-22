@@ -546,7 +546,7 @@ def test_divide():
 
 这是一段简短的代码，来测试三种字符串方法:
 
-```
+```python
 # unittest/example1.py
 import unittest
 
@@ -572,13 +572,13 @@ if __name__ == '__main__':
 
 继承 [`unittest.TestCase`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase) 就创建了一个测试样例。上述三个独立的测试是三个类的方法，这些方法的命名都以 `test` 开头。 这个命名约定告诉测试运行者类的哪些方法表示测试。每个测试的关键是：调用 [`assertEqual()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.assertEqual) 来检查预期的输出； 调用 [`assertTrue()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.assertTrue) 或 [`assertFalse()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.assertFalse) 来验证一个条件；调用 [`assertRaises()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.assertRaises) 来验证抛出了一个特定的异常。使用这些方法而不是 [`assert`](https://docs.python.org/zh-cn/3/reference/simple\_stmts.html#assert) 语句是为了让测试运行者能聚合所有的测试结果并产生结果报告。通过 [`setUp()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.setUp) 和 [`tearDown()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.TestCase.tearDown) 方法，可以设置测试开始前与完成后需要执行的指令。 在 [组织你的测试代码](https://docs.python.org/zh-cn/3/library/unittest.html#organizing-tests) 中，对此有更为详细的描述。最后的代码块中，演示了运行测试的一个简单的方法。 [`unittest.main()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.main) 提供了一个测试脚本的命令行接口。当在命令行运行该测试脚本时
 
-```
+```sh
 python unittest/example1.py
 ```
 
 上文的脚本生成如以下格式的输出:
 
-```
+```sh
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 0.000s
@@ -587,7 +587,7 @@ OK
 
 在调用测试脚本时添加 `-v` 参数使 [`unittest.main()`](https://docs.python.org/zh-cn/3/library/unittest.html#unittest.main) 显示更为详细的信息，生成如以下形式的输出：
 
-```
+```sh
 test_isupper (__main__.TestStringMethods) ... ok
 test_split (__main__.TestStringMethods) ... ok
 test_upper (__main__.TestStringMethods) ... ok
@@ -598,7 +598,7 @@ OK
 
 以上例子演示了 [`unittest`](https://docs.python.org/zh-cn/3/library/unittest.html#module-unittest) 中最常用的、足够满足许多日常测试需求的特性。当然我们也可以使用以下的命令运行测试
 
-```
+```sh
 # 加 -v 输出更多细节
 python -m unittest example1 -v
 python -m unittest example1.TestStringMethods -v
@@ -612,7 +612,7 @@ python -m unittest example1.py -v
 
 `setUp()`和`tearDown()` 在单个测例被测试前后调用，前者在测试前，后者在测试后。`setUpClass()`和`tearDownClass()` 在整个测试类中只会被调用一次，前者在类被测试前调用，后者在类被测试后调用。
 
-```
+```python
 # unittest/example2.py
 import unittest
 
@@ -651,7 +651,7 @@ if __name__ == '__main__':
 
 **默认顺序**
 
-```
+```python
 # unittest/example3.py
 import unittest
 
@@ -669,7 +669,7 @@ if __name__ == '__main__':
 
 **定制顺序**
 
-```
+```python
 # unittest/example4.py
 import unittest
 
@@ -717,7 +717,7 @@ Unittest 支持跳过单个测试用例或者整个测试类
 
 跳过测试用例
 
-```
+```python
 # unittest/example5.py
 import unittest
 
@@ -784,7 +784,7 @@ unittest.mock 中常用的两个核心类是 Mock、MagicMock 以及一个装饰
 
 A mock object
 
-```
+```sh
 # 参考 https://realpython.com/python-mock-library/#lazy-attributes-and-methods
 >>> from unittest.mock import MagicMock
 >>> mock = MagicMock()
@@ -804,7 +804,7 @@ A mock object
 
 我们可以使用 mock 对象的 assert 方法检查对象的调用是否符合预期。
 
-```
+```sh
 >>> from unittest.mock import MagicMock
 >>> mock = MagicMock()
 >>> mock('apple')
@@ -840,7 +840,7 @@ MagicMock 提供了很多断言方法，下面列出常用的几个方法，更�
 
 可以设置 mock 对象的返回值
 
-```
+```sh
 >>> from unittest.mock import MagicMock
 >>> thing = ProductionClass()
 >>> thing.method = MagicMock(return_value=3)
@@ -855,7 +855,7 @@ side\_effect 定义当 mock 对象被调用时将发生的行为。side\_effect 
 
 * side\_effect 是可回调对象
 
-```
+```sh
 >>> from unittest.mock import MagicMock
 >>> mock = Mock()
 >>> def return_input(input):
@@ -869,7 +869,7 @@ side\_effect 定义当 mock 对象被调用时将发生的行为。side\_effect 
 
 * side\_effect 是可迭代对象
 
-```
+```sh
 >>> from unittest.mock import MagicMock
 >>> mock = Mock()
 >>> mock.side_effect = [3, 2, 1]
@@ -883,7 +883,7 @@ side\_effect 定义当 mock 对象被调用时将发生的行为。side\_effect 
 
 * side\_effect 是异常对象
 
-```
+```sh
 >>> from unittest.mock import MagicMock
 >>> mock = Mock()
 >>> mock.side_effect = Exception('Boom!')
@@ -892,7 +892,7 @@ side\_effect 定义当 mock 对象被调用时将发生的行为。side\_effect 
 
 An example
 
-```
+```python
 # 参考 https://stackoverflow.com/questions/15753390/how-can-i-mock-requests-and-the-response
 # mock/example1.py
 import requests
@@ -949,7 +949,7 @@ unittest.mock 提供了 patch 装饰器，可以将 mock 行为限制在测试�
 * [patch()](https://docs.python.org/3/library/unittest.mock.html#patch)
   * Decorator
 
-```
+```python
 # mock/package_uitls.py
 import requests
 
@@ -963,7 +963,7 @@ class PackageUtils:
         return list(versions.keys()
 ```
 
-```
+```python
 # mock/example2.py
 import unittest
 from unittest.mock import patch
@@ -991,7 +991,7 @@ class TestPackageUtils(unittest.TestCase):
 
 * Context Manager
 
-```
+```python
 # mock/example3.py
 import unittest
 from unittest.mock import patch
@@ -1021,7 +1021,7 @@ class TestPackageUtils(unittest.TestCase):
 
 事实上，在上面的例子中，我们并不需要 mock 整个对象，只需 mock get 方法即可
 
-```
+```python
 # mock/example4.py
 import unittest
 from unittest.mock import patch
@@ -1059,7 +1059,7 @@ coverage.py 是一个用来统计 Python 程序代码覆盖率的工具。
 
 > https://asciinema.org/a/435655
 
-```
+```python
 # coverage/example1.py
 import pytest
 
@@ -1080,17 +1080,17 @@ def test_dummy_func():
 
 * 使用 coverage run 运行测试用例
 
-```
+```sh
 coverage run -m pytest example.py
 ```
 
 * 使用 coverage report 生成测试报告
 
-```
+```sh
 coverage report -m
 ```
 
-```
+```sh
 Name          Stmts   Miss  Cover   Missing
 -------------------------------------------
 example1.py      12      3    75%   8-11
@@ -1100,7 +1100,7 @@ TOTAL            12      3    75%
 
 * 使用 coverage html 生成 html 页面，页面标记未被测试的行
 
-```
+```sh
 coverage html
 ```
 
@@ -1116,7 +1116,7 @@ coverage html
 
 > https://asciinema.org/a/435656
 
-```
+```python
 # coverage/example2.py
 import pytest
 
@@ -1137,7 +1137,7 @@ def test_dummy_func():
     assert dummy_func(30) == 34
 ```
 
-```
+```sh
 Name          Stmts   Miss  Cover   Missing
 -------------------------------------------
 example1.py      12      3    75%   8-11

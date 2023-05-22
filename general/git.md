@@ -617,9 +617,13 @@ $ git revert (--continue | --abort)
 
 `$ git checkout main && git merge dev`
 
-![](https://cdn.vansin.top/picgo/segment\_anything/20230518202833.png)
+![图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）](https://cdn.vansin.top/picgo/segment\_anything/20230518202833.png)
 
-图11c git rebase 与 git merge 对比：将 dev 分支（当前分支）rebase 到 main 分支（目标分支）`$ git checkout dev && git rebase main`在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 3.1 部分中可以看到这一步）。`git rebase`指令的常见用法如下：
+`$ git checkout dev && git rebase main`
+
+在上图中可以看到，`git rebase`和`git merge`都可以实现分支的整合，但`git rebase`可以避免提交历史中出现分叉，保持较为清晰的提交历史。因此在实际项目开发中，通常会在将开发分支合入主分支前，先将其 rebase 到最新的主分支（在 3.1 部分中可以看到这一步）。
+
+`git rebase`指令的常见用法如下：
 
 ```sh
 # 将当前分支 rebase 到目标分支 upstream-branch
@@ -646,7 +650,7 @@ $ git rebase -i HEAD~3
 
 * **Fork 源代码仓库**
 
-在 MMPose 的 Github 页面（https://github.com/open-mmlab/mmpose）点击 Fork 按键，在自己的 Github 帐号下创建一个副本仓库（如：https://github.com/ly015/mmpose）。
+在 MMPose 的 Github 页面（[https://github.com/open-mmlab/mmpose](https://github.com/open-mmlab/mmpose)）点击 Fork 按键，在自己的 Github 帐号下创建一个副本仓库（如：[https://github.com/ly015/mmpose](https://github.com/ly015/mmpose)）。
 
 * **创建本地仓库并关联远程仓库**
 

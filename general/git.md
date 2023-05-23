@@ -40,7 +40,7 @@ Pull Requests 页面顾名思义用来浏览和管理 pull request（下简称 P
 
 * 开发者从官方代码仓库（如 open-mmlab/mmpose）fork 一份副本到自己的帐号 （如 zhang3/mmpose），并 clone 到本地。
 * 开发者在自己的代码仓库进行某项功能的开发。
-* 开发者将自己的修改推到自己的远程仓库，并向官方仓库发出申请，要求官方仓库拉取（pull）此次修改，即将此次修改加入到官方代码中。这样的请求就叫做 PR。（与之相对的还有 GitLab 平台所采用的 merge request，拓展阅读：https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request）
+* 开发者将自己的修改推到自己的远程仓库，并向官方仓库发出申请，要求官方仓库拉取（pull）此次修改，即将此次修改加入到官方代码中。这样的请求就叫做 PR。（与之相对的还有 GitLab 平台所采用的 merge request，拓展阅读：[https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request](https://stackoverflow.com/questions/22199432/pull-request-vs-merge-request)）
 * 代码库的维护者或其他开发者会对 PR 进行 Review，并与作者共同进行讨论和修改。最终将修改完成的 PR 合入到官方代码仓库中。至此，一个开发项的开发周期完成。
 
 在 PR 列表中点进某个 PR 后，可以看到其内容包括 PR 的描述信息、作者提交代码的历史、Reviewer的意见以及和作者的往来沟通等，这部分在 [3.1](git.md#3.1-chang-gui-kai-fa-liu-cheng) 中也会详细介绍。与 issue 类似，每个 PR 也会有一个编号，用来在别处引用或关联该 PR。
@@ -143,7 +143,7 @@ $ git merge dev
 
 很多时候，在合并分支时会遇到“冲突”，即待合并的两个分支中对同一文件的同一处做了不同修改，使得 Git 无法自动合并这些修改。这时，Git 会暂停分支合并，将包含冲突的文件标识为未合并（unmerged）状态，等待手动解决冲突。此时可以用`git status`指令查看存在冲突的文件：
 
-```
+```sh
 # 例如，在 run.py 文件中存在冲突
 $ git status
 On branch master
@@ -155,7 +155,7 @@ You have unmerged paths.
 3. Unmerged paths:
 4. (use "git add \<file>..." to mark resolution)
 
-```
+```sh
 
     both modified:      run.py
 
@@ -712,7 +712,7 @@ $ git push -f
 
 当我们将本地的修改推送到自己的远程仓库后，需要向官方仓库提交一个 PR，要求官方仓库将这一修改合入到主分支（或其他指定分支）。创建 PR 可以在浏览器中操作。如果是近期推送的修改，在官方仓库或自己仓库的页面上都会出现提示，点击“Compare & pull request” 即可（如下图红色部分）。如果没有看到这个提示，也可以在自己仓库的页面上切换到开发分支，点击“Contribute”→“Open pull request”即可（如下图蓝色部分）。
 
-![图12 开始创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203825.png)
+![图 12 开始创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203825.png)
 
 * **提交 PR**
 
@@ -725,19 +725,19 @@ $ git push -f
 
 PR message 的主要修改内容，结果，以及对其他部分的影响，通常我们的代码库会准备 [PR 模板](https://github.com/open-mmlab/mmcv/blob/master/.github/pull\_request\_template.md)，只需要按照模板填入对应的内容即可。另外， PR message 可以关联相关的 issue 和 PR，通过 fixes/resolves issue ID 可以在 PR merge 的时候 close issue。蓝色部分是其他信息，在这里可以指定 reviewer 来 review 这个 PR。完成所有信息后，点击下方的“Create pull request”即可完成 PR 提交。
 
-![图13 创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203913.png)
+![图 13 创建 PR](https://cdn.vansin.top/picgo/segment\_anything/20230518203913.png)
 
 * **查看 CI 状态**
 
 PR 创建后会自动触发 CI（OpenMMLab 的算法库都基于 GitHub Actions 配置了 CI），完成代码格式、单元测试等检查工作。在 PR 页面可以查看 CI 的运行状态和结果，如下图所示。如果 CI 中有失败的项，可以点击“Details” 查看详细情况，修改后推送到自己的仓库，PR 也会随之更新。
 
-![图13 CI 运行状态和结果](https://cdn.vansin.top/picgo/segment\_anything/20230518203947.png)
+![图 13 CI 运行状态和结果](https://cdn.vansin.top/picgo/segment\_anything/20230518203947.png)
 
 **3.1.4 代码 Review 及合入**
 
 PR 提交后，会由 reviewer 进行 review 并提出意见建议，再由作者修改并更新。这样的迭代通常会进行几轮，直到大家均认为该 PR 已经可以合入主分支后，由该项目的 maintainer 来进行合入操作。关于 Review 代码的方法和技巧，后续详细介绍，这里我们只简单介绍相关的 Github 操作。 如下图所示，在 PR 页面的 “Files changed” 标签页，可以看到该 PR 的所有修改。将鼠标指向某一行，会在行号出显示 “+” 按钮，点击即可输入 review 意见和建议。作者或其他 reviewer 也可以进行回复讨论。在 “Conversation” 标签页会显示这些对话内容。
 
-![图14 在 PR 中提交 review comment](https://cdn.vansin.top/picgo/segment\_anything/20230518204647.png)
+![图 14 在 PR 中提交 review comment](https://cdn.vansin.top/picgo/segment\_anything/20230518204647.png)
 
 PR 开发和 review 过程中如果 master 分支有相关的更新，需要及时 rebase，更新本地代码，以免和 master 分支有冲突。
 
@@ -794,7 +794,7 @@ model/**/*.pth
 
 完成这些配制后，当需要解决冲突时，Git 会自动启动 meld，界面如下图所示。可以看到界面分成三列，对应与上面设置中的L11，分别是本地分支内容、合并后内容和目标（远程）分支内容。在这个界面中可以清晰对比两个分支的不同，还可以三列之间的箭头状按钮选快速选择内容添加到对应文件中。这里要注意，LOCAL 和 REMOTE 对应的分支，在 merge 和 rebase 两种情况下是不同的，这在 [git-rebase 说明](git.md#2.4-git-jin-jie-zhi-ling) 中做过介绍。
 
-![图15 使用 meld 进行可视化分支合并](https://cdn.vansin.top/picgo/segment\_anything/20230518204954.png)
+![图 15 使用 meld 进行可视化分支合并](https://cdn.vansin.top/picgo/segment\_anything/20230518204954.png)
 
 由于我们同时配制了 "difftool"，所以在运行`git diff`指令时，也会启动 meld，用左右两列来对比文件差异。
 
@@ -823,7 +823,7 @@ model/**/*.pth
 
 与远程仓库通信可以使用 https 或 ssh 两种方式。在 2.3.6 中主要基于 https 方式进行了介绍，这里我们简单介绍 ssh 方式。在 clone 远程仓库到本地时，可以选择 ssh 地址，如下图所示：
 
-![图16 使用 ssh 通信的远程仓库地址](https://cdn.vansin.top/picgo/segment\_anything/20230518205111.png)
+![图 16 使用 ssh 通信的远程仓库地址](https://cdn.vansin.top/picgo/segment\_anything/20230518205111.png)
 
 使用 ssh 方式的仓库同步操作与使用 https 方式没有区别（如`git clone`，`git pull`，`git push`等）。ssh 方式需要配置公钥-私钥对，并将公钥提交到 GitHub 上，用以在通信时进行身份验证，不需要每次输入账号密码。配置 ssh 秘钥的具体的做法可以参考这里的文档：[About SSH - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 
@@ -874,11 +874,11 @@ $ git rebase -i HEAD~2
 
 
 
-![图17a 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171618.png)
+![图 17a 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171618.png)
 
-![图17b 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171728.png)
+![图 17b 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171728.png)
 
-![图17c 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171814.png)
+![图 17c 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171814.png)
 
 此时我们再查看分支提交历史，会发现之前的2个 commit 已经被合并：
 

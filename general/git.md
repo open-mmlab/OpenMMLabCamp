@@ -201,7 +201,7 @@ $ man git-checkout
 $ git status -h
 ```
 
-**2.3.1 Git 配置**
+#### **2.3.1 Git 配置**
 
 * **git config**
 
@@ -221,7 +221,7 @@ git config --global credential.helper store
 * global： \~/.gitconfig (或者 \~/.config/git/config）
 * local：正在操作的仓库的 .git 路径下的配置文件, 即 \[REPO\_PATH]/.git/config
 
-**2.3.2 建立仓库**
+#### **2.3.2 建立仓库**
 
 * **git init**
 
@@ -246,7 +246,7 @@ $ git clone https://github.com/open-mmlab/mmpose.git
 
 ![图8 GitHub 上远程仓库的URL](https://cdn.vansin.top/picgo/segment\_anything/20230518202413.png)
 
-**2.3.3 状态查询**
+#### **2.3.3 状态查询**
 
 * **git status**
 
@@ -303,7 +303,7 @@ $ git diff <branch-a>...<branch-b>
 $ git diff master...dev
 ```
 
-**2.3.4 文件操作**
+#### **2.3.4 文件操作**
 
 * **git add**
 
@@ -335,7 +335,7 @@ $ git commit --amend
 $ git commit -a
 ```
 
-**2.3.5 分支管理**
+#### **2.3.5 分支管理**
 
 * **git branch**
 
@@ -398,7 +398,7 @@ $ git merge --continue
 $ git merge --abort
 ```
 
-**2.3.6 远程仓库管理与同步**
+#### **2.3.6 远程仓库管理与同步**
 
 * **git remote**
 
@@ -800,7 +800,7 @@ model/**/*.pth
 
 #### **3.2.3 添加自定义 pre-commit hook**
 
-在 3.1.1 中我们提到，Git 提供了 pre-commit hook 机制来帮助开发者自动完成格式检查等工作。一些常用的格式格式检查三方库，都提供了可以直接调用的 hook，可以在`.pre-commit-config.yaml`文件进行配制。除此之外，我们也可以在项目中添加本地代码脚本作为 pre-commit hook 以实现特定功能。以 MMPose 中自动给代码文件添加版权信息的功能为例。我们首先添加了实现该功能的脚本[`.dev_scripts/github/update_copyright.py`](https://github.com/open-mmlab/mmpose/blob/master/.dev\_scripts/github/update\_copyright.py)，该脚本以一个文件列表作为输入参数，检查并添加版权信息到这些文件中。如果所有输入文件均已包含版权信息而未作修改，则正常返回 0, 否则返回 1。如果该 hook 在提交时对代码做了修改，就会中止这次提交，待开发者添加这些修改后重新提交。最后，我们将该脚本添加到`.pre-commit-config.yaml`中即可：
+在 [3.1.1](git.md#3.1.1-zhun-bei) 中我们提到，Git 提供了 pre-commit hook 机制来帮助开发者自动完成格式检查等工作。一些常用的格式格式检查三方库，都提供了可以直接调用的 hook，可以在`.pre-commit-config.yaml`文件进行配制。除此之外，我们也可以在项目中添加本地代码脚本作为 pre-commit hook 以实现特定功能。以 MMPose 中自动给代码文件添加版权信息的功能为例。我们首先添加了实现该功能的脚本[`.dev_scripts/github/update_copyright.py`](https://github.com/open-mmlab/mmpose/blob/master/.dev\_scripts/github/update\_copyright.py)，该脚本以一个文件列表作为输入参数，检查并添加版权信息到这些文件中。如果所有输入文件均已包含版权信息而未作修改，则正常返回 0, 否则返回 1。如果该 hook 在提交时对代码做了修改，就会中止这次提交，待开发者添加这些修改后重新提交。最后，我们将该脚本添加到`.pre-commit-config.yaml`中即可：
 
 ```yaml
 - repo: local

@@ -647,7 +647,7 @@ $ git rebase -i HEAD~3
 
 在这一部分，我们以在 MMPose 算法库中完成一个功能开发的过程为例，介绍基于 Git 的常规开发流程。
 
-**3.1.1 准备**
+#### **3.1.1 准备**
 
 * **Fork 源代码仓库**
 
@@ -669,7 +669,7 @@ $ git remote add upstream https://github.com/open-mmlab/mmpose.git
 
 参考 [Contributing to OpenMMLab](https://github.com/open-mmlab/mmcv/blob/master/CONTRIBUTING.md) 中的说明，在本地仓库配制 Pre-commit Hook。 Pre-commit Hook 是 Git 支持的钩子函数的一种，通常用于在提交修改（Commit）前自动完成代码风格检查等工作。以上准备工作只是第一次提 PR 之前需要进行，后续开发工作，在每个 PR 开发中都需要做。
 
-**3.1.2 开发**
+#### **3.1.2 开发**
 
 * **创建开发分支**
 
@@ -706,7 +706,7 @@ $ git push
 $ git push -f
 ```
 
-**3.1.3 提交 PR**
+#### **3.1.3 提交 PR**
 
 * **开始创建 PR**
 
@@ -733,7 +733,7 @@ PR 创建后会自动触发 CI（OpenMMLab 的算法库都基于 GitHub Actions 
 
 ![图 13 CI 运行状态和结果](https://cdn.vansin.top/picgo/segment\_anything/20230518203947.png)
 
-**3.1.4 代码 Review 及合入**
+#### **3.1.4 代码 Review 及合入**
 
 PR 提交后，会由 reviewer 进行 review 并提出意见建议，再由作者修改并更新。这样的迭代通常会进行几轮，直到大家均认为该 PR 已经可以合入主分支后，由该项目的 maintainer 来进行合入操作。关于 Review 代码的方法和技巧，后续详细介绍，这里我们只简单介绍相关的 Github 操作。 如下图所示，在 PR 页面的 “Files changed” 标签页，可以看到该 PR 的所有修改。将鼠标指向某一行，会在行号出显示 “+” 按钮，点击即可输入 review 意见和建议。作者或其他 reviewer 也可以进行回复讨论。在 “Conversation” 标签页会显示这些对话内容。
 
@@ -743,7 +743,7 @@ PR 开发和 review 过程中如果 master 分支有相关的更新，需要及�
 
 ### 3.2 一些常用的 Git 技巧
 
-**3.2.1 使用 gitignore文件**
+#### **3.2.1 使用 gitignore文件**
 
 `gitignore`文件用来设置不希望 Git 进行跟踪和管理的文件路径，例如编译或运行时生成的临时文件、较大的数据文件等。`gitignore`文件是一个文本文件，通常路径是项目目录下的`.gitignore`，写法规范如下：
 
@@ -774,7 +774,7 @@ model/**/*.pth
 
 通常项目里已经提供了`gitignore`文件，必要时可以对其进行修改。`gitignore`文件本身也属于项目内容，需要添加修改 (`git add`)、提交修改(`git commit`)、开 PR 合入等。
 
-**3.2.2 配置 git mergetool**
+#### **3.2.2 配置 git mergetool**
 
 在合并分支时，经常需要手动解决冲突，这里可以选用一些可视化的工具帮助我们提高效率，例如 VS Code 就有较好的可视化功能，可以协助解决冲突。除此之外我们也可以借助第三方工具，这里我们以 [meld](https://meldmerge.org/) 这个工具为例，介绍 Git 中 mergetool 的配置和使用。首先需要在本地安装 meld，可以参考其官网的文档。安装完成后，可以在 Git 配置文件（见 2.3.1onfig）中写入如下内容：
 
@@ -798,7 +798,7 @@ model/**/*.pth
 
 由于我们同时配制了 "difftool"，所以在运行`git diff`指令时，也会启动 meld，用左右两列来对比文件差异。
 
-**3.2.3 添加自定义 pre-commit hook**
+#### **3.2.3 添加自定义 pre-commit hook**
 
 在 3.1.1 中我们提到，Git 提供了 pre-commit hook 机制来帮助开发者自动完成格式检查等工作。一些常用的格式格式检查三方库，都提供了可以直接调用的 hook，可以在`.pre-commit-config.yaml`文件进行配制。除此之外，我们也可以在项目中添加本地代码脚本作为 pre-commit hook 以实现特定功能。以 MMPose 中自动给代码文件添加版权信息的功能为例。我们首先添加了实现该功能的脚本[`.dev_scripts/github/update_copyright.py`](https://github.com/open-mmlab/mmpose/blob/master/.dev\_scripts/github/update\_copyright.py)，该脚本以一个文件列表作为输入参数，检查并添加版权信息到这些文件中。如果所有输入文件均已包含版权信息而未作修改，则正常返回 0, 否则返回 1。如果该 hook 在提交时对代码做了修改，就会中止这次提交，待开发者添加这些修改后重新提交。最后，我们将该脚本添加到`.pre-commit-config.yaml`中即可：
 
@@ -819,7 +819,7 @@ model/**/*.pth
 
 关于 Git hook 的详细介绍可以参考 [Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
-**3.2.4 使用 ssh 和远程仓库通信**
+#### **3.2.4 使用 ssh 和远程仓库通信**
 
 与远程仓库通信可以使用 https 或 ssh 两种方式。在 2.3.6 中主要基于 https 方式进行了介绍，这里我们简单介绍 ssh 方式。在 clone 远程仓库到本地时，可以选择 ssh 地址，如下图所示：
 
@@ -829,7 +829,7 @@ model/**/*.pth
 
 ### 3.3 FAQ
 
-**3.3.1 关于 Git 操作**
+#### **3.3.1 关于 Git 操作**
 
 * **如何修改 commit 但不产生新的提交**
 
@@ -901,7 +901,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 在开发中会遇到不慎将一些文件错误添加到 Git 仓库中的情况（比如未及时更新`gitignore`文件就可能会导致这种情况）。尤其是以一些大文件（如数据文件或临时文件），如果被错误包含在项目仓库中，会使仓库变得很大而严重影响和远程仓库通信的效率（如`git clone`,`git push`,`git pull`等操作会变得很慢）。如果只是通过`git add`添加到了暂存区，只需要用前面介绍过的`git rm --cached`或`git reset`清理暂存区即可。但如果已经通过`git commit`提交到了仓库，情况会变得比较棘手，因为 Git 仓库会记录完整的提交历史，即使撤销这次提交，或者在后续提交中移除这些错误添加的文件，它们依旧会存在与仓库中。这种情况也不是无法解决的，这篇文档 [Git - 维护与数据恢复](https://git-scm.com/book/zh/v2/Git-%E5%86%85%E9%83%A8%E5%8E%9F%E7%90%86-%E7%BB%B4%E6%8A%A4%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D#\_removing\_objects) 中给出了一个清除历史提交中错误引入的大文件的完整例子，大家可以仔细学习并 follow 其步骤。
 
-**3.3.2 关于 PR**
+#### **3.3.2 关于 PR**
 
 * **如何往源算法库中其他人提的 PR 中提交代码**
 

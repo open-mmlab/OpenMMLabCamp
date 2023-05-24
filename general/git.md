@@ -98,7 +98,7 @@ Insights 页面展示了项目的汇总信息和统计数据，以方便开发�
 * 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
 * 已提交表示数据已经安全地保存在本地数据库中。
 
-这会让我们的 Git 项目拥有三个阶段：工作区(Working Directory)、暂存区(Staging Area) 以及 Git 目录(.git directory)。
+这会让我们的 Git 项目拥有三个阶段：工作区(Working Directory)、暂存区(Staging Area) 以及 Git 仓库区(.git directory)。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230523195113.png)
 

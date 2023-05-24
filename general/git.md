@@ -92,13 +92,7 @@ Insights 页面展示了项目的汇总信息和统计数据，以方便开发�
 
 #### 2.2.1 工作区、暂存区和 Git 仓库区
 
-现在请注意，如果你希望后面的学习更顺利，请记住下面这些关于 Git 的概念。 Git 有三种状态，你的文件可能处于其中之一： **已提交（committed）**、**已修改（modified）** 和 **已暂存（staged）**。
-
-* 已修改表示修改了文件，但还没保存到数据库中。
-* 已暂存表示对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
-* 已提交表示数据已经安全地保存在本地数据库中。
-
-这会让我们的 Git 项目拥有三个阶段：工作区(Working Directory)、暂存区(Staging Area) 以及 Git 仓库区(.git directory)。
+现在请注意，如果你希望后面的学习更顺利，请记住下面 Git 中的这三个区，工作区(Working Directory)、暂存区(Staging Area) 以及 Git 仓库区(.git directory)。
 
 ![](https://cdn.vansin.top/picgo/segment\_anything/20230523195113.png)
 

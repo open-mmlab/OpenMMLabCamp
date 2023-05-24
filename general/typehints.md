@@ -438,3 +438,12 @@ def validate_str(string: str) -> bool:
 [PEP 484 – Type Hints | peps.python.org](https://peps.python.org/pep-0484/#generics)
 
 [Why You Should Consider Using Python Type Hints | by Fernando Souza | Vacatronics | Medium](https://medium.com/vacatronics/why-you-should-consider-python-type-hints-770e5cb1570f)
+
+
+
+
+
+| 5月19日至5月30日 | 学员&助教&班长招募   |
+| ----------- | ------------ |
+| 5月31日至6月15日 | 课程培训（5月31开营） |
+| 6月16日至6月21日 | 优秀学员评选       |

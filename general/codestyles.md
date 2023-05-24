@@ -641,10 +641,10 @@ OpenMMLab 中使用类型注解还在起步阶段，更为详细的实践方式�
 ## 6. 参考资料
 
 [\
-https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/https://realpython.com/python-pep8/https://docs.python.org/3/library/typing.htmlhttps://mypy.readthedocs.io/en/stable/)[\
-https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/\
-https://realpython.com/python-pep8/\
-https://docs.python.org/3/library/typing.html\
-https://mypy.readthedocs.io/en/stable/\
+\[1\] https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/https://realpython.com/python-pep8/https://docs.python.org/3/library/typing.htmlhttps://mypy.readthedocs.io/en/stable/)[\
+\[2\] https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/\
+\[3\] https://realpython.com/python-pep8/\
+\[4\] https://docs.python.org/3/library/typing.html\
+\[5\] https://mypy.readthedocs.io/en/stable/\
 ](https://www.python.org/dev/peps/pep-0008/https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/https://realpython.com/python-pep8/https://docs.python.org/3/library/typing.htmlhttps://mypy.readthedocs.io/en/stable/)
 

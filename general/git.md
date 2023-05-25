@@ -136,68 +136,7 @@ Insights 页面展示了项目的汇总信息和统计数据，以方便开发�
 
 有人把 Git 的分支模型称为它的“必杀技特性”，也正因为这一特性，使得 Git 从众多版本控制系统中脱颖而出。 为何 Git 的分支模型如此出众呢？ Git 处理分支的方式可谓是难以置信的轻量，创建新分支这一操作几乎能在瞬间完成，并且在不同分支之间的切换操作也是一样便捷。 与许多其它版本控制系统不同，Git 鼓励在工作流程中频繁地使用分支与合并，哪怕一天之内进行许多次。 理解和精通这一特性，你便会意识到 Git 是如此的强大而又独特，并且从此真正改变你的开发方式。
 
-```sh
-# 从远程仓库 origin 拉取最新的 master
-git fetch origin
-# 从 master 分支新建 dev 分支用于开发
-git checkout master
-git checkout -b dev
-```
 
-在开发过程中，所有的修改都会被提交到 dev 分支。当开发完成后，我们会将 dev 分支合并进 master 分支：
-
-```sh
-# 切换回 master 分支
-$ git checkout master
-
-# 将 dev 分支合并到当前（master）分支
-$ git merge dev
-```
-
-很多时候，在合并分支时会遇到“冲突”，即待合并的两个分支中对同一文件的同一处做了不同修改，使得 Git 无法自动合并这些修改。这时，Git 会暂停分支合并，将包含冲突的文件标识为未合并（unmerged）状态，等待手动解决冲突。此时可以用`git status`指令查看存在冲突的文件：
-
-```sh
-# 例如，在 run.py 文件中存在冲突
-$ git status
-On branch master
-You have unmerged paths.
-  (fix conflicts and run "git commit")
-
-```
-
-```sh
-
-    both modified:      run.py
-
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
-Git 会在存在冲突的文件中对应位置加入标准的冲突解决标记，方便手动解决冲突，看起来如下：
-
-```sh
-<<<<<<< HEAD:run.py
-print('OpenMMLab is an open-source project')
-=======
-print('OpenMMLab is AWESOME!')
->>>>>>> dev:run.py
-```
-
-这里`HEAD`表示当前分支（即 master）所在位置，`=======`上面的部分就是当前分支中的内容，下面的部分则是 dev 分支中的内容。我们可以手动编辑冲突的内容，并删除冲突解决标记 （含有`<<<<<<<`，`>>>>>>>`和`=======`的行）。例如将例子中的这部分代码改为：
-
-```python
-print('OpenMMLab is an awesome open-source project')
-```
-
-手动解决冲突后，需要将修改过的文件添加到暂存区，然后继续分支合并即可：
-
-```sh
-# 添加解决冲突时的修改
-$ git add run.py
-# 继续分支合并
-$ git merge --continue
-```
-
-如果在分支合并过程中想要中断合并，并回到合并前的状态，可以使用`git merge --abort`指令。成功合并分支后，会生成一个新的提交（Commit），并将当前分支的指针 HEAD 指向该提交。
 
 ### 2.3 Git 基础指令
 

@@ -146,7 +146,7 @@ git checkout -b dev
 
 在开发过程中，所有的修改都会被提交到 dev 分支。当开发完成后，我们会将 dev 分支合并进 master 分支：
 
-```
+```sh
 # 切换回 master 分支
 $ git checkout master
 

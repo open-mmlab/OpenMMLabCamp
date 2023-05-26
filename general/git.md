@@ -782,15 +782,15 @@ model/**/*.pth
 
 * **如何修改 commit 但不产生新的提交**
 
-请参考 \[2.3.4] 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
+请参考 [2.3.4](git.md#2.3.4-wen-jian-cao-zuo) 中 `git commit --amend`的用法。请注意，严格来说这个操作是用一个新的提交替换了原来的提交。
 
 * **如何撤销 commit 但仍需保留修改**
 
-请参考 \[2.4] 中 `git reset --mixed`或`git reset --soft`的用法。
+请参考 [2.4](git.md#2.4-git-jin-jie-zhi-ling) 中 `git reset --mixed`或`git reset --soft`的用法。
 
 * **如何合并多个 commit**
 
-请参考 \[2.4] 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
+请参考 [2.4](git.md#2.4-git-jin-jie-zhi-ling) 中 `git rebase -i HEAD~n`的用法，这里举一个简单的例子。假如当前分支历史中有3个提交，如下：
 
 ```sh
 $ git log
@@ -829,7 +829,7 @@ $ git rebase -i HEAD~2
 
 ![图 17c 使用git rebase合并多个 commit](https://cdn.vansin.top/picgo/20230522171814.png)
 
-此时我们再查看分支提交历史，会发现之前的2个 commit 已经被合并：
+此时我们再查看分支提交历史，会发现之前的 2 个 commit 已经被合并：
 
 ```sh
 $ git log
@@ -854,7 +854,7 @@ Date:   Sat Oct 9 18:39:03 2021 +0800
 
 * **如何往源算法库中其他人提的 PR 中提交代码**
 
-在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（\[参考 2.3.6 git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
+在创建 PR 时，通常会默认勾选 “Allow edits and access to secrets by maintainers”，这将允许其他具有官方仓库 Write 权限的用户提交修改到这个 PR 对应的分支。这在多人合作开发时会用到。当需要向别人的 PR 中提交代码时，需要将作者的远程仓库地址添加到 remote 中（\[参考 [2.3.6](git.md#2.3.6-yuan-cheng-cang-ku-guan-li-yu-tong-bu) git remote]），然后拉取 PR 对应的分支。在本地完成修改后，再推送到作者的远程仓库即可。在将 PR 拉取到本地时，除了从作者的远程仓库拉取，还可以用以下简单的指令：
 
 ```sh
 # 拉取 PR#222 到本地并为其创建一个本地分支

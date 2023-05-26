@@ -171,7 +171,7 @@ Docstring 是对一个类、一个函数功能与 API 接口的详细描述，�
 
 与注释不同，一份规范的 docstring 有着严格的格式要求，以便于 Python 解释器以及 sphinx 进行文档解析，详细的 docstring 约定参见 [PEP 257](https://www.python.org/dev/peps/pep-0257/)。此处以例子的形式介绍各种文档的标准格式，参考格式为 [Google 风格](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python\_style\_rules/#comments)。
 
-#### 模块文档
+#### 3.2.1 模块文档
 
 代码风格规范推荐为每一个模块（即 Python 文件）编写一个 docstring，但目前 OpenMMLab 项目大部分没有此类 docstring，因此不做硬性要求。
 
@@ -190,7 +190,7 @@ bar = foo.FunctionBar()
 """
 ```
 
-#### 类文档
+#### 3.2.2 类文档
 
 类文档是我们最常需要编写的，此处，按照 OpenMMLab 的惯例，我们使用了与 Google 风格不同的写法。如下例所示，文档中没有使用 `Attributes` 描述类属性，而是使用 `Args` 描述 `__init__` 函数的参数。在 `Args` 中，遵照`parameter (type): Description.`的格式，描述每一个参数类型和功能。其中，多种类型可使用 `(float | str)`的写法，可以为 `None` 的参数可以写为`(int | None)`或`(int, optional)`。
 
@@ -297,7 +297,7 @@ class LabelSmoothLoss(nn.Module):
             (1-2\epsilon)\delta_{k, y} + \epsilon
 ```
 
-#### 方法（函数）文档
+#### 3.2.3 方法（函数）文档
 
 函数文档与类文档的结构基本一致，但需要加入返回值文档。对于较为复杂的函数和类，可以使用 `Examples` 字段加入示例；如果需要对参数加入一些较长的备注，可以加入 `Note` 字段进行说明。对于使用较为复杂的类或函数，比起看大段大段的说明文字和参数文档，添加合适的示例更能帮助用户迅速了解其用法。需要注意的是，这些示例最好是能够直接在 Python 交互式环境中运行的，并给出一些相对应的结果。如果存在多个示例，可以使用注释简单说明每段示例，也能起到分隔作用。
 

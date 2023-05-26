@@ -146,7 +146,7 @@ Insights 页面展示了项目的汇总信息和统计数据，以方便开发�
 # 查看 git checkout 指令文档
 $ man git-checkout
 
-# 查看 git checkout 指令参数说明
+# 查看 git status 指令参数说明
 $ git status -h
 ```
 

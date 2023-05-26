@@ -163,7 +163,7 @@ def __init__(self, in_channels, out_channels):
 
 ## 3. Docstring 规范
 
-### 3.1 为什么要写 docstring
+### 3.1 为什么要写 Docstring
 
 Docstring 是对一个类、一个函数功能与 API 接口的详细描述，有两个功能，一是帮助其他开发者了解代码功能，方便 debug 和复用代码；二是在 Readthedocs 文档中自动生成相关的 API reference 文档，帮助不了解源代码的社区用户使用相关功能。
 
@@ -635,8 +635,6 @@ test.py:4: error: Incompatible types in assignment (expression has type "float",
 test.py:4: error: Argument 1 to "foo" has incompatible type "str"; expected "int"
 Found 2 errors in 1 file (checked 1 source file)
 ```
-
-OpenMMLab 中使用类型注解还在起步阶段，更为详细的实践方式有待后续进一步补充。
 
 ## 6. 参考资料
 

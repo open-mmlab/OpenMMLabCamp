@@ -1,6 +1,8 @@
 # Type Hints 贡献指南(建设中)
 
-都已经 Python 3.10 了，你还没有使用 Type Hints 吗？都快 Python 3.11 了，你还没有使用 Type Hints 吗？同事的代码越来越规范整洁了，原来是用了 Type Hints！引言：学习使用 Type Hints，让代码更加规范整洁\~你有碰到这样的情况吗：你打开自己前段时间写的代码或者翻开同伴的代码，你已经忘记或者压根不知道这个函数的原型是什么、应该传入什么类型的参数，这时候需要你费很大劲阅读代码才能确定每个参数的类型是什么；如果这时候你拿到的是一个并不完善的第三方库，压根不知道这个库应该如何使用，那就更崩溃了。以上是我们在使用 Python 进行编程时，可能会遇到的一个场景。Python 作为动态类编程语言，在定义变量时不需要预声明变量类型，这一特性为编程带来便利的同时，也引入了一些问题（例如代码可读性变差，容易引发各种各样的 TypeError）。为了解决这些问题，Python 3.5 引入了 [typing ](https://docs.python.org/3/library/typing.html)模块，并在 [PEP 483](https://peps.python.org/pep-0483/) 和 [PEP 484](https://peps.python.org/pep-0484/) 进一步介绍了如何进行 Type Hints（类型提示）。今天我们就一起来学习使用 Type Hints，让代码更加规范整洁。
+学习使用 Type Hints，让代码更加规范整洁\~
+
+你有碰到这样的情况吗：你打开自己前段时间写的代码或者翻开同伴的代码，你已经忘记或者压根不知道这个函数的原型是什么、应该传入什么类型的参数，这时候需要你费很大劲阅读代码才能确定每个参数的类型是什么；如果这时候你拿到的是一个并不完善的第三方库，压根不知道这个库应该如何使用，那就更崩溃了。以上是我们在使用 Python 进行编程时，可能会遇到的一个场景。Python 作为动态类编程语言，在定义变量时不需要预声明变量类型，这一特性为编程带来便利的同时，也引入了一些问题（例如代码可读性变差，容易引发各种各样的 TypeError）。为了解决这些问题，Python 3.5 引入了 [typing ](https://docs.python.org/3/library/typing.html)模块，并在 [PEP 483](https://peps.python.org/pep-0483/) 和 [PEP 484](https://peps.python.org/pep-0484/) 进一步介绍了如何进行 Type Hints（类型提示）。今天我们就一起来学习使用 Type Hints，让代码更加规范整洁。
 
 ## 1. 为什么要使用 Type Hints
 
@@ -427,9 +429,7 @@ def validate_str(string: str) -> bool:
 * MMCV: https://github.com/open-mmlab/mmcv/pull/1946
 * MMCV: https://github.com/open-mmlab/mmcv/pull/1942
 
-## 4. 总结
 
-~~经过上面的介绍，相信大家对 Type Hints 和 mypy 的静态检查规则有了一定的了解，想必已经跃跃欲试，让自己的代码变得更加规范了吧。在这之前不妨先练练手，mmcv 在~~[ ~~#1942~~](https://github.com/open-mmlab/mmcv/pull/1942) ~~引入了 mypy 来对代码做静态检查，也计划给代码添加 Type Hints，在这可以和 mmcv 开发者一起讨论 Type Hints 的使用方法，欢迎大家踊跃参与。~~经过今天的学习，相信大家对 Type Hints 和 mypy 的静态检查规则都有了一定的了解。是不是已经跃跃欲试，想应用到日常的代码编写中啦？在这之前不妨再跟我们一起练练手。MMCV 在[ #1942](https://github.com/open-mmlab/mmcv/pull/1942) 引入了 mypy 来对代码做静态检查，同时计划给代码添加 Type Hints。我们向所有社区同学开放，邀请大家和 MMCV 开发者一起参与，在实战中进一步巩固 Type Hints 的使用，加深对 Type Hints 的理解。除了 MMCV 开发者全程耐心指导，还有精美大奖等你来拿哦！具体参与方式我们会在明天公布，敬请期待\~（今天我们先好好学习理论知识，明天就可以一显身手啦！）
 
 ## 5. 参考资料
 

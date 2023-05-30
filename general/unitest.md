@@ -1127,87 +1127,13 @@ TOTAL            26      3    88%
 
 
 
-## 6. 如何组织单元测试
+## 6. MMEngine 中的单元测试
 
-举 mmaction2 的测试目录重构为例
 
-```bash
-mmaction2 
-├── mmaction 
-├── ... 
-├── tests 
-│   ├── data (存放unittest需要的测试文件) 
-│   │   ├── activitynet_features 
-│   │   │   ├── ... 
-│   │   ├── ava_dataset 
-│   │   │   ├── ava_excluded_timestamps_sample.csv 
-│   │   │   ├── ava_proposals_sample.pkl 
-│   │   │   ├── ava_sample.csv 
-│   │   ├── bsp_features 
-│   │   │   ├── ... 
-│   │   ├── ... 
-│   │   ├── annotations 
-│   │   │   ├── ... 
-│   ├── test_data 
-│   │   ├── test_datasets (关于dataset的抽象，每个dataset单独写一个unittest) 
-│   │   │   ├── test_rawframe_dataset.py 
-│   │   │   ├── test_video_dataset.py 
-│   │   │   ├── test_ava_dataset.py 
-│   │   │   ├── ... 
-│   │   │   ├── test_dataset_wrapper.py (例如RepeatDataset, ConcatDatset, etc.) 
-│   │   ├── test_pipelines (关于dataset的抽象，根据其在package的组织结构进行分类) 
-│   │   │   ├── test_augmentation 
-│   │   │   │   ├── test_crops.py 
-│   │   │   │   ├── test_boxes.py 
-│   │   │   │   ├── test_audio.py 
-│   │   │   │   ├── test_flip.py 
-│   │   │   │   ├── test_normalization.py 
-│   │   │   │   ├── test_lazy.py 
-│   │   │   ├── test_loading 
-│   │   │   │   ├── test_decode.py 
-│   │   │   │   ├── test_sampling.py 
-│   │   │   │   ├── test_localization.py 
-│   │   │   │   ├── test_audio.py 
-│   │   │   ├── test_formatting.py 
-│   │   │   ├── test_compose.py 
-│   │   │   ├── ... 
-│   ├── test_models (关于dataset的抽象，根据其在package的组织结构进行分类) 
-│   │   ├── test_common_modules (测试各个组件里通用的模块，如backbone中常用的ResNet, Head里通用的BaseHead, etc.) 
-│   │   │   ├── test_resnet.py 
-│   │   │   ├── test_resnet3d.py 
-│   │   │   ├── test_base_recognizer.py 
-│   │   │   ├── test_base_localizer.py 
-│   │   │   ├── test_base_head.py 
-│   │   ├── test_backbones.py 
-│   │   ├── test_necks.py 
-│   │   ├── test_heads.py 
-│   │   ├── test_recognizers (测试recognizer模型的pipeline流程) 
-│   │   │   ├── test_recognizer2d.py 
-│   │   │   ├── test_recognizer3d.py 
-│   │   ├── test_localizers (测试localizer模型的pipeline流程) 
-│   │   │   ├── test_bsn.py 
-│   │   │   ├── test_bmn.py 
-│   │   │   ├── test_ssn.py 
-│   ├── test_runtime (测试repo框架有关的模块运行) 
-│   │   ├── test_apis_test.py 
-│   │   ├── test_configs.py 
-│   │   ├── test_lr.py 
-│   │   ├── test_onnx.py 
-│   │   ├── test_optimizers.py 
-│   │   ├── test_train.py 
-│   │   ├── ... 
-│   ├── test_metrics (测试repo中的指标计算) 
-│   │   ├── test_accuracy.py 
-│   │   ├── test_losses.py 
-│   ├── test_utils (测试repo中必要的前处理/后处理工具) 
-│   │   ├── test_localization_utils.py
-```
 
-## 7. 课后作业
 
-提交第一份单元测试（测试 [scandir](https://github.com/open-mmlab/mmcv/blob/93418560d8a6911326039e97831a4771b16f6afa/mmcv/utils/path.py#L39)）
 
-提交第二份单元测试（具体内容未定，要求使用 mock）
+
 
 ## 8. 参考资料
 

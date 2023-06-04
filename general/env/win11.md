@@ -160,6 +160,7 @@ C:\ProgramData\miniconda3\Scripts
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
+上面这条命令是重点，特别是你的POWERSHELL打开提示"无法加载文件 C:\Users\vicky\Documents\WindowsPowerShell\profile.ps1"这个错误的时候，一定要执行此条命令，不然会导致你后续无法进入conda环境，导致后续部署都是白干
 
 在 PowerShell 终端中，输入以下命令 `conda init`初始化，可以让打开cmd或者powershell时进入conda的base环境。
 

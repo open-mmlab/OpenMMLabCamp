@@ -1135,7 +1135,7 @@ TOTAL            26      3    88%
 
 
 
-## 8. 参考资料
+## 7. 参考资料
 
 [https://docs.python.org/zh-cn/3/library/unittest.html](https://docs.python.org/zh-cn/3/library/unittest.html)&#x20;
 

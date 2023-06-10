@@ -1149,7 +1149,7 @@ coverage run -m pytest tests/test_hooks
 
 
 
-### 6.2 vscode debug 单元测试
+### 6.2 vscode debug 单元测试（待完善）
 
 安装配置 unitest 插件
 

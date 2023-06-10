@@ -17,12 +17,12 @@
 
 ### **2.2 单元测试的重要性**
 
-* **帮助理解需求：**单元测试应该反映 Use Case，把被测单元当成黑盒测试其外部行为
-* **提高实现质量：**单元测试不保证程序做正确的事，但能帮助保证程序正确地做事，从而提高实现质量
-* **反馈速度快：**单元测试提供快速反馈，把 Bug 消灭在开发阶段
-* **利于重构：**由于有单元测试作为回归测试用例，有助于预防在重构过程中引入 Bug
-* **文档作用：**单元测试提供了被测单元的使用场景，起到了使用文档的作用
-* **对设计的反馈：**一个模块很难进行单元测试通常是不良设计的信号，单元测试可以反过来指导设计出高内聚、低耦合的模块
+* \*\*帮助理解需求：\*\*单元测试应该反映 Use Case，把被测单元当成黑盒测试其外部行为
+* \*\*提高实现质量：\*\*单元测试不保证程序做正确的事，但能帮助保证程序正确地做事，从而提高实现质量
+* \*\*反馈速度快：\*\*单元测试提供快速反馈，把 Bug 消灭在开发阶段
+* \*\*利于重构：\*\*由于有单元测试作为回归测试用例，有助于预防在重构过程中引入 Bug
+* \*\*文档作用：\*\*单元测试提供了被测单元的使用场景，起到了使用文档的作用
+* \*\*对设计的反馈：\*\*一个模块很难进行单元测试通常是不良设计的信号，单元测试可以反过来指导设计出高内聚、低耦合的模块
 
 ### **2.3 举例**
 
@@ -160,8 +160,6 @@ def test_add():
 
 控制流测试是一种在考虑测试对象的控制流情况下导出测试用例的测试方法，并且借助于控制流图（Control Flow Graph）能评估测试的完整性（覆盖率）。
 
-
-
 #### **3.3.1 控制流图**
 
 控制流图（Control Flow Graph，CFG）也叫控制流程图，是一个过程或程序的抽象表现，是用在编译器中的一个抽象数据结构，由编译器在内部维护，代表了一个程序执行过程中会遍历到的所有路径。 它用图的形式表示一个过程内所有基本块执行的可能流向, 也能反映一个过程的实时执行过程。
@@ -173,8 +171,6 @@ def test_add():
 * 控制流图的开始和结束节点在实际应用中常常被省略
 
 下图是控制流图的几种结构，大多数程序可以由以下几种结构组合而成。
-
-
 
 ![源自 https://www.cnblogs.com/lxh2cwl/p/14842908.html](https://cdn.vansin.top/picgo/20230521155302.png)
 
@@ -203,8 +199,6 @@ def dummpy_func(A, B, C, D):
 * A = True, B = True, C = True, D = True
 
 上述的测试用例可使语句覆盖率 100 %
-
-
 
 #### **3.3.4 分支覆盖（判定覆盖）**
 
@@ -1026,8 +1020,6 @@ class TestPackageUtils(unittest.TestCase):
             assert versions ==  ['0.1.0', '0.2.0']
 ```
 
-
-
 ## 5. 测试覆盖率 [**coverage**](https://coverage.readthedocs.io/en/coverage-5.5/)
 
 coverage.py 是一个用来统计 Python 程序代码覆盖率的工具。
@@ -1125,23 +1117,61 @@ TOTAL            26      3    88%
 
 可以看到，通过添加更多的测试用例，example2.py 的行被完全覆盖了，即每一行都被测到了。
 
-
-
-## 6. MMEngine 中的单元测试
-
+## 6. 运行 MMEngine 中的单元测试
 
 
 
+### 6.1 命令行运行 mmengine 单元测试
 
 
+
+```bash
+
+conda create --name mmengine_test python=3.9
+conda activate mmengine_test
+
+git clone https://github.com/open-mmlab/mmengine
+cd mmengine
+
+# 安装单元测试所需要的依赖包
+pip install -r requirements/tests.txt
+
+# 源码安装 mmengine
+pip install -v -e .
+
+# 运行 test_hooks 的单元测试
+pytest tests/test_hooks
+
+# 分析 test_hooks 的测试覆盖率
+coverage run -m pytest tests/test_hooks
+
+```
+
+
+
+### 6.2 vscode debug 单元测试
+
+安装配置 unitest 插件
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230610091351.png)
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230610091435.png)
+
+
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230610091506.png)
+
+![](https://cdn.vansin.top/picgo/segment\_anything/20230610091832.png)
+
+##
 
 ## 7. 参考资料
 
-[https://docs.python.org/zh-cn/3/library/unittest.html](https://docs.python.org/zh-cn/3/library/unittest.html)&#x20;
+[https://docs.python.org/zh-cn/3/library/unittest.html](https://docs.python.org/zh-cn/3/library/unittest.html)
 
 [https://docs.python.org/3/library/unittest.mock.html](https://docs.python.org/3/library/unittest.mock.html)
 
-[https://docs.pytest.org/en/6.2.x/](https://docs.pytest.org/en/6.2.x/)&#x20;
+[https://docs.pytest.org/en/6.2.x/](https://docs.pytest.org/en/6.2.x/)
 
 [https://realpython.com/python-mock-library/](https://realpython.com/python-mock-library/)
 

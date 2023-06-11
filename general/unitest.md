@@ -1130,7 +1130,7 @@ TOTAL            26      3    88%
 conda create --name mmengine_test python=3.9
 conda activate mmengine_test
 
-git clone https://github.com/open-mmlab/mmengine
+git clone https://github.com/open-mmlab/mmengine.git
 cd mmengine
 
 # 安装单元测试所需要的依赖包

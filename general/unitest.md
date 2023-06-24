@@ -1153,7 +1153,7 @@ coverage run -m pytest tests/test_hooks
 
 
 
-### 6.2 vscode debug 单元测试（待完善）
+### 6.2 vscode debug 单元测试
 
 安装配置 pytest 插件 
 
@@ -1163,17 +1163,20 @@ coverage run -m pytest tests/test_hooks
 2. 点击 `Configure Python Tests` 
 3. 选择 `pytest` 
 
-![Untitled 1](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/aaf6a231-58eb-4c94-9b10-70c656f0f5f6)
+![Untitled](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/f74349a9-0e3b-4e35-ab03-d700214c6ae8)
 
 接着可以看见下图，我们选择一个测试代码，这里以 `tests/test_hooks/test_param_scheduler_hook.py` 为例，选择类 `TestParamSchedulerHook` 中的方法 `test_after_train_iter` 。
 
 在该方法左边有个运行按钮 “▶” ，点击该按钮进行单元测试。
 
-![Untitled 2](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/280966d5-1f54-4b04-86cd-9191ba656346)
+![Untitled 1](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/aaf6a231-58eb-4c94-9b10-70c656f0f5f6)
+
+
 
 测试完成后会显示完成图标✅
 
-![Untitled 3](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/7de07a1f-693d-488b-b703-501d0a358530)
+![Untitled 2](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/280966d5-1f54-4b04-86cd-9191ba656346)
+
 
 同样， pytest 支持 debug 断点测试，一共分为以下两步：
 
@@ -1181,7 +1184,9 @@ coverage run -m pytest tests/test_hooks
 2. 鼠标移至相关方法区域选择 debug 运行
 3. 运行后将中断于断点处
 
-![Untitled](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/f74349a9-0e3b-4e35-ab03-d700214c6ae8)
+
+
+![Untitled 3](https://github.com/open-mmlab/OpenMMLabCamp/assets/101508488/7de07a1f-693d-488b-b703-501d0a358530)
 ##
 
 ## 7. 参考资料

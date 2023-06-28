@@ -19,7 +19,72 @@
 ![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/20e1f79f-f03c-4bf2-b653-f8ca554c8016)
 
 ## 2. 编辑 markdown 文档
+1. 首先将代码克隆到本地：
+``` shell
+git clone git@github.com:{username}/mmdetection.git
+```
+2. 添加原代码库为上游代码库
+``` shell
+git remote add upstream git@github.com:open-mmlab/mmdetection
+```
+3.  检查 remote 是否添加成功，在终端输入 `git remote -v`，下面是正常的输出：
+``` shell
+origin	git@github.com:{username}/mmdetection.git (fetch)
+origin	git@github.com:{username}/mmdetection.git (push)
+upstream	git@github.com:open-mmlab/mmdetection (fetch)
+upstream	git@github.com:open-mmlab/mmdetection (push)
+```
+4.  创建开发分支
+建议的分支命名规则为 username/pr_name。
+``` shell
+git checkout -b Lum1104/refactor_contributing_doc
+```
+5.  拉取领取任务中所提到的分支
 
+我们点击自己账号中的 MMDetection 仓库，可以切换到 dev-3.x 分支。
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/30f5bf08-6da2-4c98-8d79-2ea251e4898f)
+``` shell
+git pull upstream dev-3.x
+```
+在后续的开发中，如果本地仓库的 dev-3.x 分支落后于 upstream 的 dev-3.x 分支，我们需要先拉取 upstream 的代码进行同步，再执行上面的命令。
+6. 配置 pre-commit
+
+在本地开发环境中，我们使用 pre-commit 来检查代码风格，以确保代码风格的统一。在提交代码，需要先安装 pre-commit（需要在 mmdetection 目录下执行）:
+``` shell
+pip install -U pre-commit
+pre-commit install
+```
+检查 pre-commit 是否配置成功，并安装 .pre-commit-config.yaml 中的钩子：
+
+**Windows 用户请不要运行对所有文件检查，可能会有问题**
+``` shell
+pre-commit run --all-files
+```
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/5cd141cf-802e-4d22-a7a2-9c8fa29f46c6)
+``` note
+如果你是中国用户，由于网络原因，可能会出现安装失败的情况，这时可以使用国内源 pre-commit install -c .pre-commit-config-zh-cn.yaml pre-commit run –all-files -c .pre-commit-config-zh-cn.yaml
+```
+
+如果安装过程被中断，可以重复执行 `pre-commit run ...` 继续安装。
+
+如果提交的代码不符合代码风格规范，pre-commit 会发出警告，并自动修复部分错误。
+
+如果我们想临时绕开 pre-commit 的检查提交一次代码，可以在 git commit 时加上 --no-verify（需要保证最后推送至远程仓库的代码能够通过 pre-commit 检查）。
+```shell
+git commit -m "xxx" --no-verify
+```
+7. 编辑需要修改的文档
+
+根据具体需要，把文档进行对应修改：
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/e5f7653d-3c90-4e52-99aa-ea6ceb291ed3)
+
+8. 提交到远程仓库
+``` shell
+git add xxx
+git commit -m "[Docs] what you have done."
+git push origin Lum1104/refactor_contributing_doc
+```
+注意如果在 pre-commit 发现了错误他会尝试自动修复，这时候再执行一次上面的流程即可。
 ## 3. 创建 PR （Pull Request）
 
 ## 4. OpenMMLab社区管理员 Review, Merge PR

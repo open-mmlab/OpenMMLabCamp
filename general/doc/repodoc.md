@@ -70,7 +70,7 @@ pre-commit run --all-files
 如果提交的代码不符合代码风格规范，pre-commit 会发出警告，并自动修复部分错误。
 
 如果我们想临时绕开 pre-commit 的检查提交一次代码，可以在 git commit 时加上 --no-verify（需要保证最后推送至远程仓库的代码能够通过 pre-commit 检查）。
-```shell
+``` shell
 git commit -m "xxx" --no-verify
 ```
 7. 编辑需要修改的文档
@@ -86,5 +86,17 @@ git push origin Lum1104/refactor_contributing_doc
 ```
 注意如果在 pre-commit 发现了错误他会尝试自动修复，这时候再执行一次上面的流程即可。
 ## 3. 创建 PR （Pull Request）
-
+当完成 push 到远程仓库后，登录自己的 GitHub 账号就可以发现在 MMDetection 仓库中有自己的 commit 记录了，在 open-mmlab/mmdetection 页面发起 pull request 请求。
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/7eaae4aa-9958-4249-bc06-db1efe20a9fa)
+接着按照下图的操作**选择正确的分支进行提交**：
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/d7f25978-aedf-42da-983a-2cd7a90411bb)
+在 comment 处根据提示修改 PR 描述，以便于其他开发者更好地理解你的修改：
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/fad4b509-1f69-4fff-aec0-3f5894a53f14)
+`PR 标题处可使用 [Docs] 字样标识此处主要修改了文档，[WIP] 字样表示仍在开发中 (work in progress)`
 ## 4. OpenMMLab社区管理员 Review, Merge PR
+如果社区管理员没有直接 merge 而是给出了一下修改建议（Review），请回到自己的仓库中对应的文档进行修改（例如上面则是回到Lum1104/refactor_contributing_doc），直接 push 到自己用户下的远程仓库就会被自动同步到 PR 里面了。
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/5a9b8723-8812-4ace-a9c3-1190da6954c3)
+完成以后点击 Resolve conversation 按钮。
+经过与社区管理员的多轮 review 和修改后，PR 就被合入（merge）到仓库中了：
+![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/78af9d0d-199b-4743-a2ec-9f5e17811d87)
+至此本教程完结，恭喜你已经成为一个开源社区贡献者啦！

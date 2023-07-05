@@ -4,7 +4,7 @@
 
 点击进入[OpenMMLabCamp仓库的Discussion栏](https://github.com/open-mmlab/OpenMMLabCamp/discussions)下，即可以查看到所有的任务。
 
-在左栏的Category栏下可以看到，可以点击进入不同的算法库。
+在左栏的`Categories`栏下可以看到，可以点击进入不同的算法库。
 
 ![Discussion页面](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/5a3225e7-7c36-42e6-aeed-d96e69a25cfc)
 
@@ -61,7 +61,7 @@
 2. 中等（Medium）：指具有一定挑战性但仍然可行的任务，适合有一定经验的开发者。
 3. 困难（Hard）：指具有较高难度或复杂性的任务，需要有深入经验和技能的开发者来完成。
 
-可以通过Sort by标签来筛选出自己想要的任务，通过Filter来筛选出自己想要的任务。
+可以通过`Sort by`来筛选出自己想要的任务，通过`Filter`来筛选出自己想要的任务。
 
 ## 2 领取任务
 
@@ -69,22 +69,24 @@
 
 ![领取任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/0a23735b-8bd9-4ddb-a274-25efe0472f5c)
 
-请在回复后立即添加小助手喵喵微信（微信号：`openmmlabwx`）。社区管理员将尽快复核领取情况，一旦复核完成，任务状态将变为`已领取`，同时Discussion正文区将更新领取人的Github ID和领取时间。
+请在回复后立即添加小助手喵喵微信（微信号：`openmmlabwx`）。社区管理员将尽快复核领取情况，一旦复核完成，任务状态将变更为`已领取`，同时Discussion正文区将更新领取人的Github ID和领取时间。
 
 领取任务后，请尽量在预计耗时内及时完成任务。如果有任何其他情况，请及时与小助手喵喵沟通。如果没有及时沟通，任务可能会被收回。
 
 ## 3 完成任务
 
-![完成任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/dd54bc6b-dc9c-4ed1-b277-293385dec162)
+完成任务后，贡献者需要向算法库提交PR，并在Discussion的评论区回复PR链接。
 
-完成任务后，贡献者需要向算法库提交Pull Request（PR），并在Discussion的评论区回复以`open-mmlab`开头的PR链接。
+具体如何完成任务和提交Pull Request（PR），可以参考[代码贡献指南](https://mmengine.readthedocs.io/zh_CN/latest/notes/contributing.html)，请注意符合[拉取请求规范](https://mmengine.readthedocs.io/zh_CN/latest/notes/contributing.html#id11)。
+
+![完成任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/dd54bc6b-dc9c-4ed1-b277-293385dec162)
 
 社区管理员将对提交的PR进行复核，并将其提交给技术人员进行评审。一旦复核完成，任务状态将变为“已提交PR”。
 
 ## 4 根据评审意见修改任务
 
-提交PR后，技术人员将尽快对PR进行评审。如果评审意见中有需要修改的部分，请在进行修改后再次提交PR。
+技术人员将尽快对PR完成评审并给出评审意见，如果评审意见中有需要修改的部分，请在进行修改后再次提交PR。
 
 ## 5 成功合并
 
-经过技术人员评审通过后，PR将被合并到算法库中，任务状态将变为`已完成`，贡献者将获得相应的积分奖励。
+经过技术人员评审通过后，PR将被被允许合并到算法库中。合并成功后，任务状态将变为`已完成`，贡献者将获得相应的积分奖励。

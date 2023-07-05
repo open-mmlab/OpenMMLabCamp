@@ -31,7 +31,7 @@ OpenMMLab社区并参与社区共建，小伙伴们可以通过此[任务发布�
 
 ## 2. 贡献者贡献指南
 
-所有的任务均会发布在，贡献者通过在任务详情中评论领取任务，完成任务后提交Pull Request（PR）并在评论区回复PR链接，待PR评审通过后即可获得积分奖励。
+所有的任务均会发布在[OpenMMLabCamp仓库的Discussion栏](https://github.com/open-mmlab/OpenMMLabCamp/discussions)，贡献者通过在任务详情中评论领取任务，完成任务后提交Pull Request（PR）并在评论区回复PR链接，待PR评审通过后即可获得积分奖励。
 
 详细操作请查看[贡献者操作指南](general/task/taskdoc.md)。
 

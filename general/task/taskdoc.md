@@ -93,8 +93,8 @@
 
 🆘注意：只能领取MMSIG的任务，不能领取MMCodeCamp的任务！
 
-
 可以通过`Sort by`来对任务按指定字段排序，通过`Label`来筛选出自己想要的任务。
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/2e44e80d-1f79-454a-933b-f43dc481be9e)
 
 ## 2 领取任务(添加喵喵微信)
 

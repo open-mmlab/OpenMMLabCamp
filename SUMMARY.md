@@ -25,7 +25,7 @@
 
 * [Playground(建设中)](mm/playground-jian-she-zhong.md)
 * [MMEngine(建设中)](mm/mmengine.md)
-  * [新 Config 适配贡献指南](mm/mmengine/newconfig.md)
+  * [新 Config 适配贡献指南](mm/mmengine/config.md)
 * [MMCV(建设中)](mm/mmcv.md)
   * [Transform 数据增强贡献指南](mm/mmcv/transform.md)
   * [算子贡献指南(建设中)](mm/mmcv/suan-zi-gong-xian-zhi-nan-jian-she-zhong.md)

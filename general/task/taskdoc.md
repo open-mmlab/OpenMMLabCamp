@@ -64,7 +64,8 @@
 4. 已完成（StageDone）：任务已经通过审查并成功合并。
 5. 他人完成（StageOtherDone）：任务由他人完成。
 6. 任务废弃（StageCancelled）：任务被废弃或取消，不再需要进一步的处理。
-<p style="color: red;background-color:yellow;">提示：可以使用Label标签来筛选尚未被领取的任务！</p>
+
+✅提示：可以使用Label标签来筛选尚未被领取的任务
 
 ### 任务难度标签
 任务难度标签用于描述任务的难度级别。
@@ -90,7 +91,7 @@
 1. MMSIG：指MMSIG的任务。
 2. MMCodeCamp：指超级视客营专属的任务。
 
-<p style="color: red;background-color:yellow;">注意：只能领取MMSIG的任务，不能领取MMCodeCamp的任务！</p>
+🆘注意：只能领取MMSIG的任务，不能领取MMCodeCamp的任务！
 
 
 可以通过`Sort by`来对任务按指定字段排序，通过`Label`来筛选出自己想要的任务。

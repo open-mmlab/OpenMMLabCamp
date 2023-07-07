@@ -5,6 +5,7 @@
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 
 * [开源协议学习(建设中)](general/license.md)
+* [MMSIG任务领取指南](general/task/taskdoc.md)
 * [环境配置(建设中)](general/env/README.md)
   * [Windows 环境配置](general/env/win11.md)
   * [Github Codespaces 云 Linux 环境](general/env/github.md)
@@ -24,7 +25,7 @@
 
 * [Playground(建设中)](mm/playground-jian-she-zhong.md)
 * [MMEngine(建设中)](mm/mmengine.md)
-  * [新 Config 适配贡献指南](mm/mmengine/newconfig.md)
+  * [新 Config 适配贡献指南](mm/mmengine/config.md)
 * [MMCV(建设中)](mm/mmcv.md)
   * [Transform 数据增强贡献指南](mm/mmcv/transform.md)
   * [算子贡献指南(建设中)](mm/mmcv/suan-zi-gong-xian-zhi-nan-jian-she-zhong.md)

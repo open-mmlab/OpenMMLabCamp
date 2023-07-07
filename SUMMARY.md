@@ -5,6 +5,7 @@
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 
 * [开源协议学习(建设中)](general/license.md)
+* [MMSIG任务领取指南](general/task/taskdoc.md)
 * [环境配置(建设中)](general/env/README.md)
   * [Windows 环境配置](general/env/win11.md)
   * [Github Codespaces 云 Linux 环境](general/env/github.md)

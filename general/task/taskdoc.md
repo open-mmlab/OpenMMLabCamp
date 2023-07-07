@@ -1,4 +1,4 @@
-# OpenMMLabCamp贡献者操作指南
+# MMSIG任务领取指南
 
 ## 1 查看任务
 

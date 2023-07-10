@@ -41,7 +41,6 @@
 
 5. 其他类（Other）：指无法归类到上述类别的其他任务。
 
-
 ### 任务状态标签
 
 任务状态标签用于跟踪任务的进展和状态。
@@ -62,7 +61,7 @@
 5. 他人完成（StageOtherDone）：任务由他人完成。
 6. 任务废弃（StageCancelled）：任务被废弃或取消，不再需要进一步的处理。
 
-✅提示：可以使用Label标签来筛选尚未被领取的任务！
+✅提示：可以使用Label标签来筛选尚未被领取的任务
 
 ### 任务难度标签
 任务难度标签用于描述任务的难度级别。
@@ -109,12 +108,9 @@
 
 具体如何完成任务和提交Pull Request（PR），可以参考[代码贡献指南](https://mmengine.readthedocs.io/zh_CN/latest/notes/contributing.html)，请注意符合[拉取请求规范](https://mmengine.readthedocs.io/zh_CN/latest/notes/contributing.html#id11)。
 
-🆘注意：PR标题必须以[MMSIG]开头
-![image](https://github.com/open-mmlab/mmpose/assets/62195058/7d44dfb6-bc81-4360-b5b7-3128f213c352)
+![完成任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/dd54bc6b-dc9c-4ed1-b277-293385dec162)
 
 社区管理员将对提交的PR进行复核，并将其提交给技术人员进行评审。一旦复核完成，任务状态将变为“已提交PR”。
-
-![完成任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/dd54bc6b-dc9c-4ed1-b277-293385dec162)
 
 ## 4 根据评审意见修改任务
 

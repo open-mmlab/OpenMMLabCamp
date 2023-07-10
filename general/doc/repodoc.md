@@ -79,6 +79,11 @@ git commit -m "xxx" --no-verify
 根据具体需要，把文档进行对应修改：
 ![image](https://github.com/Lum1104/OpenMMLabCamp/assets/87774050/e5f7653d-3c90-4e52-99aa-ea6ceb291ed3)
 
+``` note
+1. 上传图片到文档里的方法：在 GitHub 中新建一个 issue 然后将需要添加的图片直接拖入。
+2. 直接在 GitHub 中编辑文档，然后将图片拖入，就可以自动上传啦~
+```
+
 8. 提交到远程仓库
 ``` shell
 git add xxx

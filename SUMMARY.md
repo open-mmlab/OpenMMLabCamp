@@ -3,6 +3,7 @@
 * [OpenMMLab 贡献者成长地图](README.md)
 * [活动](activity/README.md)
   * [MMSIG任务领取指南](activity/taskdoc.md)
+  * [超级视客营](activity/codecamp.md)
 
 ## 通用贡献者教程(建设中) <a href="#general" id="general"></a>
 

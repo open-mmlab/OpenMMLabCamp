@@ -97,7 +97,7 @@
 
 ## 2 领取任务(添加喵喵微信)
 
-要领取任务，请点击所需任务的Discussion详情页，并在评论区回复`领取任务`。
+要领取任务，请点击所需任务的Discussion详情页，并在评论区回复`Claim the mission`。
 
 ![领取任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/0a23735b-8bd9-4ddb-a274-25efe0472f5c)
 

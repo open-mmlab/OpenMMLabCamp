@@ -99,7 +99,7 @@
 
 要领取任务，请点击所需任务的Discussion详情页，并在评论区回复`Claim the mission`。
 
-![领取任务](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/0a23735b-8bd9-4ddb-a274-25efe0472f5c)
+![image](https://github.com/open-mmlab/OpenMMLabCamp/assets/62195058/229aae87-b264-4862-bb06-0defaa8f32ba)
 
 请在回复后立即添加小助手喵喵微信（微信号：`openmmlabwx`）。社区管理员将尽快复核领取情况，一旦复核完成，任务状态将变更为`已领取`，同时Discussion正文区将更新领取人的Github ID和领取时间。
 

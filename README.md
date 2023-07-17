@@ -1,6 +1,6 @@
 # OpenMMLab 贡献者成长地图
 
-[https://openmmlab.gitbook.io/mmsig/](https://openmmlab.gitbook.io/mmsig/)
+欢迎大家来到 OpenMMLab 贡献者成长地图，期待和大家一起成长为开发者大佬！！！
 
 ## 1. 序言
 

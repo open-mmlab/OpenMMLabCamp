@@ -10,7 +10,11 @@
 
 同时我们给大家准备了：
 
+* [Windows 环境配置](general/env/win11.md)、[GitHub Codespace 云 Linux 环境配置](general/env/github.md) 等环境配置教程
+* [熟悉GitHub/Git 教程](general/git.md)
+* 单元测试
 
+等贡献者教程，
 
 
 

@@ -3,9 +3,9 @@
 给本 MMSIG 贡献者教程贡献的步骤如下：
 
 * Fork 仓库
-* 编辑文档
-* 创建 PR (Pull Requests)
-* OpenMMLab 社区管理员 Merge PR
+* 编辑 markdown 文档
+* 创建 PR (Pull Request)
+* OpenMMLab 社区管理员 Review, Merge PR
 
 ## 1. Fork Github 仓库
 
@@ -39,9 +39,9 @@
 
 ![image](https://user-images.githubusercontent.com/129494131/233516250-5f56b596-2873-431a-a6dd-701f7b1f4f65.png)
 
-## 3. 提 PR （Pull Request）
+## 3. 创建 PR （Pull Request）
 
-在完成文档的编辑后，我们在底部的 **Commit changes** 中选择 \*\* Create a new branch for this commit and start a pull request.\*\*， 并给分支命名,这里命名为 update\_mmsig\_doc 分支，然后点击 **Propose changes**
+在完成文档的编辑后，我们在底部的 **Commit changes** 中选择 **Create a new branch for this commit and start a pull request.**， 并给分支命名,这里命名为 update\_mmsig\_doc 分支，然后点击 **Propose changes**
 
 ![image](https://user-images.githubusercontent.com/129494131/233517211-abfe54a7-bb40-490e-88aa-d68557308bb0.png)
 
@@ -50,6 +50,8 @@
 ![img\_v2\_cef1434b-45f3-4e2b-ac30-421d81194b9g](https://user-images.githubusercontent.com/129494131/233518289-cace14ec-af7b-45f4-a222-37cc40a31020.jpg)
 
 此时在浏览器地址栏能得到此 PR 的链接，可以在 PR 链接中追踪状态，并等待 OpenMMLab 社区管理员对 PR 进行 Review 和 Merge。
+
+## 4. OpenMMLab社区管理员 Review, Merge PR
 
 ![img\_v2\_1db926da-0eec-422f-a81d-e906c1e95a5g](https://user-images.githubusercontent.com/129494131/233519021-f626b713-9be0-4d8c-a895-5e566f9427e5.jpg)
 
